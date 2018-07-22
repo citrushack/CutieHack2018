@@ -10,10 +10,12 @@ nav{
 	display:block;
 	/**background-color: black;**/
 }
+.row{
+	margin-top:5px;
+}
 .horizCenter{
-	margin:0 auto;
-	width:200px;
-	height:200px;
+	text-align: center;
+	width:100%;
 }
 .mainHero{
 	margin-top:100px;
