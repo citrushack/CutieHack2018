@@ -1,0 +1,43 @@
+.contact-btn-spacing {
+	margin: 2%;
+	background: #EEEEEE;
+}
+
+
+
+.lightDiv {
+	background: #EEEEEE;
+	padding: 3%;
+}
+.lightText {
+	color: #EEEEEE;
+}
+.darkDiv {
+	background: #28282A;
+	padding: 3%;
+}
+.darkText {
+	color: #28282A;
+}
+.iconSize {
+	font-size: 200%;
+	margin: 2.5%;
+	margin-top: 1%;
+}
+
+#faqHeader {
+	padding-bottom: 3%;
+	font-size: 400%;
+}
+
+.faqAnswer {
+	font-size: 125% ;
+	padding-top: 2%;
+	padding-bottom: 3%;
+	padding-left: 2.5%;
+}
+
+#footer {
+	padding-top: 1.5%;
+	padding-bottom: .5%;
+}
