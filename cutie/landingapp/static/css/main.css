@@ -46,6 +46,9 @@ hr{
   font-size: 50px;
   margin-top:7rem;
 }
+.sponsors{
+	padding-top: 40px;
+}
 
 /** Responsive Images **/
 .ml-auto, .mx-auto {
@@ -69,6 +72,7 @@ img{
 }
 
 .lightDiv {
+	margin-top:20px;
 	background: #EEEEEE;
 	padding: 3%;
 }
@@ -101,6 +105,7 @@ img{
 }
 
 #footer {
+	margin-top:50px;
 	padding-top: 1.5%;
 	padding-bottom: .5%;
 }
