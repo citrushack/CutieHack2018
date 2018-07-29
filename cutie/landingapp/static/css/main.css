@@ -104,3 +104,36 @@ img{
 	padding-top: 1.5%;
 	padding-bottom: .5%;
 }
+
+/**Transition Colors for Social Media links**/
+.fa-facebook-square:hover{
+  color:#43609C;
+  -webkit-transition: color 2s ease-out;
+  -moz-transition: color 2s ease-out;
+  -o-transition: color 2s ease-out;
+  transition: color 2s ease-out;
+}
+
+.fa-instagram:hover{
+	color:#cd486b;
+	-webkit-transition: color 1s ease-out;
+	-moz-transition: color 1s ease-out;
+	-o-transition: color 1s ease-out;
+	transition: color 1s ease-out;
+}
+  
+.fa-twitter-square:hover{
+	color:#6CADDE;
+	-webkit-transition: color 1s ease-out;
+	-moz-transition: color 1s ease-out;
+	-o-transition: color 1s ease-out;
+	transition: color 1s ease-out;
+}
+
+.fa-envelope:hover{
+	color:#fbad50;
+	-webkit-transition: color 1s ease-out;
+	-moz-transition: color 1s ease-out;
+	-o-transition: color 1s ease-out;
+	transition: color 1s ease-out;
+}
