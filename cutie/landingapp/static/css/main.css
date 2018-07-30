@@ -11,12 +11,21 @@ nav{
 	/**background-color: black;**/
 }
 .row{
-	margin-top:5px;
+	margin-top:20px;
 }
+.about{
+	margin-top:50px;
+}
+
 .horizCenter{
 	text-align: center;
 	width:100%;
 }
+.Vertical{
+	margin-top:60px;
+}
+
+
 .mainHero{
 	margin-top:100px;
 	width:100%;
@@ -38,14 +47,7 @@ hr{
 	height: 100%;
 }
 
-#whatIs{
-  font-size: 50px;
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
-  font-size: 50px;
-  margin-top:7rem;
-}
+
 .sponsors{
 	padding-top: 40px;
 }
