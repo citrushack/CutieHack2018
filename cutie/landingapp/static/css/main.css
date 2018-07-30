@@ -144,3 +144,14 @@ img{
 	-o-transition: color 1s ease-out;
 	transition: color 1s ease-out;
 }
+/**With Heart**/
+.red{
+	color:white;
+}
+.red:hover{
+	color:#cd486b;
+	-webkit-transition: color 1s ease-out;
+	-moz-transition: color 1s ease-out;
+	-o-transition: color 1s ease-out;
+	transition: color 1s ease-out;
+}
