@@ -1,4 +1,8 @@
+html{
+	scroll-behavior: smooth; 
+}
 body{
+	width: 100%;
 	padding: 0px;
 	margin: 0px;
 	border: 0px;
@@ -10,6 +14,7 @@ nav{
 	display:block;
 	/**background-color: black;**/
 }
+
 .row{
 	margin-top:20px;
 }
@@ -26,6 +31,7 @@ nav{
 }
 
 
+
 .mainHero{
 	margin-top:100px;
 	width:100%;
@@ -34,7 +40,7 @@ nav{
 	text-align: center;
 }
 .container{
-	display:block;
+	width: 100%;
 }
 hr{
 	display: block;
@@ -48,8 +54,9 @@ hr{
 }
 
 
-.sponsors{
+#sponsors{
 	padding-top: 40px;
+	scroll-behavior: smooth;
 }
 
 /** Responsive Images **/
