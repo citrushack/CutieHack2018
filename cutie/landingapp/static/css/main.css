@@ -2,6 +2,7 @@ html{
 	scroll-behavior: smooth; 
 }
 body{
+	height: 100%;
 	width: 100%;
 	padding: 0px;
 	margin: 0px;
@@ -49,8 +50,10 @@ hr{
 	border-top-color: rgb(0, 0, 1);
 }
 
-#banner{
+.banner{
 	height: 100%;
+	width: 100%;
+	overflow: hidden;
 }
 
 
