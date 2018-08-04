@@ -1,0 +1,42 @@
+body {
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+hr {
+  background: #e2e2e2;   /* gray */
+  margin-bottom: 10px;
+  width: 30%;
+}
+
+/*Title*/
+
+#cutie {
+  text-transform: uppercase;
+  font-size: 40px;
+  letter-spacing: 3px;
+}
+
+/* Links */
+
+form {
+  float: left;
+}
+
+/*Schedule*/
+
+table {
+  width: 50%;
+  margin:20px auto;
+  border: 1px #e2e2e2 solid;
+}
+
+.day {
+  font-size: 20px;
+  border-bottom: 1px #e2e2e2 solid;
+}
+
+#sunday {
+  border-left: 1px #e2e2e2 solid;
+}
