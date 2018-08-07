@@ -1,76 +1,55 @@
-html{
-	scroll-behavior: smooth; 
-}
-body{
-	height: 100%;
-	width: 100%;
-	padding: 0px;
-	margin: 0px;
-	border: 0px;
-}
-nav{
-	width:100%;
-	height:60px;
-	text-align: center;
-	display:block;
-	/**background-color: black;**/
-}
-
-
-
-
 .BasicFontSize {
-	font-size: 125%;
+  font-size: 125%;
 }
 
 
 #CutieHackTitle {
-	font-size: 200%;
+  font-size: 200%;
 }
 
 .row{
-	margin-top:20px;
+  margin-top:20px;
 }
 .about{
-	margin-top:50px;
+  margin-top:50px;
 }
 
 .horizCenter{
-	text-align: center;
-	width:100%;
+  text-align: center;
+  width:100%;
 }
 .Vertical{
-	margin-top:60px;
+  margin-top:60px;
 }
 
 
 
 .mainHero{
-	margin-top:100px;
-	width:100%;
-	height:500px;
-	display: block;
-	text-align: center;
+  margin-top:100px;
+  width:100%;
+  height:500px;
+  display: block;
+  text-align: center;
 }
 .container{
-	width: 100%;
+  width: 100%;
 }
 hr{
-	display: block;
-	margin: 5rem 0; /* <hr> between each */
-	border-top: 1px solid;
-	border-top-color: rgb(0, 0, 1);
+  display: block;
+  margin: 5rem 0; /* <hr> between each */
+  border-top: 1px solid;
+  border-top-color: rgb(0, 0, 1);
 }
 
 #banner{
-	font-size: 250%;
-	margin: 15.75%;
+  font-size: 250%;
+  margin: 15.75%;
 }
 
 
 #sponsors{
-	padding-top: 40px;
-	scroll-behavior: smooth;
+  padding-top: 40px;
+  scroll-behavior: smooth;
 }
 
 /** Responsive Images **/
@@ -86,51 +65,60 @@ hr{
     height: auto;
 }
 img{
-	display:inline;
+  display:inline;
 }
 
 .contact-btn-spacing {
-	margin: 2%;
-	background: #EEEEEE;
+  margin: 2%;
+  background: #EEEEEE;
 }
 
 .lightDiv {
-	margin-top:20px;
-	background: #EEEEEE;
-	padding: 3%;
+  margin-top:20px;
+  background: #EEEEEE;
+  padding: 3%;
 }
 .lightText {
-	color: #EEEEEE;
+  color: #EEEEEE;
 }
 .darkDiv {
-	background: #28282A;
-	padding: 3%;
+  background: #28282A;
+  padding: 3%;
 }
 .darkText {
-	color: #28282A;
+  color: #28282A;
 }
 #iconSize {
-	font-size: 170%;
-	margin: 2.5%;
-	margin-top: 1%;
+  font-size: 170%;
+  margin: 2.5%;
+  margin-top: 1%;
 }
 
 #faqHeader {
-	padding-bottom: 3%;
-	font-size: 400%;
+  padding-bottom: 3%;
+  font-size: 400%;
+}
+
+.faqQuestion:hover {
+  color:#FFFFFF;
+  -webkit-transition: color .5s ease-out;
+  -moz-transition: color.5s ease-out;
+  -o-transition: color .5s ease-out;
+  transition: color .5s ease-out;
 }
 
 .faqAnswer {
-	font-size: 125%
-	padding-top: 2%;
-	padding-bottom: 3%;
-	padding-left: 2.5%;
+  font-size: 125%
+  /*padding-top: 2%;*/
+  /*padding-bottom: 3%;*/
+  padding-left: 2.5%;
+  display: none;
 }
 
 #footer {
-	margin-top:5%;
-	padding-top: 1.5%;
-	padding-bottom: .5%;
+  margin-top:5%;
+  padding-top: 1.5%;
+  padding-bottom: .5%;
 }
 
 /**Transition Colors for Social Media links**/
@@ -143,36 +131,36 @@ img{
 }
 
 .fa-instagram:hover{
-	color:#cd486b;
-	-webkit-transition: color 1s ease-out;
-	-moz-transition: color 1s ease-out;
-	-o-transition: color 1s ease-out;
-	transition: color 1s ease-out;
+  color:#cd486b;
+  -webkit-transition: color 1s ease-out;
+  -moz-transition: color 1s ease-out;
+  -o-transition: color 1s ease-out;
+  transition: color 1s ease-out;
 }
   
 .fa-twitter-square:hover{
-	color:#6CADDE;
-	-webkit-transition: color 1s ease-out;
-	-moz-transition: color 1s ease-out;
-	-o-transition: color 1s ease-out;
-	transition: color 1s ease-out;
+  color:#6CADDE;
+  -webkit-transition: color 1s ease-out;
+  -moz-transition: color 1s ease-out;
+  -o-transition: color 1s ease-out;
+  transition: color 1s ease-out;
 }
 
 .fa-envelope:hover{
-	color:#fbad50;
-	-webkit-transition: color 1s ease-out;
-	-moz-transition: color 1s ease-out;
-	-o-transition: color 1s ease-out;
-	transition: color 1s ease-out;
+  color:#fbad50;
+  -webkit-transition: color 1s ease-out;
+  -moz-transition: color 1s ease-out;
+  -o-transition: color 1s ease-out;
+  transition: color 1s ease-out;
 }
 /**With Heart**/
 .red{
-	color:white;
+  color:white;
 }
 .red:hover{
-	color:#cd486b;
-	-webkit-transition: color 1s ease-out;
-	-moz-transition: color 1s ease-out;
-	-o-transition: color 1s ease-out;
-	transition: color 1s ease-out;
+  color:#cd486b;
+  -webkit-transition: color 1s ease-out;
+  -moz-transition: color 1s ease-out;
+  -o-transition: color 1s ease-out;
+  transition: color 1s ease-out;
 }
