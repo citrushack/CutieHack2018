@@ -8,6 +8,10 @@
     <!--django will look for css/main.css file in the static folder-->
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
 
+    <!-- jquery -->
+	{% load static %}
+	<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+
     {% load static %}
     <!-- link for main.js -->
     <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
@@ -20,9 +24,6 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
 	<!-- Font Awesome (for contact icons) -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<!-- jquery -->
-	{% load static %}
-	<script type="text/javascrpit" src="{% static 'js/jquery.js' %}"></script>
 
 </head>
 
