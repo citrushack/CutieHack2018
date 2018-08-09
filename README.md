@@ -13,5 +13,9 @@ To link stylesheet in html,
 
 To link image in html,
 {% load static %}
-<pre> <img src="{% static 'images/example.png' %}" alt="My image" style="width:10px;height:10px;"/>
+<img src="{% static 'images/example.png' %}" alt="My image" style="width:10px;height:10px;"/>
+
+To link js in html,
+{% load static %}
+<script type="text/javascript" src="{% static 'js/example.js' %}"></script>
 ```
