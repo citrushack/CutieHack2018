@@ -45,9 +45,15 @@
 	    <li class= "nav-item">
 	        <a class = "nav-link" href="#organizers">CONTACT</a>
 	    </li>
+	    {% if user.is_authenticated %}
 	    <li class= "nav-item">
-	    	<a class = "nav-link" href = "">LOGIN</a> <!--need login backend before logout button html-->
+	    	<a class = "nav-link" href = "{% url 'logout'%}?next={{request.path}}">LOGOUT</a>
         </li>
+        {% else %}
+        <li class= "nav-item">
+        	<a class = "nav-link" href="{% url 'login'%}?next={{request.path}}">LOGIN</a>
+        </li>
+        {% endif %} 
     </ul>
 
 
