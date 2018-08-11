@@ -15,9 +15,9 @@ body {
 }
 
 #title-line {
-  background: #e2e2e2;   /* gray */
   margin-bottom: 10px;
-  width: 30%;
+  width: 50%;
+  border-top: 1px solid #a5a5a5;
 }
 
 /* Buttons */
@@ -41,12 +41,25 @@ body {
 .columns {
   height: 663px;
   text-transform: uppercase;
-  text-decoration: underline;
-  font-size: 2em;
+  /* text-decoration: underline; */
+  /* font-size: 2em; */
+}
+
+.lines {
+  margin-top: 10px;
+  width: 50%;
+  border-top: 1px solid #a5a5a5;
 }
 
 /* Schedule */
 
 .schedule {
-  border: 1px solid #e2e2e2;
+  border: 1px solid #a5a5a5;
+  font-size: 2em;
+}
+
+/* Speakers, Resources, and Sponsors */
+
+.speakers {
+  font-size: 2.5em;
 }
