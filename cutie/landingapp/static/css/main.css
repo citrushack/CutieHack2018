@@ -1,5 +1,5 @@
 .BasicFontSize {
-  font-size: 125%;
+  font-size: 100%;
 }
 
 
@@ -22,7 +22,31 @@
   margin-top:60px;
 }
 
+nav {
+  position: fixed;
+  top: 0; 
+  width: 100%;
+  z-index: 9;
+}
 
+nav ul li a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  opacity: 0.6;
+  transition: .15s;
+}
+
+.content{
+  overflow:hidden;
+  z-index:1;
+}
 
 .mainHero{
   margin-top:100px;
@@ -64,8 +88,10 @@ hr{
     max-width: 100%;
     height: auto;
 }
+
 img{
-  display:inline;
+  /*display:inline;*/
+  z-index:0;
 }
 
 .contact-btn-spacing {

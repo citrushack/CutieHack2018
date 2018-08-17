@@ -28,37 +28,39 @@
 </head>
 
 <body>
+
+
 	<!-- NAVBAR -->
-	<ul class="nav justify-content-end">
-		<li class= "nav-item">
-			<a class = "nav-link" href="http://citrushack.com/#home">HOME</a>
-		</li>
-		<li class= "nav-item">
-			<a class = "nav-link" href="#whatis">ABOUT</a>
-		</li>
-		<li class= "nav-item">
-			<a class = "nav-link" href="#faqHeader">FAQS</a>
-		</li>
-		<li class= "nav-item">
-	       	<a class = "nav-link" href="#sponsors">SPONSORS</a>
-	    </li>
-	    <li class= "nav-item">
-	        <a class = "nav-link" href="#organizers">CONTACT</a>
-	    </li>
-	    {% if user.is_authenticated %}
-	    <li class= "nav-item">
-	    	<a class = "nav-link" href = "{% url 'logout'%}?next={{request.path}}">LOGOUT</a>
-        </li>
-        {% else %}
-        <li class= "nav-item">
-        	<a class = "nav-link" href="{% url 'login'%}?next={{request.path}}">LOGIN</a>
-        </li>
-        {% endif %} 
-    </ul>
-
-
+	<nav>	
+		<ul id="navbar" class="nav justify-content-end">
+			<li class= "nav-item">
+				<a class = "nav-link" href="#home">HOME</a>
+			</li>
+			<li class= "nav-item">
+				<a class = "nav-link" href="#whatis">ABOUT</a>
+			</li>
+			<li class= "nav-item">
+				<a class = "nav-link" href="#faqHeader">FAQS</a>
+			</li>
+			<li class= "nav-item">
+		       	<a class = "nav-link" href="#sponsors">SPONSORS</a>
+		    </li>
+		    <li class= "nav-item">
+		        <a class = "nav-link" href="#organizers">CONTACT</a>
+		    </li>
+		    {% if user.is_authenticated %}
+		    <li class= "nav-item">
+		    	<a class = "nav-link" href = "{% url 'logout'%}?next={{request.path}}">LOGOUT</a>
+	        </li>
+	        {% else %}
+	        <li class= "nav-item">
+	        	<a class = "nav-link" href="{% url 'login'%}?next={{request.path}}">LOGIN</a>
+	        </li>
+	        {% endif %} 
+	    </ul>
+	</nav>
 	<!-- END NAVBAR -->
-
+<div id="home" class = "content">
 	<!-- LANDING -->
 	<div id="banner" class = "text-center banner position-relative overflow-hidden">
 			<h1 id="CutieHackTitle">Cutie Hack</h1>
@@ -325,6 +327,7 @@
 </p>
 </div>
 
+</div>
 
 </body>
 </html>
