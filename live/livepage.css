@@ -20,33 +20,30 @@ body {
   border-top: 1px solid #a5a5a5;
 }
 
-/* Buttons */
-
-#buttons{
-  margin-bottom: 60px;
-}
-
-#map {
-  float:left;
-  margin-left: -15px;
-}
-
-#facebook {
-  float: right;
-  margin-right: -15px;
-}
-
-/*Schedule, Speakers, Resources, and Sponsors*/
+/*Schedule, Map, Speakers, Resources, and Sponsors*/
 
 .columns {
-  height: 663px;
-  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+.all-headings {
+    text-transform: uppercase;
 }
 
 .lines {
-  margin-top: 10px;
+  margin-top: 0px;
   width: 50%;
   border-top: 1px solid #a5a5a5;
+}
+
+.img {
+  width: 100%
+}
+
+/* Map, Speakers, Resources, and Sponsors */
+
+.other-headings {
+  font-size: 2.5em;
 }
 
 /* Schedule */
@@ -54,10 +51,11 @@ body {
 .schedule {
   border: 1px solid #a5a5a5;
   font-size: 2em;
+  height: 663px; /* the height is temporarily; will remove this property once placeholder are in */
 }
 
-/* Speakers, Resources, and Sponsors */
+/* Sponsors */
 
-.speakers {
-  font-size: 2.5em;
+.sponsors {
+  margin-bottom: 30px;
 }
