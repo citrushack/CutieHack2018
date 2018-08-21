@@ -131,6 +131,7 @@ img{
   -moz-transition: color.5s ease-out;
   -o-transition: color .5s ease-out;
   transition: color .5s ease-out;
+  cursor:pointer;
 }
 
 .faqAnswer {
