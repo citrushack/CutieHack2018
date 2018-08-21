@@ -1,12 +1,15 @@
 //jQuery dropdown for FAQ section
 $(document).ready(function(){
+    //when a element from the .faqQuestion class is clicked,
     $('.faqQuestion').click(function(){
+        //the corresponding answer is revealed using slideToggle("slow")
         $("#a" + this.id.charAt(1)).slideToggle("slow");
     });
 });
 
-//jQuery smooth scrolling
+//jQuery navbar smooth scrolling
 $(document).ready(function(){
+    //
     $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
         if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
             var target = $(this.hash);
