@@ -2,7 +2,6 @@
   font-size: 100%;
 }
 
-
 #CutieHackTitle {
   font-size: 200%;
 }
@@ -23,28 +22,28 @@
 }
 
 nav {
-  position: fixed;
-  top: 0; 
-  width: 100%;
-  z-index: 9;
+  position: fixed !important;
+  top: 0 !important; 
+  width: 100% !important;
+  z-index: 9 !important;
 }
 
 nav ul li a {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  text-decoration: none;
+  float: left !important;
+  display: block !important;
+  color: black !important;
+  text-align: center !important;
+  text-decoration: none !important;
 }
 
 nav ul li a:hover {
-  color:grey;
-  transition: .5s;
-  text-decoration: none;
+  color:grey !important;
+  transition: .5s !important;
+  text-decoration: none !important;
 }
 
 .active{
-  color:#f09e12;
+  color:#f09e12 !important;
 }
 
 .content{
