@@ -12,8 +12,8 @@
 	{% load static %}
 	<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
 
+	<!-- link for main.js -->
     {% load static %}
-    <!-- link for main.js -->
     <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
     <!-- /FYI: for images/
          {% load static %}
@@ -33,29 +33,48 @@
 	<nav>	
 		<ul id="navbar" class="nav justify-content-end">
 			<li class= "nav-item">
-				<a class = "nav-link" href="#home">HOME</a>
+				<div class="nav-link">
+					<a class = "active" href="#home">HOME</a>
+				</div>
 			</li>
 			<li class= "nav-item">
-				<a class = "nav-link" href="#whatis">ABOUT</a>
+				<div class="nav-link">
+					<a href="#whatis">ABOUT</a>
+				</div>
 			</li>
 			<li class= "nav-item">
-				<a class = "nav-link" href="#faq">FAQS</a>
+				<div class="nav-link">
+					<a href="#faq">FAQS</a>
+				</div>
 			</li>
 			<li class= "nav-item">
-		       	<a class = "nav-link" href="#sponsors">SPONSORS</a>
+				<div class="nav-link">
+		       		<a href="#sponsors">SPONSORS</a>
+		       	</div>
 		    </li>
 		    <li class= "nav-item">
-		        <a class = "nav-link" href="#organizers">CONTACT</a>
+		    	<div class="nav-link">
+		        	<a href="#organizers">CONTACT</a>
+		        </div>
 		    </li>
 		    {% if user.is_authenticated %}
 		    <li class= "nav-item">
-		    	<a class = "nav-link" href = "{% url 'logout'%}?next={{request.path}}">LOGOUT</a>
+		    	<div class="nav-link">
+		    		<a href = "{% url 'logout'%}?next={{request.path}}">LOGOUT</a>
+		    	</div>
 	        </li>
 	        {% else %}
 	        <li class= "nav-item">
-	        	<a class = "nav-link" href="{% url 'login'%}?next={{request.path}}">LOGIN</a>
+	        	<div class="nav-link">
+	        		<a href="{% url 'login'%}?next={{request.path}}">LOGIN</a>
+	        	</div>
 	        </li>
-	        {% endif %} 
+	        {% endif %}
+	        <li>
+	        	<div class="icon">
+					<a href="javascript:void(0);" onclick="mobileDrop()"><i class="fa fa-bars"></i></a> 
+				</div>
+			</li>	
 	    </ul>
 	</nav>
 	<!-- END NAVBAR -->
@@ -64,7 +83,7 @@
 	<div id="banner" class = "text-center banner position-relative overflow-hidden">
 			<h1 id="CutieHackTitle">Cutie Hack</h1>
 			<p>November 10 at UC Riverside</p>
-			<p>Slogan goes here.</p>
+			<p>Let's build tomorrow.</p>
 			<div>
 				<a href="http://cutiehack.com/apply">
 					<button type="button" class="btn btn-dark">Apply</button>
@@ -152,19 +171,19 @@
 		<!-- 3 largest sponsors -->
 		<div class = "row">
 			<div class = "col horizCenter">
-				<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" height="150">
+				<img class = "bigSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" height="150">
 			</div>
 		</div>
 
 		<div class = "row">
 			<div class = "col horizCenter">
-				<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" height="150">
+				<img class="bigSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" height="150">
 			</div>
 		</div>
 
 		<div class = "row">
 			<div class = "col horizCenter">
-				<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" height="150">
+				<img class="bigSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" height="150">
 			</div>
 		</div>
 		<!-- end 3 largest sponsors -->
@@ -172,10 +191,10 @@
 		<!-- tier 2 sponsors -->
 		<div class = "row">
 			<div class = "col horizCenter">
-				<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" height="150">
+				<img class="mediumSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" height="150">
 			</div>
 			<div class = "col horizCenter">
-				<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" height="150">
+				<img class="mediumSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" height="150">
 			</div>
 		</div>
 		<!-- end tier 2 sponsors -->
@@ -184,39 +203,19 @@
 		<div class = "row">
 			<div class="col-lg-4">
 				<div class="horizCenter">
-					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
+					<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
 				</div>
 			</div>
 
 			<div class="col-lg-4">
 				<div class="horizCenter">
-					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
+					<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
 				</div>
 			</div>
 
 			<div class="col-lg-4">
 				<div class="horizCenter">
-					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-				</div>
-			</div>
-		</div>
-
-		<div class = "row">
-			<div class="col-lg-4">
-				<div class="horizCenter">
-					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-				</div>
-			</div>
-
-			<div class="col-lg-4">
-				<div class="horizCenter">
-					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-				</div>
-			</div>
-
-			<div class="col-lg-4">
-				<div class="horizCenter">
-					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
+					<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
 				</div>
 			</div>
 		</div>
@@ -224,39 +223,19 @@
 		<div class = "row">
 			<div class="col-lg-4">
 				<div class="horizCenter">
-					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
+					<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
 				</div>
 			</div>
 
 			<div class="col-lg-4">
 				<div class="horizCenter">
-					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
+					<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
 				</div>
 			</div>
 
 			<div class="col-lg-4">
 				<div class="horizCenter">
-					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-				</div>
-			</div>
-		</div>
-
-		<div class = "row">
-			<div class="col-lg-4">
-				<div class="horizCenter">
-					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-				</div>
-			</div>
-
-			<div class="col-lg-4">
-				<div class="horizCenter">
-					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-				</div>
-			</div>
-
-			<div class="col-lg-4">
-				<div class="horizCenter">
-					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
+					<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
 				</div>
 			</div>
 		</div>
@@ -264,19 +243,59 @@
 		<div class = "row">
 			<div class="col-lg-4">
 				<div class="horizCenter">
-					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
+					<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
 				</div>
 			</div>
 
 			<div class="col-lg-4">
 				<div class="horizCenter">
-					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
+					<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
 				</div>
 			</div>
 
 			<div class="col-lg-4">
 				<div class="horizCenter">
-					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
+					<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
+				</div>
+			</div>
+		</div>
+
+		<div class = "row">
+			<div class="col-lg-4">
+				<div class="horizCenter">
+					<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+				<div class="horizCenter">
+					<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+				<div class="horizCenter">
+					<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
+				</div>
+			</div>
+		</div>
+
+		<div class = "row">
+			<div class="col-lg-4">
+				<div class="horizCenter">
+					<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+				<div class="horizCenter">
+					<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+				<div class="horizCenter">
+					<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
 				</div>
 			</div>
 		</div>

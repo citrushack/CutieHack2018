@@ -1,11 +1,11 @@
-//import jquery
-
+//jQuery dropdown for FAQ section
 $(document).ready(function(){
     $('.faqQuestion').click(function(){
         $("#a" + this.id.charAt(1)).slideToggle("slow");
     });
 });
 
+//jQuery smooth scrolling
 $(document).ready(function(){
     $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
         if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
@@ -34,3 +34,21 @@ $(document).ready(function(){
         }
     });
 });
+
+//highlight active nav link
+$(document).ready(function() {
+    $('nav ul li a').click(function() {
+        $('nav ul li a').removeClass();
+        $(this).addClass('active');
+    });
+});
+
+//responsive dropdown menu for mobile
+function mobileDrop() {
+    var x = document.getElementById("navbar");
+    if (x.className === "nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav";
+    }
+}
