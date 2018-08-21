@@ -34,18 +34,13 @@ nav ul li a {
   display: block;
   color: black;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
 }
 
 nav ul li a:hover {
   color:grey;
-  transition: .15s;
+  transition: .5s;
   text-decoration: none;
-}
-
-nav .icon{
-  display: none;
 }
 
 .active{

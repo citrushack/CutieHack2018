@@ -29,54 +29,68 @@
 <body>
 
 
-	<!-- NAVBAR -->
-	<nav>	
-		<ul id="navbar" class="nav justify-content-end">
+	<!-- NAVBAR -->	
+	<nav>
+		<ul id="topnav" class="nav justify-content-end">
 			<li class= "nav-item">
 				<div class="nav-link">
-					<a class = "active" href="#home">HOME</a>
+					<a id="homelink"class = "active" href="#home">HOME</a>
 				</div>
 			</li>
 			<li class= "nav-item">
 				<div class="nav-link">
-					<a href="#whatis">ABOUT</a>
+					<a id="aboutlink"href="#whatis">ABOUT</a>
 				</div>
 			</li>
 			<li class= "nav-item">
 				<div class="nav-link">
-					<a href="#faq">FAQS</a>
+					<a id="faqlink"href="#faq">FAQS</a>
 				</div>
 			</li>
 			<li class= "nav-item">
 				<div class="nav-link">
-		       		<a href="#sponsors">SPONSORS</a>
+		       		<a id="sponsorslink"href="#sponsors">SPONSORS</a>
 		       	</div>
 		    </li>
 		    <li class= "nav-item">
 		    	<div class="nav-link">
-		        	<a href="#organizers">CONTACT</a>
+		        	<a id="contactlink"href="#organizers">CONTACT</a>
 		        </div>
 		    </li>
 		    {% if user.is_authenticated %}
 		    <li class= "nav-item">
 		    	<div class="nav-link">
-		    		<a href = "{% url 'logout'%}?next={{request.path}}">LOGOUT</a>
+		    		<a id="logoutlink"href = "{% url 'logout'%}?next={{request.path}}">LOGOUT</a>
 		    	</div>
 	        </li>
 	        {% else %}
 	        <li class= "nav-item">
 	        	<div class="nav-link">
-	        		<a href="{% url 'login'%}?next={{request.path}}">LOGIN</a>
+	        		<a id="loginlink"href="{% url 'login'%}?next={{request.path}}">LOGIN</a>
 	        	</div>
 	        </li>
-	        {% endif %}
-	        <li>
-	        	<div class="icon">
-					<a href="javascript:void(0);" onclick="mobileDrop()"><i class="fa fa-bars"></i></a> 
-				</div>
-			</li>	
+	        {% endif %}	
 	    </ul>
-	</nav>
+	</nav>    
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
 	<!-- END NAVBAR -->
 <div id="home" class = "content">
 	<!-- LANDING -->
@@ -165,8 +179,8 @@
 <!-- END of FAQ Section -->
 
 <!--Sponsors and Organizers-->
-	<div class = "container">
-		<h1 class = "text-center" id ="sponsors">2018 Sponsors</h1>
+	<div id = "sponsors" class = "container">
+		<h1 class = "text-center">2018 Sponsors</h1>
 
 		<!-- 3 largest sponsors -->
 		<div class = "row">
