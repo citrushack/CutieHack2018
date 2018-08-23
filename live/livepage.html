@@ -9,6 +9,34 @@
   </head>
   <body>
 
+<!-- Nav Bar  -->
+
+  <nav class="navbar navbar-default">
+
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#map">Map</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+          </ul>
+
+      </div>
+
+  </nav>
+
 <div class="container">
 
 <!--Title-->
@@ -51,15 +79,14 @@
       </div>
 
 <!--Schedule -->
-
-        <div class="row">
+        <div class="row" id="schedule">
             <div class="col-sm-6 columns all-headings schedule">Saturday <hr class="lines"> </div>
             <div class="col-sm-6 columns all-headings schedule">Sunday <hr class="lines"></div>
         </div>
 
 <!--Map-->
 
-        <div class="row">
+        <div class="row" id="map">
             <div class="col-lg-12 columns all-headings other-headings">Map <hr class="lines">
               <div class="col-sm-12 sponsors"><img src="https://via.placeholder.com/1023x365"></div>
             </div>
@@ -67,7 +94,7 @@
 
 <!--Speakers-->
 
-        <div class="row">
+        <div class="row" id="speakers">
             <div class="col-lg-12 columns all-headings other-headings">Speakers <hr class="lines">
                 <div class="col-sm-6 sponsors"><img src="https://via.placeholder.com/290x464"></div>
                 <div class="col-sm-6 sponsors"><img src="https://via.placeholder.com/290x464"></div>
@@ -76,7 +103,7 @@
 
 <!--Resources  -->
 
-        <div class="row">
+        <div class="row" id="resources">
             <div class="col-lg-12 columns all-headings other-headings">Resources <hr class="lines"></div>
               <div class="col-sm-6 sponsors"><img src="https://via.placeholder.com/290x464"></div>
               <div class="col-sm-6 sponsors"><img src="https://via.placeholder.com/290x464"></div>
@@ -86,7 +113,7 @@
 
 <!--2018 Sponsors/Organizers-->
 
-        <div class="row">
+        <div class="row" id="sponsors">
             <div class="col-lg-12 columns all-headings other-headings">2018 Sponsors <hr class="lines">
 
               <!-- Wide icons (1 for each row) -->
@@ -138,6 +165,10 @@
         </div>
 
 </div> <!--ending div of container -->
+
+<!-- JS Scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   </body>
 </html>
