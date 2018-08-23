@@ -2,6 +2,13 @@ body {
   text-align: center;
 }
 
+/* Nav Bar */
+
+.navbar-default {
+  background: transparent;
+  border-color: transparent;
+}
+
 /*Title*/
 
 #cutie {
@@ -52,6 +59,13 @@ body {
   border: 1px solid #a5a5a5;
   font-size: 2em;
   height: 663px; /* the height is temporarily; will remove this property once placeholder are in */
+}
+
+/* Resources */
+
+.resources {
+  width: 290px;
+  height: 464px;
 }
 
 /* Sponsors */
