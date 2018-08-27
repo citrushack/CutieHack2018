@@ -3,22 +3,62 @@
 }
 
 #CutieHackTitle {
-  font-size: 200%;
+  font-size: 700%;
 }
 
-.row{
-  margin-top:20px;
-}
-.about{
-  margin-top:50px;
+#dateOfEvent {
+  font-size: 175%;
 }
 
-.horizCenter{
-  text-align: center;
+#MainHeroText{
+  text-align:center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 75%;
+  height: 400px;
+  /*background: #ccc;*/
+}
+
+#headerTextBreak {
+  width: 33%;
+  display: block;
+  margin: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  border-width: 2px;
+
+}
+
+#banner {
+  background-color:blue !important;
+  height: 100vh;
+  padding: 20%;
+}
+
+#whatis {
+  background-color: yellow;
   width:100%;
+  height:50vh;
+  padding:3%;
 }
-.Vertical{
-  margin-top:60px;
+
+#about {
+  background-color: green;
+  width:100%;
+  height:50vh;
+  padding: 3%;
+}
+
+#aboutText {
+  padding-left:4%;
+}
+
+.row {
+  width: 100%;
 }
 
 nav {
@@ -47,23 +87,19 @@ nav ul li a:hover {
 }
 
 .content{
-  overflow:hidden;
+  /*overflow:hidden;*/
   z-index:1;
 }
 
 .container{
-  width: 100%;
+  /*width: 100%;*/
 }
+
 hr{
   display: block;
   margin: 5rem 0; /* <hr> between each */
   border-top: 1px solid;
   border-top-color: rgb(0, 0, 1);
-}
-
-#banner{
-  font-size: 250%;
-  margin: 15.75%;
 }
 
 
@@ -96,7 +132,6 @@ img{
 }
 
 .lightDiv {
-  margin-top:20px;
   background: #EEEEEE;
   padding: 3%;
 }
@@ -110,13 +145,8 @@ img{
 .darkText {
   color: #28282A;
 }
-#iconSize {
-  font-size: 170%;
-  margin: 2.5%;
-  margin-top: 1%;
-}
 
-#faqHeader {
+.sectionHeader {
   padding-bottom: 3%;
   font-size: 400%;
 }
@@ -136,6 +166,11 @@ img{
   display: none;
 }
 
+#sponsors {
+  background : orange;
+  padding-bottom: 5%;
+}
+
 .bigSponsor{
   padding: 2px;
 }
@@ -149,9 +184,14 @@ img{
 }
 
 #footer {
-  margin-top:5%;
   padding-top: 1.5%;
   padding-bottom: .5%;
+}
+
+#iconSize {
+  font-size: 170%;
+  margin: 2.5%;
+  margin-top: 1%;
 }
 
 /**Transition Colors for Social Media links**/
@@ -161,6 +201,7 @@ img{
   -moz-transition: color 2s ease-out;
   -o-transition: color 2s ease-out;
   transition: color 2s ease-out;
+  text-decoration: none;
 }
 
 .fa-instagram:hover{
@@ -169,6 +210,7 @@ img{
   -moz-transition: color 1s ease-out;
   -o-transition: color 1s ease-out;
   transition: color 1s ease-out;
+  text-decoration: none;
 }
   
 .fa-twitter-square:hover{
@@ -177,6 +219,7 @@ img{
   -moz-transition: color 1s ease-out;
   -o-transition: color 1s ease-out;
   transition: color 1s ease-out;
+  text-decoration: none;
 }
 
 .fa-envelope:hover{
@@ -185,6 +228,7 @@ img{
   -moz-transition: color 1s ease-out;
   -o-transition: color 1s ease-out;
   transition: color 1s ease-out;
+  text-decoration: none;
 }
 /**With Heart**/
 .red{

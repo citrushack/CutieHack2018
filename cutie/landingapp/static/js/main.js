@@ -45,29 +45,17 @@ $(document).ready(function(){
     });
 });
 
-//changes active nav link on click
-$(document).ready(function() {
-    //once you click a nav link
-    $('nav ul li a').click(function() {
-        //remove 'active' class from all nav links
-        $('nav ul li a').removeClass();
-        //add 'active' class to the nav link that was clicked (this)
-        $(this).addClass('active');
-    });
-});
-
 //changes active nav link on scroll
 $(document).ready(function() {
     $(window).scroll(function(){
         var scrollTop       = $(window).scrollTop() + 10, // top of browser + 10px
-            whatisOffset    = $('#whatis').offset().top,
+            whatisOffset    = $('#aboutUs').offset().top,
             whatisDist      = (whatisOffset - scrollTop), // stores current distance between top of browser and "about" section
             faqOffset       = $('#faq').offset().top,
             faqDist         = (faqOffset - scrollTop), // stores current distance between top of browser and "faq" section
             sponsorsOffset  = $('#sponsors').offset().top,
-            sponsorsDist    = (sponsorsOffset - scrollTop), // stores current distance between top of browser and "sponsors" section
-            organizersOffset   = $('#organizers').offset().top;
-            organizersDist     = (organizersOffset - scrollTop); // stores current distance between top of browser and "contact" section
+            sponsorsDist    = (sponsorsOffset - scrollTop); // stores current distance between top of browser and "sponsors" section
+            
 
         if (whatisDist > 0) { //checks if you're in home section
             $('nav ul li a').removeClass();   
@@ -76,13 +64,12 @@ $(document).ready(function() {
             $('nav ul li a').removeClass();
             $('#aboutlink').addClass('active');
         } else if (faqDist <= 0 && sponsorsDist > 0) { //checks if you're in faq section
-            console.log("WE ARE IN FAQ BABYYYY");
             $('nav ul li a').removeClass();
             $('#faqlink').addClass('active');
-        } else if (sponsorsDist <= 0 && organizersDist > 0) { //checks if you're in sponsors section
+        } else if (sponsorsDist <= 0 && !((window.innerHeight + window.scrollY) >= document.body.offsetHeight)) { //checks if you're in sponsors section, but haven't hit the bottom of page
             $('nav ul li a').removeClass();
             $('#sponsorslink').addClass('active');
-        } else { // checks if you're in anywhere but the ones checked before, ie contact section
+        } else if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) { // you're at the bottom of the page
             $('nav ul li a').removeClass();
             $('#contactlink').addClass('active');
         }     
