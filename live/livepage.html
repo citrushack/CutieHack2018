@@ -6,11 +6,17 @@
     <!-- include boostrap -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="livepage.css" />
+<<<<<<< HEAD
     <!-- custom style for scrolling nav -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
+=======
+    <!-- JS Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+>>>>>>> c84708a54a5791fb1781da9f5c1d63228fc5a6ce
   </head>
   <body>
-
+    
 <!-- Nav Bar  -->
 
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -47,26 +53,6 @@
           <p id="cntdwn"></p>
           <hr id="title-line">
        </div>
-
-         <script>
-           var countDownDate = new Date("Nov 10, 2018  09:00:00").getTime();
-           var x = setInterval(function() {
-             var now = new Date().getTime();
-             var distance = countDownDate - now;
-             var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-             var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-             document.getElementById("cntdwn").innerHTML = days + " Days, " + hours + " Hours, " + minutes + " Minutes, and " + seconds + " Seconds ";
-
-             if(distance < 0)
-             {
-               clearInterval(x);
-               document.getElementById("cntdwn").innerHTML = "Event now in session!";
-             }
-           }, 1000);
-         </script>
 
 <!--Buttons-->
       <div id="schedule">
@@ -208,6 +194,7 @@
 
 </div> <!--ending div of container -->
 
+<<<<<<< HEAD
 <!-- JS Scripts -->
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -215,6 +202,9 @@
 <script src="vendor/bootstrap/js/boostrap.bundle.min.js"></script>
 <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 <script src="js/scrolling-nav.js"></script>
+=======
+<script type="text/javascript" src="livepage.js"></script>
+>>>>>>> c84708a54a5791fb1781da9f5c1d63228fc5a6ce
 
   </body>
 </html>
