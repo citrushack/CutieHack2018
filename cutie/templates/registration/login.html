@@ -1,47 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cutie Hack Login</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body style="background-color: #d9d9d9">
 
 
-<div style="text-align: center;">
 
-
-<img src="https://www.neatorama.com/images/2007-01/orange-peel-man.jpg">
-
-
-
-
-{% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
-{% endif %}
-
-{% if next %}
-    {% if user.is_authenticated %}
-    <p>Your account doesn't have access to this page. To proceed,
-    please login with an account that has access.</p>
-    {% else %}
-    <p>Please login to see this page.</p>
-    {% endif %}
-{% endif %}
-
-
-	<form method="post" action="{% url 'login' %}" style="display: inline-block;">
+<!-- commented this out, i think it's just for the style  -->
+<!-- 	<form method="post" action="{% url 'login' %}" style="display: inline-block;"> -->
 	{% csrf_token %}
 
-	<div>
-	  <td>{{ form.username.label_tag }}</td>
-	  <td>{{ form.username }}</td>
+	<div class="container">
+	<div class="row">
+		<div class="col">
+		  <img style="width:72%; display: block; margin: 5% auto 5% auto;" src="http://radla2018.org/wp-content/uploads/2017/02/s3-1-500x1000.jpg">
+		</div>
+		<div class="col border rounded" style="text-align: center; margin: 5%; padding: 10% 3% 10% 3%; width: 30%; background-color: #f2f2f2;">
+		  {% if form.errors %}
+		    <p>Your username and password didn't match. Please try again.</p>
+		    {% endif %}
+		    {% if next %}
+		    {% if user.is_authenticated %}
+		    <p>Your account doesn't have access to this page. To proceed,
+		    please login with an account that has access.</p>
+		    {% else %}
+		    <p>Please login to see this page.</p>
+		    {% endif %}
+		  {% endif %}
+		  <p> {{ form.username.label_tag }} {{ form.username }} </p>
+		  <p> {{ form.password.label_tag }} {{ form.password }}</p>
+		  <input type="submit" value="login" />
+		  <input type="hidden" name="next" value="{{ next }}" />
+		  {# Assumes you setup the password_reset view in your URLconf #}
+		  <p style="padding: 5%;"><a href="{% url 'password_reset' %}">Lost password?</a></p>
+		</div>
 	</div>
-	<div>
-	  <td>{{ form.password.label_tag }}</td>
-	  <td>{{ form.password }}</td>
 	</div>
 
-	<div>
-	  <input type="submit" value="login" />
-	  <input type="hidden" name="next" value="{{ next }}" />
-	</div>
 	</form>
 
-	{# Assumes you setup the password_reset view in your URLconf #}
-	<p><a href="{% url 'password_reset' %}">Lost password?</a></p>
 
 </div>
+
+
+</body>
+</html>
+
+
+
+
 
