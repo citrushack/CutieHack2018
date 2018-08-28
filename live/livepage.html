@@ -6,6 +6,8 @@
     <!-- include boostrap -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="livepage.css" />
+    <!-- custom style for scrolling nav -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
   </head>
   <body>
 
@@ -13,7 +15,6 @@
 
   <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
-
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -21,17 +22,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-
       </div>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#schedule">Schedule</a></li>
-            <li><a href="#map">Map</a></li>
-            <li><a href="#speakers">Speakers</a></li>
-            <li><a href="#resources">Resources</a></li>
-            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a class="nav-link js-scroll-trigger m-4" href="#schedule">Schedule</a></li>
+            <li><a class="nav-link js-scroll-trigger" href="#map">Map</a></li>
+            <li><a class="nav-link js-scroll-trigger" href="#speakers">Speakers</a></li>
+            <li><a class="nav-link js-scroll-trigger" href="#resources">Resources</a></li>
+            <li><a class="nav-link js-scroll-trigger" href="#sponsors">Sponsors</a></li>
           </ul>
 
       </div>
@@ -121,6 +120,7 @@
                       <p>Prepare a powerpoint</p>
                       <p>Illustrate branding like logos and slogans</p>
                       <p>Research APIs, Frameworks, and other tools for your developer team mates</p>
+                      <p>...And many more! Hackathons are never limited to people with coding experience.
                     </ul>
                     <!-- <img src="https://via.placeholder.com/290x464"> -->
                 </div>
@@ -211,6 +211,10 @@
 <!-- JS Scripts -->
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/boostrap.bundle.min.js"></script>
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="js/scrolling-nav.js"></script>
 
   </body>
 </html>
