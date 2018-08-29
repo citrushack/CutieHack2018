@@ -76,11 +76,11 @@
 	<div id="home" class = "content">
 		
 		<!-- MainHero -->
-		<div id="banner">
+		<div id="banner" style="background-image: url({% static 'images/city.jpg' %})">
 			<div id = "MainHeroText">
 				<h1 id="CutieHackTitle">Cutie Hack</h1>
 				<p id="dateOfEvent">November 10 at UC Riverside</p>
-				<p>Let's build tomorrow.</p>
+				<p id="slogan">Let's build tomorrow.</p>
 				<hr id="headerTextBreak">
 				<a href="http://cutiehack.com/apply"><button type="button" class="btn btn-dark">Apply</button></a>
 			</div>	
@@ -96,12 +96,13 @@
 				<div class='container'>
 					<div class="row">
 						<div class="col-12 col-sm-12 col-lg-5 col-xl-5 text-center">
-							<img class="img-fluid"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="250" height="250">
+							{% load static %}
+         					<img src="{% static 'images/cody.png' %}" alt="Cody" style="width:250px;height:250px;"/>
 						</div>
 
 						<div class="col-12 col-sm-12 col-lg-7 col-xl-7">
-							<h1 class="sectionHeader">What is Cutie Hack?</h1>
-							<p class="infoText">Cutie Hack is a beginner-friendly, 12-hour hackathon. Hosted at UC Riverside, Cutie Hack is designed to help new hackers get used to the time crunch of a hackathon environment. Cutie Hack invites collegiate students to UC Riverside to collaborate and innovate. Throughout the 12 hours, participants work in teams on a project, attend workshops to learn about new technologies, and network with industry partners.</p>
+							<h1 class="sectionHeader" style="color: #EEEEEE;">What is Cutie Hack?</h1>
+							<p class="infoText" style="color: #EEEEEE;">Cutie Hack is a beginner-friendly, 12-hour hackathon. Hosted at UC Riverside, Cutie Hack is designed to help new hackers get used to the time crunch of a hackathon environment. Cutie Hack invites collegiate students to UC Riverside to collaborate and innovate. Throughout the 12 hours, participants work in teams on a project, attend workshops to learn about new technologies, and network with industry partners.</p>
 						</div>
 					</div>
 				</div>	
@@ -129,37 +130,37 @@
 		<!-- END What is Cutie Hack & About Us -->
 
 		<!-- FAQ Section -->
-		<div id="faq" class="lightDiv">
+		<div id="faq" class="darkDiv">
 
-			<h1 class="sectionHeader text-center darkText">FAQ</h1>
+			<h1 class="sectionHeader text-center lightText">FAQ</h1>
 
 			<div> 
-				<h2 id="q1" class="faqQuestion darkText">&#8226; Who can attend?</h2>
-		    	<div id="a1" class="faqAnswer darkText BasicFontSize">We welcome all undergraduate university students, from any major! If you have graduated within the past year, you are also welcome to attend.</div>
+				<h2 id="q1" class="faqQuestion faqA lightText">&#8226; Who can attend?</h2>
+		    	<div id="a1" class="faqAnswer lightText BasicFontSize">We welcome all undergraduate university students, from any major! If you have graduated within the past year, you are also welcome to attend.</div>
 		  	</div>  
 		  	<div> 
-		  		<h2 id="q2"class="faqQuestion darkText">&#8226; Is Cutie Hack free?</h2>
-		    	<div id="a2"class="faqAnswer darkText BasicFontSize">Absolutely!</div>
+		  		<h2 id="q2"class="faqQuestion faqB lightText">&#8226; Is Cutie Hack free?</h2>
+		    	<div id="a2"class="faqAnswer lightText BasicFontSize">Absolutely!</div>
 		  	</div>
 		  	<div> 
-		  		<h2 id="q3"class="faqQuestion darkText">&#8226; Is there free food?</h2>
-		    	<div id="a3"class="faqAnswer darkText BasicFontSize">Yes! Meals, refreshments, and snacks will be provided thoughout the event.</div>
+		  		<h2 id="q3"class="faqQuestion faqA lightText">&#8226; Is there free food?</h2>
+		    	<div id="a3"class="faqAnswer lightText BasicFontSize">Yes! Meals, refreshments, and snacks will be provided thoughout the event.</div>
 		  	</div>  
 		  	<div> 
-		  		<h2 id="q4"class="faqQuestion darkText">&#8226; What should I bring?</h2>
-		    	<div id="a4"class="faqAnswer darkText BasicFontSize">Student IDs are required. Consider bringing a hacking machine, headphones, and a pillow!</div>
+		  		<h2 id="q4"class="faqQuestion faqB lightText">&#8226; What should I bring?</h2>
+		    	<div id="a4"class="faqAnswer lightText BasicFontSize">Student IDs are required. Consider bringing a hacking machine, headphones, and a pillow!</div>
 		 	</div>
 		  	<div> 
-		  		<h2 id="q5"class="faqQuestion darkText">&#8226; Do I need a team?</h2>
-		    	<div id="a5"class="faqAnswer darkText BasicFontSize"> Teams are not required, but are recommended. Membership is capped at 4 members. You are welcome to form teams before the hacking begins!</div>
+		  		<h2 id="q5"class="faqQuestion faqA lightText">&#8226; Do I need a team?</h2>
+		    	<div id="a5"class="faqAnswer lightText BasicFontSize"> Teams are not required, but are recommended. Membership is capped at 4 members. You are welcome to form teams before the hacking begins!</div>
 		  	</div>
 		  	<div> 
-		  		<h2 id="q6"class="faqQuestion darkText">&#8226; When is the deadline to sign up?</h2>
-		    	<div id="a6"class="faqAnswer darkText BasicFontSize">The deadline to signup is ..... </div>
+		  		<h2 id="q6"class="faqQuestion faqB lightText">&#8226; When is the deadline to sign up?</h2>
+		    	<div id="a6"class="faqAnswer lightText BasicFontSize">The deadline to signup is <span style="color:#f09e12">Xtember, XXth</span> </div>
 		  	</div>
 		  	<div> 
-		  		<h2 id="q7"class="faqQuestion darkText">&#8226; Any other questions?</h2>
-		    	<div id="a7"class="faqAnswer darkText BasicFontSize">Feel free to contact us through <a href="mailto:cutiehack@gmail.com">email</a>!</div>
+		  		<h2 id="q7"class="faqQuestion faqA lightText">&#8226; Any other questions?</h2>
+		    	<div id="a7"class="faqAnswer lightText BasicFontSize">Feel free to contact us through <a href="mailto:cutiehack@gmail.com">email</a>!</div>
 		  	</div>
 
 		</div>
