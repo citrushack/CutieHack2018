@@ -9,6 +9,11 @@ body {
   border-color: transparent;
 }
 */
+
+.active{
+  color:#f09e12 !important;
+}
+
 /*Title*/
 
 #cutie {
@@ -136,5 +141,3 @@ body {
           color: #333;
     }
 }
-
-
