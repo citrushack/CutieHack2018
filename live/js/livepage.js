@@ -1,42 +1,4 @@
 //file for js code
-//jQuery navbar smooth scrolling
-$(document).ready(function(){
-    //when a tag with a valid anchortag is clicked
-    $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
-        //if the location is the same as the one that is clicked
-        if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
-            //store the href as 'target'
-            var target = $(this.hash);
-
-            //ion't really know what the slice does but this basically checks if the target isn't empty
-            target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-
-            if (target.length) {
-                //prevent default jump scroll
-                event.preventDefault();
-
-                //jQuery smooth scroll magic
-                $("html, body").animate(
-                    {
-                        scrollTop: target.offset().top
-                    },
-                    1000,
-                    function() {
-                        var $target = $(target);
-                        $target.focus();
-                        if ($target.is(":focus")) {
-                            return false;
-                        } else {
-                            $target.attr("tabindex", "-1");
-                            $target.focus();
-                        }
-                    }
-                );
-            }
-        }
-    });
-});
-
 // countdown
 
 var countDownDate = new Date("Nov 10, 2018  09:00:00").getTime();
@@ -56,3 +18,40 @@ var x = setInterval(function() {
     document.getElementById("cntdwn").innerHTML = "Event now in session!";
   }
 }, 1000);
+
+//changes active nav link on scroll
+$(document).ready(function() { //(document).ready: let file know that it is jQuery
+    $(window).scroll(function(){
+        var scrollTop       = $(window).scrollTop() + 10, // top of browser + 10px
+            scheduleOffset    = $('#schedule').offset().top,
+            scheduleDist      = (scheduleOffset - scrollTop), // stores current distance between top of browser and "about" section
+            mapOffset       = $('#map').offset().top,
+            mapDist         = (mapOffset - scrollTop), // stores current distance between top of browser and "faq" section
+            speakersOffset  = $('#speakers').offset().top,
+            speakersDist    = (speakersOffset - scrollTop); // stores current distance between top of browser and "sponsors" section
+            resourcesOffset  = $('#resources').offset().top,
+            resourcesDist    = (resourcesOffset - scrollTop); // stores current distance between top of browser and "sponsors" section
+            sponsorsOffset  = $('#sponsors').offset().top,
+            sponsorsDist    = (sponsorsOffset - scrollTop); // stores current distance between top of browser and "sponsors" section
+
+        if (scheduleDist > 0) { //checks if you're in home section
+            $('nav ul li a').removeClass();
+            $('#homelink').addClass('active');
+        } else if (scheduleDist <= 0 && mapDist > 0) { //checks if you're in schedule section
+            $('nav ul li a').removeClass();
+            $('#schedulelink').addClass('active');
+        } else if (mapDist <= 0 && speakersDist > 0) { //checks if you're in map section
+            $('nav ul li a').removeClass();
+            $('#maplink').addClass('active');
+        } else if (speakersDist <= 0 && resourcesDist > 0) { //checks if you're in speakers section
+            $('nav ul li a').removeClass();
+            $('#speakerslink').addClass('active');
+        } else if (resourcesDist <= 0 && sponsorsDist > 0) { //checks if you're in resources section
+              $('nav ul li a').removeClass();
+              $('#resourceslink').addClass('active');
+        } else if (sponsorsDist <= 0 && !((window.innerHeight + window.scrollY) >= document.body.offsetHeight)) { //checks if you're in sponsors section, but haven't hit the bottom of page
+            $('nav ul li a').removeClass();
+            $('#sponsorslink').addClass('active');
+        }
+    });
+});
