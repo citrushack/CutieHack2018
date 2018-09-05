@@ -167,8 +167,8 @@ body {
 <body>
 
 <div class="sidenav">
-  <a href="placeholder/{{User.app}}">Application Status: pending</a>
-
+  <a href="placeholder">Application Status: pending</a>
+  <a href="{% url 'index' %}">Home</a>
 
 <!--
 
@@ -183,8 +183,11 @@ body {
 
 <div class="main">
 
-	<div class="studentname"><h1> Student Name </h1></div>
-	<div class="box"> Hello </div>
+	<div class="studentname"><h1> {{ user.profile.first_name }} {{ user.profile.last_name }}</h1></div>
+	<div class="box"> 
+    {{ user.profile.school }}
+    {{ user.profile.major }}
+  </div>
 
 
 
