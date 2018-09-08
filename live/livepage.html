@@ -2,126 +2,201 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Cutie Hack 2018</title>
-    <link rel="stylesheet" type="text/css" href="livepage.css" />
+    <div id="home"><title>Cutie Hack 2018</title></div>
     <!-- include boostrap -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="livepage.css" />
+    <!-- custom style for scrolling nav -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <!-- JS Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/livepage.js"></script>
   </head>
   <body>
 
+<!-- Nav Bar  -->
+
+  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+  <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="nav-link js-scroll-trigger active" id="homelink" href="#home">Home</a></li>
+            <li><a class="nav-link js-scroll-trigger" id="schedulelink" href="#schedule">Schedule</a></li>
+            <li><a class="nav-link js-scroll-trigger" id="maplink" href="#map">Map</a></li>
+            <li><a class="nav-link js-scroll-trigger" id="speakerslink" href="#speakers">Speakers</a></li>
+            <li><a class="nav-link js-scroll-trigger" id="resourceslink" href="#resources">Resources</a></li>
+            <li><a class="nav-link js-scroll-trigger" id="sponsorslink" href="#sponsors">Sponsors</a></li>
+          </ul>
+
+      </div>
+
+  </div>
+  </nav>
+
+<div class="container">
+
 <!--Title-->
-<div>
-  <h1 id="cutie">Cutie Hack 2018</h1>
-  <p>Coming November 10, 2018!</p>
-</div>
 
-<!-- <div class="container">
-  <div class="jumbotron">
-    <center><h1>Cutie Hack 2018</h1></center>
-    <center><p>Coming November 10, 2018!</p></center>
-  </div>
-</div> -->
+      <div class="jumbotron">
+        <h1 id="cutie">Cutie Hack 2018</h1>
+          <p id="cntdwn"></p>
+          <hr id="title-line">
+       </div>
 
-  <!-- <h2>36 Hours 0 Min 0 Sec</h2>  -->
-  <!-- need to put countdown using JS -->
-  <!-- might be better to use days as well -->
-  <p id="cntdwn"></p>
-  <script>
-    var countDownDate = new Date("Nov 10, 2018  09:00:00").getTime();
-    var x = setInterval(function() {
-      var now = new Date().getTime();
-      var distance = countDownDate - now;
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+<!--Buttons-->
+      <div id="schedule">
+          <div id="buttons">
+            <span id="allbuttons">
+               <a href="https://citrushack2018.devpost.com/" class="btn btn-success btn-default">Devpost</a>
+                <a href="https://www.facebook.com/CitrusHack/" class="btn btn-success btn-default">Facebook</a>
+                <a href="https://twitter.com/citrushack?lang=en" class="btn btn-success btn-default">Twitter</a>
+                <a href="https://citrus-hack-2018.slack.com/join/shared_invite/enQtMzQ1NjExOTAxMTY5LTBiMjBhMTdiMjMyZDEwOWNmZDgwZjc1ZDI2NmU1ZTBiYzgzOGI0NmIxOTQwMjZhZGE5MmMxNTYwMjdhZjRjNzg" class="btn btn-success btn-default">Slack</a>
+            </span>
+          </div>
+      </div>
 
-      document.getElementById("cntdwn").innerHTML = days + " Days, " + hours + " Hours, " + minutes + " Minutes, and " + seconds + " Seconds ";
-
-      if(distance < 0)
-      {
-        clearInterval(x);
-        document.getElementById("cntdwn").innerHTML = "Event now in session!";
-      }     
-    }, 1000);
-  </script>
-  <hr>
-<!-- </div> -->
-
-<!--Links -->
-<!-- fixed alignment -->
-<p style="text-align:left">
-  <div>
-    <!-- need to make links into buttons -->
-    <form method="get" action="http://live.citrushack.com/assets/maps.pdf">
-        <!-- <button type="submit">Map</button> -->
-        <button class="btn btn-success btn-xs">Map</button>
-    </form>
-    <form method="get" action="https://citrushack2018.devpost.com/">
-        <!-- <button type="submit">Devpost</button> -->
-        <button class="btn btn-success btn-xs">Devpost</button>
-    </form>
-  </div>
-  <span style="float:right;">
-    <div>
-      <form method="get" action="https://www.facebook.com/CitrusHack/">
-          <!-- <button type="submit">Facebook</button> -->
-          <button class="btn btn-success btn-xs">Facebook</button>
-      </form>
-      <form method="get" action="https://twitter.com/citrushack?lang=en">
-          <!-- <button type="submit">Twitter</button> -->
-          <button class="btn btn-success btn-xs">Twitter</button>
-      </form>
-      <form method="get" action="https://citrus-hack-2018.slack.com/join/shared_invite/enQtMzQ1NjExOTAxMTY5LTBiMjBhMTdiMjMyZDEwOWNmZDgwZjc1ZDI2NmU1ZTBiYzgzOGI0NmIxOTQwMjZhZGE5MmMxNTYwMjdhZjRjNzg">
-          <!-- <button type="submit">Slack</button> -->
-          <button class="btn btn-success btn-xs">Slack</button>
-      </form>
-    </div>
-  </span>
-</p>
-
-
-<br>
 <!--Schedule -->
+        <div class="row">
+            <div class="col-sm-6 columns all-headings schedule">Saturday <hr class="lines"> </div>
+            <div class="col-sm-6 columns all-headings schedule">Sunday <hr class="lines"></div>
+        </div>
 
-<div>
-<table>
-  <tr>
-    <td class="day">Saturday</td>
-    <td class="day" id="sunday">Sunday</td>
-  </tr>
-</table>
+<!--Map-->
 
-  <!-- <h3>Saturday</h3>
-  <hr>
-  Insert event names and times here
+        <div class="row" id="map">
+            <div class="col-lg-12 columns all-headings other-headings">Map <hr class="lines">
+              <div class="col-sm-12 sponsors"><img src="https://via.placeholder.com/1023x365"></div>
+            </div>
+        </div>
 
-  <h3>Sunday</h3>
-  <hr>
-  Insert event names and times here-->
+<!--Speakers-->
 
-</div>
+        <div class="row" id="speakers">
+            <div class="col-lg-12 columns all-headings other-headings">Speakers <hr class="lines">
+                <div class="col-sm-6 sponsors"><img src="https://via.placeholder.com/290x464"></div>
+                <div class="col-sm-6 sponsors"><img src="https://via.placeholder.com/290x464"></div>
+            </div>
+        </div>
 
-<!-- Speakers -->
-<div>
-  <h2>Speakers</h2>
-  <hr>
-  <!--Insert speaker name and info here-->
-</div>
+<!--Resources  -->
 
-<!-- Resources -->
-<h2>Resources</h2>
-<hr>
-<!--Insert hacker resources stuff here-->
+        <div class="row" id="resources">
+            <div class="col-lg-12 columns all-headings other-headings">Resources <hr class="lines"></div>
 
-<!--Sponsors-->
-<h1>2019 Sponsors</h1>
-<hr>
-<!--Insert sponsor logos here-->
+        <!-- Resources Subsections  -->
+        <!-- Added thumbnails to see where the content is in the grid; might delete later -->
 
-<h1>Organizers</h1>
-<hr>
-<!--Insert sponsor logos here-->
+              <div class="col-sm-6 sponsors">
+
+                <h3>Not a coder? <br>Here's other ways you can contribute to your team:</h3>
+
+                <div class="thumbnail">
+                    <ul>
+                      <p>Prepare a powerpoint</p>
+                      <p>Illustrate branding like logos and slogans</p>
+                      <p>Research APIs, Frameworks, and other tools for your developer team mates</p>
+                      <p>...And many more! Hackathons are never limited to people with coding experience.
+                    </ul>
+                    <!-- <img src="https://via.placeholder.com/290x464"> -->
+                </div>
+
+              </div>
+
+              <div class="col-sm-6 sponsors">
+
+                <div class="thumbnail">
+                  <img src="https://via.placeholder.com/290x464">
+                </div>
+
+              </div>
+
+              <div class="col-sm-6 sponsors">
+
+                <div class="thumbnail">
+                  <img src="https://via.placeholder.com/290x464">
+                </div>
+
+              </div>
+
+              <div class="col-sm-6 sponsors">
+
+                <div class="thumbnail">
+                  <img src="https://via.placeholder.com/290x464">
+                </div>
+
+              </div>
+
+        </div>
+
+<!--2018 Sponsors/Organizers-->
+
+        <div class="row" id="sponsors">
+            <div class="col-lg-12 columns all-headings other-headings">2018 Sponsors <hr class="lines">
+
+              <!-- Wide icons (1 for each row) -->
+              <div class="col-sm-12 sponsors"><img src="https://via.placeholder.com/215x103"></div>
+              <div class="col-sm-12 sponsors"><img src="https://via.placeholder.com/215x103"></div>
+              <div class="col-lg-12 sponsors"><img src="https://via.placeholder.com/215x103"></div>
+
+              <!-- Wide icons (2 for each row) -->
+              <div class="col-sm-6 sponsors"><img src="https://via.placeholder.com/215x103"></div>
+              <div class="col-sm-6 sponsors"><img src="https://via.placeholder.com/215x103"></div>
+
+              <!-- Mini icons (3 for each row) -->
+              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+
+              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+
+              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+
+              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+
+              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+
+              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 columns all-headings other-headings">Organizers <hr class="lines">
+
+              <!-- Mini icons (3 for each row) -->
+              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+
+            </div>
+        </div>
+
+</div> <!--ending div of container -->
+
+<!-- JS Scripts -->
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="js/scrolling-nav.js"></script>
 
   </body>
 </html>

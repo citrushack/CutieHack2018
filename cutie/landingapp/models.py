@@ -81,6 +81,7 @@ class Profile(models.Model):
     date_of_birth = models.DateField(null=True, blank=True) # change to age
     school = models.CharField(max_length=100, blank=True)
     major = models.CharField(max_length=30, blank=True)
+    # Hey Jerry! Thanks!! Write below
     #phone number
     #gender
     #race/ethnicity
