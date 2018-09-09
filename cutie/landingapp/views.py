@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import login, authenticate
-from .forms import SignUpForm
+from .forms import ProfileForm
 # Create your views here.
 
 ''' test
@@ -16,7 +16,7 @@ def profile(request): #implement the case when user is not logged in redirect to
 
 def signup(request):
     if request.method == 'POST':
-        form = SignUpForm(request.POST)
+        form = ProfileForm(request.POST)
         if form.is_valid():
             user = form.save()
             user.email = form.cleaned_data.get('email')
@@ -26,13 +26,23 @@ def signup(request):
             user.profile.date_of_birth = form.cleaned_data.get('date_of_birth')
             user.profile.school = form.cleaned_data.get('school')
             user.profile.major = form.cleaned_data.get('major')
+            user.profile.phoneNumber = form.cleaned_data.get('phoneNumber')
+            user.profile.gender = form.cleaned_data.get('Gender')
+            user.profile.race = form.cleaned_data.get('Race')
+            user.profile.LevelofStudy = form.cleaned_data.get('LevelofStudy')
+            user.profile.gradYear = form.cleaned_data.get('gradYear')
+            user.profile.dietRestrictions = form.cleaned_data.get('dietRestrictions')
+            user.profile.Resume = form.cleaned_data.get('Resume')
+            user.profile.shareBox = form.cleaned_data.get('shareBox')
+            user.profile.conductBox = form.cleaned_data.get('conductBox')
+            user.profile.questions = form.cleaned_data.get('questions')
             user.save()
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(email=user.email, password=raw_password)
             login(request, user)
             return redirect('profile')
     else:
-        form = SignUpForm()
+        form = ProfileForm()
     return render(request, 'signup.html', {'form': form})
 
 #2 form method incomplete
