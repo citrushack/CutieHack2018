@@ -56,16 +56,24 @@
 		        </div>
 		    </li>
 		    {% if user.is_authenticated %}
-		    <li class= "nav-item">
-		    	<div class="nav-link">
-		    		<a id="logoutlink"href = "{% url 'logout'%}?next={{request.path}}">LOGOUT</a>
-		    	</div>
-	        </li>
-	        {% else %}
 	        <li class= "nav-item">
 	        	<div class="nav-link">
 	        		<a id="loginlink"href="{% url 'login'%}?next={{request.path}}">LOGIN</a>
 	        	</div>
+	        </li>
+	        {% else %}
+	        <li class= "nav-item">
+		    	<div class="dropdown">
+		    		<button class="dropbutton nav-link">ACCOUNT <i class="fa fa-caret-down"></i></button>
+		    		<div class="dropdown-content">
+		    			<div class="nav-link">
+		    				<a id="logoutlink"href = "{% url 'logout'%}?next={{request.path}}">PROFILE</a>
+		    			</div>
+		    			<div class="nav-link">	
+		    				<a id="profilelink"href = "{% url 'logout'%}?next={{request.path}}">LOG OUT</a> 
+		    			</div>	
+		    		</div>	
+		    	</div>
 	        </li>
 	        {% endif %}	
 	    </ul>
@@ -76,7 +84,8 @@
 	<div id="home" class = "content">
 		
 		<!-- MainHero -->
-		<div id="banner" style="background-image: url({% static 'images/city.jpg' %})">
+		{% load static %}
+		<div id="banner" style="background-image: url({% static 'images/cityscape.png' %})">
 			<div id = "MainHeroText">
 				<h1 id="CutieHackTitle">Cutie Hack</h1>
 				<p id="dateOfEvent">November 10 at UC Riverside</p>
@@ -92,37 +101,41 @@
 		<div id="aboutUs">
 
 			<!-- Begin What is -->
-			<div id="whatis">
-				<div class='container'>
-					<div class="row">
-						<div class="col-12 col-sm-12 col-lg-5 col-xl-5 text-center">
-							{% load static %}
-         					<img src="{% static 'images/cody.png' %}" alt="Cody" style="width:250px;height:250px;"/>
-						</div>
+			<div id="whatis" class="cardParent">
+				<div id="whatisContent" class="cardComponent">
+					<div class='container'>
+						<div class="row">
+							<div class="col-12 col-sm-12 col-lg-6 col-xl-6 text-center">
+								{% load static %}
+	         					<img src="{% static 'images/cody.png' %}" alt="Cody" style="width:275px;height:275px;"/>
+							</div>
 
-						<div class="col-12 col-sm-12 col-lg-7 col-xl-7">
-							<h1 class="sectionHeader" style="color: #EEEEEE;">What is Cutie Hack?</h1>
-							<p class="infoText" style="color: #EEEEEE;">Cutie Hack is a beginner-friendly, 12-hour hackathon. Hosted at UC Riverside, Cutie Hack is designed to help new hackers get used to the time crunch of a hackathon environment. Cutie Hack invites collegiate students to UC Riverside to collaborate and innovate. Throughout the 12 hours, participants work in teams on a project, attend workshops to learn about new technologies, and network with industry partners.</p>
+							<div class="col-12 col-sm-12 col-lg-6 col-xl-6">
+								<h1 class="sectionHeader" style="color: #28282A;">What is Cutie Hack?</h1>
+								<p class="infoText" style="color: #28282A;">Cutie Hack is a beginner-friendly, 12-hour hackathon. Hosted at UC Riverside, Cutie Hack is designed to help new hackers get used to the time crunch of a hackathon environment. Cutie Hack invites collegiate students to UC Riverside to collaborate and innovate. Throughout the 12 hours, participants work in teams on a project, attend workshops to learn about new technologies, and network with industry partners.</p>
+							</div>
 						</div>
-					</div>
-				</div>	
-			</div>
+					</div>	
+				</div>
+			</div>	
 			<!-- End What is -->
 
 
 			<!--About Us-->
-			<div id="about">
-				<div class="container">
-					<div class="row">
-						<div id="aboutText"class="col-12 col-sm-12 col-lg-7 col-xl-7">
-							<h1 class="sectionHeader">About Us</h1>
-							<p class="infoText">Since it's inaugural year of 2015, Cutie Hack's goal is to create a place where students can build and create to their heart's content. Founded by ACM and IEEE student members at the University of California, Riverside, the Cutie Hack committee strives to make Cutie Hack an easy entry point for new hackers to jump into the collegiate hackathons.</p>
-						</div>
+			<div id="about" class="cardParent">
+				<div id="aboutContent" class="cardComponent">
+					<div class="container">
+						<div class="row">
+							<div id="aboutText"class="col-12 col-sm-12 col-lg-7 col-xl-7">
+								<h1 class="sectionHeader">About Us</h1>
+								<p class="infoText">Since it's inaugural year of 2015, Cutie Hack's goal is to create a place where students can build and create to their heart's content. Founded by ACM and IEEE student members at the University of California, Riverside, the Cutie Hack committee strives to make Cutie Hack an easy entry point for new hackers to jump into the collegiate hackathons.</p>
+							</div>
 
-						<div class="col-12 col-sm-12 col-lg-5 col-xl-5 text-center">
-							<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="250" height="250">
-						</div>
-					</div>	
+							<div class="col-12 col-sm-12 col-lg-5 col-xl-5 text-center">
+								<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="250" height="250">
+							</div>
+						</div>	
+					</div>
 				</div>	
 			</div>
 			<!-- END About Us -->
