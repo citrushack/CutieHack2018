@@ -34,8 +34,8 @@ body {
 
 /*Schedule, Map, Speakers, Resources, and Sponsors*/
 
-.columns {
-  margin-top: 30px;
+.container {
+  width: 90%;
 }
 
 .all-headings {
@@ -58,18 +58,38 @@ body {
   font-size: 2.5em;
 }
 
+.sections {
+  margin-bottom: 30px;
+}
+
 /* Schedule */
 
 .schedule {
   border: 1px solid #a5a5a5;
-  font-size: 2em;
-  height: 663px; /* the height is temporarily; will remove this property once placeholder are in */
+  padding: 3% 0%;
+  border-radius: 30px;
+  margin: 30px;
 }
 
-/* Sponsors */
+.weekends {
+  font-size: 2em;
+}
 
-.sponsors {
-  margin-bottom: 30px;
+.events {
+  font-size: 20px;
+  text-transform: none;
+  padding: 3%;
+  border: 1px solid #a5a5a5;
+  width: 60%;
+  margin: 5% 20%;
+}
+
+/* Resources */
+.resources {
+  border: 1px solid #a5a5a5;
+  border-radius: 30px;
+  width: 45%;
+  margin: 33px;
 }
 
 /* navbar */
