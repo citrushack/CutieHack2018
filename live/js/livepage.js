@@ -40,15 +40,15 @@ $(document).ready(function() { //(document).ready: let file know that it is jQue
         } else if (scheduleDist <= 0 && mapDist > 0) { //checks if you're in schedule section
             $('nav ul li a').removeClass();
             $('#schedulelink').addClass('active');
-        } else if (mapDist <= 0 && speakersDist > 0) { //checks if you're in map section
+        } else if (mapDist <= 0 && resourcesDist > 0) { //checks if you're in map section
             $('nav ul li a').removeClass();
             $('#maplink').addClass('active');
-        } else if (speakersDist <= 0 && resourcesDist > 0) { //checks if you're in speakers section
+        } else if (resourcesDist <= 0 && speakersDist > 0) { //checks if you're in resources section
             $('nav ul li a').removeClass();
-            $('#speakerslink').addClass('active');
-        } else if (resourcesDist <= 0 && sponsorsDist > 0) { //checks if you're in resources section
+            $('#resourceslink').addClass('active');
+        } else if (speakersDist <= 0 && sponsorsDist > 0) { //checks if you're in speakers section
               $('nav ul li a').removeClass();
-              $('#resourceslink').addClass('active');
+              $('#speakerslink').addClass('active');
         } else if (sponsorsDist <= 0 && !((window.innerHeight + window.scrollY) >= document.body.offsetHeight)) { //checks if you're in sponsors section, but haven't hit the bottom of page
             $('nav ul li a').removeClass();
             $('#sponsorslink').addClass('active');
