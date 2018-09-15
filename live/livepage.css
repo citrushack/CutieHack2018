@@ -92,6 +92,14 @@ body {
   margin: 2%;
 }
 
+.ui.segment, .ui.segments .segment {
+  font-size: 1.2em;
+}
+
+.ui.raised.segments {
+  margin: 4% 3%;
+}
+
 /* navbar */
 
 .navbar-default {
