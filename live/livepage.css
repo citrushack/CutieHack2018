@@ -10,13 +10,15 @@ body {
 }
 */
 
+/* For active nav link */
+
 .active{
   color:#f09e12 !important;
 }
 
-/*Title*/
+/* Title */
 
-#cutie {
+#title-name {
   text-transform: uppercase;
   letter-spacing: 3px;
 }
@@ -33,9 +35,9 @@ body {
   border-top: 1px solid #a5a5a5;
 }
 
-/*Schedule, Map, Speakers, Resources, and Sponsors*/
+/*All Sections*/
 
-.container {
+.container { /* makes everything bigger */
   width: 90%;
 }
 
@@ -49,11 +51,7 @@ body {
   border-top: 1px solid #a5a5a5;
 }
 
-.img {
-  width: 100%
-}
-
-/* Map, Speakers, Resources, and Sponsors */
+/* Sections after Schedule */
 
 .other-headings {
   font-size: 2.5em;
@@ -86,14 +84,16 @@ body {
 }
 
 /* Resources */
+
 .resources {
   border: 1px solid #a5a5a5;
   border-radius: 30px;
   width: 45%;
-  margin: 33px;
+  margin: 2%;
 }
 
 /* navbar */
+
 .navbar-default {
     background-color: white;
     border-color: black;
