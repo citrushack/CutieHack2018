@@ -24,6 +24,7 @@ body {
 .jumbotron {
   background: transparent;
   margin-bottom: -20px;
+  padding-top: 6%;
 }
 
 #title-line {
@@ -58,8 +59,8 @@ body {
   font-size: 2.5em;
 }
 
-.sections {
-  margin-bottom: 30px;
+.sections {   /* makes each section have space top and bottom */
+  padding: 5%;
 }
 
 /* Schedule */
