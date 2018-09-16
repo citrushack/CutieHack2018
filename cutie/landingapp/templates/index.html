@@ -15,6 +15,9 @@
 	<!-- link for main.js -->
     {% load static %}
     <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{%  static 'images/favicon.png' %}">
     <!-- /FYI: for images/
          {% load static %}
          <img src="{% static 'images/image1.png' %}" alt="My image" style="width:10px;height:10px;"/>
@@ -24,8 +27,10 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
 	<!-- Font Awesome (for contact icons) -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- CSS Animate on Scroll Library -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
-
 <body>
 	<!-- NAVBAR -->	
 	<nav>
@@ -81,38 +86,39 @@
 	<!-- END NAVBAR -->
 	
 	<!-- BEGIN CONTENT ON PAGE -->
-	<div id="home" class = "content">
-		
+	<div id="home" class="content">
 		<!-- MainHero -->
 		{% load static %}
-		<div id="banner" style="background-image: url({% static 'images/cityscape.png' %})">
-			<div id = "MainHeroText">
-				<h1 id="CutieHackTitle">Cutie Hack</h1>
-				<p id="dateOfEvent">November 10 at UC Riverside</p>
-				<p id="slogan">Let's build tomorrow.</p>
+		<img src="{% static 'images/cityscape.png' %}" alt="Hero Image" id="hero"/>
+		<div id="banner">
+			<div id = "MainHeroText" data-aos="fade-up">
+				<h1 id="CutieHackTitle">CUTIE HACK</h1>
+				<p id="eventDetails">November 10, 2018<br>
+				Let's build tomorrow.</p>
 				<hr id="headerTextBreak">
 				<a href="http://cutiehack.com/apply"><button type="button" class="btn btn-dark">Apply</button></a>
 			</div>	
 		</div>
+
 		<!--  END MainHero -->
 
 
-		<!--Begin What is Cutie Hack & About Us-->
+		<!--Begin Main Info Sections-->
 		<div id="aboutUs">
 
 			<!-- Begin What is -->
-			<div id="whatis" class="cardParent">
-				<div id="whatisContent" class="cardComponent">
+			<div id="whatis">
+				<div id="whatisContent" data-aos="fade-right">
 					<div class='container'>
 						<div class="row">
 							<div class="col-12 col-sm-12 col-lg-6 col-xl-6 text-center">
 								{% load static %}
-	         					<img src="{% static 'images/cody.png' %}" alt="Cody" style="width:275px;height:275px;"/>
+	         					<img src="{% static 'images/cody.png' %}" alt="Cody" id="computerCody"/>
 							</div>
 
 							<div class="col-12 col-sm-12 col-lg-6 col-xl-6">
-								<h1 class="sectionHeader" style="color: #28282A;">What is Cutie Hack?</h1>
-								<p class="infoText" style="color: #28282A;">Cutie Hack is a beginner-friendly, 12-hour hackathon. Hosted at UC Riverside, Cutie Hack is designed to help new hackers get used to the time crunch of a hackathon environment. Cutie Hack invites collegiate students to UC Riverside to collaborate and innovate. Throughout the 12 hours, participants work in teams on a project, attend workshops to learn about new technologies, and network with industry partners.</p>
+								<h1 class="sectionHeader" style="color: #FFFFFF;">What is Cutie Hack?</h1>
+								<p class="infoText" style="color: #FFFFFF;">Cutie Hack is a beginner-friendly, 12-hour hackathon. Hosted at UC Riverside, Cutie Hack is designed to help new hackers get used to the time crunch of a hackathon environment. Cutie Hack invites collegiate students to UC Riverside to collaborate and innovate. Throughout the 12 hours, participants work in teams on a project, attend workshops to learn about new technologies, and network with industry partners.</p>
 							</div>
 						</div>
 					</div>	
@@ -122,8 +128,8 @@
 
 
 			<!--About Us-->
-			<div id="about" class="cardParent">
-				<div id="aboutContent" class="cardComponent">
+			<div id="about">
+				<div id="aboutContent" data-aos="fade-left">
 					<div class="container">
 						<div class="row">
 							<div id="aboutText"class="col-12 col-sm-12 col-lg-7 col-xl-7">
@@ -132,7 +138,8 @@
 							</div>
 
 							<div class="col-12 col-sm-12 col-lg-5 col-xl-5 text-center">
-								<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="250" height="250">
+								{% load static %}
+	         					<img src="{% static 'images/billboard.png' %}" alt="Billboard" id="billboard"/>
 							</div>
 						</div>	
 					</div>
@@ -143,7 +150,7 @@
 		<!-- END What is Cutie Hack & About Us -->
 
 		<!-- FAQ Section -->
-		<div id="faq" class="darkDiv">
+		<div id="faq">
 
 			<h1 class="sectionHeader text-center lightText">FAQ</h1>
 
@@ -344,33 +351,39 @@
 		</div>
 		<!-- END Sponsors and organizers -->
 
-		<!-- FOOTER -->
-		<div id="footer" class="darkDiv">
-			<p class="text-center lightText">
-				<a href="https://www.facebook.com/cutiehack/">
-					<i id = "iconSize" class="fa fa-facebook-square lightText"> 
-					</i>
-				</a>
-			    <a href="mailto:cutiehack@gmail.com">
-			    	<i id = "iconSize" class="fa fa-envelope lightText"> 
-			    	</i> 
-			    </a>
-			    <a href="https://twitter.com/citrushack">
-			    	<i id = "iconSize" class="fa fa-twitter-square lightText"> 
-			    	</i>
-			    </a>
-			    <a href="https://www.instagram.com/citrushack_ucr/">
-			    	<i id = "iconSize" class="fa fa-instagram lightText">
-			    	</i>
-			    </a>
-			    <p class="lightText text-center">Made with <span class = "red" >&#9829;</span> in Riverside, CA</p>
-				<p class="lightText text-center">© 2018 Cutie Hack</p>
-			</p>
-		</div>
-		<!-- END FOOTER -->
+	</div>	
 
+	<!-- FOOTER -->
+	<div id="footer" class="darkDiv">
+		<p class="text-center lightText">
+			<a href="https://www.facebook.com/cutiehack/">
+				<i id = "iconSize" class="fa fa-facebook-square lightText"> 
+				</i>
+			</a>
+		    <a href="mailto:cutiehack@gmail.com">
+		    	<i id = "iconSize" class="fa fa-envelope lightText"> 
+		    	</i> 
+		    </a>
+		    <a href="https://twitter.com/citrushack">
+		    	<i id = "iconSize" class="fa fa-twitter-square lightText"> 
+		    	</i>
+		    </a>
+		    <a href="https://www.instagram.com/citrushack_ucr/">
+		    	<i id = "iconSize" class="fa fa-instagram lightText">
+		    	</i>
+		    </a>
+		    <p class="lightText text-center">Made with <span class = "red" >&#9829;</span> in Riverside, CA</p>
+			<p class="lightText text-center">© 2018 Cutie Hack</p>
+		</p>
 	</div>
-	<!-- END CONTENT ON PAGE -->
+	<!-- END FOOTER -->
 
 </body>
+
+<script type="text/javascript">
+	AOS.init({
+		duration : 1200,
+		once : true,
+	})
+</script>
 </html>

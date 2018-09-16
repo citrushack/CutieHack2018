@@ -1,19 +1,15 @@
-.BasicFontSize {
-  font-size: 100%;
-}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600');
 
 #CutieHackTitle {
   font-size: 700%;
-  text-shadow: 5px 5px 0px #282828;
+  font-family:'Poppins';
+  font-weight: 600;
 }
 
-#dateOfEvent {
-  font-size: 175%;
-  text-shadow: 2px 2px 0px #28282A;
-}
-
-#slogan{
-  text-shadow:2px 2px 0px #28282A;
+#eventDetails {
+  font-size: 200%;
+  font-family:'Poppins';
+  font-weight: 500;
 }
 
 #MainHeroText{
@@ -25,7 +21,7 @@
   bottom: 0;
   left: 0;
   width: 75%;
-  height: 400px;
+  height: 250px;
   color:#FFFFFF;
   /*font-style:italic;*/
 }
@@ -37,44 +33,63 @@
   margin-left: auto;
   margin-right: auto;
   border-top: 2px solid #FFFFFF;
-  box-shadow:0px 1px 1px #28282A;
 }
 
 #banner {
-  /*background-image: url('../static/images/dummybackground') !important;*/
-  height: 100vh;
+  background-color: #F38709;
+  height: 140vh;
   padding: 20%;
+  z-index: 4;
 }
 
-.cardParent{
+#hero {
+  position:absolute;
+  top:0;
+  min-width: 100%;
+  height: 140%;
+}
+
+#whatis{
   padding:5%;
   height:auto;
   width:100vw;
-  background-color: #EEEEEE;
+  background-color: #F38709;
+  z-index: 0;
  } 
 
-.cardComponent {
-  margin:0 auto;
-  background-color: #EEBD69;
-  width:95%;
-  height:auto;
-  padding: 8% 2% 8% 2%;
-  border-radius: 24px;
-  box-shadow: 8px 8px 4px #28282A;
+#computerCody {
+  height: 500px;
+  width: auto;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+#billboard {
+  height:500px;
+  width: auto;
 }
 
 .sectionHeader {
   font-size:275% !important;
-  font-style: italic;
-  font-weight: bold;
-  line-height: normal;
+  font-family: 'Poppins' !important;
+  font-weight: 500;
+  color: #fff;
+}
 
-  color: #161619;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.infoText{
+  font-family: 'Poppins' !important;
+  font-weight: 400;
+  color: #fff;
+  line-height: 2;
+}
+
+#about{
+  padding:8%;
+  background-color: #f09e12;
 }
 
 #aboutText {
-  padding-left:4%;
+  padding-left:10%;
 }
 
 .row {
@@ -86,12 +101,14 @@ nav {
   top: 0 !important; 
   width: 100% !important;
   z-index: 9 !important;
+  background:#616160;
+  border: 10px !important;
 }
 
 nav ul li a {
   float: left !important;
   display: block !important;
-  color: white !important;
+  color: #FFFFFF !important;
   text-align: center !important;
   text-decoration: none !important;
 }
@@ -103,16 +120,15 @@ nav ul li a:hover {
 }
 
 .dropdown {
-    float: left !important;
-    overflow: hidden !important;
-    margin:0 !important;
+  float: left !important;
+  overflow: hidden !important;
+  margin:0 !important;
 }
 
 .dropbutton {
   border:none !important; 
   background:none !important;
-  color:white;
-  width:auto;
+  color:#28282A;
 }
 
 .dropdown-content{
@@ -121,6 +137,7 @@ nav ul li a:hover {
 
 .dropdown:hover .dropdown-content {
     display: block !important;
+    background-color: transparent !important;
 }
 
 .active{
@@ -136,13 +153,9 @@ nav ul li a:hover {
   /*width: 100%;*/
 }
 
-hr{
-  display: block;
-  margin: 5rem 0; /* <hr> between each */
-  border-top: 1px solid;
-  border-top-color: rgb(0, 0, 1);
+#info{
+  background-image: linear-gradient(#F38709, #F5CF8A);
 }
-
 
 #sponsors{
   padding-top: 40px;
