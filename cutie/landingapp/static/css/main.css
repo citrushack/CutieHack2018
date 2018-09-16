@@ -101,19 +101,13 @@ img{
 
 .faqQuestion:hover {
   color:#FFFFFF;
-  -webkit-transition: color .5s ease-out;
-  -moz-transition: color.5s ease-out;
-  -o-transition: color .5s ease-out;
-  transition: color .5s ease-out;
 }
 
-.faqAnswer {
-  font-size: 125%
-  /*padding-top: 2%;*/
-  /*padding-bottom: 3%;*/
-  padding-left: 2.5%;
-  display: none;
+.faqAnsw {
+  font-size: 125%;
 }
+
+
 
 #footer {
   margin-top:5%;

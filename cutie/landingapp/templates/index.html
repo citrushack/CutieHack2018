@@ -31,7 +31,7 @@
 	<!-- NAVBAR -->
 	<ul class="nav justify-content-end">
 		<li class= "nav-item">
-			<a class = "nav-link" href="http://citrushack.com/#home">HOME</a>
+			<a class = "nav-link" href="#home">HOME</a>
 		</li>
 		<li class= "nav-item">
 			<a class = "nav-link" href="#whatis">ABOUT</a>
@@ -107,34 +107,81 @@
 				</div>
 			</div>
 		</div>
+
+<!-- tried applying style to main.css, wasnt working so I just did it here-->
+<style type="text/css">
+	.questionBorder {
+		border-radius: 5px;
+		background-color: #EEBD69;
+		padding: 10px;
+		box-shadow: 5px 10px;
+		margin: 5%;
+	}
+	#faqDiv {
+		background-color: #EFDABF;
+		text-align: center;
+	}
+	#faqHeader {
+		color: black;
+	}
+</style>
+
 <!-- FAQ Section -->
-<div class="lightDiv">
+<div id="faqDiv" class="container">
 
-  <h1 id="faqHeader" class="text-center darkText">FAQ</h1>
+  <h1 id="faqHeader" class="text-center lightText">FAQ</h1>
 
+  <div class="row">
 
-  <div id="q1"> <h2 class="faqQuestion darkText">&#8226 Who can attend?</h2>
-    <div id="a1" class="faqAnswer darkText BasicFontSize">We welcome all undergraduate university students, from any major! If you have graduated within the past year, you are also welcome to attend.</div>
-  </div>  
-  <div id="q2"> <h2 class="faqQuestion darkText">&#8226 Is Cutie Hack free?</h2>
-    <div id="a2"class="faqAnswer darkText BasicFontSize">Absolutely!</div>
-  </div>
-  <div id="q3"> <h2 class="faqQuestion darkText">&#8226 Is there free food?</h2>
-    <div id="a3"class="faqAnswer darkText BasicFontSize">Yes! Meals, refreshments, and snacks will be provided thoughout the event.</div>
-  </div>  
-  <div id="q4"> <h2 class="faqQuestion darkText">&#8226 What should I bring?</h2>
-    <div id="a4"class="faqAnswer darkText BasicFontSize">Student IDs are required. Consider bringing a hacking machine, headphones, and a pillow!</div>
-  </div>
-  <div id="q5"> <h2 class="faqQuestion darkText">&#8226 Do I need a team?</h2>
-    <div id="a5"class="faqAnswer darkText BasicFontSize"> Teams are not required, but are recommended. Membership is capped at 4 members. You are welcome to form teams before the hacking begins!</div>
-  </div>
-  <div id="q6"> <h2 class="faqQuestion darkText">&#8226 When is the deadline to sign up?</h2>
-    <div id="a6"class="faqAnswer darkText BasicFontSize">The deadline to signup is ..... </div>
-  </div>
-  <div id="q7"> <h2 class="faqQuestion darkText">&#8226 Any other questions?</h2>
-    <div id="a7"class="faqAnswer darkText BasicFontSize">Feel free to contact us through <a href="mailto:cutiehack@gmail.com">email</a>!</div>
-  </div>
+	  <div class="col questionBorder"> 
+	  	<h2 class="faqQuestion darkText">Who can attend?</h2>
+	    <p class="faqAnsw darkText BasicFontSize">We welcome all undergraduate university students, from any major! If you have graduated within the past year, you are also welcome to attend.</p>
+	  </div>  
+	  <div class="col questionBorder"> 
+		<h2 class="faqQuestion darkText">Is Cutie Hack free?</h2>
+    	<p class="faqAnsw darkText BasicFontSize">Absolutely!</p>
+	  </div>
 
+	  <!-- bootstrap shortcut for creating new row -->
+	  <div class="w-100"></div>  
+
+	  <div class="col questionBorder"> 
+	  	<h2 class="faqQuestion darkText">Is there free food?</h2>
+	  	<p class="faqAnsw darkText BasicFontSize">Yes! Meals, refreshments, and snacks will be provided thoughout the event.</p>
+	  </div>  
+	  <div class="col questionBorder"> 
+	  	<h2 class="faqQuestion darkText"> What should I bring?</h2>
+		<div class="faqAnsw darkText BasicFontSize">Student IDs are required. Consider bringing a hacking machine, headphones, and a pillow!</div>
+	</div>
+
+	  <!-- bootstrap shortcut for creating new row -->
+	  <div class="w-100"></div>  
+
+	  <div class="col questionBorder"> 
+	  	<h2 class="faqQuestion darkText"> Do I need a team?</h2>
+	  	<p class="faqAnsw darkText BasicFontSize">Teams are not required, but are recommended. Membership is capped at 4 members. You are welcome to form teams before the hacking begins!</p>
+	  </div>  
+	  <div class="col questionBorder"> 
+	  	<h2 class="faqQuestion darkText"> When is the deadline to sign up?</h2>
+		<div class="faqAnsw darkText BasicFontSize">The deadline to signup is ..... </div>
+	  </div>
+	  
+	  <!-- bootstrap shortcut for creating new row -->
+	  <div class="w-100"></div>  
+
+	  <div class="col questionBorder"> 
+	  	<h2 class="faqQuestion darkText">Any other questions?</h2>
+	  	<p class="faqAnsw darkText BasicFontSize">Feel free to contact us through <a href="mailto:cutiehack@gmail.com">email</a>!</p>
+	  </div>
+	  <div class="col questionBorder"> 
+	  	<h2 class="faqQuestion darkText">Another question...</h2>
+		<p class="faqAnsw darkText BasicFontSize">Another Answer</p>
+  	  </div>
+
+  </div>	
+</div>
+ 
+  
 </div>
 <!-- END of FAQ Section -->
 
