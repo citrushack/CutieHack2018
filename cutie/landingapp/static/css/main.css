@@ -205,6 +205,13 @@ img{
   font-size: 400%;
 }
 
+
+#faq>h1{
+  color:black;
+}
+
+.faqA{text-align: center;}
+.faqB{text-align: center;}
 .faqA:hover {
   color:#F38709;
   -webkit-transition: color .5s ease-out;
@@ -228,6 +235,7 @@ img{
   font-size: 125%
   padding-left: 2.5%;
   display: none;
+  text-align:center;
 }
 
 .bigSponsor{
