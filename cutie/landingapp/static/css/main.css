@@ -1,19 +1,15 @@
-.BasicFontSize {
-  font-size: 100%;
-}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600');
 
 #CutieHackTitle {
   font-size: 700%;
-  text-shadow:4px 4px #28282A;
+  font-family:'Poppins';
+  font-weight: 600;
 }
 
-#dateOfEvent {
-  font-size: 175%;
-  text-shadow:2px 2px #28282A;
-}
-
-#slogan{
-  text-shadow:2px 2px #28282A;
+#eventDetails {
+  font-size: 200%;
+  font-family:'Poppins';
+  font-weight: 500;
 }
 
 #MainHeroText{
@@ -25,9 +21,9 @@
   bottom: 0;
   left: 0;
   width: 75%;
-  height: 400px;
-  color:#EEEEEE;
-  /*background: #ccc;*/
+  height: 250px;
+  color:#FFFFFF;
+  /*font-style:italic;*/
 }
 
 #headerTextBreak {
@@ -36,60 +32,64 @@
   margin: 1em;
   margin-left: auto;
   margin-right: auto;
-  border-top: 2px solid #EEEEEE;
-  box-shadow:0px 1px 1px #28282A;
+  border-top: 2px solid #FFFFFF;
 }
 
 #banner {
-  /*background-image: url('../static/images/dummybackground') !important;*/
-  height: 100vh;
+  background-color: #F38709;
+  height: 140vh;
   padding: 20%;
+  z-index: 4;
 }
 
-#whatis {
-  background-color: #28282A;
-  width:100%;
-  height:50vh;
-  padding:3%;
+#hero {
+  position:absolute;
+  top:0;
+  min-width: 100%;
+  height: 140%;
 }
 
-#about {
-  background-color: #EEEEEE;
-  width:100%;
-  height:50vh;
-  padding: 3%;
+#whatis{
+  padding:5%;
+  height:auto;
+  width:100vw;
+  background-color: #F38709;
+  z-index: 0;
+ } 
+
+#computerCody {
+  height: 500px;
+  width: auto;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+#billboard {
+  height:500px;
+  width: auto;
 }
 
 .sectionHeader {
-  padding-bottom: 3%;
-  font-size: 400%;
+  font-size:275% !important;
+  font-family: 'Poppins' !important;
+  font-weight: 500;
+  color: #fff;
 }
 
-@media screen and (max-width: 1080px) {
-  #whatis {
-    width:100%;
-    height:100vh;
-    padding:7%;
-  }
+.infoText{
+  font-family: 'Poppins' !important;
+  font-weight: 400;
+  color: #fff;
+  line-height: 2;
+}
 
-  #about {
-    width:100%;
-    height:100vh;
-    padding: 7%;
-  }
-
-  .sectionHeader {
-    padding: 3%;
-    font-size: 250% !important;
-  }
-
-  .infoText {
-    font-size: 80%;
-  }
+#about{
+  padding:8%;
+  background-color: #f09e12;
 }
 
 #aboutText {
-  padding-left:4%;
+  padding-left:10%;
 }
 
 .row {
@@ -101,12 +101,14 @@ nav {
   top: 0 !important; 
   width: 100% !important;
   z-index: 9 !important;
+  background:#616160;
+  border: 10px !important;
 }
 
 nav ul li a {
   float: left !important;
   display: block !important;
-  color: black !important;
+  color: #FFFFFF !important;
   text-align: center !important;
   text-decoration: none !important;
 }
@@ -115,6 +117,27 @@ nav ul li a:hover {
   color:grey !important;
   transition: .5s !important;
   text-decoration: none !important;
+}
+
+.dropdown {
+  float: left !important;
+  overflow: hidden !important;
+  margin:0 !important;
+}
+
+.dropbutton {
+  border:none !important; 
+  background:none !important;
+  color:#28282A;
+}
+
+.dropdown-content{
+  display:none !important;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block !important;
+    background-color: transparent !important;
 }
 
 .active{
@@ -130,13 +153,9 @@ nav ul li a:hover {
   /*width: 100%;*/
 }
 
-hr{
-  display: block;
-  margin: 5rem 0; /* <hr> between each */
-  border-top: 1px solid;
-  border-top-color: rgb(0, 0, 1);
+#info{
+  background-image: linear-gradient(#F38709, #F5CF8A);
 }
-
 
 #sponsors{
   padding-top: 40px;

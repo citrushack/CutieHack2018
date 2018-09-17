@@ -1,5 +1,3 @@
-
-
 //jQuery dropdown for FAQ section
 $(document).ready(function(){
     //when a element from the .faqQuestion class is clicked,
@@ -83,4 +81,5 @@ $(document).ready(function() {
         }     
     });
 });    
+
 
