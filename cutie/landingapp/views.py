@@ -14,6 +14,9 @@ def index(request):
 def profile(request): #implement the case when user is not logged in redirect to login page
 	return render(request, 'profile.html', context={}, )
 
+def live(request):
+    return render(request, 'live.html', context={}, )
+
 def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
