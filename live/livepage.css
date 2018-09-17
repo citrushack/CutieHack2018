@@ -10,13 +10,15 @@ body {
 }
 */
 
+/* For active nav link */
+
 .active{
   color:#f09e12 !important;
 }
 
-/*Title*/
+/* Title */
 
-#cutie {
+#title-name {
   text-transform: uppercase;
   letter-spacing: 3px;
 }
@@ -24,6 +26,7 @@ body {
 .jumbotron {
   background: transparent;
   margin-bottom: -20px;
+  padding-top: 6%;
 }
 
 #title-line {
@@ -32,10 +35,10 @@ body {
   border-top: 1px solid #a5a5a5;
 }
 
-/*Schedule, Map, Speakers, Resources, and Sponsors*/
+/*All Sections*/
 
-.columns {
-  margin-top: 30px;
+.container { /* makes everything bigger */
+  width: 90%;
 }
 
 .all-headings {
@@ -48,31 +51,57 @@ body {
   border-top: 1px solid #a5a5a5;
 }
 
-.img {
-  width: 100%
-}
-
-/* Map, Speakers, Resources, and Sponsors */
+/* Sections after Schedule */
 
 .other-headings {
   font-size: 2.5em;
+}
+
+.sections {   /* makes each section have space top and bottom */
+  padding: 5%;
 }
 
 /* Schedule */
 
 .schedule {
   border: 1px solid #a5a5a5;
-  font-size: 2em;
-  height: 663px; /* the height is temporarily; will remove this property once placeholder are in */
+  padding: 3% 0%;
+  border-radius: 30px;
+  margin: 30px;
 }
 
-/* Sponsors */
+.weekends {
+  font-size: 2em;
+}
 
-.sponsors {
-  margin-bottom: 30px;
+.events {
+  font-size: 20px;
+  text-transform: none;
+  padding: 3%;
+  border: 1px solid #a5a5a5;
+  width: 60%;
+  margin: 5% 20%;
+}
+
+/* Resources */
+
+.resources {
+  border: 1px solid #a5a5a5;
+  border-radius: 30px;
+  width: 45%;
+  margin: 2%;
+}
+
+.ui.segment, .ui.segments .segment {
+  font-size: 1.2em;
+}
+
+.ui.raised.segments {
+  margin: 4% 3%;
 }
 
 /* navbar */
+
 .navbar-default {
     background-color: white;
     border-color: black;
@@ -91,7 +120,7 @@ body {
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    color: #333; /*color change when hovering nav link*/
+    color: black; /*color change when hovering nav link*/
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,

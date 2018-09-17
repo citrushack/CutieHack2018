@@ -5,6 +5,7 @@
     <div id="home"><title>Cutie Hack 2018</title></div>
     <!-- include boostrap -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/segment.min.css">
     <link rel="stylesheet" type="text/css" href="livepage.css" />
     <!-- custom style for scrolling nav -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
@@ -33,8 +34,8 @@
             <li><a class="nav-link js-scroll-trigger active" id="homelink" href="#home">Home</a></li>
             <li><a class="nav-link js-scroll-trigger" id="schedulelink" href="#schedule">Schedule</a></li>
             <li><a class="nav-link js-scroll-trigger" id="maplink" href="#map">Map</a></li>
-            <li><a class="nav-link js-scroll-trigger" id="speakerslink" href="#speakers">Speakers</a></li>
             <li><a class="nav-link js-scroll-trigger" id="resourceslink" href="#resources">Resources</a></li>
+            <li><a class="nav-link js-scroll-trigger" id="speakerslink" href="#speakers">Speakers</a></li>
             <li><a class="nav-link js-scroll-trigger" id="sponsorslink" href="#sponsors">Sponsors</a></li>
           </ul>
 
@@ -45,16 +46,13 @@
 
 <div class="container">
 
-<!--Title-->
+<!--Title + Buttons-->
 
       <div class="jumbotron">
-        <h1 id="cutie">Cutie Hack 2018</h1>
+        <h1 id="title-name">Cutie Hack 2018</h1>
           <p id="cntdwn"></p>
           <hr id="title-line">
-       </div>
-
-<!--Buttons-->
-      <div id="schedule">
+          <br>
           <div id="buttons">
             <span id="allbuttons">
                <a href="https://citrushack2018.devpost.com/" class="btn btn-success btn-default">Devpost</a>
@@ -63,119 +61,237 @@
                 <a href="https://citrus-hack-2018.slack.com/join/shared_invite/enQtMzQ1NjExOTAxMTY5LTBiMjBhMTdiMjMyZDEwOWNmZDgwZjc1ZDI2NmU1ZTBiYzgzOGI0NmIxOTQwMjZhZGE5MmMxNTYwMjdhZjRjNzg" class="btn btn-success btn-default">Slack</a>
             </span>
           </div>
-      </div>
+       </div>
 
 <!--Schedule -->
-        <div class="row">
-            <div class="col-sm-6 columns all-headings schedule">Saturday <hr class="lines"> </div>
-            <div class="col-sm-6 columns all-headings schedule">Sunday <hr class="lines"></div>
+
+      <div id="schedule"> <!-- clean this up later -->
+      </div>
+        <div class="row schedule">
+            <div class="col-sm-6 columns all-headings weekends">Saturday <hr class="lines">
+                <div class="row">
+                    <div class="col-sm-12 events">0:00 AM | Event name</div>
+                    <div class="col-sm-12 events">0:00 AM | Event name</div>
+                    <div class="col-sm-12 events">0:00 AM | Event name</div>
+                    <div class="col-sm-12 events">0:00 AM | Event name</div>
+                    <div class="col-sm-12 events">0:00 AM | Event name</div>
+                    <div class="col-sm-12 events">0:00 AM | Event name</div>
+                </div>
+            </div>
+            <div class="col-sm-6 columns all-headings weekends">Sunday <hr class="lines">
+                <div class="row">
+                    <div class="col-sm-12 events">0:00 AM | Event name</div>
+                    <div class="col-sm-12 events">0:00 AM | Event name</div>
+                    <div class="col-sm-12 events">0:00 AM | Event name</div>
+                    <div class="col-sm-12 events">0:00 AM | Event name</div>
+                    <div class="col-sm-12 events">0:00 AM | Event name</div>
+                    <div class="col-sm-12 events">0:00 AM | Event name</div>
+                </div>
+            </div>
         </div>
 
 <!--Map-->
 
-        <div class="row" id="map">
+        <div class="row sections" id="map">
             <div class="col-lg-12 columns all-headings other-headings">Map <hr class="lines">
-              <div class="col-sm-12 sponsors"><img src="https://via.placeholder.com/1023x365"></div>
-            </div>
-        </div>
-
-<!--Speakers-->
-
-        <div class="row" id="speakers">
-            <div class="col-lg-12 columns all-headings other-headings">Speakers <hr class="lines">
-                <div class="col-sm-6 sponsors"><img src="https://via.placeholder.com/290x464"></div>
-                <div class="col-sm-6 sponsors"><img src="https://via.placeholder.com/290x464"></div>
+              <div class="col-sm-12"><img src="https://via.placeholder.com/750x365"></div>
             </div>
         </div>
 
 <!--Resources  -->
 
-        <div class="row" id="resources">
+        <div class="row sections" id="resources">
             <div class="col-lg-12 columns all-headings other-headings">Resources <hr class="lines"></div>
 
         <!-- Resources Subsections  -->
-        <!-- Added thumbnails to see where the content is in the grid; might delete later -->
 
-              <div class="col-sm-6 sponsors">
-
-                <h3>Not a coder? <br>Here's other ways you can contribute to your team:</h3>
-
-                <div class="thumbnail">
-                    <ul>
-                      <p>Prepare a powerpoint</p>
-                      <p>Illustrate branding like logos and slogans</p>
-                      <p>Research APIs, Frameworks, and other tools for your developer team mates</p>
-                      <p>...And many more! Hackathons are never limited to people with coding experience.
-                    </ul>
-                    <!-- <img src="https://via.placeholder.com/290x464"> -->
+              <div class="col-sm-6">
+                <div class="ui raised segments">
+                    <div class="ui segment">
+                      <p><em>Not a coder? Here's other ways you can contribute to your team:</em></p>
+                    </div>
+                    <div class="ui segments">
+                        <div class="ui segment">
+                          <p>Prepare a powerpoint</p>
+                        </div>
+                        <div class="ui segment">
+                          <p>Research APIs, Frameworks, and other tools for your developer team mates</p>
+                        </div>
+                        <div class="ui segment">
+                          <p>...And many more! Hackathons are never limited to people with coding experience.
+                        </div>
+                      </div>
+                  </div>
                 </div>
+
+                <div class="col-sm-6">
+                  <div class="ui raised segments">
+                      <div class="ui segment">
+                        <p><em>Not a coder? Here's other ways you can contribute to your team:</em></p>
+                      </div>
+                      <div class="ui segments">
+                          <div class="ui segment">
+                            <p>Prepare a powerpoint</p>
+                          </div>
+                          <div class="ui segment">
+                            <p>Research APIs, Frameworks, and other tools for your developer team mates</p>
+                          </div>
+                          <div class="ui segment">
+                            <p>...And many more! Hackathons are never limited to people with coding experience.
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="ui raised segments">
+                        <div class="ui segment">
+                          <p><em>Not a coder? Here's other ways you can contribute to your team:</em></p>
+                        </div>
+                        <div class="ui segments">
+                            <div class="ui segment">
+                              <p>Prepare a powerpoint</p>
+                            </div>
+                            <div class="ui segment">
+                              <p>Research APIs, Frameworks, and other tools for your developer team mates</p>
+                            </div>
+                            <div class="ui segment">
+                              <p>...And many more! Hackathons are never limited to people with coding experience.
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <div class="ui raised segments">
+                          <div class="ui segment">
+                            <p><em>Not a coder? Here's other ways you can contribute to your team:</em></p>
+                          </div>
+                          <div class="ui segments">
+                              <div class="ui segment">
+                                <p>Prepare a powerpoint</p>
+                              </div>
+                              <div class="ui segment">
+                                <p>Research APIs, Frameworks, and other tools for your developer team mates</p>
+                              </div>
+                              <div class="ui segment">
+                                <p>...And many more! Hackathons are never limited to people with coding experience.
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-6">
+                        <div class="ui raised segments">
+                            <div class="ui segment">
+                              <p><em>Not a coder? Here's other ways you can contribute to your team:</em></p>
+                            </div>
+                            <div class="ui segments">
+                                <div class="ui segment">
+                                  <p>Prepare a powerpoint</p>
+                                </div>
+                                <div class="ui segment">
+                                  <p>Research APIs, Frameworks, and other tools for your developer team mates</p>
+                                </div>
+                                <div class="ui segment">
+                                  <p>...And many more! Hackathons are never limited to people with coding experience.
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <div class="ui raised segments">
+                              <div class="ui segment">
+                                <p><em>Not a coder? Here's other ways you can contribute to your team:</em></p>
+                              </div>
+                              <div class="ui segments">
+                                  <div class="ui segment">
+                                    <p>Prepare a powerpoint</p>
+                                  </div>
+                                  <div class="ui segment">
+                                    <p>Research APIs, Frameworks, and other tools for your developer team mates</p>
+                                  </div>
+                                  <div class="ui segment">
+                                    <p>...And many more! Hackathons are never limited to people with coding experience.
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
 
               </div>
 
-              <div class="col-sm-6 sponsors">
-
-                <div class="thumbnail">
-                  <img src="https://via.placeholder.com/290x464">
-                </div>
-
+              <!-- <div class="col-sm-6 resources">
+                  <img src="https://via.placeholder.com/290x250">
               </div>
 
-              <div class="col-sm-6 sponsors">
-
-                <div class="thumbnail">
-                  <img src="https://via.placeholder.com/290x464">
+              <div class="col-sm-6 resources">
+                  <img src="https://via.placeholder.com/290x250">
                 </div>
 
+              <div class="col-sm-6 resources">
+                  <img src="https://via.placeholder.com/290x250">
               </div>
 
-              <div class="col-sm-6 sponsors">
-
-                <div class="thumbnail">
-                  <img src="https://via.placeholder.com/290x464">
-                </div>
-
+              <div class="col-sm-6 resources">
+                  <img src="https://via.placeholder.com/290x250">
               </div>
 
+              <div class="col-sm-6 resources">
+                  <img src="https://via.placeholder.com/290x250">
+              </div>
+
+              </div> -->
+
+        </div>
+
+<!--Speakers-->
+
+        <div class="row sections" id="speakers">
+            <div class="col-lg-12 columns all-headings other-headings">Speakers <hr class="lines">
+                <div class="col-sm-6 sections"><img src="https://via.placeholder.com/290x464"></div>
+                <div class="col-sm-6 sections"><img src="https://via.placeholder.com/290x464"></div>
+            </div>
         </div>
 
 <!--2018 Sponsors/Organizers-->
 
-        <div class="row" id="sponsors">
+        <div class="row sections" id="sponsors">
             <div class="col-lg-12 columns all-headings other-headings">2018 Sponsors <hr class="lines">
 
               <!-- Wide icons (1 for each row) -->
-              <div class="col-sm-12 sponsors"><img src="https://via.placeholder.com/215x103"></div>
-              <div class="col-sm-12 sponsors"><img src="https://via.placeholder.com/215x103"></div>
-              <div class="col-lg-12 sponsors"><img src="https://via.placeholder.com/215x103"></div>
+              <div class="col-sm-12 sections"><img src="https://via.placeholder.com/215x103"></div>
+              <div class="col-sm-12 sections"><img src="https://via.placeholder.com/215x103"></div>
+              <div class="col-lg-12 sections"><img src="https://via.placeholder.com/215x103"></div>
 
               <!-- Wide icons (2 for each row) -->
-              <div class="col-sm-6 sponsors"><img src="https://via.placeholder.com/215x103"></div>
-              <div class="col-sm-6 sponsors"><img src="https://via.placeholder.com/215x103"></div>
+              <div class="col-sm-6 sections"><img src="https://via.placeholder.com/215x103"></div>
+              <div class="col-sm-6 sections"><img src="https://via.placeholder.com/215x103"></div>
 
               <!-- Mini icons (3 for each row) -->
-              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
-              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
-              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sections"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sections"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sections"><img src="https://via.placeholder.com/118x103"></div>
 
-              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
-              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
-              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sections"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sections"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sections"><img src="https://via.placeholder.com/118x103"></div>
 
-              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
-              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
-              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sections"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sections"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sections"><img src="https://via.placeholder.com/118x103"></div>
 
-              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
-              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
-              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sections"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sections"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sections"><img src="https://via.placeholder.com/118x103"></div>
 
-              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
-              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
-              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sections"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sections"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sections"><img src="https://via.placeholder.com/118x103"></div>
 
-              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
-              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
-              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sections"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sections"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sections"><img src="https://via.placeholder.com/118x103"></div>
 
             </div>
         </div>
@@ -184,9 +300,9 @@
             <div class="col-lg-12 columns all-headings other-headings">Organizers <hr class="lines">
 
               <!-- Mini icons (3 for each row) -->
-              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
-              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
-              <div class="col-sm-4 sponsors"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sections"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sections"><img src="https://via.placeholder.com/118x103"></div>
+              <div class="col-sm-4 sections"><img src="https://via.placeholder.com/118x103"></div>
 
             </div>
         </div>
