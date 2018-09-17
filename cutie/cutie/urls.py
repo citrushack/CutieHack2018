@@ -20,7 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-   # path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('', include('landingapp.urls')), #cutiehack.com will take it to the landingapp's urls where all the view is: check out landingapp's urls.py
 ]
 #for static files

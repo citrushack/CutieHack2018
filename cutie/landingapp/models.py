@@ -81,23 +81,13 @@ class Profile(models.Model):
     date_of_birth = models.DateField(null=True, blank=True, help_text='Format: MM-DD-YYYY') # change to age
     school = models.CharField(max_length=100, blank=True)
     major = models.CharField(max_length=30, blank=True)
-    # Hey Jerry! Thanks!! Write below
-    #phone number
-    #gender
-    #race/ethnicity
-    #current level of study
-    #expected year of graduation
-    #code of conduct boolean
-    #data sharing boolean
-    #dietary restriction
-    #resume
-    #link to a meme
-    #application status default to Pending
+    #appStatus = Pending default
+    #need to check what is missing from here
     phoneNumber = models.CharField(max_length=15, blank=True,help_text="Format: ***********; digits only")
     genderOptions = (("a", "male"), ('b', 'female'), ("c", "non-binary"), ("d", "transgender"), ('e', 'other'), ('f', "I prefer not to answer"))
-    Gender = models.CharField(max_length=30, choices=genderOptions)
+    Gender = models.CharField(max_length=30, choices=genderOptions, default="")
     raceOptions = (('a', 'American Indian or Alaskan Native'), ('b','Asian or Pacific Islander'), ('c', 'Black or African American'), ('d', 'Hispanic'), ('e','White / Caucasian'), ('f','Multiple ethnicity / Other'), ('g','I prefer not to answer'))
-    Race = models.CharField(max_length=30, choices=raceOptions)
+    Race = models.CharField(max_length=30, choices=raceOptions, default="")
     studyOptions = (
             ("a", "Freshman"),
             ("b", "Sophomore"),
@@ -105,7 +95,7 @@ class Profile(models.Model):
             ("d", "Senior"),
             ("e", "Graduate Student"),
             )
-    LevelofStudy = models.CharField(max_length=30, choices=studyOptions)
+    LevelofStudy = models.CharField(max_length=30, choices=studyOptions, default="")
     yearOptions = (
             ("a", "2018"),
             ("b", "2019"),
@@ -113,7 +103,7 @@ class Profile(models.Model):
             ("d", "2021"),
             ("e", "2022"),
             )
-    gradYear = models.CharField(max_length=30, choices=yearOptions)
+    gradYear = models.CharField(max_length=30, choices=yearOptions, default="")
     dietOptions = (
             ("a", "Vegetarian"),
             ("b", "Vegan"),
@@ -122,11 +112,11 @@ class Profile(models.Model):
             ("e", "Diary Free"),
             ("f", "None")
             )
-    dietRestrictions = models.CharField(max_length=30, choices=dietOptions)
-    Resume = models.FileField()
-    conductBox = models.BooleanField()
-    shareBox = models.BooleanField()
-    questions = models.CharField(max_length= 200)
+    dietRestrictions = models.CharField(max_length=30, choices=dietOptions, default="")
+    Resume = models.FileField(default="")
+    conductBox = models.BooleanField(default=False)
+    shareBox = models.BooleanField(default=False)
+    questions = models.CharField(max_length=200, default="")
 
 
 #might be better to have signal codes somewhere else 

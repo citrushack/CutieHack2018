@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import login, authenticate
-from .forms import ProfileForm
+from .forms import SignUpForm
 # Create your views here.
 
 ''' test
@@ -19,7 +19,7 @@ def live(request):
 
 def signup(request):
     if request.method == 'POST':
-        form = ProfileForm(request.POST)
+        form = SignUpForm(request.POST)
         if form.is_valid():
             user = form.save()
             user.email = form.cleaned_data.get('email')

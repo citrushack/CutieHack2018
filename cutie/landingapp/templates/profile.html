@@ -1,253 +1,233 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html>
+<html>
+	<style>
+	.profileInfo{
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	background-color: #F9F6E5;
 
-    <title>Hello, world!</title>
-  </head>
+	border-radius: 64px;
 
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-    font-family: "Lato", sans-serif;
+	/*border: 1px solid black;*/
+
+	width: 1307px;
+
+	height: 753px;
+
+	/* margin: auto ; */
+
+	position: fixed;
+
+	top: 50%;
+
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	/*overflow-y: scroll; */
+	padding-top: 0px;
+	filter: drop-shadow(8px,8px,0px,4px,#28282A);
+	box-shadow: 8px 8px 4px #28282A; 
+	-moz-box-shadow: 8px 8px 4px #28282A; 
+	-webkit-box-shadow: 8px 8px 4px #28282A; 
+	-o-box-shadow: 4px 4px 4px #28282A; 
+	border-radius:64px;
 }
 
-.sidenav {
-    width: 200px;
-    position: fixed;
-    z-index: 1;
-    top: 100px;
-    left: 20px;
-  /*  right 80px; */
-    background: #eee;
-    overflow-x: hidden;
-    /*padding: 0px 0px 0px 80px;*/
 
-    padding-left: 0px;
-    padding top: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
+	.btnpos{
 
-
-    margin-left: 0px;
-}
-
-.sidenav a {
-    padding: 20px 20px 20px 20px; 
-    margin-right: 0px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #2196F3;
-    display: block;
-}
-
-.sidenav a:hover {
-    color: #064579;
-}
-
-.main {
-    margin-left: 200px; /* Same width as the sidebar + left position in px */
-    font-size: 28px; /* Increased text to enable scrolling */
-    padding: 70px 70px 0px 80px;
-}
-
-.box{
-
+	/* position: fixed; */
 	
-	
-	width: 75%;
-	height: 1000px;
-	padding: 50px;
-	border: 2px solid black;
-
-	margin: auto;
-}
-
-.studentname{
-
-	text-align: center;
 
 
 
+	}
 
-}
+	.btn{
+
+	color: white;
+	/* padding: 100px 100px 100px 100px;*/
+	float: right;
+	font-family: "Roboto", Roboto, sans-serif;
+	font-size: 36px;
+	line-height: 42px;
+	font-style: bold;	
+	/* transform: translate(-30%, -30%); */
+	margin-right: 340px;
+	position: relative;
+	bottom: 20px;
+	}
 
 
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px; padding-left: 0px;}
-    .sidenav a {font-size: 18px;}
-}
+
+	.btn:hover{
+
+
+	color: #F38709;
+
+
+	}
+	.btnHome{
+
+
+	color: white;
+        /* padding: 100px 100px 100px 100px;*/
+        float: right;
+        font-family: "Roboto", Roboto, sans-serif;
+        font-size: 36px;
+        line-height: 42px;
+        font-style: bold;
+        /* transform: translate(-30%, -30%); */
+        margin-right: 23px;
+        position: relative;
+        bottom: 20px;
+
+	}
+	.btnHome:hover{
+
+	color: #F38709;
+
+
+	}
+	#logo{
+
+	float: left;
+	margin: 0 26px 0 0;
+	padding: 15px;
+	margin-left: 39px;
+
+	}
+	.WelcomeText{
+
+
+	display: inline-block;
+	float: left;
+	font-family: "Roboto", Roboto, sans-serif;
+	padding-top: 57px; 
+	line-height: 56px; 
+	font-size: 48px;
+	color: black;
+
+	}
+	.ApplicationStatus{
+
+	/* float: clear; */
+	/* display: block; */
+	clear: both;
+	margin-left: 15px;
+	margin-left: 43px;
+	padding-top: 27px;
+	padding-bottom: 0px;	
+	float: left;
+	width: 1193px;
+	margin-bottom: 0px;
+
+	height: 100px;
+
+	background-color: white;
+
+	color: #F38709;
+
+	font-family: "Roboto", Roboto, sans-serif;
+	padding-left: 8px;
+	font-size: 48px;
+	line-height: 56px;
+	margin-right: 71px;	
+
+	}
+	.UserInfoDisplay{
+	display: block;
+	clear: both;
+	float: left;
+	margin-left: 39px;
+	padding-top: 15px;
+	padding-left: 30px;
+	background-color: white;
+	margin-top: 15px;
+	width: 1193px;
+	height: 408px;
+
+	color: #000000;
+
+	font-family: "Roboto", Roboto , sans-serif;
+	font-weight: 100;
+	font-size: 48px;	
+	line-height: 56px;
+	margin-right: 75px;
+	margin-bottom: 36px;
+	}
+
+
+
+
 </style>
-</head>
 
 
 
 
-<body>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <head>
+        <title>Profile</title>
+    </head>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Home </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-	 <li class="nav-item">
-        <a class="nav-link" href="#">FAQ</a>
-      </li>
-	 <li class="nav-item">
-        <a class="nav-link" href="#">Sponsors</a>
-      </li>
-	 <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
-      </li>
-	 <li class="nav-item">
-        <a class="nav-link" href="#">Log Out</a>
-      </li>
-	
-	<!--
 
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+
+    <body style="background-image: url('citrusHackTheme.png');">
+        .
+	   <a href = "#">
+        <div class="btnpos">
+        <div class="btn">
+
+                Logout
+
         </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
+        </div>
+        </a>
+	<a href = "#">
+	<div class = "btnHome">
+		Home
+	</div>
+	</a>
 
-	-->
-
-
-
-    </ul>
-
-
-<!--
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
--->
-
-  </div>
-</nav>
-
-</body>
+	<div class="profileInfo">
 
 
+		<img src = "citrusHackLogo.png" alt = " Citrus Hack logo" width = "122" height = "123" id="logo">
+		<div class="WelcomeText"> Hello Norm the Navel! </div>
+		<div class="ApplicationStatus">
+                	Application Status: PENDING
+		</div>
+		<div class = "UserInfoDisplay">
+			Application Details: <br/><br/>
 
+			First Name: {{Profile.first_name}} <br/>
+			Last Name: {{Profile.last_name}} <br/>
+			School: {{Profile.school}} <br/>
+			Age: {{Profile.age}}<br/>
+			Major: {{Profile.major}}<br/>
+		</div>
+        </div>
 
-
-
-
-
-
-
-
-<body>
-
-<div class="sidenav">
-  <a href="placeholder">Application Status: pending</a>
-  <a href="{% url 'index' %}">Home</a>
-
-<!--
-
-  <a href="#services">Services</a>
-  <a href="#clients">Clients</a>
-  <a href="#contact">Contact</a>
-
--->
-
-
-</div>
-
-<div class="main">
-
-	<div class="studentname"><h1> {{ user.profile.first_name }} {{ user.profile.last_name }}</h1></div>
-	<div class="box"> 
-    {{ user.profile.school }}
-    {{ user.profile.major }}
-  </div>
-
-
-
-
-
-	<!--
-
-	<div class="jumbotron bg-success text-center"> 
-
-	<h1> Woohoo! </h1>
-	<p> Congratulations! Your application has been accepted! </p>
 	
 
+
+
+
+
+<!--	<a href = "#">
+	<div class="btnpos">
+	<div class="btn">
+
+		Home
 
 	</div>
+	</div>
+	</a>
 
-	-->
-	<!--
-	<div class="card w-100" style="width: 30rem;">
-  <img class="card-img-top" src=".../500px500/" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+
 -->
-  
-</body>
+    </body>
 
+	
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <body>
-    
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
 </html>
