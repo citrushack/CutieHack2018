@@ -78,7 +78,7 @@ class Profile(models.Model):
     user = models.OneToOneField(MyUser, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=30, blank=True)
     last_name = models.CharField(max_length=30, blank=True)
-    date_of_birth = models.DateField(null=True, blank=True) # change to age
+    date_of_birth = models.DateField(null=True, blank=True, help_text='Format: MM-DD-YYYY') # change to age
     school = models.CharField(max_length=100, blank=True)
     major = models.CharField(max_length=30, blank=True)
     # Hey Jerry! Thanks!! Write below
@@ -93,6 +93,41 @@ class Profile(models.Model):
     #resume
     #link to a meme
     #application status default to Pending
+    phoneNumber = models.CharField(max_length=15, blank=True,help_text="Format: ***********; digits only")
+    genderOptions = (("a", "male"), ('b', 'female'), ("c", "non-binary"), ("d", "transgender"), ('e', 'other'), ('f', "I prefer not to answer"))
+    Gender = models.CharField(max_length=30, choices=genderOptions)
+    raceOptions = (('a', 'American Indian or Alaskan Native'), ('b','Asian or Pacific Islander'), ('c', 'Black or African American'), ('d', 'Hispanic'), ('e','White / Caucasian'), ('f','Multiple ethnicity / Other'), ('g','I prefer not to answer'))
+    Race = models.CharField(max_length=30, choices=raceOptions)
+    studyOptions = (
+            ("a", "Freshman"),
+            ("b", "Sophomore"),
+            ("c", "Junior"),
+            ("d", "Senior"),
+            ("e", "Graduate Student"),
+            )
+    LevelofStudy = models.CharField(max_length=30, choices=studyOptions)
+    yearOptions = (
+            ("a", "2018"),
+            ("b", "2019"),
+            ("c", "2020"),
+            ("d", "2021"),
+            ("e", "2022"),
+            )
+    gradYear = models.CharField(max_length=30, choices=yearOptions)
+    dietOptions = (
+            ("a", "Vegetarian"),
+            ("b", "Vegan"),
+            ("c", "Gluten Free"),
+            ("d", "Kosher"),
+            ("e", "Diary Free"),
+            ("f", "None")
+            )
+    dietRestrictions = models.CharField(max_length=30, choices=dietOptions)
+    Resume = models.FileField()
+    conductBox = models.BooleanField()
+    shareBox = models.BooleanField()
+    questions = models.CharField(max_length= 200)
+
 
 #might be better to have signal codes somewhere else 
 @receiver(post_save, sender=MyUser)
