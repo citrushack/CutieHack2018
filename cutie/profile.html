@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+	<style>
+	.profileInfo{
+
+	background-color: #F9F6E5;
+
+	border-radius: 64px;
+
+	/*border: 1px solid black;*/
+
+	width: 1307px;
+
+	height: 753px;
+
+	/* margin: auto ; */
+
+	position: fixed;
+
+	top: 50%;
+
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	/*overflow-y: scroll; */
+	padding-top: 0px;
+	filter: drop-shadow(8px,8px,0px,4px,#28282A);
+	box-shadow: 8px 8px 4px #28282A; 
+	-moz-box-shadow: 8px 8px 4px #28282A; 
+	-webkit-box-shadow: 8px 8px 4px #28282A; 
+	-o-box-shadow: 4px 4px 4px #28282A; 
+	border-radius:64px;
+}
+
+
+	.btnpos{
+
+	/* position: fixed; */
+	
+
+
+
+	}
+
+	.btn{
+
+	color: white;
+	/* padding: 100px 100px 100px 100px;*/
+	float: right;
+	font-family: "Roboto", Roboto, sans-serif;
+	font-size: 36px;
+	line-height: 42px;
+	font-style: bold;	
+	/* transform: translate(-30%, -30%); */
+	margin-right: 340px;
+	position: relative;
+	bottom: 20px;
+	}
+
+
+
+	.btn:hover{
+
+
+	color: #F38709;
+
+
+	}
+	.btnHome{
+
+
+	color: white;
+        /* padding: 100px 100px 100px 100px;*/
+        float: right;
+        font-family: "Roboto", Roboto, sans-serif;
+        font-size: 36px;
+        line-height: 42px;
+        font-style: bold;
+        /* transform: translate(-30%, -30%); */
+        margin-right: 23px;
+        position: relative;
+        bottom: 20px;
+
+	}
+	.btnHome:hover{
+
+	color: #F38709;
+
+
+	}
+	#logo{
+
+	float: left;
+	margin: 0 26px 0 0;
+	padding: 15px;
+	margin-left: 39px;
+
+	}
+	.WelcomeText{
+
+
+	display: inline-block;
+	float: left;
+	font-family: "Roboto", Roboto, sans-serif;
+	padding-top: 57px; 
+	line-height: 56px; 
+	font-size: 48px;
+	color: black;
+
+	}
+	.ApplicationStatus{
+
+	/* float: clear; */
+	/* display: block; */
+	clear: both;
+	margin-left: 15px;
+	margin-left: 43px;
+	padding-top: 27px;
+	padding-bottom: 0px;	
+	float: left;
+	width: 1193px;
+	margin-bottom: 0px;
+
+	height: 100px;
+
+	background-color: white;
+
+	color: #F38709;
+
+	font-family: "Roboto", Roboto, sans-serif;
+	padding-left: 8px;
+	font-size: 48px;
+	line-height: 56px;
+	margin-right: 71px;	
+
+	}
+	.UserInfoDisplay{
+	display: block;
+	clear: both;
+	float: left;
+	margin-left: 39px;
+	padding-top: 15px;
+	padding-left: 30px;
+	background-color: white;
+	margin-top: 15px;
+	width: 1193px;
+	height: 408px;
+
+	color: #000000;
+
+	font-family: "Roboto", Roboto , sans-serif;
+	font-weight: 100;
+	font-size: 48px;	
+	line-height: 56px;
+	margin-right: 75px;
+	margin-bottom: 36px;
+	}
+
+
+
+
+</style>
+
+
+
+
+
+    <head>
+        <title>Profile</title>
+    </head>
+
+
+
+    <body style="background-image: url('citrusHackTheme.png');">
+        .
+	   <a href = "#">
+        <div class="btnpos">
+        <div class="btn">
+
+                Logout
+
+        </div>
+        </div>
+        </a>
+	<a href = "#">
+	<div class = "btnHome">
+		Home
+	</div>
+	</a>
+
+	<div class="profileInfo">
+
+
+		<img src = "citrusHackLogo.png" alt = " Citrus Hack logo" width = "122" height = "123" id="logo">
+		<div class="WelcomeText"> Hello Norm the Navel! </div>
+		<div class="ApplicationStatus">
+                	Application Status: PENDING
+		</div>
+		<div class = "UserInfoDisplay">
+			Application Details: <br/><br/>
+
+			First Name: {{Profile.first_name}} <br/>
+			Last Name: {{Profile.last_name}} <br/>
+			School: {{Profile.school}} <br/>
+			Age: {{Profile.age}}<br/>
+			Major: {{Profile.major}}<br/>
+		</div>
+        </div>
+
+	
+
+
+
+
+
+<!--	<a href = "#">
+	<div class="btnpos">
+	<div class="btn">
+
+		Home
+
+	</div>
+	</div>
+	</a>
+
+
+-->
+    </body>
+
+	
+
+</html>
