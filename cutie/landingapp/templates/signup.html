@@ -17,37 +17,94 @@
     <button type="submit">Sign up</button>
   </form>
   --->
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Cutie Hack 2018</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="live/css/segment.min.css">
+  <link rel="stylesheet" type="text/css" href="signup.css" />
 </head>
 <body>
 
-  <h1>Apply to Cutie Hack</h1>
-  <p>Personal Information</p>
-  <p> * denotes required field</p>
+<div class="container">
 
-  <form>
-  First name:
-  <input type="text" name="firstname">
-  Last name:
-  <input type="text" name="lastname">
-  <br><br>
-  Email:
-  <input type="email" name="">
-  <br><br>
-  Confirm Email:
-  <input type="email" name="">
-  <br><br>
-  Password:
-  <input type="Password" name="">
-  Confirm Password:
-  <input type="Password" name="">
-  <br><br>
-  <input type="submit" value="next">
+  <div class="row">
+    <div class="col-sm-12 form">
 
-  </form>
+<!-- Form -->
+
+      <div class="ui raised segment">
+
+        <div class="formtop">
+          <img src="https://via.placeholder.com/100x100" id="icon">
+          <h1>Apply to Cutie Hack</h1>
+          <p class="description">Personal Information
+          <p class="description">(* denotes required field)</p>
+        </div>
+
+        <form>
+
+        <div>
+          <label for="firstname">First Name:
+            <br>
+            <input id="firstname" name="firstname" required> *
+          </label>
+
+          <label for="lastname">Last Name:
+            <br>
+            <input id="lastname" name="lastname" required> *
+          </label>
+        </div>
+
+        <div>
+          <label for="email">Email:
+            <br>
+            <input id="email" name="email" required> *
+          </label>
+        </div>
+
+        <div>
+          <label for="">Confirm email:
+            <br>
+            <input id="" name="" required> *
+          </label>
+        </div>
+
+        <div>
+          <label for="password">Password:
+            <br>
+            <input id="password" name="password" required> *
+          </label>
+
+          <label for="">Confirm Password:
+            <br>
+            <input id="" name="" required> *
+          </label>
+        </div>
+
+          <br>
+
+          <div id="next">
+            <button type="button" class="btn btn-warning">
+              Next
+            </button>
+
+          </div>
+
+
+        </form>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>
+
 
 </body>
 </html>
