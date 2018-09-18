@@ -12,6 +12,11 @@
   padding: 10%;
 }
 
+h1 {
+  font-style: italic;
+  font-weight: bold;
+}
+
 /* Icon, Title */
 
 .formtop {
@@ -30,6 +35,14 @@
 
 /* Button */
 
-#next {
-  margin-left: 92%;
+.previous {
+  margin-bottom: 2%;
+}
+
+#next { /* for the button in the application pt 1*/
+  margin-left: 94%;
+}
+
+.next {
+  float:right;
 }
