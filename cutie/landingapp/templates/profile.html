@@ -103,73 +103,113 @@
 	margin-bottom: 36px;
 	}
 
-.navbar-default {
-    background-color: white;
-    border-color: black;
+.navbar-inverse{
+	background: transparent !important;
 }
-/* Title */
+
+.navbar.transparent.navbar-inverse .navbar-inner {
+    border-width: 0px;
+    -webkit-box-shadow: 0px 0px;
+    box-shadow: 0px 0px;
+    background-color: rgba(0,0,0,0.0);
+    background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
+    background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+}
+
+.navbar.navbar-default {
+    background-color: #99ccff;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.navbar.navbar-default .navbar-collapse {
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/*.navbar-default {}
 .navbar-default .navbar-brand {
-    color: #777;
+    color: white;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
     color: #5E5E5E;
 }
+*/
 /* Link */
-.navbar-default .navbar-nav > li > a {
-    color: #777; /*color of nav links*/
+.navbar.navbar-default .navbar-nav > li > a {
+    color: white; /*color of nav links*/
 }
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-    color: black; /*color change when hovering nav link*/
+.navbar.navbar-default .navbar-nav > li > a:hover,
+.navbar.navbar-default .navbar-nav > li > a:focus {
+    color: #F38709; /*color change when hovering nav link*/
 }
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
+.navbar.navbar-default .navbar-nav > .active > a,
+.navbar.navbar-default .navbar-nav > .active > a:hover,
+.navbar.navbar-default .navbar-nav > .active > a:focus {
     color: #555;
     background-color: #E7E7E7;
 }
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
+.navbar.navbar-default .navbar-nav > .open > a,
+.navbar.navbar-default .navbar-nav > .open > a:hover,
+.navbar.navbar-default .navbar-nav > .open > a:focus {
     color: #555;
     background-color: #D5D5D5;
 }
 /* Caret */
-.navbar-default .navbar-nav > .dropdown > a .caret {
+.navbar.navbar-default .navbar-nav > .dropdown > a .caret {
     border-top-color: #777;
     border-bottom-color: #777;
 }
-.navbar-default .navbar-nav > .dropdown > a:hover .caret,
-.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+.navbar.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar.navbar-default .navbar-nav > .dropdown > a:focus .caret {
     border-top-color: #333;
     border-bottom-color: #333;
 }
-.navbar-default .navbar-nav > .open > a .caret,
-.navbar-default .navbar-nav > .open > a:hover .caret,
-.navbar-default .navbar-nav > .open > a:focus .caret {
+.navbar.navbar-default .navbar-nav > .open > a .caret,
+.navbar.navbar-default .navbar-nav > .open > a:hover .caret,
+.navbar.navbar-default .navbar-nav > .open > a:focus .caret {
     border-top-color: #555;
     border-bottom-color: #555;
 }
 /* Mobile version */
-.navbar-default .navbar-toggle {
+.navbar.navbar-default .navbar-toggle {
     border-color: #DDD;
 }
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
+.navbar.navbar-default .navbar-toggle:hover,
+.navbar.navbar-default .navbar-toggle:focus {
     background-color: #DDD;
 }
-.navbar-default .navbar-toggle .icon-bar {
+.navbar.navbar-default .navbar-toggle .icon-bar {
     background-color: #CCC;
 }
 @media (max-width: 767px) {
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    .navbar.navbar-default .navbar-nav .open .dropdown-menu > li > a {
         color: #777;
     }
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    .navbar.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
           color: #333;
     }
+}
+.container {
+  width: 90%;
+}
+
+@media only screen and (max-width: 766px) {
+.collapsing, .in {background-color: #00000040;}
+.collapsing ul li a, .in ul li a {color: white!important;}
+.collapsing ul li a:hover, .in ul li a:hover {color:orange!important;}
+}
+
+.navbar-collapse{
+	text-align:center;
+}
+.navbar-header{
+	text-align:center;
 }
 
 </style>
@@ -179,7 +219,14 @@
 
 
     <head>
-    	    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <title>Profile</title>
     </head>
 
@@ -205,11 +252,13 @@
 
 
 
-  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+  <nav class="navbar transparent navbar-default navbar-fixed-top navbar-inverse">
   <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
       </div>
