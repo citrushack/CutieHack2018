@@ -3,7 +3,7 @@
 	<style>
 	.profileInfo{
 
-	background-color: #F9F6E5;
+	background-color: #EEBD69;
 
 	border-radius: 64px;
 
@@ -34,61 +34,7 @@
 }
 
 
-	.btnpos{
 
-	/* position: fixed; */
-	
-
-
-
-	}
-
-	.btn{
-
-	color: white;
-	/* padding: 100px 100px 100px 100px;*/
-	float: right;
-	font-family: "Roboto", Roboto, sans-serif;
-	font-size: 36px;
-	line-height: 42px;
-	font-style: bold;	
-	/* transform: translate(-30%, -30%); */
-	margin-right: 340px;
-	position: relative;
-	bottom: 20px;
-	}
-
-
-
-	.btn:hover{
-
-
-	color: #F38709;
-
-
-	}
-	.btnHome{
-
-
-	color: white;
-        /* padding: 100px 100px 100px 100px;*/
-        float: right;
-        font-family: "Roboto", Roboto, sans-serif;
-        font-size: 36px;
-        line-height: 42px;
-        font-style: bold;
-        /* transform: translate(-30%, -30%); */
-        margin-right: 23px;
-        position: relative;
-        bottom: 20px;
-
-	}
-	.btnHome:hover{
-
-	color: #F38709;
-
-
-	}
 	#logo{
 
 	float: left;
@@ -157,6 +103,74 @@
 	margin-bottom: 36px;
 	}
 
+.navbar-default {
+    background-color: white;
+    border-color: black;
+}
+/* Title */
+.navbar-default .navbar-brand {
+    color: #777;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #5E5E5E;
+}
+/* Link */
+.navbar-default .navbar-nav > li > a {
+    color: #777; /*color of nav links*/
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: black; /*color change when hovering nav link*/
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: #E7E7E7;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #D5D5D5;
+}
+/* Caret */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #777;
+    border-bottom-color: #777;
+}
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #333;
+    border-bottom-color: #333;
+}
+.navbar-default .navbar-nav > .open > a .caret,
+.navbar-default .navbar-nav > .open > a:hover .caret,
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #555;
+    border-bottom-color: #555;
+}
+/* Mobile version */
+.navbar-default .navbar-toggle {
+    border-color: #DDD;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #DDD;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #CCC;
+}
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+          color: #333;
+    }
+}
 
 </style>
 
@@ -165,15 +179,15 @@
 
 
     <head>
-    	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    	    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <title>Profile</title>
     </head>
 
 
 
-    <body style="background-image: url('../static/images/city_scape.png');">
+    <body style="background-image: url('../static/images/cityscape.png');">
         .
-	   <a href = "#">
+<!-- 	   <a href = "#">
         <div class="btnpos">
         <div class="btn">
 
@@ -187,14 +201,15 @@
 		Home
 	</div>
 	</a>
+ -->
+
+
 
   <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
   <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
       </div>
@@ -205,7 +220,7 @@
             <li><a>Log Out</a></li>
           </ul>
       </div>
-</div>
+	</div>
 </nav>
 
 	<div class="profileInfo">
