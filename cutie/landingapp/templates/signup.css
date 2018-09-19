@@ -1,0 +1,48 @@
+/* Everything */
+
+.ui.segment, .ui.segments .segment {
+  font-size: 1.2em;
+}
+
+.ui.segment {
+  border-radius: 30px;
+}
+
+.form {
+  padding: 10%;
+}
+
+h1 {
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Icon, Title */
+
+.formtop {
+  margin-bottom: 4%;
+}
+
+#icon {
+  float: left;
+  margin-right: 2%;
+}
+
+.description {
+  font-size: 0.7em;
+  margin: auto;
+}
+
+/* Button */
+
+.previous {
+  margin-bottom: 2%;
+}
+
+#next { /* for the button in the application pt 1*/
+  margin-left: 94%;
+}
+
+.next {
+  float:right;
+}

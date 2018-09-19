@@ -31,33 +31,6 @@
   <link rel="stylesheet" type="text/css" href="signup.css" />
 </head>
 <body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-<!--- <script src="signup.js"></script>--->
-    <script>
-        $(document).ready(function (){
-            $("#nextSection1").click(function (){
-                $('html, body').animate({
-                    scrollTop: $(".formtop2").offset().top
-                }, 500);
-            });
-            $("#nextSection2").click(function (){
-                $('html, body').animate({
-                    scrollTop: $(".formtop3").offset().top
-                }, 500);
-            });
-            $("#prevSection2").click(function (){
-                $('html, body').animate({
-                    scrollTop: 0
-                }, 500);
-            });
-            $("#prevSection3").click(function (){
-                $('html, body').animate({
-                    scrollTop: $(".formtop2").offset().top
-                }, 500);
-            });
-
-        });
-    </script>
 
 <div class="container">
 
@@ -69,7 +42,7 @@
 
       <div class="ui raised segment">
 
-        <div class="formtop1">
+        <div class="formtop">
           <img src="https://via.placeholder.com/100x100" id="icon">
           <h1>Apply to Cutie Hack</h1>
           <p class="description">Account Information
@@ -119,7 +92,7 @@
           <br>
 
           <div id="next">
-            <button id='nextSection1'type="button" class="btn btn-warning">
+            <button type="button" class="btn btn-warning">
               Next
             </button>
           </div>
@@ -159,7 +132,7 @@
 
         <div class="ui raised segment">
 
-          <div class="formtop2">
+          <div class="formtop">
             <img src="https://via.placeholder.com/100x100" id="icon">
             <h1>Apply to Cutie Hack</h1>
             <p class="description">Demographic Information
@@ -274,8 +247,8 @@
 
       <br><br>
 
-      <span><button id='prevSection2'type="button" class="btn btn-warning">Previous</button></span>
-      <span><button id='nextSection2'type="button" class="btn btn-warning next">Next</button></span>
+      <span><button type="button" class="btn btn-warning">Previous</button></span>
+      <span><button type="button" class="btn btn-warning next">Next</button></span>
 
       <!-- <button>previous</button>
       <button>next</button> -->
@@ -289,7 +262,7 @@
 
   <div class="ui raised segment">
 
-    <div class="formtop3">
+    <div class="formtop">
       <img src="https://via.placeholder.com/100x100" id="icon">
       <h1>Apply to Cutie Hack</h1>
       <p class="description">Additional Information
@@ -317,8 +290,8 @@
 
       <br><br>
 
-      <span><button id='prevSection3'type="button" class="btn btn-warning">Previous</button></span>
-      <span><button type="button" class="btn btn-warning next">Apply</button></span>
+      <span><button type="button" class="btn btn-warning">Previous</button></span>
+      <span><button type="button" class="btn btn-warning next">Next</button></span>
 
     </div>
   </div>
