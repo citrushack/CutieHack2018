@@ -37,12 +37,12 @@
         $(document).ready(function (){
             $("#nextSection1").click(function (){
                 $('html, body').animate({
-                    scrollTop: $("#part2").offset().top
+                    scrollTop: $("#wrapper2").offset().top
                 }, 500);
             });
             $("#nextSection2").click(function (){
                 $('html, body').animate({
-                    scrollTop: $("#part3").offset().top
+                    scrollTop: $("#wrapper3").offset().top
                 }, 500);
             });
             $("#prevSection2").click(function (){
@@ -52,7 +52,7 @@
             });
             $("#prevSection3").click(function (){
                 $('html, body').animate({
-                    scrollTop: $("#part2").offset().top
+                    scrollTop: $("#wrapper2").offset().top
                 }, 500);
             });
 
@@ -154,7 +154,7 @@
     </div> -->
 
 <!-- Application Part 2 -->
-
+<div id='wrapper2'>
       <div class="col-sm-12 form">
 
         <div id='part2'class="ui raised segment">
@@ -282,11 +282,12 @@
 
   </div>
 </div>
+</div>
 
 <!-- Application Part 3 -->
 
 <div class="col-sm-12 form">
-
+<div id='wrapper3'>
   <div id='part3'class="ui raised segment">
 
     <div class="formtop3">
@@ -300,9 +301,8 @@
 
       <input type="checkbox" name="code of Conduct">
 
-      I have read and agree to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct.</a>
-
-      <p>By participating in Cutie Hack, you must allow the use of your application information to be passed along by MLH to be used to promote other MLH affliated events. Don't worry, we'll keep your information safe and secure! By checking the following box, you hereby agree to us sharing your information with MLH</p>
+      I have read and agree to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct.</a><br><br>
+      <p>By participating in Cutie Hack, you must allow the use of your application information to be passed along by MLH to be used to promote other MLH affliated events. Don't worry, we'll keep your information safe and secure! By checking the following box, you hereby agree to us sharing your information with MLH.</p>
 
       <input type="checkbox" name="Application info">
 
@@ -320,8 +320,9 @@
       <span><button id='prevSection3'type="button" class="btn btn-warning">Previous</button></span>
       <span><button type="button" class="btn btn-warning next">Apply</button></span>
 
-    </div>
   </div>
+</div>
+</div>
 
 </div>
 
