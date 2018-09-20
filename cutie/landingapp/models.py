@@ -78,45 +78,40 @@ class Profile(models.Model):
     user = models.OneToOneField(MyUser, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=30, blank=True)
     last_name = models.CharField(max_length=30, blank=True)
-    date_of_birth = models.DateField(null=True, blank=True, help_text='Format: MM-DD-YYYY') # change to age
+    age = models.IntegerField(null=True, blank=True) # change to age
     school = models.CharField(max_length=100, blank=True)
     major = models.CharField(max_length=30, blank=True)
     #appStatus = Pending default
     #need to check what is missing from here
-    phoneNumber = models.CharField(max_length=15, blank=True,help_text="Format: ***********; digits only")
-    genderOptions = (("a", "male"), ('b', 'female'), ("c", "non-binary"), ("d", "transgender"), ('e', 'other'), ('f', "I prefer not to answer"))
+    phoneNumber = models.CharField(max_length=12, blank=True,help_text="Phone Number: 123 456 7890")
+    genderOptions = (("a", "male"), ('b', 'female'), ("c", "Other"), ("d", "Prefer not to disclose"), )
     Gender = models.CharField(max_length=30, choices=genderOptions, default="")
-    raceOptions = (('a', 'American Indian or Alaskan Native'), ('b','Asian or Pacific Islander'), ('c', 'Black or African American'), ('d', 'Hispanic'), ('e','White / Caucasian'), ('f','Multiple ethnicity / Other'), ('g','I prefer not to answer'))
+    raceOptions = (('a', 'White'), ('b','Black or African American'), ('c', 'Native American'), ('d', 'Asian'), ('e','Native Hawaiian or other Pacific Islander'), ('f','Latino or Latin American'), ('g','Other'), ('h', 'Two or more races'), ('i', 'Prefer not to disclose'), )
     Race = models.CharField(max_length=30, choices=raceOptions, default="")
     studyOptions = (
-            ("a", "Freshman"),
-            ("b", "Sophomore"),
-            ("c", "Junior"),
-            ("d", "Senior"),
-            ("e", "Graduate Student"),
-            )
+      ("a", "1st Year"),
+      ("b", "2nd Year"),
+      ("c", "3rd Year"),
+      ("d", "4th Year"),
+      ("e", "5th Year or beyond"),
+      ("f", "Prefer not to disclose"),
+      )
     LevelofStudy = models.CharField(max_length=30, choices=studyOptions, default="")
     yearOptions = (
-            ("a", "2018"),
-            ("b", "2019"),
-            ("c", "2020"),
-            ("d", "2021"),
-            ("e", "2022"),
-            )
+      ("a", "2019"),
+      ("b", "2020"),
+      ("c", "2021"),
+      ("d", "2022"),
+      ("e", "2023"),
+      ("f", "2024"),
+      ("g", "2025"),
+      )
     gradYear = models.CharField(max_length=30, choices=yearOptions, default="")
-    dietOptions = (
-            ("a", "Vegetarian"),
-            ("b", "Vegan"),
-            ("c", "Gluten Free"),
-            ("d", "Kosher"),
-            ("e", "Diary Free"),
-            ("f", "None")
-            )
-    dietRestrictions = models.CharField(max_length=30, choices=dietOptions, default="")
+    dietRestrictions = models.CharField(max_length=100, default="")
     Resume = models.FileField(default="")
     conductBox = models.BooleanField(default=False)
     shareBox = models.BooleanField(default=False)
-    questions = models.CharField(max_length=200, default="")
+    meme = models.CharField(max_length=200, default="")
 
 
 #might be better to have signal codes somewhere else 
