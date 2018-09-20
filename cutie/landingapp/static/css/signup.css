@@ -1,8 +1,7 @@
 /* Everything */
 
 body {
-  background: url({% static 'images/cityscape_repeating.png' %});
-  background-size: cover;
+  background: url(../images/cityscape_repeating.png);
 }
 
 .ui.segment, .ui.segments .segment {
