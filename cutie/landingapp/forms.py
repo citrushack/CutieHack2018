@@ -6,6 +6,11 @@ from .models import MyUser
 class SignUpForm(UserCreationForm):
    first_name = forms.CharField(max_length=30, required=True, help_text='fname')
    last_name = forms.CharField(max_length=30, required=True, help_text='lname')
+   email = forms.EmailField(max_length=40, required=True, help_text='e-mail')
+   confirmEmail = forms.EmailField(max_length=40, required=True, help_text='confirm e-mail')
+   password1 = forms.CharField(max_length=32, widget=forms.PasswordInput, help_text='password')
+   password2 = forms.CharField(max_length=32, widget=forms.PasswordInput, help_text='confirm password')
+   school = forms.CharField(max_length=100, required=True, help_text='school')
    ageOptions = (
       ("a", "13"),
       ("b", "14"),
@@ -29,13 +34,11 @@ class SignUpForm(UserCreationForm):
       ("t", "32"),
       )
    age = forms.ChoiceField(choices=ageOptions)
-   school = forms.CharField(max_length=100, required=True, help_text='school')
-   major = forms.CharField(max_length=30, required=True, help_text='major')
-   phoneNumber = forms.CharField(max_length=12,required=True,help_text="Phone Number: 123 456 7890")
    genderOptions = (("a", "male"), ('b', 'female'), ("c", "Other"), ("d", "Prefer not to disclose"),)
    Gender = forms.ChoiceField(choices=genderOptions)
    raceOptions = (('a', 'White'), ('b','Black or African American'), ('c', 'Native American'), ('d', 'Asian'), ('e','Native Hawaiian or other Pacific Islander'), ('f','Latino or Latin American'), ('g','Other'), ('h', 'Two or more races'), ('i', 'Prefer not to disclose'), )
    Race = forms.ChoiceField(choices=raceOptions)
+   major = forms.CharField(max_length=30, required=True, help_text='major')
    studyOptions = (
       ("a", "1st Year"),
       ("b", "2nd Year"),
@@ -55,10 +58,11 @@ class SignUpForm(UserCreationForm):
       ("g", "2025"),
       )
    gradYear = forms.ChoiceField(choices=yearOptions)
-   dietRestrictions = forms.CharField(max_length=100)
+   phoneNumber = forms.CharField(max_length=12,required=True,help_text="Phone Number: 123 456 7890")
    Resume = forms.FileField()
    conductBox = forms.BooleanField()
    shareBox = forms.BooleanField()
+   dietRestrictions = forms.CharField(max_length=100)
    meme = forms.CharField(max_length= 200)
 
    class Meta:
