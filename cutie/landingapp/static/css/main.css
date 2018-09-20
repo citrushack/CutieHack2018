@@ -176,9 +176,9 @@ img{
   background: #EEEEEE;
 }
 
-.lightDiv {
-  background: #EEEEEE;
-  padding: 3%;
+.lightColor {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .darkDiv {
@@ -226,8 +226,9 @@ img{
   padding-bottom: .5%;
 }
 
-#iconSize {
-  font-size: 170%;
+.iconSize {
+  color:#fff;
+  font-size: 175%;
   margin: 2.5%;
   margin-top: 1%;
 }

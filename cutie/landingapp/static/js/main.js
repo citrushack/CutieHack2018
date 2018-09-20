@@ -6,7 +6,7 @@ $(document).ready(function(){
         $("#a" + this.id.charAt(1)).slideToggle("slow");
     });
 });
-
+// DELTE THIS FAM ^^^^^
 //jQuery navbar smooth scrolling
 $(document).ready(function(){
     //when a tag with a valid anchortag is clicked
