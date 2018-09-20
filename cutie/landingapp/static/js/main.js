@@ -7,12 +7,6 @@ $(document).ready(function(){
     });
 });
 
-$(document).ready(function(){
-    $(window).scroll(function(){
-        console.log($(window).width())
-    });
-});
-
 //jQuery navbar smooth scrolling
 $(document).ready(function(){
     //when a tag with a valid anchortag is clicked

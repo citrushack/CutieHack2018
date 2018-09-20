@@ -145,16 +145,7 @@ nav ul li a:hover {
 }
 
 .content{
-  /*overflow:hidden;*/
   z-index:1;
-}
-
-.container{
-  /*width: 100%;*/
-}
-
-#info{
-  background-image: linear-gradient(#F38709, #F5CF8A);
 }
 
 #sponsors{
@@ -205,37 +196,18 @@ img{
   font-size: 400%;
 }
 
-
-#faq>h1{
-  color:black;
+.questionBorder {
+  border-radius: 5px;
+  background-color: #f09e12;
+  padding: 10px;
+  box-shadow: 5px 10px;
+  margin: 5%;
 }
 
-.faqA{text-align: center;}
-.faqB{text-align: center;}
-.faqA:hover {
-  color:#F38709;
-  -webkit-transition: color .5s ease-out;
-  -moz-transition: color.5s ease-out;
-  -o-transition: color .5s ease-out;
-  transition: color .5s ease-out;
-  cursor:pointer;
-}
-
-.faqB:hover {
-  color:#596E9F;
-  /*color:#5fd86d;*/
-  -webkit-transition: color .5s ease-out;
-  -moz-transition: color.5s ease-out;
-  -o-transition: color .5s ease-out;
-  transition: color .5s ease-out;
-  cursor:pointer;
-}
-
-.faqAnswer {
-  font-size: 125%
-  padding-left: 2.5%;
-  display: none;
-  text-align:center;
+#faq {
+  background-color: #F38709;
+  text-align: center;
+  padding:10%;
 }
 
 .bigSponsor{
