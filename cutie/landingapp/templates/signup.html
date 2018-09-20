@@ -26,7 +26,7 @@
   <!-- Favicon -->
   {% load static %}
   <link rel="shortcut icon" type="image/png" href="{%  static 'images/favicon.png' %}">
- 
+
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/segment.min.css">
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/signup.css' %}">
@@ -246,7 +246,7 @@
       <div>
         <label for="resume">Resume:
           <br>
-          <button id="resume" type="button">Click to upload a file</button>
+          <input id="resume" name="resume" type="file" accept="image/png, image/jpeg" />
           <span class="red-star">&#x2605;</span>
           <p class="description">
             Acceptable file format includes DOC,PDF,RTF,HTML,TXT, ODF, and DOCX

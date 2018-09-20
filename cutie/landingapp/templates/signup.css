@@ -1,0 +1,72 @@
+/* Everything */
+
+body {
+  background: url({% static 'images/cityscape_repeating.png' %});
+  background-size: cover;
+}
+
+.ui.segment, .ui.segments .segment {
+  font-size: 1.2em;
+}
+
+.ui.segment {
+  border-radius: 30px;
+  background: #edbd69;
+}
+
+.form {
+  padding: 10%;
+}
+
+h1 {
+  font-style: italic;
+  font-weight: bold;
+}
+
+label {
+  font-weight: normal;
+}
+
+/* Formtop */
+
+.topDescrip {
+  margin-bottom: 4%;
+}
+
+#icon {
+  float: left;
+  margin-right: 2%;
+}
+
+.description {
+  font-size: 0.7em;
+  margin: auto;
+}
+
+/* Button */
+
+.previous {
+  margin-bottom: 2%;
+}
+
+#next { /* for the button in the application pt 1*/
+  margin-left: 94%;
+}
+
+.next {
+  float:right;
+}
+
+.red-star {
+    color: red;
+}
+
+.btn-warning {
+  background-color: #f3870b;
+  border-color: #f3870b;
+}
+
+.btn {
+  border-radius: 15px;
+  padding: 6px 20px;
+}

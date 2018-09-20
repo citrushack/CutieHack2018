@@ -58,21 +58,29 @@ label {
   float:right;
 }
 
+
 .red-star {
     color: red;
 }
+
+/* For resume part */
+input[type=file] {
+  display: inline-block;
+  width: 220px;
+}
+
 select {
 
   background-color: white;
   font: inherit;
   padding: 0.0em 3.5em 0.1em 1em;
-  margin: 0;      
+  margin: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-appearance: none;
   -moz-appearance: none;
- 
+
   background-image:
     linear-gradient(45deg, transparent 50%, white 50%),
     linear-gradient(135deg, white 50%, transparent 50%),
@@ -147,6 +155,3 @@ select {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-
-
-
