@@ -45,7 +45,7 @@ def signup(request):
             login(request, user)
             return redirect('profile')
     else:
-        form = ProfileForm()
+        form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
 
 #2 form method incomplete

@@ -6,45 +6,62 @@ from .models import MyUser
 class SignUpForm(UserCreationForm):
    first_name = forms.CharField(max_length=30, required=True, help_text='fname')
    last_name = forms.CharField(max_length=30, required=True, help_text='lname')
-   date_of_birth = forms.DateField(help_text='Required. Format: YYYY-MM-DD')
+   ageOptions = (
+      ("a", "13"),
+      ("b", "14"),
+      ("c", "15"),
+      ("d", "16"),
+      ("e", "17 "),
+      ("f", "18"),
+      ("g", "19"),
+      ("h", "20"),
+      ("i", "21"),
+      ("j", "22"),
+      ("k", "23"),
+      ("l", "24"),
+      ("m", "25"),
+      ("n", "26"),
+      ("o", "27"),
+      ("p", "28"),
+      ("q", "29"),
+      ("r", "30"),
+      ("s", "31"),
+      ("t", "32"),
+      )
+   age = forms.ChoiceField(choices=ageOptions)
    school = forms.CharField(max_length=100, required=True, help_text='school')
    major = forms.CharField(max_length=30, required=True, help_text='major')
-   phoneNumber = forms.ChoiceField(required=True,help_text="Format: ***********; digits only")
-   genderOptions = (("a", "male"), ('b', 'female'), ("c", "non-binary"), ("d", "transgender"), ('e', 'other'), ('f', "I prefer not to answer"))
+   phoneNumber = forms.CharField(max_length=12,required=True,help_text="Phone Number: 123 456 7890")
+   genderOptions = (("a", "male"), ('b', 'female'), ("c", "Other"), ("d", "Prefer not to disclose"),)
    Gender = forms.ChoiceField(choices=genderOptions)
-   raceOptions = (('a', 'American Indian or Alaskan Native'), ('b','Asian or Pacific Islander'), ('c', 'Black or African American'), ('d', 'Hispanic'), ('e','White / Caucasian'), ('f','Multiple ethnicity / Other'), ('g','I prefer not to answer'))
+   raceOptions = (('a', 'White'), ('b','Black or African American'), ('c', 'Native American'), ('d', 'Asian'), ('e','Native Hawaiian or other Pacific Islander'), ('f','Latino or Latin American'), ('g','Other'), ('h', 'Two or more races'), ('i', 'Prefer not to disclose'), )
    Race = forms.ChoiceField(choices=raceOptions)
    studyOptions = (
-      ("a", "Freshman"),
-      ("b", "Sophomore"),
-      ("c", "Junior"),
-      ("d", "Senior"),
-      ("e", "Graduate Student"),
+      ("a", "1st Year"),
+      ("b", "2nd Year"),
+      ("c", "3rd Year"),
+      ("d", "4th Year"),
+      ("e", "5th Year or beyond"),
+      ("f", "Prefer not to disclose"),
       )
    LevelofStudy = forms.ChoiceField(choices=studyOptions)
    yearOptions = (
-      ("a", "2018"),
-      ("b", "2019"),
-      ("c", "2020"),
-      ("d", "2021"),
-      ("e", "2022"),
+      ("a", "2019"),
+      ("b", "2020"),
+      ("c", "2021"),
+      ("d", "2022"),
+      ("e", "2023"),
+      ("f", "2024"),
+      ("g", "2025"),
       )
    gradYear = forms.ChoiceField(choices=yearOptions)
-   dietOptions = (
-      ("a", "Vegetarian"),
-      ("b", "Vegan"),
-      ("c", "Gluten Free"),
-      ("d", "Kosher"),
-      ("e", "Diary Free"),
-      ("f", "None")
-      )
-   dietRestrictions = forms.ChoiceField(choices=dietOptions)
+   dietRestrictions = forms.CharField(max_length=100)
    Resume = forms.FileField()
    conductBox = forms.BooleanField()
    shareBox = forms.BooleanField()
-   questions = forms.CharField(max_length= 200)
+   meme = forms.CharField(max_length= 200)
 
    class Meta:
       model = MyUser
-      fields = ('email', 'password1', 'password2', 'first_name', 'last_name', 'date_of_birth', 'school', 'major', 'phoneNumber', 'Gender', 'Race', 'LevelofStudy', 'gradYear', 'dietRestrictions', 'Resume', 'conductBox', 'shareBox', 'questions')
+      fields = ('email', 'password1', 'password2', 'first_name', 'last_name', 'age', 'school', 'major', 'phoneNumber', 'Gender', 'Race', 'LevelofStudy', 'gradYear', 'dietRestrictions', 'Resume', 'conductBox', 'shareBox', 'meme')
 
