@@ -30,35 +30,13 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/segment.min.css">
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+
 </head>
 <body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-<!--- <script src="signup.js"></script>--->
-    <script>
-        $(document).ready(function (){
-            $("#nextSection1").click(function (){
-                $('html, body').animate({
-                    scrollTop: $("#wrapper2").offset().top
-                }, 500);
-            });
-            $("#nextSection2").click(function (){
-                $('html, body').animate({
-                    scrollTop: $("#wrapper3").offset().top
-                }, 500);
-            });
-            $("#prevSection2").click(function (){
-                $('html, body').animate({
-                    scrollTop: 0
-                }, 500);
-            });
-            $("#prevSection3").click(function (){
-                $('html, body').animate({
-                    scrollTop: $("#wrapper2").offset().top
-                }, 500);
-            });
 
-        });
-    </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+{% load static %}
+<script type="text/javascript" src="{% static 'js/signup.js' %}"></script>
 
 <div class="container">
 
@@ -298,7 +276,7 @@
         <p class="description">(<span class="red-star">&#x2605;</span> denotes required field)</p>
       </div>
 
-        <p>All Cutie Hack participants must adhere to the MLH Code of Conduct at all times during the event. By checking the following box, you hereby agree to follow all rules and regulations outlined in the offical MLH Code of Conduct</p>
+        <p>All Cutie Hack participants must adhere to the MLH Code of Conduct at all times during the event. By checking the following box, you hereby agree to follow all rules and regulations outlined in the offical MLH Code of Conduct.</p>
 
         <label for="conduct">
         	<input name="conduct" id="conduct" type="checkbox" value="agreed">

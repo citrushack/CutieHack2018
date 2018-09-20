@@ -1,13 +1,12 @@
-// jquery button scrolling
-$(document).ready(function (){
+ $(document).ready(function (){
             $("#nextSection1").click(function (){
                 $('html, body').animate({
-                    scrollTop: $(".formtop2").offset().top
+                    scrollTop: $("#wrapper2").offset().top
                 }, 500);
             });
             $("#nextSection2").click(function (){
                 $('html, body').animate({
-                    scrollTop: $(".formtop3").offset().top
+                    scrollTop: $("#wrapper3").offset().top
                 }, 500);
             });
             $("#prevSection2").click(function (){
@@ -17,7 +16,7 @@ $(document).ready(function (){
             });
             $("#prevSection3").click(function (){
                 $('html, body').animate({
-                    scrollTop: $(".formtop2").offset().top
+                    scrollTop: $("#wrapper2").offset().top
                 }, 500);
             });
 
