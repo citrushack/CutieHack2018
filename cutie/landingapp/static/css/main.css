@@ -209,6 +209,10 @@ img{
   padding:8%;
 }
 
+#sponsors {
+  background-color: #f09e12;
+}
+
 .bigSponsor{
   padding: 2px;
 }
@@ -227,6 +231,7 @@ img{
 }
 
 .iconSize {
+  text-decoration:none;
   color:#fff;
   font-size: 175%;
   margin: 2.5%;
