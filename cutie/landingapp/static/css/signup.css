@@ -6,7 +6,7 @@ body {
 
 .ui.segment, .ui.segments .segment {
   font-size: 1.2em;
-  background-color: rgb(255, 219, 135)
+  background-color: #EEBD69;
 }
 
 .ui.segment {
@@ -48,6 +48,7 @@ label {
 
 .previous {
   margin-bottom: 2%;
+  background-color: blue;
 }
 
 #next { /* for the button in the application pt 1*/
@@ -147,6 +148,8 @@ select {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-
+input{
+  width: 400px;
+}
 
 
