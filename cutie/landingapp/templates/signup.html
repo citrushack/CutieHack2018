@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!-- Favicon
   {% load static %}
-  <link rel="shortcut icon" type="image/png" href="{%  static 'images/favicon.png' %}"> 
+  <link rel="shortcut icon" type="image/png" href="{%  static 'images/favicon.png' %}">
   -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/segment.min.css">
   <link rel="stylesheet" type="text/css" href="signup.css" />
@@ -69,8 +69,8 @@
 
       <div class="ui raised segment">
 
-        <div class="formtop1">
-          <img src="https://via.placeholder.com/100x100" id="icon">
+        <div class="topDescrip formtop1">
+          <img src="{% static 'images/logo.png' %}" id="icon">
           <h1>Apply to Cutie Hack</h1>
           <p class="description">Account Information
           <p class="description">(<span class="red-star">&#x2605;</span> denotes required field)</p>
@@ -81,42 +81,48 @@
         <div>
           <label for="firstname">First Name:
             <br>
-            <input id="firstname" name="firstname" required> <span class="red-star">&#x2605;</span>
+            <input id="firstname" name="firstname" type="text" required>
+            <span class="red-star">&#x2605;</span>
           </label>
 
           <label for="lastname">Last Name:
             <br>
-            <input id="lastname" name="lastname" required> <span class="red-star">&#x2605;</span>
+            <input id="lastname" name="lastname" type="text" required>
+            <span class="red-star">&#x2605;</span>
           </label>
         </div>
 
         <div>
           <label for="email">Email:
             <br>
-            <input id="email" name="email" required> <span class="red-star">&#x2605;</span>
+            <input id="email" name="email" type="email" required>
+            <span class="red-star">&#x2605;</span>
           </label>
         </div>
 
         <div>
           <label for="">Confirm email:
             <br>
-            <input id="" name="" required> <span class="red-star">&#x2605;</span>
+            <input id="" name="" type="email" required>
+            <span class="red-star">&#x2605;</span>
           </label>
         </div>
 
         <div>
           <label for="password">Password:
             <br>
-            <input id="password" name="password" required> <span class="red-star">&#x2605;</span>
+            <input id="password" name="password" type="password" required>
+            <span class="red-star">&#x2605;</span>
           </label>
 
           <label for="">Confirm Password:
             <br>
-            <input id="" name="" required> <span class="red-star">&#x2605;</span>
+            <input id="" name="" type="password" required>
+            <span class="red-star">&#x2605;</span>
           </label>
         </div>
 
-          <br>
+        <br><br>
 
           <div id="next">
             <button id='nextSection1'type="button" class="btn btn-warning">
@@ -132,35 +138,14 @@
 
   </div>
 
-<!-- =======
-    <form>
-        First name:
-        <input type="text" name="firstname">
-        Last name:
-        <input type="text" name="lastname">
-        <br><br>
-        Email:
-        <input type="email" name="">
-        <br><br>
-        Confirm Email:
-        <input type="email" name="">
-        <br><br>
-        Password:
-        <input type="Password" name="">
-        Confirm Password:
-        <input type="Password" name="">
-        <br><br>
-        <input type="button" value="next">
-    </div> -->
-
 <!-- Application Part 2 -->
 <div id='wrapper2'>
       <div class="col-sm-12 form">
 
         <div id='part2'class="ui raised segment">
 
-          <div class="formtop2">
-            <img src="https://via.placeholder.com/100x100" id="icon">
+          <div class="topDescrip formtop2">
+            <img src="{% static 'images/logo.png' %}" id="icon">
             <h1>Apply to Cutie Hack</h1>
             <p class="description">Demographic Information
             <p class="description">(<span class="red-star">&#x2605;</span> denotes required field)</p>
@@ -169,13 +154,10 @@
           <div>
             <label for="school">Name of School:
               <br>
-              <input id="school" name="school" required> <span class="red-star">&#x2605;</span>
+              <input id="school" name="school" type="text" required>
+              <span class="red-star">&#x2605;</span>
             </label>
           </div>
-
-      <!-- Name of School:<br>
-      <input type="text" name="firstname">
-      <br><br> -->
 
           <div>
             <label for="age">Age:
@@ -202,7 +184,8 @@
                   <option value="30">30</option>
                   <option value="31">31</option>
                   <option value="32">32</option>
-                </select> <span class="red-star">&#x2605;</span>
+                </select>
+                <span class="red-star">&#x2605;</span>
               </label>
 
               <label for="gender">Gender:
@@ -213,7 +196,8 @@
                     <option value="female">Female</option>
                     <option value="other">Other</option>
                     <option value="no disclosure">Prefer not to disclose</option>
-                  </select> <span class="red-star">&#x2605;</span>
+                  </select>
+                  <span class="red-star">&#x2605;</span>
               </label>
 
               <label for="race">Race/Ethnicty:
@@ -229,56 +213,72 @@
                     <option value="Other">Other</option>
                     <option value="mutliple races">Two or more races</option>
                     <option value="no disclosure">Prefer not to disclose</option>
-                  </select> <span class="red-star">&#x2605;</span>
+                  </select>
+                  <span class="red-star">&#x2605;</span>
               </label>
           </div>
 
+          <div>
+            <label for="major">Major:
+              <br>
+              <input id="major" name="major" type="text" required>
+              <span class="red-star">&#x2605;</span>
+            </label>
 
+            <label for="levelOfStudy">Current Level of Study:
+              <br>
+              <select name="levelOfStudy">
+                <option value=""></option>
+                <option value="1st">1st Year</option>
+                <option value="2nd">2nd Year</option>
+                <option value="3rd">3rd Year</option>
+                <option value="4th">4th Year</option>
+                <option value="5th">5th Year or beyond</option>
+                <option value="no disclosure">Prefer not to disclose</option>
+              </select>
+              <span class="red-star">&#x2605;</span>
+            </label>
+          </div>
 
+      <div>
+        <label for="gradYear">Expected year of Graduation:
+          <br>
+          <select name='gradYear'>
+            <option value=""></option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+          </select>
+          <span class="red-star">&#x2605;</span>
+        </label>
 
-      <br><br>
-      Major:
-      <input type="text" name="major"> <span class="red-star">&#x2605;</span>
-      Current Level of Study:
-      <select name="level of study">
-        <option value=""></option>
-        <option value="1st">1st Year</option>
-        <option value="2nd">2nd Year</option>
-        <option value="3rd">3rd Year</option>
-        <option value="4th">4th Year</option>
-        <option value="5th">5th Year or beyond</option>
-        <option value="no disclosure">Prefer not to disclose</option>
+        <label for="phoneNumber">Phone Number: 123 456 7890
+          <br>
+          <input id="phoneNumber" name="phoneNumber" type="tel" required>
+          <span class="red-star">&#x2605;</span>
+        </label>
 
+      </div>
 
-      </select> <span class="red-star">&#x2605;</span>
-
-      <br><br>
-      Expected year of gradation:
-      <select name='grad Year'>
-        <option value=""></option>
-        <option value="2019">2019</option>
-        <option value="2020">2020</option>
-        <option value="2021">2021</option>
-        <option value="2022">2022</option>
-        <option value="2023">2023</option>
-        <option value="2024">2024</option>
-        <option value="2025">2025</option>
-
-      </select> <span class="red-star">&#x2605;</span>
-      Phone Number: 123 456 7890
-      <input type="tel" name="phoneNumber"> <span class="red-star">&#x2605;</span>
-      <br>
-      Resume:
-      <button type="button">Click to upload a file</button> <span class="red-star">&#x2605;</span>
-      Acceptable file format includes DOC,PDF,RTF,HTML,TXT,ODF, and DOCX
+      <div>
+        <label for="resume">Resume:
+          <br>
+          <button id="resume" type="button">Click to upload a file</button>
+          <span class="red-star">&#x2605;</span>
+          <p class="description">
+            Acceptable file format includes DOC,PDF,RTF,HTML,TXT, ODF, and DOCX
+          </p>
+        </label>
+      </div>
 
       <br><br>
 
       <span><button id='prevSection2'type="button" class="btn btn-warning">Previous</button></span>
       <span><button id='nextSection2'type="button" class="btn btn-warning next">Next</button></span>
-
-      <!-- <button>previous</button>
-      <button>next</button> -->
 
   </div>
 </div>
@@ -287,41 +287,52 @@
 <!-- Application Part 3 -->
 
 <div class="col-sm-12 form">
-<div id='wrapper3'>
-  <div id='part3'class="ui raised segment">
+  <div id='wrapper3'>
+    <div id='part3' class="ui raised segment">
 
-    <div class="formtop3">
-      <img src="https://via.placeholder.com/100x100" id="icon">
-      <h1>Apply to Cutie Hack</h1>
-      <p class="description">Additional Information
-      <p class="description">(<span class="red-star">&#x2605;</span> denotes required field)</p>
+      <div class="topDescrip formtop3">
+        <img src="{% static 'images/logo.png' %}" id="icon">
+        <h1>Apply to Cutie Hack</h1>
+        <p class="description">Additional Information
+        <p class="description">(<span class="red-star">&#x2605;</span> denotes required field)</p>
+      </div>
+
+        <p>All Cutie Hack participants must adhere to the MLH Code of Conduct at all times during the event. By checking the following box, you hereby agree to follow all rules and regulations outlined in the offical MLH Code of Conduct</p>
+
+        <label for="conduct">
+        	<input name="conduct" id="conduct" type="checkbox" value="agreed">
+          <span class="red-star">&#x2605;</span>
+          <span class="checkboxText">
+            I have read and agree to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct.</a>
+          </span>
+        </label>
+
+        <p>By participating in Cutie Hack, you must allow the use of your application information to be passed along by MLH to be used to promote other MLH affliated events. Don't worry, we'll keep your information safe and secure! By checking the following box, you hereby agree to us sharing your information with MLH. </p>
+      <label for="authorizeToShare">
+        <input name="authorizeToShare" id="authorizeToShare" type="checkbox" value="agreed">
+        <span class="red-star">&#x2605;</span>
+        I authorize you to share my application/registration information for event adminstration, ranking, MLH adminstration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the MLH Privacy Policy. I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy.
+      </label>
+
+      <label for="allergies">
+        Do you have any food allergies or dietary restrictions we should know about? If so, please enter them in the field below:
+        <br>
+        <input name="allergies" id="allergies" type="text">
+      </label>
+
+      <label for="meme">
+        Makes us laugh! Share a link to a meme, funny video, website, etc.:
+        <br>
+        <input name="meme" id="meme" type="text">
+      </label>
+
+        <br><br>
+
+        <span><button id='prevSection3'type="button" class="btn btn-warning">Previous</button></span>
+        <span><button type="button" class="btn btn-warning next">Apply</button></span>
+
     </div>
-
-      <p>All Cutie Hack participants must adhere to the MLH Code of Conduct at all times during the event. By checking the following box, you hereby agree to follow all rules and regulations outlined in the offical MLH Code of Conduct</p>
-
-      <input type="checkbox" name="code of Conduct">
-
-      I have read and agree to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct.</a> <span class="red-star">&#x2605;</span><br><br>
-      <p>By participating in Cutie Hack, you must allow the use of your application information to be passed along by MLH to be used to promote other MLH affliated events. Don't worry, we'll keep your information safe and secure! By checking the following box, you hereby agree to us sharing your information with MLH.</p>
-
-      <input type="checkbox" name="Application info">
-
-      I authorize you to share my application/registration information for event adminstration, ranking, MLH adminstration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the MLH Privacy Policy. I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy. <span class="red-star">&#x2605;</span><br><br>
-
-      Do u have any food allergies or dietary restrictions we should know about? If so, please enter them in the field below.<br>
-      <input type="text" name="allergies">
-      <br>
-
-      Makes us laugh! Share a link to a meme, funny video, website, etc.<br>
-      <input type="text" name="meme">
-
-      <br><br>
-
-      <span><button id='prevSection3'type="button" class="btn btn-warning">Previous</button></span>
-      <span><button type="button" class="btn btn-warning next">Apply</button></span>
-
   </div>
-</div>
 </div>
 
 </div>

@@ -1,5 +1,10 @@
 /* Everything */
 
+body {
+  background: url({% static 'images/cityscape_repeating.png' %});
+  background-size: cover;
+}
+
 .ui.segment, .ui.segments .segment {
   font-size: 1.2em;
 }
@@ -17,9 +22,13 @@ h1 {
   font-weight: bold;
 }
 
-/* Icon, Title */
+label {
+  font-weight: normal;
+}
 
-.formtop {
+/* Formtop */
+
+.topDescrip {
   margin-bottom: 4%;
 }
 
@@ -46,6 +55,7 @@ h1 {
 .next {
   float:right;
 }
+
 .red-star {
     color: red;
 }
