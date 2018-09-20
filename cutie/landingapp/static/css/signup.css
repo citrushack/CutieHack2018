@@ -35,6 +35,8 @@ label {
 #icon {
   float: left;
   margin-right: 2%;
+  height: 100px;
+  width: 100px;
 }
 
 .description {
