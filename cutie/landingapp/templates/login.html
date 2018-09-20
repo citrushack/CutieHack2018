@@ -38,6 +38,10 @@
 
 {# Assumes you setup the password_reset view in your URLconf #}
  -->
+ 	<!-- Favicon -->
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{%  static 'images/favicon.png' %}">
+
 		<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
 </head>
@@ -166,7 +170,7 @@
 	}
 
 /*	mobile phones*/
-	@media (max-device-height: 850px) {
+	@media (min-device-height: 850px) {
 		#logo {
 			margin-top: 15%;
 			width: 12vh;

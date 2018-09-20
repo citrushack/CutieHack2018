@@ -16,6 +16,7 @@
     {% load static %}
     <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 
+    <!-- Favicon -->
     {% load static %}
     <link rel="shortcut icon" type="image/png" href="{%  static 'images/favicon.png' %}">
     <!-- /FYI: for images/
@@ -89,12 +90,14 @@
 	<div id="home" class="content">
 		<!-- MainHero -->
 		{% load static %}
-		<img src="{% static 'images/cityscape.png' %}" alt="Hero Image" id="hero"/>
+		<img src="{% static 'images/cityscape.png' %}" alt="Hero Image" id="heroLG" class="hero" data-aos="fade-up"/>
+		{% load static %}
+		<img src="{% static 'images/cityscape_mobile.png' %}" alt="Hero Image" id="heroSM" class="hero" data-aos="fade-up"/>
 		<div id="banner">
 			<div id = "MainHeroText" data-aos="fade-up">
 				<h1 id="CutieHackTitle">CUTIE HACK</h1>
 				<p id="eventDetails">November 10, 2018<br>
-				Let's build tomorrow.</p>
+				at UC Riverside</p>
 				<hr id="headerTextBreak">
 				<a href="http://cutiehack.com/apply"><button type="button" class="btn btn-dark">Apply</button></a>
 			</div>	
@@ -113,7 +116,7 @@
 						<div class="row">
 							<div class="col-12 col-sm-12 col-lg-6 col-xl-6 text-center">
 								{% load static %}
-	         					<img src="{% static 'images/cody.png' %}" alt="Cody" id="computerCody"/>
+	         					<img src="{% static 'images/cody.png' %}" alt="Cody" class="img-fluid" id="computerCody"/>
 							</div>
 
 							<div class="col-12 col-sm-12 col-lg-6 col-xl-6">
@@ -150,43 +153,59 @@
 		<!-- END What is Cutie Hack & About Us -->
 
 		<!-- FAQ Section -->
+		
 		<div id="faq">
+			<div class="container">
+				<h1 id="faqHeader" class="text-center sectionHeader">FAQ</h1>
 
-			<h1 class="sectionHeader text-center">FAQs</h1>
+				<div class="row">
 
-			<div> 
-				<h2 id="q1" class="faqQuestion faqA">▼ Who can attend?</h2>
-		    	<div id="a1" class="faqAnswer  BasicFontSize">We welcome all undergraduate university students, from any major! If you have graduated within the past year, you are also welcome to attend.</div>
-		  	</div>  
-		  	<div> 
-		  		<h2 id="q2"class="faqQuestion faqB">▼ Is Cutie Hack free?</h2>
-		    	<div id="a2"class="faqAnswer BasicFontSize">Absolutely!</div>
-			</div>
-			
-			<div> 
-				<h2 id="q5"class="faqQuestion faqA ">▼ Do I need a team?</h2>
-			  	<div id="a5"class="faqAnswer BasicFontSize"> Teams are not required, but are recommended. Membership is capped at 4 members. You are welcome to form teams before the hacking begins!</div>
-			</div>
-			
-			<div> 
-				<h2 id="q4"class="faqQuestion faqB">▼ What should I bring?</h2>
-			  <div id="a4"class="faqAnswer BasicFontSize">Student IDs are required. Consider bringing a personal laptop, headphones, and a pillow!</div>
-		   </div>
+					<div class="col questionBorder"> 
+					  	<h2 class="faqQuestion darkText">Who can attend?</h2>
+					   	<p class="faqAnsw infoText">We welcome all undergraduate university students, from any major! If you have graduated within the past year, you are also welcome to attend.</p>
+					 </div>  
+					<div class="col questionBorder"> 
+						<h2 class="faqQuestion darkText">Is Cutie Hack free?</h2>
+				    	<p class="faqAnsw infoText">Absolutely! There's no cost to attend, but do bring your own hacking device.</p>
+					</div>
 
-		  	<div> 
-		  		<h2 id="q3"class="faqQuestion faqA ">▼ Will there be free food?</h2>
-		    	<div id="a3"class="faqAnswer BasicFontSize">Yes! Meals, refreshments, and snacks will be provided thoughout the event.</div>
-		  	</div>  
-		  
-		  	<div> 
-		  		<h2 id="q6"class="faqQuestion faqB">▼ When is the deadline to sign up?</h2>
-		    	<div id="a6"class="faqAnswer BasicFontSize">The deadline to signup is <span style="color:#f09e12">Xtember, XXth</span> </div>
-		  	</div>
-		  	<div> 
-		  		<h2 id="q7"class="faqQuestion faqA">▼ Any other questions?</h2>
-		    	<div id="a7"class="faqAnswer BasicFontSize">Feel free to contact us through <a href="mailto:cutiehack@gmail.com">email</a>!</div>
-		  	</div>
+					  <!-- bootstrap shortcut for creating new row -->
+					<div class="w-100"></div>  
 
+					<div class="col questionBorder"> 
+						<h2 class="faqQuestion darkText">Is there free food?</h2>
+					  	<p class="faqAnsw infoText">Yes! Meals, refreshments, and snacks will be provided thoughout the event.</p>
+					</div>  
+					<div class="col questionBorder"> 
+					  	<h2 class="faqQuestion darkText">What should I bring?</h2>
+						<div class="faqAnsw infoText">Student IDs are required. Consider bringing a hacking machine, headphones, and a pillow!</div>
+					</div>
+
+					<!-- bootstrap shortcut for creating new row -->
+					<div class="w-100"></div>  
+
+					<div class="col questionBorder"> 
+					  	<h2 class="faqQuestion darkText">Do I need a team?</h2>
+					  	<p class="faqAnsw infoText">Teams are not required, but are recommended. Membership is capped at 4 members. You are welcome to form teams before the hacking begins!</p>
+					</div>  
+					<div class="col questionBorder"> 
+					  	<h2 class="faqQuestion darkText">Am allowed to prepare code before coming to the event?</h2>
+						<div class="faqAnsw infoText">All coding must be done during the given hacking period. You can, however, plan your project as much as you like before time starts!</div>
+					</div>
+					  
+					  <!-- bootstrap shortcut for creating new row -->
+					<div class="w-100"></div>  
+
+					<div class="col questionBorder"> 
+					  	<h2 class="faqQuestion darkText">Where will the event be held?</h2>
+					  	<p class="faqAnsw infoText">Cutie Hack will be held November 10, 2018 in Winston Chung Hall at UC Riverside.</p>
+					</div>
+					<div class="col questionBorder"> 
+					  	<h2 class="faqQuestion darkText">Any other questions?</h2>
+						<p class="faqAnsw infoText">Feel free to contact us through <a href="mailto:cutiehack@gmail.com">email!</a></p>
+					</div>
+				</div>
+			</div>	
 		</div>
 		<!-- END of FAQ Section -->
 
@@ -195,160 +214,31 @@
 			<div class = "container">
 				<h1 class="sectionHeader text-center">2018 Sponsors</h1>
 
-				<!-- 3 largest sponsors -->
-				<div class = "row text-center">
-					<div class = "col img-responsive center-block ">
-						<img class = "bigSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" height="150">
-					</div>
+				<!-- Sponsors -->
+				<div class = "row">
+					<span class = "col img-responsive center-block">
+						{% load static %}
+	         			<a href="https://github.com"><img class="zoom mediumSponsor" src="{% static 'images/companylogos/GitHub.png' %}" alt="GitHub" id="GitHub"/></a>
+					</span>
+					<span class = "col img-responsive center-block">
+						{% load static %}
+	         			<a href="https://gogosqueez.com"><img class="zoom mediumSponsor" src="{% static 'images/companylogos/GoGoSqueez.png' %}" alt="GoGoSqueez" id="GoGoSqueez"/></a>
+					</span>
 				</div>
-
-				<div class = "row text-center">
-					<div class = "col img-responsive center-block ">
-						<img class="bigSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" height="150">
-					</div>
-				</div>
-
-				<div class = "row text-center">
-					<div class = "col img-responsive center-block ">
-						<img class="bigSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" height="150">
-					</div>
-				</div>
-				<!-- end 3 largest sponsors -->
-
-				<!-- tier 2 sponsors -->
-				<div class = "row text-center">
-					<div class = "col img-responsive center-block ">
-						<img class="mediumSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" height="150">
-					</div>
-					<div class = "col img-responsive center-block ">
-						<img class="mediumSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" height="150">
-					</div>
-				</div>
-				<!-- end tier 2 sponsors -->
-
-				<!-- tier 3 sponsors -->
-				<div class = "row text-center">
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="img-responsive center-block smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-				</div>
-
-				<div class = "row text-center">
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-				</div>
-
-				<div class = "row text-center">
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-				</div>
-
-				<div class = "row text-center">
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-				</div>
-
-				<div class = "row text-center">
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-				</div>
-				<!-- end tier 3 sponsors -->
+				<!-- End Sponsors -->
 
 				<!-- organizers -->
 				<h1  class="sectionHeader text-center pt-4 pb-2" id= "organizers">Organizers</h1>
 
 				<div class = "row text-center">
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
+					<span class = "col img-responsive center-block">
+						{% load static %}
+	         			<a href="https://acmucr.org"><img class="zoom mediumSponsor" src="{% static 'images/companylogos/ACMUCR.png' %}" alt="Association of Computing Machines, UC Riverside" id="ACM"/></a>
+					</span>
+					<span class = "col img-responsive center-block">
+						{% load static %}
+	         			<a href="ieee.ee.ucr.edu/"><img class="zoom mediumSponsor" src="{% static 'images/companylogos/IEEE.png' %}" alt="Institute of Electrical and Electronics Engineers, UC Riverside" id="IEEE"/></a>
+					</span>
 				</div>
 			</div>	
 			<!-- End Organizers -->
@@ -360,24 +250,12 @@
 	<!-- FOOTER -->
 	<div id="footer" class="darkDiv">
 		<p class="text-center lightText">
-			<a href="https://www.facebook.com/cutiehack/">
-				<i id = "iconSize" class="fa fa-facebook-square lightText"> 
-				</i>
-			</a>
-		    <a href="mailto:cutiehack@gmail.com">
-		    	<i id = "iconSize" class="fa fa-envelope lightText"> 
-		    	</i> 
-		    </a>
-		    <a href="https://twitter.com/citrushack">
-		    	<i id = "iconSize" class="fa fa-twitter-square lightText"> 
-		    	</i>
-		    </a>
-		    <a href="https://www.instagram.com/citrushack_ucr/">
-		    	<i id = "iconSize" class="fa fa-instagram lightText">
-		    	</i>
-		    </a>
-		    <p class="lightText text-center">Made with <span class = "red" >&#9829;</span> in Riverside, CA</p>
-			<p class="lightText text-center">© 2018 Cutie Hack</p>
+			<a class="iconSize" href="https://www.facebook.com/cutiehack/"><i class="fa fa-facebook-square lightText"></i></a>
+		    <a class="iconSize" href="mailto:cutiehack@gmail.com"><i class="fa fa-envelope lightText"></i></a>
+		    <a class="iconSize" href="https://twitter.com/citrushack"><i class="fa fa-twitter-square lightText"></i></a>
+		    <a class="iconSize" href="https://www.instagram.com/citrushack_ucr/"><i class="fa fa-instagram lightText"></i></a>
+		    <p class="infoText text-center">Made with <span class = "red" >&#9829;</span> in Riverside, CA</p>
+			<p class="infoText text-center">© 2018 Cutie Hack</p>
 		</p>
 	</div>
 	<!-- END FOOTER -->

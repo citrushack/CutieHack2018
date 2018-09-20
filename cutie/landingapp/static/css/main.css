@@ -26,6 +26,20 @@
   /*font-style:italic;*/
 }
 
+@media (max-width: 799px) {
+  #CutieHackTitle{
+    font-size:300%;
+  }
+
+  #eventDetails {
+  font-size: 125%;
+  font-family:'Poppins';
+  font-weight: 500;
+  }
+}
+
+
+
 #headerTextBreak {
   width: 33%;
   display: block;
@@ -42,18 +56,36 @@
   z-index: 4;
 }
 
-#hero {
+.hero {
   position:absolute;
   top:0;
   min-width: 100%;
   height: 140%;
 }
 
+@media (max-width: 800px) {
+  #heroLG {
+    display: none;
+  }
+    .hero {
+    position:absolute;
+    top:0;
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media (min-width: 801px) {
+  #heroSM {
+    display: none;
+  }
+}
+
 #whatis{
   padding:5%;
   height:auto;
   width:100vw;
-  background-color: #F38709;
+  background-image: linear-gradient(#F38709,#dd7a08);
   z-index: 0;
  } 
 
@@ -62,6 +94,13 @@
   width: auto;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+}
+
+@media (max-width: 750px) {
+  #computerCody{
+    height:300px;
+    width:auto;
+  }
 }
 
 #billboard {
@@ -85,7 +124,7 @@
 
 #about{
   padding:8%;
-  background-color: #f09e12;
+  background-image: linear-gradient(#f09e12,#d88e0f);
 }
 
 #aboutText {
@@ -145,38 +184,23 @@ nav ul li a:hover {
 }
 
 .content{
-  /*overflow:hidden;*/
   z-index:1;
-}
-
-.container{
-  /*width: 100%;*/
-}
-
-#info{
-  background-image: linear-gradient(#F38709, #F5CF8A);
-}
-
-#sponsors{
-  padding-top: 40px;
-  padding-bottom: 5%;
 }
 
 /** Responsive Images **/
 .ml-auto, .mx-auto {
-    margin-left: auto!important;
+  margin-left: auto!important;
 }
 .mr-auto, .mx-auto {
-    margin-right: auto!important;
+  margin-right: auto!important;
 }
 
 .img-fluid {
-    max-width: 100%;
-    height: auto;
+  max-height: 100%;
+  width: auto;
 }
 
 img{
-  /*display:inline;*/
   z-index:0;
 }
 
@@ -185,19 +209,18 @@ img{
   background: #EEEEEE;
 }
 
-.lightDiv {
-  background: #EEEEEE;
-  padding: 3%;
+.lightColor {
+  text-decoration: none;
+  color: #ffffff;
 }
-.lightText {
-  color: #EEEEEE;
-}
+
 .darkDiv {
   background: #28282A;
   padding: 3%;
 }
+
 .darkText {
-  color: #28282A;
+  color: #EEEEEE;
 }
 
 .sectionHeader {
@@ -205,37 +228,32 @@ img{
   font-size: 400%;
 }
 
-
-#faq>h1{
-  color:black;
+.questionBorder {
+  border-radius: 5px;
+  background-color: #f09e12;
+  padding: 10px;
+  box-shadow: 5px 10px #906231;
+  margin: 25px;
 }
 
-.faqA{text-align: center;}
-.faqB{text-align: center;}
-.faqA:hover {
-  color:#F38709;
-  -webkit-transition: color .5s ease-out;
-  -moz-transition: color.5s ease-out;
-  -o-transition: color .5s ease-out;
-  transition: color .5s ease-out;
-  cursor:pointer;
+#faq {
+  background-image: linear-gradient(#F38709,#dd7a08);
+  text-align: center;
+  padding:8%;
 }
 
-.faqB:hover {
-  color:#596E9F;
-  /*color:#5fd86d;*/
-  -webkit-transition: color .5s ease-out;
-  -moz-transition: color.5s ease-out;
-  -o-transition: color .5s ease-out;
-  transition: color .5s ease-out;
-  cursor:pointer;
+#sponsors {
+  background-image: linear-gradient(#f09e12,#d88e0f);
+  padding-top: 40px;
+  padding-bottom: 5%;
 }
 
-.faqAnswer {
-  font-size: 125%
-  padding-left: 2.5%;
-  display: none;
-  text-align:center;
+.zoom {
+  transition: 1s;
+}
+
+.zoom:hover {
+  transform: scale(1.08);
 }
 
 .bigSponsor{
@@ -243,7 +261,52 @@ img{
 }
 
 .mediumSponsor{
-  padding:10px;
+  margin-top:50px;
+  margin-left: 50px;
+  margin: auto;    
+  display: block;
+}
+
+#GitHub{
+  height:100px;
+  width:auto;
+}
+
+#GoGoSqueez{
+  height:170px;
+  width:auto;
+}
+
+#ACM {
+  height:170px;
+  width:auto;
+}
+
+#IEEE{
+  height: 170px;
+  width:auto;
+}
+
+@media (max-width: 799px) {
+  #GitHub{
+    height:60px;
+    width:auto;
+  }
+
+  #GoGoSqueez{
+    height:100px;
+    width:auto;
+  }
+
+  #ACM {
+    height:100px;
+    width:auto;
+  }
+
+  #IEEE{
+    height: 100px;
+    width:auto;
+  }
 }
 
 .smallSponsor{
@@ -255,47 +318,49 @@ img{
   padding-bottom: .5%;
 }
 
-#iconSize {
-  font-size: 170%;
+.iconSize {
+  text-decoration:none;
+  color:#fff;
+  font-size: 175%;
   margin: 2.5%;
   margin-top: 1%;
 }
 
 /**Transition Colors for Social Media links**/
 .fa-facebook-square:hover{
+  text-decoration:none;
   color:#43609C;
   -webkit-transition: color 2s ease-out;
   -moz-transition: color 2s ease-out;
   -o-transition: color 2s ease-out;
   transition: color 2s ease-out;
-  text-decoration: none;
 }
 
 .fa-instagram:hover{
+  text-decoration:none;
   color:#cd486b;
   -webkit-transition: color 1s ease-out;
   -moz-transition: color 1s ease-out;
   -o-transition: color 1s ease-out;
   transition: color 1s ease-out;
-  text-decoration: none;
 }
   
 .fa-twitter-square:hover{
+  text-decoration:none;
   color:#6CADDE;
   -webkit-transition: color 1s ease-out;
   -moz-transition: color 1s ease-out;
   -o-transition: color 1s ease-out;
   transition: color 1s ease-out;
-  text-decoration: none;
 }
 
 .fa-envelope:hover{
+  text-decoration:none;
   color:#fbad50;
   -webkit-transition: color 1s ease-out;
   -moz-transition: color 1s ease-out;
   -o-transition: color 1s ease-out;
   transition: color 1s ease-out;
-  text-decoration: none;
 }
 /**With Heart**/
 .red{
