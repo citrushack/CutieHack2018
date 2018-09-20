@@ -148,26 +148,20 @@ nav ul li a:hover {
   z-index:1;
 }
 
-#sponsors{
-  padding-top: 40px;
-  padding-bottom: 5%;
-}
-
 /** Responsive Images **/
 .ml-auto, .mx-auto {
-    margin-left: auto!important;
+  margin-left: auto!important;
 }
 .mr-auto, .mx-auto {
-    margin-right: auto!important;
+  margin-right: auto!important;
 }
 
 .img-fluid {
-    max-width: 100%;
-    height: auto;
+  max-height: 100%;
+  width: auto;
 }
 
 img{
-  /*display:inline;*/
   z-index:0;
 }
 
@@ -200,7 +194,7 @@ img{
   background-color: #f09e12;
   padding: 10px;
   box-shadow: 5px 10px #906231;
-  margin: 5%;
+  margin: 25px;
 }
 
 #faq {
@@ -211,6 +205,16 @@ img{
 
 #sponsors {
   background-color: #f09e12;
+  padding-top: 40px;
+  padding-bottom: 5%;
+}
+
+.zoom {
+  transition: 1s;
+}
+
+.zoom:hover {
+  transform: scale(1.08);
 }
 
 .bigSponsor{
@@ -218,7 +222,30 @@ img{
 }
 
 .mediumSponsor{
-  padding:10px;
+  margin-top:50px;
+  margin-left: 50px;
+  margin: auto;    
+  display: block;
+}
+
+#GitHub{
+  height:100px;
+  width:auto;
+}
+
+#GoGoSqueez{
+  height:170px;
+  width:auto;
+}
+
+#ACM {
+  height:170px;
+  width:auto;
+}
+
+#IEEE{
+  height: 170px;
+  width:auto;
 }
 
 .smallSponsor{
@@ -240,39 +267,39 @@ img{
 
 /**Transition Colors for Social Media links**/
 .fa-facebook-square:hover{
+  text-decoration:none;
   color:#43609C;
   -webkit-transition: color 2s ease-out;
   -moz-transition: color 2s ease-out;
   -o-transition: color 2s ease-out;
   transition: color 2s ease-out;
-  text-decoration: none;
 }
 
 .fa-instagram:hover{
+  text-decoration:none;
   color:#cd486b;
   -webkit-transition: color 1s ease-out;
   -moz-transition: color 1s ease-out;
   -o-transition: color 1s ease-out;
   transition: color 1s ease-out;
-  text-decoration: none;
 }
   
 .fa-twitter-square:hover{
+  text-decoration:none;
   color:#6CADDE;
   -webkit-transition: color 1s ease-out;
   -moz-transition: color 1s ease-out;
   -o-transition: color 1s ease-out;
   transition: color 1s ease-out;
-  text-decoration: none;
 }
 
 .fa-envelope:hover{
+  text-decoration:none;
   color:#fbad50;
   -webkit-transition: color 1s ease-out;
   -moz-transition: color 1s ease-out;
   -o-transition: color 1s ease-out;
   transition: color 1s ease-out;
-  text-decoration: none;
 }
 /**With Heart**/
 .red{

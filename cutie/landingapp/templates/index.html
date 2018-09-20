@@ -95,7 +95,7 @@
 			<div id = "MainHeroText" data-aos="fade-up">
 				<h1 id="CutieHackTitle">CUTIE HACK</h1>
 				<p id="eventDetails">November 10, 2018<br>
-				Let's build tomorrow.</p>
+				at UC Riverside</p>
 				<hr id="headerTextBreak">
 				<a href="http://cutiehack.com/apply"><button type="button" class="btn btn-dark">Apply</button></a>
 			</div>	
@@ -114,7 +114,7 @@
 						<div class="row">
 							<div class="col-12 col-sm-12 col-lg-6 col-xl-6 text-center">
 								{% load static %}
-	         					<img src="{% static 'images/cody.png' %}" alt="Cody" id="computerCody"/>
+	         					<img src="{% static 'images/cody.png' %}" alt="Cody" class="img-fluid" id="computerCody"/>
 							</div>
 
 							<div class="col-12 col-sm-12 col-lg-6 col-xl-6">
@@ -212,160 +212,31 @@
 			<div class = "container">
 				<h1 class="sectionHeader text-center">2018 Sponsors</h1>
 
-				<!-- 3 largest sponsors -->
-				<div class = "row text-center">
-					<div class = "col img-responsive center-block ">
-						<img class = "bigSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" height="150">
-					</div>
+				<!-- Sponsors -->
+				<div class = "row">
+					<span class = "col text-center">
+						{% load static %}
+	         			<a href="https://github.com"><img class="zoom mediumSponsor img-fluid" src="{% static 'images/companylogos/GitHub.png' %}" alt="GitHub" id="GitHub"/></a>
+					</span>
+					<span class = "col text-center">
+						{% load static %}
+	         			<a href="https://gogosqueez.com"><img class="zoom mediumSponsor img-fluid" src="{% static 'images/companylogos/GoGoSqueez.png' %}" alt="GoGoSqueez" id="GoGoSqueez"/></a>
+					</span>
 				</div>
-
-				<div class = "row text-center">
-					<div class = "col img-responsive center-block ">
-						<img class="bigSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" height="150">
-					</div>
-				</div>
-
-				<div class = "row text-center">
-					<div class = "col img-responsive center-block ">
-						<img class="bigSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" height="150">
-					</div>
-				</div>
-				<!-- end 3 largest sponsors -->
-
-				<!-- tier 2 sponsors -->
-				<div class = "row text-center">
-					<div class = "col img-responsive center-block ">
-						<img class="mediumSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" height="150">
-					</div>
-					<div class = "col img-responsive center-block ">
-						<img class="mediumSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" height="150">
-					</div>
-				</div>
-				<!-- end tier 2 sponsors -->
-
-				<!-- tier 3 sponsors -->
-				<div class = "row text-center">
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="img-responsive center-block smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-				</div>
-
-				<div class = "row text-center">
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-				</div>
-
-				<div class = "row text-center">
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-				</div>
-
-				<div class = "row text-center">
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-				</div>
-
-				<div class = "row text-center">
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-				</div>
-				<!-- end tier 3 sponsors -->
+				<!-- End Sponsors -->
 
 				<!-- organizers -->
 				<h1  class="sectionHeader text-center pt-4 pb-2" id= "organizers">Organizers</h1>
 
 				<div class = "row text-center">
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="img-responsive center-block ">
-							<img class="smallSponsor"src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="150" height="150">
-						</div>
-					</div>
+					<span class = "col text-center">
+						{% load static %}
+	         			<a href="https://acmucr.org"><img class="zoom mediumSponsor img-fluid" src="{% static 'images/companylogos/ACMUCR.png' %}" alt="Association of Computing Machines, UC Riverside" id="ACM"/></a>
+					</span>
+					<span class = "col text-center">
+						{% load static %}
+	         			<a href="ieee.ee.ucr.edu/"><img class="zoom mediumSponsor img-fluid" src="{% static 'images/companylogos/IEEE.png' %}" alt="Institute of Electrical and Electronics Engineers, UC Riverside" id="IEEE"/></a>
+					</span>
 				</div>
 			</div>	
 			<!-- End Organizers -->
@@ -377,18 +248,10 @@
 	<!-- FOOTER -->
 	<div id="footer" class="darkDiv">
 		<p class="text-center lightText">
-			<a class="iconSize" href="https://www.facebook.com/cutiehack/">
-				<i class="fa fa-facebook-square lightText"></i>
-			</a>
-		    <a class="iconSize" href="mailto:cutiehack@gmail.com">
-		    	<i class="fa fa-envelope lightText"></i> 
-		    </a>
-		    <a class="iconSize" href="https://twitter.com/citrushack">
-		    	<i class="fa fa-twitter-square lightText"></i>
-		    </a>
-		    <a class="iconSize" href="https://www.instagram.com/citrushack_ucr/">
-		    	<i class="fa fa-instagram lightText"></i>
-		    </a>
+			<a class="iconSize" href="https://www.facebook.com/cutiehack/"><i class="fa fa-facebook-square lightText"></i></a>
+		    <a class="iconSize" href="mailto:cutiehack@gmail.com"><i class="fa fa-envelope lightText"></i></a>
+		    <a class="iconSize" href="https://twitter.com/citrushack"><i class="fa fa-twitter-square lightText"></i></a>
+		    <a class="iconSize" href="https://www.instagram.com/citrushack_ucr/"><i class="fa fa-instagram lightText"></i></a>
 		    <p class="infoText text-center">Made with <span class = "red" >&#9829;</span> in Riverside, CA</p>
 			<p class="infoText text-center">© 2018 Cutie Hack</p>
 		</p>
