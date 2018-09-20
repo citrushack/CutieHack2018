@@ -26,6 +26,20 @@
   /*font-style:italic;*/
 }
 
+@media (max-width: 799px) {
+  #CutieHackTitle{
+    font-size:300%;
+  }
+
+  #eventDetails {
+  font-size: 125%;
+  font-family:'Poppins';
+  font-weight: 500;
+  }
+}
+
+
+
 #headerTextBreak {
   width: 33%;
   display: block;
@@ -42,11 +56,29 @@
   z-index: 4;
 }
 
-#hero {
+.hero {
   position:absolute;
   top:0;
   min-width: 100%;
   height: 140%;
+}
+
+@media (max-width: 800px) {
+  #heroLG {
+    display: none;
+  }
+    .hero {
+    position:absolute;
+    top:0;
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media (min-width: 801px) {
+  #heroSM {
+    display: none;
+  }
 }
 
 #whatis{
@@ -62,6 +94,13 @@
   width: auto;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+}
+
+@media (max-width: 750px) {
+  #computerCody{
+    height:300px;
+    width:auto;
+  }
 }
 
 #billboard {
@@ -246,6 +285,28 @@ img{
 #IEEE{
   height: 170px;
   width:auto;
+}
+
+@media (max-width: 799px) {
+  #GitHub{
+    height:60px;
+    width:auto;
+  }
+
+  #GoGoSqueez{
+    height:100px;
+    width:auto;
+  }
+
+  #ACM {
+    height:100px;
+    width:auto;
+  }
+
+  #IEEE{
+    height: 100px;
+    width:auto;
+  }
 }
 
 .smallSponsor{

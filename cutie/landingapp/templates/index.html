@@ -90,7 +90,9 @@
 	<div id="home" class="content">
 		<!-- MainHero -->
 		{% load static %}
-		<img src="{% static 'images/cityscape.png' %}" alt="Hero Image" id="hero" data-aos="fade-up"/>
+		<img src="{% static 'images/cityscape.png' %}" alt="Hero Image" id="heroLG" class="hero" data-aos="fade-up"/>
+		{% load static %}
+		<img src="{% static 'images/cityscape_mobile.png' %}" alt="Hero Image" id="heroSM" class="hero" data-aos="fade-up"/>
 		<div id="banner">
 			<div id = "MainHeroText" data-aos="fade-up">
 				<h1 id="CutieHackTitle">CUTIE HACK</h1>
@@ -214,13 +216,13 @@
 
 				<!-- Sponsors -->
 				<div class = "row">
-					<span class = "col text-center">
+					<span class = "col img-responsive center-block">
 						{% load static %}
-	         			<a href="https://github.com"><img class="zoom mediumSponsor img-fluid" src="{% static 'images/companylogos/GitHub.png' %}" alt="GitHub" id="GitHub"/></a>
+	         			<a href="https://github.com"><img class="zoom mediumSponsor" src="{% static 'images/companylogos/GitHub.png' %}" alt="GitHub" id="GitHub"/></a>
 					</span>
-					<span class = "col text-center">
+					<span class = "col img-responsive center-block">
 						{% load static %}
-	         			<a href="https://gogosqueez.com"><img class="zoom mediumSponsor img-fluid" src="{% static 'images/companylogos/GoGoSqueez.png' %}" alt="GoGoSqueez" id="GoGoSqueez"/></a>
+	         			<a href="https://gogosqueez.com"><img class="zoom mediumSponsor" src="{% static 'images/companylogos/GoGoSqueez.png' %}" alt="GoGoSqueez" id="GoGoSqueez"/></a>
 					</span>
 				</div>
 				<!-- End Sponsors -->
@@ -229,13 +231,13 @@
 				<h1  class="sectionHeader text-center pt-4 pb-2" id= "organizers">Organizers</h1>
 
 				<div class = "row text-center">
-					<span class = "col text-center">
+					<span class = "col img-responsive center-block">
 						{% load static %}
-	         			<a href="https://acmucr.org"><img class="zoom mediumSponsor img-fluid" src="{% static 'images/companylogos/ACMUCR.png' %}" alt="Association of Computing Machines, UC Riverside" id="ACM"/></a>
+	         			<a href="https://acmucr.org"><img class="zoom mediumSponsor" src="{% static 'images/companylogos/ACMUCR.png' %}" alt="Association of Computing Machines, UC Riverside" id="ACM"/></a>
 					</span>
-					<span class = "col text-center">
+					<span class = "col img-responsive center-block">
 						{% load static %}
-	         			<a href="ieee.ee.ucr.edu/"><img class="zoom mediumSponsor img-fluid" src="{% static 'images/companylogos/IEEE.png' %}" alt="Institute of Electrical and Electronics Engineers, UC Riverside" id="IEEE"/></a>
+	         			<a href="ieee.ee.ucr.edu/"><img class="zoom mediumSponsor" src="{% static 'images/companylogos/IEEE.png' %}" alt="Institute of Electrical and Electronics Engineers, UC Riverside" id="IEEE"/></a>
 					</span>
 				</div>
 			</div>	
