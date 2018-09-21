@@ -1,7 +1,12 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import login, authenticate
+from django.contrib.sites.shortcuts import get_current_site
+from django.template.loader import render_to_string
+from django.utils.encoding import force_bytes
+from django.utils.http import urlsafe_base64_encode
 from .forms import SignUpForm
+from .tokens import account_activation_token
 # Create your views here.
 
 ''' test
@@ -19,11 +24,28 @@ def profile(request): #when user is not logged in redirect to login page
 def live(request):
     return render(request, 'live.html', context={}, )
 
+def activate(request, uidb64, token):
+    try:
+        uid = force_text(urlsafe_base64_decode(uidb64))
+        user = User.objects.get(pk=uid)
+    except (TypeError, ValueError, OverflowError, User.DoesNotExist):
+        user = None
+
+    if user is not None and account_activation_token.check_token(user, token):
+        user.is_active = True
+        user.profile.email_confirmed = True
+        user.save()
+        login(request, user)
+        return redirect('login')
+    else:
+        return render(request, 'account_activation_invalid.html')
+
 def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
             user = form.save()
+            '''user.is_active = False'''
             user.email = form.cleaned_data.get('email')
             user.refresh_from_db()  # load the profile instance created by the signal
             user.profile.first_name = form.cleaned_data.get('first_name')
@@ -43,9 +65,19 @@ def signup(request):
             user.profile.questions = form.cleaned_data.get('questions')
             user.save()
             raw_password = form.cleaned_data.get('password1')
-            user = authenticate(email=user.email, password=raw_password)
-            login(request, user)
-            return redirect('profile')
+            subject = 'Activate Your CutieHack Account'
+            message = render_to_string('account_activation_email.html', {
+                'user': user,
+                'domain': current_site.domain,
+                'uid': urlsafe_base64_encode(force_bytes(user.pk)),
+                'token': account_activation_token.make_token(user),
+                })
+            #user = authenticate(email=user.email, password=raw_password)
+            user.email_user(subject, message)
+            return redirect('account_activation_sent')
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
+
+def account_activation_sent(request):
+    return render(request, 'account_activation_sent.html')
