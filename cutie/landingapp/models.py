@@ -78,12 +78,12 @@ class Profile(models.Model):
     user = models.OneToOneField(MyUser, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=30, blank=True)
     last_name = models.CharField(max_length=30, blank=True)
-    age = models.IntegerField(null=True, blank=True) # change to age
+    age = models.CharField(max_length=30,null=True, blank=True) # change to age
     school = models.CharField(max_length=100, blank=True)
     major = models.CharField(max_length=30, blank=True)
     #appStatus = Pending default
     #need to check what is missing from here
-    phoneNumber = models.CharField(max_length=12, blank=True,help_text="Phone Number: 123 456 7890")
+    phoneNumber = models.CharField(max_length=12, blank=True)
     genderOptions = (("a", "male"), ('b', 'female'), ("c", "Other"), ("d", "Prefer not to disclose"), )
     Gender = models.CharField(max_length=30, choices=genderOptions, default="")
     raceOptions = (('a', 'White'), ('b','Black or African American'), ('c', 'Native American'), ('d', 'Asian'), ('e','Native Hawaiian or other Pacific Islander'), ('f','Latino or Latin American'), ('g','Other'), ('h', 'Two or more races'), ('i', 'Prefer not to disclose'), )

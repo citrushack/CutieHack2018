@@ -26,7 +26,7 @@ def signup(request):
             user.refresh_from_db()  # load the profile instance created by the signal
             user.profile.first_name = form.cleaned_data.get('first_name')
             user.profile.last_name = form.cleaned_data.get('last_name')
-            user.profile.date_of_birth = form.cleaned_data.get('date_of_birth')
+            user.profile.age = form.cleaned_data.get('age')
             user.profile.school = form.cleaned_data.get('school')
             user.profile.major = form.cleaned_data.get('major')
             user.profile.phoneNumber = form.cleaned_data.get('phoneNumber')

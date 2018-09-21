@@ -60,13 +60,14 @@
         <div>
           <label for="firstname">First Name:
             <br>
-            <input id="firstname" name="firstname" type="text" required>
+            {{ form.first_name }}
+
             <span class="red-star">&#x2605;</span>
           </label>
 
           <label for="lastname">Last Name:
             <br>
-            <input id="lastname" name="lastname" type="text" required>
+            {{form.last_name}}
             <span class="red-star">&#x2605;</span>
           </label>
         </div>
@@ -74,7 +75,8 @@
         <div>
           <label for="email">Email:
             <br>
-            <input id="email" name="email" type="email" style='width: 826px;' required>
+            <!--<input id="email" name="email" type="email" style='width: 826px;' required> -->
+            {{ form.email}}
             <span class="red-star">&#x2605;</span>
           </label>
         </div>
@@ -82,7 +84,8 @@
         <div>
           <label for="">Confirm email:
             <br>
-            <input id="" name="" type="email" style='width: 826px;'required>
+            <!--<input id="" name="" type="email" style='width: 826px;'required> -->
+            {{ form.confirmEmail }}
             <span class="red-star">&#x2605;</span>
           </label>
         </div>
@@ -90,13 +93,13 @@
         <div>
           <label for="password">Password:
             <br>
-            <input id="password" name="password" type="password" required>
+            {{ form.password1 }}
             <span class="red-star">&#x2605;</span>
           </label>
 
           <label for="">Confirm Password:
             <br>
-            <input id="" name="" type="password" required>
+            {{ form.password2 }}
             <span class="red-star">&#x2605;</span>
           </label>
         </div>
@@ -133,7 +136,8 @@
           <div>
             <label for="school">Name of School:
               <br>
-              <input id="school" name="school" type="text" style='width: 826px;' required>
+              <!--<input id="school" name="school" type="text" style='width: 826px;' required> -->
+              {{ form.school }}
 
               <span class="red-star">&#x2605;</span>
             </label>
@@ -142,80 +146,37 @@
           <div>
             <label for="age">Age:
               <br>
-                <select name ='age'>
-                  <option value=""></option>
-                  <option value="13">13</option>
-                  <option value="14">14</option>
-                  <option value="15">15</option>
-                  <option value="16">16</option>
-                  <option value="17">17</option>
-                  <option value="18">18</option>
-                  <option value="19">19</option>
-                  <option value="20">20</option>
-                  <option value="21">21</option>
-                  <option value="22">22</option>
-                  <option value="23">23</option>
-                  <option value="24">24</option>
-                  <option value="25">25</option>
-                  <option value="26">26</option>
-                  <option value="27">27</option>
-                  <option value="28">28</option>
-                  <option value="29">29</option>
-                  <option value="30">30</option>
-                  <option value="31">31</option>
-                  <option value="32">32</option>
-                </select>
+                {{ form.age }}
                 <span class="red-star">&#x2605;</span>
               </label>
 
               <label for="gender">Gender:
                 <br>
-                  <select name="gender">
-                    <option value=""></option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                    <option value="no disclosure">Prefer not to disclose</option>
-                  </select>
+                  {{ form.Gender }}
                   <span class="red-star">&#x2605;</span>
               </label>
 
               <label for="race">Race/Ethnicty:
                 <br>
-                  <select name='Race' style="width: 437px;">
-                    <option value=""></option>
-                    <option value="white"> White</option>
-                    <option value="black">Black or African Amercian</option>
-                    <option value="native american"> Native American</option>
-                    <option value="asian">Asian</option>
-                    <option value="Native Hawaiian/Pacific Islander">Native Hawaiian or other Pacific Islander</option>
-                    <option value="Latino">Latino or Latin American</option>
-                    <option value="Other">Other</option>
-                    <option value="mutliple races">Two or more races</option>
-                    <option value="no disclosure">Prefer not to disclose</option>
-                  </select>
+                  <!---<select name='Race' style="width: 437px;"> -->
+                    {{form.Race }}
+                    
                   <span class="red-star">&#x2605;</span>
+                    
               </label>
           </div>
 
           <div>
             <label for="major">Major:
               <br>
-              <input id="major" name="major" type="text" required>
+              {{form.major }}
               <span class="red-star">&#x2605;</span>
             </label>
 
             <label for="levelOfStudy">Current Level of Study:
               <br>
-              <select name="levelOfStudy" style="width: 400px;">
-                <option value=""></option>
-                <option value="1st">1st Year</option>
-                <option value="2nd">2nd Year</option>
-                <option value="3rd">3rd Year</option>
-                <option value="4th">4th Year</option>
-                <option value="5th">5th Year or beyond</option>
-                <option value="no disclosure">Prefer not to disclose</option>
-              </select>
+              <!--<select name="levelOfStudy" style="width: 400px;"> -->
+                {{form.LevelofStudy }}
               <span class="red-star">&#x2605;</span>
             </label>
           </div>
@@ -223,22 +184,15 @@
       <div>
         <label for="gradYear">Expected Year of Graduation:
           <br>
-          <select name='gradYear' style="width: 224px;">
-            <option value=""></option>
-            <option value="2019">2019</option>
-            <option value="2020">2020</option>
-            <option value="2021">2021</option>
-            <option value="2022">2022</option>
-            <option value="2023">2023</option>
-            <option value="2024">2024</option>
-            <option value="2025">2025</option>
-          </select>
+          <!--<select name='gradYear' style="width: 224px;"> -->
+            {{form.gradYear}}
           <span class="red-star">&#x2605;</span>
         </label>
 
         <label for="phoneNumber">Phone Number: 123 456 7890
           <br>
-          <input id="phoneNumber" name="phoneNumber" type="tel" style='width: 224px;'required>
+          <!--<input id="phoneNumber" name="phoneNumber" type="tel" style='width: 224px;'required> -->
+          {{form.phoneNumber}}
           <span class="red-star">&#x2605;</span>
         </label>
 
@@ -247,8 +201,7 @@
       <div>
         <label for="resume">Resume:
           <br>
-          <button id="resume" type="button">Click to upload a file</button>
-          <span class="red-star">&#x2605;</span>
+          <span class="red-star">&#x2605;</span> {{form.Resume}} 
           <p class="description">
             Acceptable file format includes DOC,PDF,RTF,HTML,TXT, ODF, and DOCX
           </p>
@@ -280,8 +233,9 @@
         <p>All Cutie Hack participants must adhere to the MLH Code of Conduct at all times during the event. By checking the following box, you hereby agree to follow all rules and regulations outlined in the offical MLH Code of Conduct.</p>
 
         <label class='container2'for="conduct">
-        	<input name="conduct" id="conduct" type="checkbox" value="agreed">
-          <span class="checkmark"></span>
+        	<!--<input name="conduct" id="conduct" type="checkbox" value="agreed"> 
+          <span class="checkmark"></span> -->
+          {{form.conductBox}}
           <span class="red-star">&#x2605;</span>
           <span class="checkboxText">
             I have read and agree to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct.</a>
@@ -290,8 +244,10 @@
 
         <p>By participating in Cutie Hack, you must allow the use of your application information to be passed along by MLH to be used to promote other MLH affliated events. Don't worry, we'll keep your information safe and secure! By checking the following box, you hereby agree to us sharing your information with MLH. </p>
       <label class='container2'for="authorizeToShare">
-        <input name="authorizeToShare" id="authorizeToShare" type="checkbox" value="agreed">
-        <span class="checkmark"></span>
+        <!--<input name="authorizeToShare" id="authorizeToShare" type="checkbox" value="agreed">
+        <span class="checkmark"></span> -->
+
+        {{form.shareBox}}
         <span class="red-star">&#x2605;</span>
         I authorize you to share my application/registration information for event adminstration, ranking, MLH adminstration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the MLH Privacy Policy. I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy.
       </label>
@@ -299,13 +255,15 @@
       <label for="allergies">
         Do you have any food allergies or dietary restrictions we should know about? If so, please enter them in the field below:
         <br>
-        <input name="allergies" id="allergies" style='width: 627px;'type="text">
+       <!-- <input name="allergies" id="allergies" style='width: 627px;'type="text"> -->
+       {{form.dietRestrictions}}
       </label>
 
       <label for="meme">
         Makes us laugh! Share a link to a meme, funny video, website, etc.:
         <br>
-        <input name="meme" id="meme" style='width: 627px;'type="text">
+        <!--input name="meme" id="meme" style='width: 627px;'type="text"> -->
+        {{form.meme}}
       </label>
 
         <br><br>
