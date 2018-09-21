@@ -102,7 +102,7 @@ select {
 
 
 #conduct, #authorizeToShare{
-  position: absolute;
+    position: absolute;
     opacity: 0;
     cursor: pointer;
 }
@@ -151,5 +151,17 @@ select {
 input{
   width: 400px;
 }
+.myfieldclass{
+  width: 826px;
+}
+.moreInput{
+  width: 224px;
+}
+.moreInput2{
+  width: 627px;
+}
+
+
+
 
 
