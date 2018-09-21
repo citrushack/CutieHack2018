@@ -9,9 +9,9 @@ def index(request):
     return HttpResponse("You're at the index.")
 '''
 def index(request):
-	return render(request, 'index.html', context={}, ) #context is empty for now: this is if we want to incorporate data into our landing page
+	return render(request, 'index.html', context={}, ) #context is empty unless we want to incorporate data into our landing page
 
-def profile(request): #implement the case when user is not logged in redirect to login page
+def profile(request): #implement the case when user is not logged in redirect to login page  if not request.user.is_authenticated: return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
 	return render(request, 'profile.html', context={}, )
 
 def live(request):
@@ -47,24 +47,3 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
-
-#2 form method incomplete
-# @transaction.atomic
-# def update_profile(request):
-#     if request.method == 'POST':
-#         user_form = UserForm(request.POST, instance=request.user)
-#         profile_form = ProfileForm(request.POST, instance=request.user.profile)
-#         if user_form.is_valid() and profile_form.is_valid():
-#             user_form.save()
-#             profile_form.save()
-#             messages.success(request, ('Your profile was successfully updated!'))
-#             return redirect('settings:profile')
-#         else:
-#             messages.error(request, ('Please correct the error below.'))
-#     else:
-#         user_form = UserForm(instance=request.user)
-#         profile_form = ProfileForm(instance=request.user.profile)
-#     return render(request, 'profiles/profile.html', {
-#         'user_form': user_form,
-#         'profile_form': profile_form
-#     })
