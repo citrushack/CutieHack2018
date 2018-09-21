@@ -2,42 +2,6 @@
 <html>
 <head>
 	<title>Cutie Hack Login</title>
-
-<!-- actual form part -->
-
-<!-- {% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
-{% endif %}
-
-{% if next %}
-    {% if user.is_authenticated %}
-    <p>Your account doesn't have access to this page. To proceed,
-    please login with an account that has access.</p>
-    {% else %}
-    <p>Please login to see this page.</p>
-    {% endif %}
-{% endif %}
-
-<form method="post" action="{% url 'login' %}">
-{% csrf_token %}
-
-<div>
-  <td>{{ form.username.label_tag }}</td>
-  <td>{{ form.username }}</td>
-</div>
-<div>
-  <td>{{ form.password.label_tag }}</td>
-  <td>{{ form.password }}</td>
-</div>
-
-<div>
-  <input type="submit" value="login" />
-  <input type="hidden" name="next" value="{{ next }}" />
-</div>
-</form>
-
-{# Assumes you setup the password_reset view in your URLconf #}
- -->
  	<!-- Favicon -->
     {% load static %}
     <link rel="shortcut icon" type="image/png" href="{%  static 'images/favicon.png' %}">
@@ -221,8 +185,17 @@
 
 {% load static %}
 <body id="background" style="background-image: url({% static 'images/cityscape_repeating.png' %})">
-
-
+{% if form.errors %}
+	<p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+<!--{% if next %}-->
+<!--    {% if user.is_authenticated %}-->
+<!--    <p>Your account doesn't have access to this page. To proceed,-->
+<!--    please login with an account that has access.</p>-->
+<!--    {% else %}-->
+<!--    <p>Please login to see this page.</p>-->
+<!--    {% endif %}-->
+<!--{% endif %}-->
 	<ul class="nav justify-content-end">
 		<li class= "nav-item mr-3">
 			<a class = "nav-link" href="{../../landingapp/templates/index.html" style="color:white;">HOME</a>
@@ -235,14 +208,64 @@
 		{% load static %}
 		<img src="{% static 'images/logo.png' %}"; id="logo">
 		<h1 id="title">Cutie Hack</h1>
-		<form style="display: inline-block">
-			<input type="text" name="email" placeholder="email@example.com" class="textField">
-			<input type="password" name="password" placeholder="password" class="textField">
-			<br><br>
-			<input type="submit" value="Log In" id="button">
-		</form>	
+		<form method="post" action="{% url 'login' %}">
+			{% csrf_token %}
+			<div>
+			  <td>{{ form.username.label_tag }}</td> <!-- you can comment the form.username.label_tag out to see the difference-->
+			  <td>{{ form.username }}</td>
+			</div>
+			<div>
+			  <td>{{ form.password.label_tag }}</td>
+			  <td>{{ form.password }}</td>
+			</div>
+			<div>
+			  <input type="submit" value="Log In" id="button"/>
+			</div>
+		</form>
+		<p><a href="{% url 'index' %}">Forgot password? "not working; redirects to home"</a></p>
+		<!--<form style="display: inline-block">-->
+			<!--<input type="text" name="email" placeholder="email@example.com" class="textField">-->
+			<!--<input type="password" name="password" placeholder="password" class="textField">-->
+			<!--<br><br>-->
+			<!---->
+		<!--</form>	-->
 	</div>
 
 </body>
 
 </html>
+<!-- actual form part -->
+
+<!-- {% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+{% if next %}
+    {% if user.is_authenticated %}
+    <p>Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.</p>
+    {% else %}
+    <p>Please login to see this page.</p>
+    {% endif %}
+{% endif %}
+
+<form method="post" action="{% url 'login' %}">
+{% csrf_token %}
+
+<div>
+  <td>{{ form.username.label_tag }}</td>
+  <td>{{ form.username }}</td>
+</div>
+<div>
+  <td>{{ form.password.label_tag }}</td>
+  <td>{{ form.password }}</td>
+</div>
+
+<div>
+  <input type="submit" value="login" />
+  <input type="hidden" name="next" value="{{ next }}" />
+</div>
+</form>
+
+{# Assumes you setup the password_reset view in your URLconf #}
+ -->

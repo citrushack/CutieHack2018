@@ -18,3 +18,4 @@ To link js in html,
 {% load static %}
 <script type="text/javascript" src="{% static 'js/example.js' %}"></script>
 ```
+for c9 users: https://community.c9.io/t/updating-django/15335

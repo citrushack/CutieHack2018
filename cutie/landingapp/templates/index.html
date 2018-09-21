@@ -63,23 +63,23 @@
 		    </li>
 		    {% if user.is_authenticated %}
 	        <li class= "nav-item">
-	        	<div class="nav-link">
-	        		<a id="loginlink"href="{% url 'login'%}?next={{request.path}}">LOGIN</a>
-	        	</div>
-	        </li>
-	        {% else %}
-	        <li class= "nav-item">
-		    	<div class="dropdown">
+	        	<div class="dropdown">
 		    		<button class="dropbutton nav-link">ACCOUNT <i class="fa fa-caret-down"></i></button>
 		    		<div class="dropdown-content">
 		    			<div class="nav-link">
-		    				<a id="logoutlink"href = "{% url 'logout'%}?next={{request.path}}">PROFILE</a>
+		    				<a id="profilelink"href = "{% url 'profile'%}">PROFILE</a>
 		    			</div>
 		    			<div class="nav-link">	
-		    				<a id="profilelink"href = "{% url 'logout'%}?next={{request.path}}">LOG OUT</a> 
+		    				<a id="logoutlink"href = "{% url 'logout'%}">LOG OUT</a> 
 		    			</div>	
 		    		</div>	
 		    	</div>
+	        </li>
+	        {% else %}
+	        <li class= "nav-item">
+	        	<div class="nav-link">
+	        		<a id="loginlink"href="{% url 'login'%}">LOGIN</a>
+	        	</div>
 	        </li>
 	        {% endif %}	
 	    </ul>
@@ -99,7 +99,7 @@
 				<p id="eventDetails">November 10, 2018<br>
 				at UC Riverside</p>
 				<hr id="headerTextBreak">
-				<a href="http://cutiehack.com/apply"><button type="button" class="btn btn-dark">Apply</button></a>
+				<a href="{% url 'signup'%}"><button type="button" class="btn btn-dark">Apply</button></a>
 			</div>	
 		</div>
 

@@ -25,7 +25,7 @@ SECRET_KEY = '$dd0v0!7!h+x6_qondkdg6&k9-9w#@ejil$g6o%0yrd%qdran('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cutiehack2018-jkim393.c9users.io'] #emergency c9 usage
 
 
 # Application definition
@@ -126,3 +126,4 @@ STATIC_URL = '/static/'
 
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGOUT_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'profile'
