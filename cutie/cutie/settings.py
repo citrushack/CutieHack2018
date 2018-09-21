@@ -25,7 +25,7 @@ SECRET_KEY = '$dd0v0!7!h+x6_qondkdg6&k9-9w#@ejil$g6o%0yrd%qdran('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cutiehack2018-jkim393.c9users.io'] #emergency c9 usage
+ALLOWED_HOSTS = [ ] # add 'cutiehack2018-jkim393.c9users.io' for c9 usage
 
 
 # Application definition
