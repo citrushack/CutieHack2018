@@ -6,7 +6,11 @@ body {
 
 .ui.segment, .ui.segments .segment {
   font-size: 1.2em;
+<<<<<<< HEAD
   background-color: #EEBD69;
+=======
+  background-color: rgb(255, 219, 135);
+>>>>>>> applyPage
 }
 
 .ui.segment {
@@ -15,6 +19,7 @@ body {
 
 .form {
   padding: 10%;
+  filter: drop-shadow(5px 5px 2px #282828);
 }
 
 h1 {
@@ -44,6 +49,52 @@ label {
   margin: auto;
 }
 
+/* Input Boxes */
+
+.input1Form1 {
+  width: 720px;
+  height: 40px;
+}
+
+.input2Form1 {
+  width: 428px;
+  height: 40px;
+}
+
+.input1Form2 {
+  width: 717px;
+  height: 40px;
+}
+
+.input2Form2 {
+  width: 397px;
+  height: 40px;
+}
+
+.input3Form2 {
+  width: 270px;
+  height: 40px;
+}
+
+.input1Form3 {
+  width: 700px;
+  height: 40px;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+/* For resume part */
+input[type=file] {
+  display: inline-block;
+  width: 220px;
+}
+
+#resumemargin {
+  margin-right: 10px;
+}
+
 /* Button */
 
 .previous {
@@ -52,28 +103,54 @@ label {
 }
 
 #next { /* for the button in the application pt 1*/
-  margin-left: 94%;
+  margin-left: 87%;
 }
 
 .next {
   float:right;
 }
 
+.next1 {
+  margin-right: 30px;
+}
+
+.btn-warning {
+  background-color: #F38709;
+  border-color: #F38709;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn {
+  border-radius: 20px;
+  padding: 5px 30px;
+  filter: drop-shadow(1px 2px 2px #746d5a);
+}
+
+.btn-warning:hover {
+  background-color: #f09e12;
+  border-color: #f09e12;
+}
+
+/* Misc */
+
 .red-star {
     color: red;
 }
+
+
 select {
 
   background-color: white;
   font: inherit;
   padding: 0.0em 3.5em 0.1em 1em;
-  margin: 0;      
+  margin: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-appearance: none;
   -moz-appearance: none;
- 
+
   background-image:
     linear-gradient(45deg, transparent 50%, white 50%),
     linear-gradient(135deg, white 50%, transparent 50%),
@@ -148,8 +225,11 @@ select {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+<<<<<<< HEAD
 input{
   width: 400px;
 }
 
 
+=======
+>>>>>>> applyPage
