@@ -6,7 +6,7 @@ body {
 
 .ui.segment, .ui.segments .segment {
   font-size: 1.2em;
-  background-color: rgb(255, 219, 135)
+  background-color: rgb(255, 219, 135);
 }
 
 .ui.segment {
@@ -117,7 +117,7 @@ input[type=file] {
 }
 
 .btn {
-  border-radius: 16px;
+  border-radius: 20px;
   padding: 5px 30px;
   filter: drop-shadow(1px 2px 2px #746d5a);
 }
