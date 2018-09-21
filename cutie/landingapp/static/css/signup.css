@@ -15,6 +15,7 @@ body {
 
 .form {
   padding: 10%;
+  filter: drop-shadow(5px 5px 2px #282828);
 }
 
 h1 {
@@ -44,23 +45,40 @@ label {
   margin: auto;
 }
 
-/* Button */
+/* Input Boxes */
 
-.previous {
-  margin-bottom: 2%;
+.input1Form1 {
+  width: 720px;
+  height: 40px;
 }
 
-#next { /* for the button in the application pt 1*/
-  margin-left: 94%;
+.input2Form1 {
+  width: 428px;
+  height: 40px;
 }
 
-.next {
-  float:right;
+.input1Form2 {
+  width: 717px;
+  height: 40px;
 }
 
+.input2Form2 {
+  width: 397px;
+  height: 40px;
+}
 
-.red-star {
-    color: red;
+.input3Form2 {
+  width: 270px;
+  height: 40px;
+}
+
+.input1Form3 {
+  width: 700px;
+  height: 40px;
+}
+
+label {
+  margin-bottom: 10px;
 }
 
 /* For resume part */
@@ -68,6 +86,53 @@ input[type=file] {
   display: inline-block;
   width: 220px;
 }
+
+#resumemargin {
+  margin-right: 10px;
+}
+
+/* Button */
+
+.previous {
+  margin-bottom: 2%;
+}
+
+#next { /* for the button in the application pt 1*/
+  margin-left: 87%;
+}
+
+.next {
+  float:right;
+}
+
+.next1 {
+  margin-right: 30px;
+}
+
+.btn-warning {
+  background-color: #F38709;
+  border-color: #F38709;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn {
+  border-radius: 16px;
+  padding: 5px 30px;
+  filter: drop-shadow(1px 2px 2px #746d5a);
+}
+
+.btn-warning:hover {
+  background-color: #f09e12;
+  border-color: #f09e12;
+}
+
+/* Misc */
+
+.red-star {
+    color: red;
+}
+
 
 select {
 
