@@ -185,9 +185,6 @@
 
 {% load static %}
 <body id="background" style="background-image: url({% static 'images/cityscape_repeating.png' %})">
-{% if form.errors %}
-	<p>Your username and password didn't match. Please try again.</p>
-{% endif %}
 <!--{% if next %}-->
 <!--    {% if user.is_authenticated %}-->
 <!--    <p>Your account doesn't have access to this page. To proceed,-->
@@ -218,6 +215,9 @@
 			  <td>{{ form.password.label_tag }}</td>
 			  <td>{{ form.password }}</td>
 			</div>
+			{% if form.errors %}
+				<p>Your username and password didn't match. Please try again. (in red)</p>
+			{% endif %}
 			<div>
 			  <input type="submit" value="Log In" id="button"/>
 			</div>
