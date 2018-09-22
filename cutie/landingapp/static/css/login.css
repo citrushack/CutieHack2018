@@ -1,18 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600');
+
 #background {
   background-size: cover;
   overflow: hidden;
 }
+
 /* Card */
 
 .ui.segment, .ui.segments .segment {
   font-size: 1.2em;
-  background-color: #EEBD69;
+  background-color: #eeeeee;
   width: 40%;
   margin: auto;
 }
 
 .ui.segment {
-  border-radius: 30px;
+  border-radius: 5px;
+  box-shadow: 5px 10px #282828  !important;
+
 }
 
 #card {
@@ -23,13 +28,12 @@
   /* background-color: #F9F6E5;
   border-radius: 30px; */
   padding: 5%;
-  filter: drop-shadow(5px 5px 2px #282828);
 }
 
 /* Home */
 
 #home {
-  color: white;
+  color: #eeeeee;
   font-weight: bold;
   filter: drop-shadow(5px 5px 2px #282828);
 }
@@ -43,6 +47,9 @@
 
 #title {
   font-size: 3em;
+  font-family: 'Poppins';
+  color: black;
+  font-weight: 600 !important;
 }
 
 #logo {
@@ -58,6 +65,9 @@
 label {
   font-weight: normal;
   font-size: 1.1em;
+  font-family: 'Poppins';
+  font-weight: 500;
+  color: black;
 }
 
 .textField {
@@ -123,6 +133,11 @@ input[type="text"], [type="password"] {
   width: 90px;
   margin: 0%;
 } */
+
+/* Error Message */
+#error {
+  color: red;
+}
 
 /* Optimization for Other Platforms */
 
