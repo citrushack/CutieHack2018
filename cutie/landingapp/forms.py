@@ -6,10 +6,6 @@ from .models import MyUser
 class SignUpForm(UserCreationForm):
    first_name = forms.CharField(max_length=30, required=True)
    last_name = forms.CharField(max_length=30, required=True)
-   email1 = forms.EmailField(max_length=40, required=True)
-   email2 = forms.EmailField(max_length=40, required=True)
-   password1 = forms.CharField(max_length=32, widget=forms.PasswordInput)
-   password2 = forms.CharField(max_length=32, widget=forms.PasswordInput)
    school = forms.CharField(max_length=100, required=True)
    ageOptions = (
       ("a", "13"),
@@ -59,7 +55,7 @@ class SignUpForm(UserCreationForm):
       )
    gradYear = forms.ChoiceField(choices=yearOptions)
    phoneNumber = forms.CharField(max_length=12,required=True)
-   Resume = forms.FileField(label='Click to upload file')
+   #Resume = forms.FileField(label='Click to upload file')
    conductBox = forms.BooleanField()
    shareBox = forms.BooleanField()
    dietRestrictions = forms.CharField(max_length=100)
@@ -67,5 +63,5 @@ class SignUpForm(UserCreationForm):
 
    class Meta:
       model = MyUser
-      fields = ('email', 'password1', 'password2', 'first_name', 'last_name', 'age', 'school', 'major', 'phoneNumber', 'Gender', 'Race', 'LevelofStudy', 'gradYear', 'dietRestrictions', 'Resume', 'conductBox', 'shareBox', 'meme')
+      fields = ('email', 'password1', 'password2', 'first_name', 'last_name', 'age', 'school', 'major', 'phoneNumber', 'Gender', 'Race', 'LevelofStudy', 'gradYear', 'dietRestrictions', 'conductBox', 'shareBox', 'meme')
 

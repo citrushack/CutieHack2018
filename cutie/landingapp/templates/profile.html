@@ -270,8 +270,8 @@
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a class="nav-link" href="index.html">Home</a></li>
-            <li><a>Log Out</a></li>
+            <li><a class="nav-link" href="{% url 'index'%}">Home</a></li>
+            <li><a href="{% url 'logout'%}">Log Out</a></li>
           </ul>
       </div>
 	</div>
@@ -281,7 +281,7 @@
 
 
 		<img src = "../static/images/logo.png" alt = " Citrus Hack logo" width = "122" height = "123" id="logo">
-		<div class="WelcomeText"> Hello {{Profile.first_name}}! </div>
+		<div class="WelcomeText"> Hello {{user.profile.first_name}}! </div>
 		<div class="ApplicationStatus">
                 	Application Status: PENDING
 		</div>

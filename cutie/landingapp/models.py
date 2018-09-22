@@ -83,7 +83,7 @@ class Profile(models.Model):
     major = models.CharField(max_length=30, blank=True)
     #appStatus = Pending default
     #need to check what is missing from here
-    email_configrmed = models.BooleanField(default=False)
+    #email_confirmed = models.BooleanField(default=False)
     phoneNumber = models.CharField(max_length=12, blank=True)
     genderOptions = (("a", "male"), ('b', 'female'), ("c", "Other"), ("d", "Prefer not to disclose"), )
     Gender = models.CharField(max_length=30, choices=genderOptions, default="")
