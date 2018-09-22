@@ -55,9 +55,12 @@
           <p class="description">(<span class="red-star">&#x2605;</span> denotes required field)</p>
         </div>
         {% load myfilters %}
-        <form action='' method='post'>
+        <form action="." method='post'>
+          {% csrf_token %}
+
 
         <div>
+          
           <label for="firstname">First Name:
             <br>
             {{ form.first_name }}
@@ -111,7 +114,7 @@
             </button>
           </span>
 
-        </form>
+        
 
       </div>
 
@@ -248,7 +251,7 @@
         <span><button id='prevSection2'type="button" class="btn btn-warning">Previous</button></span>
         <span><button id='nextSection2'type="button" class="btn btn-warning next">Next</button></span>
 
-          </form>
+          
 
   </div>
 </div>
@@ -307,7 +310,7 @@
         <br><br>
 
         <span><button id='prevSection3'type="button" class="btn btn-warning">Previous</button></span>
-        <span><button type="submit" class="btn btn-warning next">Apply</button></span>
+        <span><input type="submit" class="btn btn-warning next" value="Apply"></span>
 
     </div>
   </div>
