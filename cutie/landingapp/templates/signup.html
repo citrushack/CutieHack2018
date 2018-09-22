@@ -78,7 +78,7 @@
         <div>
           <label for="email">Email:
             <br>
-            {{ form.email1|addclass:'myfieldclass' }}
+            {{ form.email|addclass:'myfieldclass' }}
             <span class="red-star">&#x2605;</span>
           </label>
         </div>
@@ -87,7 +87,7 @@
           <label for="">Confirm email:
             <br>
 
-           {{ form.email2|addclass:'myfieldclass' }}
+           {{ form.email|addclass:'myfieldclass' }}
             <span class="red-star">&#x2605;</span>
           </label>
         </div>
@@ -162,6 +162,7 @@
             -->
                 <label for="gender">Gender:
                   <br>
+                  <!--
                     <select name="gender" class="input3Form2">
                       <option value=""></option>
                       <option value="male">Male</option>
@@ -169,11 +170,16 @@
                       <option value="other">Other</option>
                       <option value="no disclosure">Prefer not to disclose</option>
                     </select>
+
+                    
+                    --->
+                    {{ form.Gender }}
                     <span class="red-star">&#x2605;</span>
                 </label>
 
                 <label for="race">Race/Ethnicty:
                   <br>
+                  <!--
                     <select name='Race' class="input3Form2">
                       <option value=""></option>
                       <option value="white"> White</option>
@@ -186,6 +192,8 @@
                       <option value="mutliple races">Two or more races</option>
                       <option value="no disclosure">Prefer not to disclose</option>
                     </select>
+                  -->
+                  {{ form.Race }}
                     <span class="red-star">&#x2605;</span>
                 </label>
             </div>
@@ -272,26 +280,20 @@
 
         <p>All Cutie Hack participants must adhere to the MLH Code of Conduct at all times during the event. By checking the following box, you hereby agree to follow all rules and regulations outlined in the offical <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct.</a></p>
 
-        <label class='container2'for="conduct">
-
-        	<input name="conduct" id="conduct" type="checkbox" value="agreed" required> 
+        <label class='containertwo'for="conduct"> <span class="red-star">&#x2605;</span>
+          {{form.conductBox}}
+          I have read and agree to the MLH Code of Conduct.
           <span class="checkmark"></span> 
-        
-          <span class="red-star">&#x2605;</span>
-          <span class="checkboxText">
-            I have read and agree to the MLH Code of Conduct.
-          </span>
         </label>
 
         <p>By participating in Cutie Hack, you must allow the use of your application information to be passed along by MLH to be used to promote other MLH affliated events. Don't worry, we'll keep your information safe and secure! By checking the following box, you hereby agree to us sharing your information with MLH. </p>
-      <label class='container2'for="authorizeToShare">
-        <input name="authorizeToShare" id="authorizeToShare" type="checkbox" value="agreed" required>
-        <span class="checkmark"></span> 
+      <label class='containertwo'for="authorizeToShare">  <span class="red-star">&#x2605;</span>
+         {{form.shareBox}}
 
-       
-        <span class="red-star">&#x2605;</span>
         I authorize you to share my application/registration information for event adminstration, ranking, MLH adminstration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the MLH Privacy Policy. I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy.
-      </label>
+        
+        <span class="checkmark"></span> 
+         </label>
 
       <label for="allergies">
         Do you have any food allergies or dietary restrictions we should know about? If so, please enter them in the field below:

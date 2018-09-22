@@ -79,7 +79,7 @@ def signup(request):
             return redirect('profile')                                      #directly takes the user to his/her profile page (@jZhu, these 3 lines are subject to your change I think - jihwan)
     else:
         form = SignUpForm()
-    return render(request, 'signupDummy.html', {'form': form})
+    return render(request, 'signup.html', {'form': form})
 
 # def account_activation_sent(request):
 #     return render(request, 'account_activation_sent.html')
