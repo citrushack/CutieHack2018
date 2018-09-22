@@ -283,16 +283,16 @@
 		<img src = "../static/images/logo.png" alt = " Citrus Hack logo" width = "122" height = "123" id="logo">
 		<div class="WelcomeText"> Hello {{user.profile.first_name}}! </div>
 		<div class="ApplicationStatus">
-                	Application Status: PENDING
+                	Application Status: {{user.profile.appStatus}}
 		</div>
 		<div class = "UserInfoDisplay">
 			Application Details: <br/><br/>
 
-			First Name: {{Profile.first_name}} <br/>
-			Last Name: {{Profile.last_name}} <br/>
-			School: {{Profile.school}} <br/>
-			Age: {{Profile.age}}<br/>
-			Major: {{Profile.major}}<br/>
+			First Name: {{user.profile.first_name}} <br/>
+			Last Name: {{user.profile.last_name}} <br/>
+			School: {{user.profile.school}} <br/>
+			Age: {{user.profile.age}}<br/>
+			Major: {{user.profile.major}}<br/>
 		</div>
         </div>
 
