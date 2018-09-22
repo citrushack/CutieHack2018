@@ -87,6 +87,140 @@ input[type=file] {
   width: 220px;
 }
 
+
+@media (max-width:400px) {
+  input[type=firstname] {
+    width: 50px;
+  }
+  input[type=email] {
+    width: 250px;
+  }
+  input[type=password] {
+    width: 250px;
+  }
+  input[type=school] {
+    width: 250px;
+  }
+  input[type=major] {
+    width: 250px;
+  }
+  input[type=allergies] {
+    width: 250px;
+  }
+  input[type=memes] {
+    width: 250px;
+  }
+  #nextSection1{
+    margin-left:-100px;
+  }
+}
+@media (min-width:401px) and (max-width:599px) {
+  input[type="firstname"]{
+    width: 200px;
+  }
+  input[type=email] {
+    width: 250px;
+  }
+  input[type=password] {
+    width: 250px;
+  }
+  input[type=school] {
+    width: 250px;
+  }
+  input[type=major] {
+    width: 250px;
+  }
+  input[type=allergies] {
+    width: 250px;
+  }
+  input[type=memes] {
+    width: 250px;
+  }
+  #nextSection1{
+    margin-left:-100px;
+  }
+}
+@media (min-width:600px) and (max-width:767px) {
+  .b {
+    width: 400px;
+  }
+  input[type=email] {
+    width: 400px;
+  }
+  input[type=password] {
+    width: 400px;
+  }
+  input[type=school] {
+    width: 400px;
+  }
+  input[type=major] {
+    width: 400px;
+  }
+  input[type=allergies] {
+    width: 400px;
+  }
+  input[type=memes] {
+    width: 400px;
+  }
+  #nextSection1{
+    margin-left:-100px;
+  }
+}
+
+@media (min-width:768px) and (max-width:950px) {
+  .b {
+    width: 500px;
+  }
+  input[type=email] {
+    width: 500px;
+  }
+  input[type=password] {
+    width: 500px;
+  }
+  input[type=school] {
+    width: 500px;
+  }
+  input[type=major] {
+    width: 500px;
+  }
+  input[type=allergies] {
+    width: 500px;
+  }
+  input[type=memes] {
+    width: 500px;
+  }
+  #nextSection1{
+    margin-left:-100px;
+  }
+}
+@media (min-width:951px) and (max-width:1250px) {
+  input[type=firstname] {
+    width: 50px;
+  }
+  input[type=email] {
+    width: 550px;
+  }
+  input[type=password] {
+    width: 550px;
+  }
+  input[type=school] {
+    width: 550px;
+  }
+  input[type=major] {
+    width: 550px;
+  }
+  input[type=allergies] {
+    width: 550px;
+  }
+  input[type=memes] {
+    width: 550px;
+  }
+  #nextSection1{
+    margin-left:-200px;
+  }
+}
+
+
 #resumemargin {
   margin-right: 10px;
 }
