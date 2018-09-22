@@ -58,8 +58,8 @@ class SignUpForm(UserCreationForm):
    #Resume = forms.FileField(label='Click to upload file')
    conductBox = forms.BooleanField()
    shareBox = forms.BooleanField()
-   dietRestrictions = forms.CharField(max_length=100)
-   meme = forms.CharField(max_length= 200)
+   dietRestrictions = forms.CharField(max_length=100, required=False)
+   meme = forms.CharField(max_length= 200, required=False)
 
    class Meta:
       model = MyUser

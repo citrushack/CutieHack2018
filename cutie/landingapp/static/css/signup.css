@@ -15,7 +15,6 @@ body {
 
 .form {
   padding: 10%;
-  filter: drop-shadow(5px 5px 2px #282828);
 }
 
 h1 {
@@ -45,52 +44,6 @@ label {
   margin: auto;
 }
 
-/* Input Boxes */
-
-.input1Form1 {
-  width: 720px;
-  height: 40px;
-}
-
-.input2Form1 {
-  width: 428px;
-  height: 40px;
-}
-
-.input1Form2 {
-  width: 717px;
-  height: 40px;
-}
-
-.input2Form2 {
-  width: 397px;
-  height: 40px;
-}
-
-.input3Form2 {
-  width: 270px;
-  height: 40px;
-}
-
-.input1Form3 {
-  width: 700px;
-  height: 40px;
-}
-
-label {
-  margin-bottom: 10px;
-}
-
-/* For resume part */
-input[type=file] {
-  display: inline-block;
-  width: 220px;
-}
-
-#resumemargin {
-  margin-right: 10px;
-}
-
 /* Button */
 
 .previous {
@@ -99,54 +52,28 @@ input[type=file] {
 }
 
 #next { /* for the button in the application pt 1*/
-  margin-left: 87%;
+  margin-left: 94%;
 }
 
 .next {
   float:right;
 }
 
-.next1 {
-  margin-right: 30px;
-}
-
-.btn-warning {
-  background-color: #F38709;
-  border-color: #F38709;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.btn {
-  border-radius: 20px;
-  padding: 5px 30px;
-  filter: drop-shadow(1px 2px 2px #746d5a);
-}
-
-.btn-warning:hover {
-  background-color: #f09e12;
-  border-color: #f09e12;
-}
-
-/* Misc */
-
 .red-star {
     color: red;
 }
-
-
 select {
 
   background-color: white;
   font: inherit;
   padding: 0.0em 3.5em 0.1em 1em;
-  margin: 0;
+  margin: 0;      
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-appearance: none;
   -moz-appearance: none;
-
+ 
   background-image:
     linear-gradient(45deg, transparent 50%, white 50%),
     linear-gradient(135deg, white 50%, transparent 50%),
@@ -161,44 +88,40 @@ select {
     2.5em 2.5em;
   background-repeat: no-repeat;
 }
-.containertwo {
+.container2 {
     display: block;
     position: relative;
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
 
-/* Hide the browser's default checkbox */
-.containertwo input {
+
+.container2 input{
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
-
-/* Create a custom checkbox */
 .checkmark {
     position: absolute;
     top: 0;
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: #eee;
+    background-color: white;
 }
-
 /* On mouse-over, add a grey background color */
-.containertwo:hover input ~ .checkmark {
-    background-color: #ccc;
+.container2:hover input ~ .checkmark {
+    background-color: #FF8C00;
 }
 
 /* When the checkbox is checked, add a blue background */
-.containertwo input:checked ~ .checkmark {
-    background-color: #2196F3;
+.container2 input:checked ~ .checkmark {
+    background-color: #FF8C00;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -209,12 +132,12 @@ select {
 }
 
 /* Show the checkmark when checked */
-.containertwo input:checked ~ .checkmark:after {
+.container2 input:checked ~ .checkmark:after {
     display: block;
 }
 
 /* Style the checkmark/indicator */
-.containertwo .checkmark:after {
+.container2 .checkmark:after {
     left: 9px;
     top: 5px;
     width: 5px;
