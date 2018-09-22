@@ -90,22 +90,22 @@ class Profile(models.Model):
     raceOptions = (('a', 'White'), ('b','Black or African American'), ('c', 'Native American'), ('d', 'Asian'), ('e','Native Hawaiian or other Pacific Islander'), ('f','Latino or Latin American'), ('g','Other'), ('h', 'Two or more races'), ('i', 'Prefer not to disclose'), )
     Race = models.CharField(max_length=30, choices=raceOptions, default="")
     studyOptions = (
-      ("a", "1st Year"),
-      ("b", "2nd Year"),
-      ("c", "3rd Year"),
-      ("d", "4th Year"),
-      ("e", "5th Year or beyond"),
-      ("f", "Prefer not to disclose"),
+      ("1st Year", "1st Year"),
+      ("2nd Year", "2nd Year"),
+      ("3rd Year","3rd Year"),
+      ("4th Year", "4th Year"),
+      ("5th Year or beyond", "5th Year or beyond"),
+      ("Prefer not to disclose", "Prefer not to disclose"),
       )
     LevelofStudy = models.CharField(max_length=30, choices=studyOptions, default="")
     yearOptions = (
-      ("a", "2019"),
-      ("b", "2020"),
-      ("c", "2021"),
-      ("d", "2022"),
-      ("e", "2023"),
-      ("f", "2024"),
-      ("g", "2025"),
+      ("2019", "2019"),
+      ("2020", "2020"),
+      ("2021", "2021"),
+      ("2022", "2022"),
+      ("2023", "2023"),
+      ("2024", "2024"),
+      ("2025", "2025"),
       )
     gradYear = models.CharField(max_length=30, choices=yearOptions, default="")
     dietRestrictions = models.CharField(max_length=100, default="")
