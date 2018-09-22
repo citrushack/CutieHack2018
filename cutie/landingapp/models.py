@@ -81,7 +81,7 @@ class Profile(models.Model):
     age = models.CharField(max_length=30,null=True, blank=True) # change to age
     school = models.CharField(max_length=100, blank=True)
     major = models.CharField(max_length=30, blank=True)
-    #appStatus = Pending default
+    appStatus = models.CharField(max_length=30, default ="Pending")
     #need to check what is missing from here
     #email_confirmed = models.BooleanField(default=False)
     phoneNumber = models.CharField(max_length=12, blank=True)
