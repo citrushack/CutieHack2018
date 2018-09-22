@@ -55,18 +55,20 @@
 
 								<div class="row">
 
-									<div class="col-sm-12">
-										{% csrf_token %}
-										<div id="username">
-											<td>{{ form.username.label_tag }}</td> <!-- you can comment the form.username.label_tag out to see the difference-->
-											<td>{{ form.username }}</td>
+									<div id="inputs">
+										<div class="col-sm-12">
+											<div id="username">
+												{% csrf_token %}
+												<td>{{ form.username.label_tag }}</td> <!-- you can comment the form.username.label_tag out to see the difference-->
+												<td>{{ form.username }}</td>
+											</div>
 										</div>
-									</div>
 
-									<div class="col-sm-12">
-										<div id="password">
-											<td>{{ form.password.label_tag }}</td>
-											<td>{{ form.password }}</td>
+										<div class="col-sm-12">
+											<div id="password">
+												<td>{{ form.password.label_tag }}</td>
+												<td>{{ form.password }}</td>
+											</div>
 										</div>
 									</div>
 
