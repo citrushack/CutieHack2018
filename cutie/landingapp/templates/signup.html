@@ -38,7 +38,7 @@
 {% load static %}
 <script type="text/javascript" src="{% static 'js/signup.js' %}"></script>
 
-<div class="nocontainer" style="background-image: url("static 'images/cityscape_repeating.png' ")">
+<div class="container" style="background-image: url("static 'images/cityscape_repeating.png' ")">
 
 <div class="row">
 
@@ -280,18 +280,17 @@
 
         <p>All Cutie Hack participants must adhere to the MLH Code of Conduct at all times during the event. By checking the following box, you hereby agree to follow all rules and regulations outlined in the offical <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct.</a></p>
 
-        <label class='containertwo'for="conduct"> <span class="red-star">&#x2605;</span>
+        <label class='container'for="conduct"> <span class="red-star">&#x2605;</span>
           {{form.conductBox}}
           I have read and agree to the MLH Code of Conduct.
           <span class="checkmark"></span> 
         </label>
 
         <p>By participating in Cutie Hack, you must allow the use of your application information to be passed along by MLH to be used to promote other MLH affliated events. Don't worry, we'll keep your information safe and secure! By checking the following box, you hereby agree to us sharing your information with MLH. </p>
-      <label class='containertwo'for="authorizeToShare">  <span class="red-star">&#x2605;</span>
+      <label class='container'for="authorizeToShare">  <span class="red-star">&#x2605;</span>
          {{form.shareBox}}
 
-        I authorize you to share my application/registration information for event adminstration, ranking, MLH adminstration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the MLH Privacy Policy. I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy.
-        
+        I authorize you to share my application/registration information for event adminstration, ranking, MLH adminstration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the MLH Privacy Policy. I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy
         <span class="checkmark"></span> 
          </label>
 
