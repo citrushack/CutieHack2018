@@ -8,23 +8,43 @@
 
 		<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/segment.min.css">
 </head>
 
 <style type="text/css">
 
-	#card {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);	
-		background-color: #F9F6E5;
-		border-radius: 7.5%;
-		box-shadow: 5px 5px;	
+	.ui.segment, .ui.segments .segment {
+		font-size: 1.2em;
+		background-color: #EEBD69;
 	}
+
+	.ui.segment {
+		border-radius: 30px;
+	}
+
+	label {
+	  font-weight: normal;
+	}
+
+	#card {
+		/* position: absolute; */
+		/* top: 50%; */
+		/* left: 50%; */
+		/* transform: translate(-50%, -50%); */
+		padding: 20%;
+	  filter: drop-shadow(5px 5px 2px #282828);
+		/* background-color: #F9F6E5;
+		border-radius: 30px; */
+	}
+
 	#logo {
 		display: inline-block;
 		height: auto;
 		min-width: 80px;
+		/* height: 100px;
+	  width: 100px; */
 	}
 	#background {
 		background-size: cover;
@@ -44,6 +64,7 @@
 	#button:hover {
 		cursor:pointer;
 	}
+
 	.textField {
 		display: inline-block;
 		width: 60%;
@@ -109,10 +130,10 @@
 		.textField {
 			margin: 3%;
 		}
-	}
-	
+	} */
+
 /*	1.5-2 aspect ratio (test 1500/1000 and 2000/1000)*/
-	@media (min-aspect-ratio: 3/2) {
+	/* @media (min-aspect-ratio: 3/2) {
 		#card{
 			height: 90%;
 			width: 40%;
@@ -155,7 +176,7 @@
 			font-size: 5vh;
 		}
 	}
-	
+
 /*tablets*/
 	@media (min-device-height: 900px) {
 		#logo {
@@ -179,8 +200,6 @@
 		}
 	}
 
-
-
 </style>
 
 {% load static %}
@@ -198,30 +217,38 @@
 			<a class = "nav-link" href="{../../landingapp/templates/index.html" style="color:white;">HOME</a>
 		</li>
     </ul>
+	<!-- <div id="card" class="text-center"> -->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 text-center" id="card">
+				<div class="ui raised segment">
 
-
-	
-	<div id="card" class="text-center">
 		{% load static %}
 		<img src="{% static 'images/logo.png' %}"; id="logo">
 		<h1 id="title">Cutie Hack</h1>
 		<form method="post" action="{% url 'login' %}">
 			{% csrf_token %}
 			<div>
-			  <td>{{ form.username.label_tag }}</td> <!-- you can comment the form.username.label_tag out to see the difference-->
-			  <td>{{ form.username }}</td>
+				<td>{{ form.username.label_tag }}</td> <!-- you can comment the form.username.label_tag out to see the difference-->
+				<td>{{ form.username }}</td>
 			</div>
 			<div>
-			  <td>{{ form.password.label_tag }}</td>
-			  <td>{{ form.password }}</td>
+				<td>{{ form.password.label_tag }}</td>
+				<td>{{ form.password }}</td>
 			</div>
 			{% if form.errors %}
 				<p>Your username and password didn't match. Please try again. (in red)</p>
 			{% endif %}
 			<div>
-			  <input type="submit" value="Log In" id="button"/>
+				<input type="submit" value="Log In" id="button"/>
 			</div>
 		</form>
+
+					</div>
+			</div>
+		</div>
+	</div>
+
 		<p><a href="{% url 'index' %}">Forgot password? "not working; redirects to home"</a></p>
 		<!--<form style="display: inline-block">-->
 			<!--<input type="text" name="email" placeholder="email@example.com" class="textField">-->
@@ -229,7 +256,8 @@
 			<!--<br><br>-->
 			<!---->
 		<!--</form>	-->
-	</div>
+
+	<!-- </div> -->
 
 </body>
 
