@@ -58,7 +58,7 @@ def signup(request):
             user.profile.LevelofStudy = form.cleaned_data.get('LevelofStudy')
             user.profile.gradYear = form.cleaned_data.get('gradYear')
             user.profile.dietRestrictions = form.cleaned_data.get('dietRestrictions')
-            #user.profile.Resume = form.cleaned_data.get('Resume')
+            user.profile.Resume = form.cleaned_data.get('Resume')
             user.profile.shareBox = form.cleaned_data.get('shareBox')
             user.profile.conductBox = form.cleaned_data.get('conductBox')
             user.profile.questions = form.cleaned_data.get('questions')
