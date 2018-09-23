@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600');
+
+#background {
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* Card */
+
+.ui.segment, .ui.segments .segment {
+  font-size: 1.2em;
+  background-color: #eeeeee;
+  width: 40%;
+  margin: auto;
+}
+
+.ui.segment {
+  border-radius: 5px;
+  box-shadow: 5px 10px #282828  !important;
+
+}
+
+#card {
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  /* background-color: #F9F6E5;
+  border-radius: 30px; */
+  padding: 5%;
+}
+
+/* Home */
+
+#home {
+  color: #eeeeee;
+  font-weight: bold;
+  filter: drop-shadow(5px 5px 2px #282828);
+}
+
+#home:hover {
+  background-color: orange;
+  color: white;
+}
+
+/* Title and Logo */
+
+#title {
+  font-size: 3em;
+  font-family: 'Poppins';
+  color: black;
+  font-weight: 600 !important;
+}
+
+#logo {
+  display: inline-block;
+  height: auto;
+  /* min-width: 80px; */
+  height: 200px;
+  width: 200px;
+}
+
+/* Inputs */
+
+label {
+  font-weight: normal;
+  font-size: 1.1em;
+  font-family: 'Poppins';
+  font-weight: 500;
+  color: black;
+}
+
+.textField {
+  display: inline-block;
+  width: 60%;
+  border:none;
+  margin: 4%;
+}
+
+input {
+  display: block;
+  margin: auto;
+}
+
+#username {
+  margin: auto;
+  margin-top: 3%;
+  margin-bottom: 4%;
+}
+
+input[type="text"], [type="password"] {
+  width: 90%;
+  height: 35px;
+}
+
+#password {
+  margin: auto;
+  margin-bottom: -8%;
+}
+
+/* Login Button */
+
+.btn-warning {
+  background-color: #F38709;
+  border-color: #F38709;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn {
+  border-radius: 20px;
+  padding: 5px 30px;
+  filter: drop-shadow(1px 2px 2px #746d5a);
+  margin-top: 20%;
+}
+
+.btn-warning:hover {
+  background-color: #f09e12;
+  border-color: #f09e12;
+}
+
+#button:hover {
+  cursor:pointer;
+}
+
+/* #button {
+  display: inline-block;
+  background-color: #F38709;
+  border: none;
+  border-radius: 12px;
+  color: #FFFFFF;
+  box-shadow: 2px 2px 5px #28282A;
+  width: 90px;
+  margin: 0%;
+} */
+
+/* Error Message */
+#error {
+  color: red;
+}
+
+/* Optimization for Other Platforms */
+
+/*	<.7 aspect ratio */
+/* @media all {
+
+    #card{
+      height: 80%;
+      width: 63%;
+      min-height: 300px;
+    }
+
+    #logo {
+      width:10vh;
+      margin-top: 14.5%;
+    }
+
+    #title {
+      font-weight: 700;
+      font-size: 5.5vh;
+      margin: 7%;
+    }
+
+    .btn {
+      margin-bottom: 8%;
+    }
+
+    #username {
+       margin-right: 8%;
+    }
+
+} */
+
+/*	.7-1 aspect ratio */
+/* @media (min-aspect-ratio: 7/10) {
+  #card{
+    height: 80%;
+    width: 63%;
+    min-width: 250px;
+    min-height: 300px;
+  }
+  #logo {
+    width:15vh;
+    margin-top: 14.5%;
+  }
+  #title {
+    font-weight: 700;
+    font-size: 5.5vh;
+    margin: 7%;
+  }
+} */
+
+/*	1-1.5 aspect ratio (test 1000/1000 and 1500/1000)*/
+/* @media (min-aspect-ratio: 1/1) {
+  #card{
+    height: 85%;
+    width: 45%;
+    min-width: 250px;
+    min-height: 300px;
+  }
+  #logo {
+    width:20vh;
+    margin-top: 7%;
+  }
+  #title {
+    font-weight: 700;
+    font-size: 8vh;
+    margin: 7%;
+  }
+  .textField {
+    margin: 3%;
+  }
+} */
+
+/*	1.5-2 aspect ratio (test 1500/1000 and 2000/1000)*/
+/* @media (min-aspect-ratio: 3/2) {
+  #card{
+    height: 90%;
+    width: 40%;
+    min-width: 250px;
+    min-height: 425px;
+  }
+  #logo {
+    width:23vh;
+    margin-top: 7%;
+  }
+  #title {
+    font-weight: 700;
+    font-size: 9vh;
+    margin: 7%;
+  }
+  .textField {
+    margin-bottom: 6%;
+  }
+} */
+
+/*	mobile phones*/
+/* @media (min-device-height: 850px) {
+  #logo {
+    /* margin-top: 15%;
+    width: 12vh;
+  }
+  #card{
+    height: 53%;
+    width: 70%;
+  }
+  .textField {
+    width: 70%;
+    margin: 10%;
+  }
+  #button {
+    width: 130px;
+    margin-top: 20%;
+  }
+  #title {
+    font-size: 5vh;
+  }
+} */
+
+/*tablets*/
+/* @media (min-device-height: 900px) {
+  #logo {
+    margin-top: 15%;
+    width: 12vh;
+  }
+  #card{
+    height: 67%;
+    width: 70%;
+  }
+  .textField {
+    width: 70%;
+    margin: 10%;
+  }
+  #button {
+    width: 130px;
+    margin-top: 20%;
+  }
+  #title {
+    font-size: 5vh;
+  }
+} */
