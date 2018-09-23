@@ -85,9 +85,9 @@ class Profile(models.Model):
     #need to check what is missing from here
     #email_confirmed = models.BooleanField(default=False)
     phoneNumber = models.CharField(max_length=12, blank=True)
-    genderOptions = (("a", "male"), ('b', 'female'), ("c", "Other"), ("d", "Prefer not to disclose"), )
+    genderOptions = (("male", "male"), ('female', 'female'), ("Other", "Other"), ("Prefer not to disclose", "Prefer not to disclose"), )
     Gender = models.CharField(max_length=30, choices=genderOptions, default="")
-    raceOptions = (('a', 'White'), ('b','Black or African American'), ('c', 'Native American'), ('d', 'Asian'), ('e','Native Hawaiian or other Pacific Islander'), ('f','Latino or Latin American'), ('g','Other'), ('h', 'Two or more races'), ('i', 'Prefer not to disclose'), )
+    raceOptions = (('White', 'White'), ('Black or African American','Black or African American'), ('Native American', 'Native American'), ('d', 'Asian'), ('Native Hawaiian or other Pacific Islander','Native Hawaiian or other Pacific Islander'), ('Latino or Latin American','Latino or Latin American'), ('Other','Other'), ('Two or more races', 'Two or more races'), ('Prefer not to disclose', 'Prefer not to disclose'), )
     Race = models.CharField(max_length=30, choices=raceOptions, default="")
     studyOptions = (
       ("1st Year", "1st Year"),
