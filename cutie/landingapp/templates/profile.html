@@ -10,8 +10,9 @@
 	/*border: 1px solid black;*/
 
 	width: 1307px;
-
+	width: 95vw;
 	height: 753px;
+	height: 75.7vh;
 
 	/* margin: auto ; */
 
@@ -99,9 +100,9 @@
 	padding-top: 57px; 
 	line-height: 56px; 
 	font-size: 48px;
-/*	font-size: 3vw;*/
+	font-size: 3.5vw;
 	color: black;
-	overflow: auto;
+	/*overflow-y: auto;*/
 	}
 	.ApplicationStatus{
 
@@ -114,6 +115,7 @@
 	padding-bottom: 0px;	
 	float: none;
 	width: 1193px;
+	width: 55vw;
 	margin-bottom: 0px;
 
 	height: 100px;
@@ -125,10 +127,10 @@
 	font-family: "Roboto", Roboto, sans-serif;
 	padding-left: 8px;
 	font-size: 48px;
-/*	font-size: 3vw;*/
+	font-size: 3vw;
 	line-height: 56px;
 	margin-right: 71px;	
-	overflow: auto;
+	/*overflow-y: auto;*/
 	}
 	.UserInfoDisplay{
 	display: block;
@@ -140,18 +142,21 @@
 	background-color: white;
 	margin-top: 15px;
 	width: 1193px;
+	/*width: 1058px;*/
+	width: 55vw;
 	height: 408px;
-
+	height: 42vh;
+/*	height: 30vh;*/
 	color: #000000;
 
 	font-family: "Roboto", Roboto , sans-serif;
 	font-weight: 100;
 	font-size: 48px;
-	/*font-size: 3vw;	*/
+	font-size: 3vw;	
 	line-height: 56px;
 	margin-right: 75px;
 	margin-bottom: 36px;
-	overflow: auto;
+	overflow-y: auto;
 	}
 
 .navbar-inverse{
@@ -263,8 +268,18 @@
 	max-height: 100vh;
 	margin: auto;
 }
+#sameline{
+	display:flex;
+	flex-wrap:nowrap;
+}
+#sameline span img{
+	width:20vw;
+}
+/*img{
+	max-width: 50%;
+	max-height: 50%;
 
-
+}*/
 </style>
 
 
@@ -315,15 +330,16 @@
 	</div>
 </nav>
 
-	<div class="container profileInfo">
-		<img class="img" src = "../static/images/logo.png" alt = " Citrus Hack logo" width = "122" height = "123" id="logo">
-		<div class="WelcomeText"> Hello {{Profile.first_name}}! </div>
+	<div class="profileInfo">
+<div id="sameline">
+		<img src = "../static/images/logo.png" alt = " Citrus Hack logo" width = "122" height = "123" id="logo">
+		<div class="container WelcomeText"> Hello {{Profile.first_name}}! </div>
+</div>
 		<div class="container ApplicationStatus">
                 	Application Status: PENDING
 		</div>
 		<div class = "container UserInfoDisplay">
-			Application Details: <br/><br/>
-
+			Application Details<br/><br/>
 			First Name: {{Profile.first_name}} <br/>
 			Last Name: {{Profile.last_name}} <br/>
 			School: {{Profile.school}} <br/>
