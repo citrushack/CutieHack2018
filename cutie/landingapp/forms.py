@@ -36,22 +36,22 @@ class SignUpForm(UserCreationForm):
    Race = forms.ChoiceField(choices=raceOptions)
    major = forms.CharField(max_length=30, required=True)
    studyOptions = (
-      ("a", "1st Year"),
-      ("b", "2nd Year"),
-      ("c", "3rd Year"),
-      ("d", "4th Year"),
-      ("e", "5th Year or beyond"),
-      ("f", "Prefer not to disclose"),
+      ("1st Year", "1st Year"),
+      ("2nd Year", "2nd Year"),
+      ("3rd Year", "3rd Year"),
+      ("4th Year", "4th Year"),
+      ("5th Year or beyond", "5th Year or beyond"),
+      ("Prefer not to disclose", "Prefer not to disclose"),
       )
    LevelofStudy = forms.ChoiceField(choices=studyOptions)
    yearOptions = (
-      ("a", "2019"),
-      ("b", "2020"),
-      ("c", "2021"),
-      ("d", "2022"),
-      ("e", "2023"),
-      ("f", "2024"),
-      ("g", "2025"),
+      ("2019", "2019"),
+      ("2020", "2020"),
+      ("2021", "2021"),
+      ("2022", "2022"),
+      ("2023", "2023"),
+      ("2024", "2024"),
+      ("2025", "2025"),
       )
    gradYear = forms.ChoiceField(choices=yearOptions)
    phoneNumber = forms.CharField(max_length=12,required=True)
@@ -63,5 +63,8 @@ class SignUpForm(UserCreationForm):
 
    class Meta:
       model = MyUser
+
       fields = ('email', 'password1', 'password2', 'first_name', 'last_name', 'age', 'school', 'major', 'phoneNumber', 'Gender', 'Race', 'LevelofStudy', 'gradYear', 'dietRestrictions', 'conductBox', 'shareBox', 'meme','Resume')
+
+      
 
