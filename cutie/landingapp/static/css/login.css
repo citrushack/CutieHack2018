@@ -36,6 +36,10 @@
   color: #eeeeee;
   font-weight: bold;
   filter: drop-shadow(5px 5px 2px #282828);
+  float: right;
+  margin-right: 3%;
+  text-decoration: none;
+  padding: 15px;
 }
 
 #home:hover {
@@ -53,8 +57,9 @@
 }
 
 #logo {
-  display: inline-block;
-  height: auto;
+  /* display: inline-block; */
+  margin: auto;
+  /* height: auto; */
   /* min-width: 80px; */
   height: 200px;
   width: 200px;

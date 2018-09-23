@@ -26,19 +26,19 @@
 <!--{% endif %}-->
 
 <!-- Nav Bar  -->
-	<ul class="nav justify-content-end">
+	<!-- <ul class="nav justify-content-end">
 		<li class= "nav-item mr-3">
 			<a class="nav-link" id="home" href="{% url 'index' %}">HOME</a>
 		</li>
-    </ul>
+    </ul> -->
+
+<a id="home" href="{% url 'index' %}">HOME</a>
 
 <!-- Login Card -->
 
 	<!-- <div id="card" class="text-center"> -->
 	<div class="container">
-
 		<div class="row">
-
 			<div class="col-sm-12 text-center" id="card">
 
 				<div class="ui raised segment">
@@ -54,7 +54,6 @@
 							<form method="post" action="{% url 'login' %}">
 
 								<div class="row">
-
 									<div id="inputs">
 										<div class="col-sm-12">
 											<div id="username">
