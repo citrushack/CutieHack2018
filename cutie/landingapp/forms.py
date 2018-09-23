@@ -55,7 +55,7 @@ class SignUpForm(UserCreationForm):
       )
    gradYear = forms.ChoiceField(choices=yearOptions)
    phoneNumber = forms.CharField(max_length=12,required=True)
-   Resume = forms.FileField(label='Click to upload file')
+   #Resume = forms.FileField(label='Click to upload file')
    conductBox = forms.BooleanField()
    shareBox = forms.BooleanField()
    dietRestrictions = forms.CharField(max_length=100, required=False)
@@ -63,5 +63,5 @@ class SignUpForm(UserCreationForm):
 
    class Meta:
       model = MyUser
-      fields = ('email', 'password1', 'password2', 'first_name', 'last_name', 'age', 'school', 'major', 'phoneNumber', 'Gender', 'Race', 'LevelofStudy', 'gradYear', 'dietRestrictions', 'conductBox', 'shareBox', 'meme', 'Resume')
+      fields = ('email', 'password1', 'password2', 'first_name', 'last_name', 'age', 'school', 'major', 'phoneNumber', 'Gender', 'Race', 'LevelofStudy', 'gradYear', 'dietRestrictions', 'conductBox', 'shareBox', 'meme')
 
