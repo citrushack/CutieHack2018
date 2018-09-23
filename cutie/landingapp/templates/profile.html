@@ -22,7 +22,7 @@
 	left: 50%;
 
 	transform: translate(-50%, -50%);
-	overflow: hidden;
+	overflow: auto;
 	/*overflow-y: scroll; */
 	padding-top: 0px;
 	filter: drop-shadow(8px,8px,0px,4px,#28282A);
@@ -33,8 +33,55 @@
 	border-radius:64px;
 }
 
-
-
+.profileInfo .jspVerticalBar {
+	background: transparent;
+	width: 10px;
+}
+.profileInfo .jspTrack {
+	background: transparent;
+	width: 10px;
+}
+.profileInfo .jspCap {
+	background: transparent;
+	display: block;
+	height: 2px;
+}
+.profileInfo .jspDrag {
+	background: #EEBD69;
+	border-radius: 10px;
+}
+.profileInfo p{
+	margin: 10px;
+}
+/*.scroll-pretty {
+  background: grey;
+  border-radius: 5px;
+  width: 300px;
+  height: 150px;
+  overflow: auto;
+  outline: 0;
+}
+.scroll-pretty .jspVerticalBar {
+  background: transparent;
+  width: 10px;
+}
+.scroll-pretty .jspTrack {
+  background: transparent;
+  width: 8px;
+}
+.scroll-pretty .jspCap {
+  background: transparent;
+  display: block;
+  height: 2px; 
+}
+.scroll-pretty .jspDrag {
+  background: silver;
+  border-radius: 10px;
+}
+.scroll-pretty p {
+  margin: 10px;
+}
+*/
 	#logo{
 
 	float: left;
@@ -52,8 +99,9 @@
 	padding-top: 57px; 
 	line-height: 56px; 
 	font-size: 48px;
+/*	font-size: 3vw;*/
 	color: black;
-
+	overflow: auto;
 	}
 	.ApplicationStatus{
 
@@ -61,10 +109,10 @@
 	/* display: block; */
 	clear: both;
 	margin-left: 15px;
-	margin-left: 43px;
+	margin-left: 43px;	
 	padding-top: 27px;
 	padding-bottom: 0px;	
-	float: left;
+	float: none;
 	width: 1193px;
 	margin-bottom: 0px;
 
@@ -77,14 +125,15 @@
 	font-family: "Roboto", Roboto, sans-serif;
 	padding-left: 8px;
 	font-size: 48px;
+/*	font-size: 3vw;*/
 	line-height: 56px;
 	margin-right: 71px;	
-
+	overflow: auto;
 	}
 	.UserInfoDisplay{
 	display: block;
 	clear: both;
-	float: left;
+	float: none;
 	margin-left: 39px;
 	padding-top: 15px;
 	padding-left: 30px;
@@ -97,10 +146,12 @@
 
 	font-family: "Roboto", Roboto , sans-serif;
 	font-weight: 100;
-	font-size: 48px;	
+	font-size: 48px;
+	/*font-size: 3vw;	*/
 	line-height: 56px;
 	margin-right: 75px;
 	margin-bottom: 36px;
+	overflow: auto;
 	}
 
 .navbar-inverse{
@@ -203,10 +254,17 @@
 	text-align:center;
 }
 
-#inner {
-	width: 50%;
-	margin: 0 auto;
+.center-fit{
+	margin: 0;
+	padding: 0;
+	display: grid;
+	height: 100%;
+	max-width: 100%;
+	max-height: 100vh;
+	margin: auto;
 }
+
+
 </style>
 
 
@@ -226,11 +284,14 @@
 	    <!-- {% load static %} -->
 	    <link rel="shortcut icon" type="image/png" href="{%  static 'images/favicon.png' %}">
 	    	    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.23/script/jquery.jscrollpane.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.23/style/jquery.jscrollpane.min.css">
         <title>Profile</title>
+        <script type="text/javascript" src="cutie/landingapp/templates/scroll.js" async></script>
+        </script>
     </head>
-
-
 
     <body style="background-image: url('../static/images/cityscape.png');">
 
@@ -255,12 +316,12 @@
 </nav>
 
 	<div class="container profileInfo">
-		<img src = "../static/images/logo.png" alt = " Citrus Hack logo" width = "122" height = "123" id="logo">
+		<img class="img" src = "../static/images/logo.png" alt = " Citrus Hack logo" width = "122" height = "123" id="logo">
 		<div class="WelcomeText"> Hello {{Profile.first_name}}! </div>
-		<div class="container ApplicationStatus" style="overflow-y: scroll;">
+		<div class="container ApplicationStatus">
                 	Application Status: PENDING
 		</div>
-		<div class = "container UserInfoDisplay" style="overflow-y: scroll;">
+		<div class = "container UserInfoDisplay">
 			Application Details: <br/><br/>
 
 			First Name: {{Profile.first_name}} <br/>
@@ -269,7 +330,6 @@
 			Age: {{Profile.age}}<br/>
 			Major: {{Profile.major}}<br/>
 		</div>
-        </div>
+	</div>
     </body>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 </html>
