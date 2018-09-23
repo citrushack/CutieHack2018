@@ -203,6 +203,10 @@
 	text-align:center;
 }
 
+#inner {
+	width: 50%;
+	margin: 0 auto;
+}
 </style>
 
 
@@ -252,7 +256,7 @@
 
 	<div class="container profileInfo">
 		<img src = "../static/images/logo.png" alt = " Citrus Hack logo" width = "122" height = "123" id="logo">
-		<div class="container WelcomeText" style="overflow-y: scroll;"> Hello {{Profile.first_name}}! </div>
+		<div class="WelcomeText"> Hello {{Profile.first_name}}! </div>
 		<div class="container ApplicationStatus" style="overflow-y: scroll;">
                 	Application Status: PENDING
 		</div>
@@ -267,4 +271,5 @@
 		</div>
         </div>
     </body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </html>
