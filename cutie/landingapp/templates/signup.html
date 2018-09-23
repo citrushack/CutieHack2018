@@ -55,7 +55,7 @@
           <p class="description">(<span class="red-star">&#x2605;</span> denotes required field)</p>
         </div>
         {% load myfilters %}
-        <form action="." method='post'>
+        <form action="." method='post' enctype = "multipart/form-data" >
           {% csrf_token %}
 
 

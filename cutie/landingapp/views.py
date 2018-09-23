@@ -7,12 +7,25 @@ from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode
 from .forms import SignUpForm
 from .tokens import account_activation_token
+import os
+from django.conf import settings
 # Create your views here.
 
 ''' test
 def index(request):
     return HttpResponse("You're at the index.")
 '''
+
+def file_upload(request):
+        save_path = os.path.join(settings.MEDIA_ROOT, 'uploads', request.FILES['Resume'])
+        path = default_storage.save(save_path, request.FILES['Resume'])
+        return default_storage.path(path)
+def handle_file_upload(f):
+        with open('UserResumes', 'wb+') as destination:
+                for chunk in f.chunks():
+                        destination.write(chunk)
+
+
 def index(request):
 	return render(request, 'index.html', context={}, ) #context is empty unless we want to incorporate data into our landing page
 
@@ -42,8 +55,9 @@ def live(request):
 
 def signup(request):
     if request.method == 'POST':
-        form = SignUpForm(request.POST)
+        form = SignUpForm(request.POST, request.FILES)
         if form.is_valid():
+            print("Hey Im valid")
             user = form.save()
             '''user.is_active = False'''
             user.refresh_from_db()  # load the profile instance created by the signal
@@ -59,6 +73,7 @@ def signup(request):
             user.profile.gradYear = form.cleaned_data.get('gradYear')
             user.profile.dietRestrictions = form.cleaned_data.get('dietRestrictions')
             #user.profile.Resume = form.cleaned_data.get('Resume')
+            user.profile.Resume = handle_file_upload(request.FILES['Resume'])
             user.profile.shareBox = form.cleaned_data.get('shareBox')
             user.profile.conductBox = form.cleaned_data.get('conductBox')
             user.profile.questions = form.cleaned_data.get('questions')
