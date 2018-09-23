@@ -79,13 +79,16 @@
 								{% endif %}
 
 								<div class="row">
-
 									<div class="col-sm-12">
 										<input type="submit" value="Log In" id="button" class="btn btn-warning"/>
 									</div>
-
 								</div>
 
+								<div class="row">
+									<div class="col-sm-12" id="forgot">
+										<p><a href="{% url 'index' %}">Forgot password?</a></p>
+									</div>
+								</div>
 
 							</form>
 
@@ -94,7 +97,7 @@
 		</div>
 	</div>
 
-		<p><a href="{% url 'index' %}">Forgot password? "not working; redirects to home"</a></p>
+		<!-- <p><a href="{% url 'index' %}">Forgot password? "not working; redirects to home"</a></p> -->
 		<!--<form style="display: inline-block">-->
 			<!--<input type="text" name="email" placeholder="email@example.com" class="textField">-->
 			<!--<input type="password" name="password" placeholder="password" class="textField">-->

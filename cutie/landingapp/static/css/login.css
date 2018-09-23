@@ -123,6 +123,13 @@ input[type="text"], [type="password"] {
   cursor:pointer;
 }
 
+/* Forgot Pass */
+
+#forgot {
+  margin: auto;
+  margin-top: 3%;
+}
+
 /* #button {
   display: inline-block;
   background-color: #F38709;
