@@ -130,15 +130,6 @@
     box-shadow: none;
 }
 
-/*.navbar-default {}
-.navbar-default .navbar-brand {
-    color: white;
-}
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-    color: #5E5E5E;
-}
-*/
 /* Link */
 .navbar.navbar-default .navbar-nav > li > a {
     color: white; /*color of nav links*/
@@ -219,18 +210,18 @@
 
 
     <head>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    	<!-- Favicon -->
-    {% load static %}
-    <link rel="shortcut icon" type="image/png" href="{%  static 'images/favicon.png' %}">
-    	    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	    	<!-- Favicon -->
+	    <!-- {% load static %} -->
+	    <link rel="shortcut icon" type="image/png" href="{%  static 'images/favicon.png' %}">
+	    	    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
         <title>Profile</title>
     </head>
@@ -238,24 +229,6 @@
 
 
     <body style="background-image: url('../static/images/cityscape.png');">
-        .
-<!-- 	   <a href = "#">
-        <div class="btnpos">
-        <div class="btn">
-
-                Logout
-
-        </div>
-        </div>
-        </a>
-	<a href = "#">
-	<div class = "btnHome">
-		Home
-	</div>
-	</a>
- -->
-
-
 
   <nav class="navbar transparent navbar-default navbar-fixed-top navbar-inverse">
   <div class="container">
@@ -277,15 +250,13 @@
 	</div>
 </nav>
 
-	<div class="profileInfo">
-
-
+	<div class="container" id="profileInfo" style="overflow-y: scroll;">
 		<img src = "../static/images/logo.png" alt = " Citrus Hack logo" width = "122" height = "123" id="logo">
-		<div class="WelcomeText"> Hello {{Profile.first_name}}! </div>
-		<div class="ApplicationStatus">
+		<div class="container" id="WelcomeText" style="overflow-y: scroll;"> Hello {{Profile.first_name}}! </div>
+		<div class="container ApplicationStatus">
                 	Application Status: PENDING
 		</div>
-		<div class = "UserInfoDisplay">
+		<div class = "container UserInfoDisplay">
 			Application Details: <br/><br/>
 
 			First Name: {{Profile.first_name}} <br/>
@@ -295,27 +266,5 @@
 			Major: {{Profile.major}}<br/>
 		</div>
         </div>
-
-	
-
-
-
-
-
-<!--	<a href = "#">
-	<div class="btnpos">
-	<div class="btn">
-
-		Home
-
-	</div>
-	</div>
-	</a>
-
-
--->
     </body>
-
-	
-
 </html>
