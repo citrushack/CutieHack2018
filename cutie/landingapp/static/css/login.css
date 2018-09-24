@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600');
 
+body {
+  overflow: auto !important;
+}
+
 #background {
   background-size: cover;
   overflow: hidden;
@@ -8,7 +12,7 @@
 /* Card */
 
 .ui.segment, .ui.segments .segment {
-  font-size: 1.2em;
+  font-size: 1.1em;
   background-color: #eeeeee;
   width: 40%;
   margin: auto;
@@ -116,7 +120,7 @@ input[type="text"], [type="password"] {
   border-radius: 20px;
   padding: 5px 30px;
   filter: drop-shadow(1px 2px 2px #746d5a);
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
 .btn-warning:hover {
