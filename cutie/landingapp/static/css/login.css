@@ -11,13 +11,28 @@ body {
 
 /* Card */
 
-.panel {
+.ui.segment, .ui.segments .segment {
   font-size: 1.1em;
   background-color: #eeeeee;
   width: 40%;
+  height: auto;
   margin: auto;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .ui.segment, .ui.segments .segment {
+    font-size: 1.1em;
+    background-color: #eeeeee;
+    width: auto;
+    height: auto;
+    margin: auto;
+  }
+}
+
+.ui.segment {
   border-radius: 5px;
   box-shadow: 5px 10px #282828  !important;
+
 }
 
 #card {
@@ -27,7 +42,7 @@ body {
   /* transform: translate(-50%, -50%); */
   /* background-color: #F9F6E5;
   border-radius: 30px; */
-  padding: 5%;
+  padding: 3%;
 }
 
 /* Home */
@@ -61,10 +76,8 @@ body {
   margin: auto;
   /* height: auto; */
   /* min-width: 80px; */
-  max-width: 150px;
-  max-height: 150px;
-  min-height: 100px;
-  min-width: 100px;
+  height: 150px;
+  width: 150px;
 }
 
 /* Inputs */
@@ -272,17 +285,16 @@ input[type="text"], [type="password"] {
 } */
 
 /*tablets*/
-/* @media (min-device-height: 900px) { */
-  /* #logo {
+/* @media (min-device-height: 900px) {
+  #logo {
     margin-top: 15%;
     width: 12vh;
-  } */
-
-  /* #card{
+  }
+  #card{
+    height: 67%;
     width: 70%;
-  } */
-
-  /* .textField {
+  }
+  .textField {
     width: 70%;
     margin: 10%;
   }
@@ -292,5 +304,5 @@ input[type="text"], [type="password"] {
   }
   #title {
     font-size: 5vh;
-  } */
-/* } */
+  }
+} */
