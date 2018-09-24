@@ -35,40 +35,41 @@
 <!-- Login Card -->
 
 	<!-- <div id="card" class="text-center"> -->
-	<div class="container">
+	<div class="container visible-xs visible-sm visible-md visible-lg">
 		<!-- <div class="row"> -->
 			<!-- <div class="col-sm-12 text-center" id="card"> -->
-		<div class="ui raised segment text-center zoom">
-						{% load static %}
-						<img src="{% static 'images/logo.png' %}"; id="logo">
-						<h1 id="title"><strong>CUTIE HACK</strong></h1>
+		<div class="panel panel-default text-center">
+			<div class="panel-body">
+				{% load static %}
+				<img src="{% static 'images/logo.png' %}"; id="logo">
+				<h1 id="title"><strong>CUTIE HACK</strong></h1>
 
-						<form method="post" action="{% url 'login' %}">
+				<form method="post" action="{% url 'login' %}">
 
-							<div class="form-group">
-								<div id="username">
-									{% csrf_token %}
-									<td>{{ form.username.label_tag }}</td> <!-- you can comment the form.username.label_tag out to see the difference-->
-									<td>{{ form.username }}</td>
-								</div>
-							</div>
+					<div class="form-group">
+						<div id="username">
+							{% csrf_token %}
+							<td>{{ form.username.label_tag }}</td> <!-- you can comment the form.username.label_tag out to see the difference-->
+							<td>{{ form.username }}</td>
+						</div>
+					</div>
 
-							<div class="form-group">
-								<div id="password">
-									<td>{{ form.password.label_tag }}</td>
-									<td>{{ form.password }}</td>
-								</div>
-							</div>
+					<div class="form-group">
+						<div id="password">
+							<td>{{ form.password.label_tag }}</td>
+							<td>{{ form.password }}</td>
+						</div>
+					</div>
 
-							{% if form.errors %}
-								<p id="error">Your username and password didn't match. Please try again. (in red)</p>
-							{% endif %}
+					{% if form.errors %}
+						<p id="error">Your username and password didn't match. Please try again. (in red)</p>
+					{% endif %}
 
-							<input type="submit" value="Log In" id="button" class="btn btn-warning"/>
+					<input type="submit" value="Log In" id="button" class="btn btn-warning"/>
 
-							<p id="forgot"><a href="{% url 'index' %}">Forgot password?</a></p>
-
+					<p id="forgot"><a href="{% url 'index' %}">Forgot password?</a></p>
 			</div>
+	</div>
 </div>
 
 		<!-- </div>

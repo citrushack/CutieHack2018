@@ -11,14 +11,11 @@ body {
 
 /* Card */
 
-.ui.segment, .ui.segments .segment {
+.panel {
   font-size: 1.1em;
   background-color: #eeeeee;
   width: 40%;
   margin: auto;
-}
-
-.ui.segment {
   border-radius: 5px;
   box-shadow: 5px 10px #282828  !important;
 
