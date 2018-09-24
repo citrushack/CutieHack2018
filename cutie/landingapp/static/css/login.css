@@ -18,7 +18,6 @@ body {
   margin: auto;
   border-radius: 5px;
   box-shadow: 5px 10px #282828  !important;
-
 }
 
 #card {
@@ -62,8 +61,10 @@ body {
   margin: auto;
   /* height: auto; */
   /* min-width: 80px; */
-  height: 200px;
-  width: 200px;
+  max-width: 150px;
+  max-height: 150px;
+  min-height: 100px;
+  min-width: 100px;
 }
 
 /* Inputs */
@@ -271,16 +272,17 @@ input[type="text"], [type="password"] {
 } */
 
 /*tablets*/
-/* @media (min-device-height: 900px) {
-  #logo {
+/* @media (min-device-height: 900px) { */
+  /* #logo {
     margin-top: 15%;
     width: 12vh;
-  }
-  #card{
-    height: 67%;
+  } */
+
+  /* #card{
     width: 70%;
-  }
-  .textField {
+  } */
+
+  /* .textField {
     width: 70%;
     margin: 10%;
   }
@@ -290,5 +292,5 @@ input[type="text"], [type="password"] {
   }
   #title {
     font-size: 5vh;
-  }
-} */
+  } */
+/* } */
