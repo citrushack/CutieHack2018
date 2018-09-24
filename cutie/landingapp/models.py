@@ -109,7 +109,7 @@ class Profile(models.Model):
       )
     gradYear = models.CharField(max_length=30, choices=yearOptions, default="")
     dietRestrictions = models.CharField(max_length=100, default="")
-    Resume = models.FileField(default="")
+    Resume = models.FileField(default="", upload_to='resumes/%Y/%m/%d')
     conductBox = models.BooleanField(default=False)
     shareBox = models.BooleanField(default=False)
     meme = models.CharField(max_length=200, default="")
