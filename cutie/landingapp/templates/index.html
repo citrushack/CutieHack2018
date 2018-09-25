@@ -98,8 +98,11 @@
 				<h1 id="CutieHackTitle">CUTIE HACK</h1>
 				<p id="eventDetails">November 10, 2018<br>
 				at UC Riverside</p>
+				{% if user.is_authenticated %}
+				{% else %}
 				<hr id="headerTextBreak">
 				<a href="{% url 'signup'%}"><button type="button" class="btn btn-dark">Apply</button></a>
+				{% endif %}	
 			</div>	
 		</div>
 
