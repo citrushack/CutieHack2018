@@ -323,8 +323,8 @@
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a class="nav-link" href="index.html">Home</a></li>
-            <li><a>Log Out</a></li>
+            <li><a class="nav-link" href="{% url 'index'%}">Home</a></li>
+            <li><a href="{% url 'logout'%}">Log Out</a></li>
           </ul>
       </div>
 	</div>
@@ -333,18 +333,19 @@
 	<div class="profileInfo">
 <div id="sameline">
 		<img src = "../static/images/logo.png" alt = " Citrus Hack logo" width = "122" height = "123" id="logo">
-		<div class="container WelcomeText"> Hello {{Profile.first_name}}! </div>
-</div>
-		<div class="container ApplicationStatus">
-                	Application Status: PENDING
+		<div class="WelcomeText"> Hello {{user.profile.first_name}}! </div>
+		<div class="ApplicationStatus">
+                	Application Status: {{user.profile.appStatus}}
 		</div>
-		<div class = "container UserInfoDisplay">
-			Application Details<br/><br/>
-			First Name: {{Profile.first_name}} <br/>
-			Last Name: {{Profile.last_name}} <br/>
-			School: {{Profile.school}} <br/>
-			Age: {{Profile.age}}<br/>
-			Major: {{Profile.major}}<br/>
+		<div class = "UserInfoDisplay">
+			Application Details: <br/><br/>
+
+			First Name: {{user.profile.first_name}} <br/>
+			Last Name: {{user.profile.last_name}} <br/>
+			School: {{user.profile.school}} <br/>
+			Age: {{user.profile.age}}<br/>
+			Major: {{user.profile.major}}<br/>
+
 		</div>
 	</div>
     </body>

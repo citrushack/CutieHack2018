@@ -15,7 +15,6 @@ body {
 
 .form {
   padding: 10%;
-  filter: drop-shadow(5px 5px 2px #282828);
 }
 
 h1 {
@@ -44,6 +43,7 @@ label {
   font-size: 0.7em;
   margin: auto;
 }
+
 
 /* Input Boxes */
 
@@ -225,6 +225,7 @@ input[type=file] {
   margin-right: 10px;
 }
 
+
 /* Button */
 
 .previous {
@@ -233,54 +234,28 @@ input[type=file] {
 }
 
 #next { /* for the button in the application pt 1*/
-  margin-left: 87%;
+  margin-left: 94%;
 }
 
 .next {
   float:right;
 }
 
-.next1 {
-  margin-right: 30px;
-}
-
-.btn-warning {
-  background-color: #F38709;
-  border-color: #F38709;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.btn {
-  border-radius: 20px;
-  padding: 5px 30px;
-  filter: drop-shadow(1px 2px 2px #746d5a);
-}
-
-.btn-warning:hover {
-  background-color: #f09e12;
-  border-color: #f09e12;
-}
-
-/* Misc */
-
 .red-star {
     color: red;
 }
-
-
 select {
 
   background-color: white;
   font: inherit;
   padding: 0.0em 3.5em 0.1em 1em;
-  margin: 0;
+  margin: 0;      
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-appearance: none;
   -moz-appearance: none;
-
+ 
   background-image:
     linear-gradient(45deg, transparent 50%, white 50%),
     linear-gradient(135deg, white 50%, transparent 50%),
@@ -308,7 +283,7 @@ select {
 }
 
 
-#conduct, #authorizeToShare{
+.container2 input{
     position: absolute;
     opacity: 0;
     cursor: pointer;

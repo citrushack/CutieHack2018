@@ -81,35 +81,35 @@ class Profile(models.Model):
     age = models.CharField(max_length=30,null=True, blank=True) # change to age
     school = models.CharField(max_length=100, blank=True)
     major = models.CharField(max_length=30, blank=True)
-    #appStatus = Pending default
+    appStatus = models.CharField(max_length=30, default ="Pending")
     #need to check what is missing from here
-    email_configrmed = models.BooleanField(default=False)
+    #email_confirmed = models.BooleanField(default=False)
     phoneNumber = models.CharField(max_length=12, blank=True)
-    genderOptions = (("a", "male"), ('b', 'female'), ("c", "Other"), ("d", "Prefer not to disclose"), )
+    genderOptions = (("male", "male"), ('female', 'female'), ("Other", "Other"), ("Prefer not to disclose", "Prefer not to disclose"), )
     Gender = models.CharField(max_length=30, choices=genderOptions, default="")
-    raceOptions = (('a', 'White'), ('b','Black or African American'), ('c', 'Native American'), ('d', 'Asian'), ('e','Native Hawaiian or other Pacific Islander'), ('f','Latino or Latin American'), ('g','Other'), ('h', 'Two or more races'), ('i', 'Prefer not to disclose'), )
+    raceOptions = (('White', 'White'), ('Black or African American','Black or African American'), ('Native American', 'Native American'), ('d', 'Asian'), ('Native Hawaiian or other Pacific Islander','Native Hawaiian or other Pacific Islander'), ('Latino or Latin American','Latino or Latin American'), ('Other','Other'), ('Two or more races', 'Two or more races'), ('Prefer not to disclose', 'Prefer not to disclose'), )
     Race = models.CharField(max_length=30, choices=raceOptions, default="")
     studyOptions = (
-      ("a", "1st Year"),
-      ("b", "2nd Year"),
-      ("c", "3rd Year"),
-      ("d", "4th Year"),
-      ("e", "5th Year or beyond"),
-      ("f", "Prefer not to disclose"),
+      ("1st Year", "1st Year"),
+      ("2nd Year", "2nd Year"),
+      ("3rd Year","3rd Year"),
+      ("4th Year", "4th Year"),
+      ("5th Year or beyond", "5th Year or beyond"),
+      ("Prefer not to disclose", "Prefer not to disclose"),
       )
     LevelofStudy = models.CharField(max_length=30, choices=studyOptions, default="")
     yearOptions = (
-      ("a", "2019"),
-      ("b", "2020"),
-      ("c", "2021"),
-      ("d", "2022"),
-      ("e", "2023"),
-      ("f", "2024"),
-      ("g", "2025"),
+      ("2019", "2019"),
+      ("2020", "2020"),
+      ("2021", "2021"),
+      ("2022", "2022"),
+      ("2023", "2023"),
+      ("2024", "2024"),
+      ("2025", "2025"),
       )
     gradYear = models.CharField(max_length=30, choices=yearOptions, default="")
     dietRestrictions = models.CharField(max_length=100, default="")
-    Resume = models.FileField(default="")
+    Resume = models.FileField(default="", upload_to='uploads/')
     conductBox = models.BooleanField(default=False)
     shareBox = models.BooleanField(default=False)
     meme = models.CharField(max_length=200, default="")

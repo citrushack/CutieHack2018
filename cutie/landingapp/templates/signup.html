@@ -55,10 +55,15 @@
           <p class="description">(<span class="red-star">&#x2605;</span> denotes required field)</p>
         </div>
         {% load myfilters %}
-        <form action='' method='post'>
+        <form action="." method='post' enctype = "multipart/form-data" >
+          {% csrf_token %}
+
 
         <div>
-          <label for="firstname" >First Name:
+
+          
+          <label for="firstname">First Name:
+
             <br>
             {{ form.first_name }}
 
@@ -75,7 +80,7 @@
         <div>
           <label for="email">Email:
             <br>
-            {{ form.email1|addclass:'myfieldclass' }}
+            {{ form.email|addclass:'myfieldclass' }}
             <span class="red-star">&#x2605;</span>
           </label>
         </div>
@@ -84,7 +89,7 @@
           <label for="">Confirm email:
             <br>
 
-           {{ form.email2|addclass:'myfieldclass' }}
+           {{ form.email|addclass:'myfieldclass' }}
             <span class="red-star">&#x2605;</span>
           </label>
         </div>
@@ -111,7 +116,7 @@
             </button>
           </span>
 
-        </form>
+        
 
       </div>
 
@@ -149,17 +154,17 @@
                 {{ form.age }}
                 <span class="red-star">&#x2605;</span>
               </label>
-            </div>
-
-            <div>
-              <label for="age">Age:
+            <!-- </div> -->
+         <!--   <div> -->
+             <!-- <label for="age">Age:
                 <br>
                   {{ form.Gender }}
                   <span class="red-star">&#x2605;</span>
                 </label>
-
+            -->
                 <label for="gender">Gender:
                   <br>
+                  <!--
                     <select name="gender" class="input3Form2">
                       <option value=""></option>
                       <option value="male">Male</option>
@@ -167,11 +172,16 @@
                       <option value="other">Other</option>
                       <option value="no disclosure">Prefer not to disclose</option>
                     </select>
+
+                    
+                    --->
+                    {{ form.Gender }}
                     <span class="red-star">&#x2605;</span>
                 </label>
 
                 <label for="race">Race/Ethnicty:
                   <br>
+                  <!--
                     <select name='Race' class="input3Form2">
                       <option value=""></option>
                       <option value="white"> White</option>
@@ -184,10 +194,12 @@
                       <option value="mutliple races">Two or more races</option>
                       <option value="no disclosure">Prefer not to disclose</option>
                     </select>
+                  -->
+                  {{ form.Race }}
                     <span class="red-star">&#x2605;</span>
                 </label>
             </div>
-
+  <!--
             <div>
               <label for="major">Major:
                 <br>
@@ -197,14 +209,14 @@
 
               <label for="levelOfStudy">Current Level of Study:
                 <br>
-                  <!---<select name='Race' style="width: 437px;"> -->
+                  <select name='Race' style="width: 437px;"> 
                     {{ form.Race}}
                     
                   <span class="red-star">&#x2605;</span>
                     
               </label>
             </div>
-
+-->
           <div>
             <label for="major">Major:
               <br>
@@ -249,7 +261,7 @@
         <span><button id='prevSection2'type="button" class="btn btn-warning">Previous</button></span>
         <span><button id='nextSection2'type="button" class="btn btn-warning next">Next</button></span>
 
-          </form>
+          
 
   </div>
 </div>
@@ -270,9 +282,11 @@
 
         <p>All Cutie Hack participants must adhere to the MLH Code of Conduct at all times during the event. By checking the following box, you hereby agree to follow all rules and regulations outlined in the offical <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct.</a></p>
 
-        <label class='container2'for="conduct">
+      <label class='container2'>
 
-        	<input name="conduct" id="conduct" type="checkbox" value="agreed" required> 
+          <!--<input type="checkbox" value="agreed" > -->
+
+          {{form.conductBox}}
           <span class="checkmark"></span> 
         
           <span class="red-star">&#x2605;</span>
@@ -282,14 +296,18 @@
         </label>
 
         <p>By participating in Cutie Hack, you must allow the use of your application information to be passed along by MLH to be used to promote other MLH affliated events. Don't worry, we'll keep your information safe and secure! By checking the following box, you hereby agree to us sharing your information with MLH. </p>
-      <label class='container2'for="authorizeToShare">
-        <input name="authorizeToShare" id="authorizeToShare" type="checkbox" value="agreed" required>
+      <label class='container2'>
+        <!--<input name="authorizeToShare" id="authorizeToShare" type="checkbox" value="agreed" required> -->
+        {{form.shareBox}}
+
         <span class="checkmark"></span> 
 
        
         <span class="red-star">&#x2605;</span>
         I authorize you to share my application/registration information for event adminstration, ranking, MLH adminstration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the MLH Privacy Policy. I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy.
       </label>
+
+    
 
       <label for="allergies">
         Do you have any food allergies or dietary restrictions we should know about? If so, please enter them in the field below:
@@ -308,7 +326,7 @@
         <br><br>
 
         <span><button id='prevSection3'type="button" class="btn btn-warning">Previous</button></span>
-        <span><button type="submit" class="btn btn-warning next">Apply</button></span>
+        <span><input type="submit" class="btn btn-warning next" value="Apply" style="width: 100px;"></span>
 
     </div>
   </div>

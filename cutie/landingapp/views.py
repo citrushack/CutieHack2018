@@ -7,12 +7,26 @@ from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode
 from .forms import SignUpForm
 from .tokens import account_activation_token
+import os
+from django.conf import settings
+from .models import Profile
 # Create your views here.
 
 ''' test
 def index(request):
     return HttpResponse("You're at the index.")
 '''
+
+def file_upload(request):
+        save_path = os.path.join(settings.MEDIA_ROOT, 'uploads', request.FILES['Resume'])
+        path = default_storage.save(save_path, request.FILES['Resume'])
+        return default_storage.path(path)
+def handle_file_upload(f):
+        with open('UserResumes', 'wb+') as destination:
+                for chunk in f.chunks():
+                        destination.write(chunk)
+
+
 def index(request):
 	return render(request, 'index.html', context={}, ) #context is empty unless we want to incorporate data into our landing page
 
@@ -24,29 +38,29 @@ def profile(request): #when user is not logged in redirect to login page
 def live(request):
     return render(request, 'live.html', context={}, )
 
-def activate(request, uidb64, token):
-    try:
-        uid = force_text(urlsafe_base64_decode(uidb64))
-        user = User.objects.get(pk=uid)
-    except (TypeError, ValueError, OverflowError, User.DoesNotExist):
-        user = None
+# def activate(request, uidb64, token):
+#     try:
+#         uid = force_text(urlsafe_base64_decode(uidb64))
+#         user = User.objects.get(pk=uid)
+#     except (TypeError, ValueError, OverflowError, User.DoesNotExist):
+#         user = None
 
-    if user is not None and account_activation_token.check_token(user, token):
-        user.is_active = True
-        user.profile.email_confirmed = True
-        user.save()
-        login(request, user)
-        return redirect('login')
-    else:
-        return render(request, 'account_activation_invalid.html')
+#     if user is not None and account_activation_token.check_token(user, token):
+#         user.is_active = True
+#         user.profile.email_confirmed = True
+#         user.save()
+#         login(request, user)
+#         return redirect('login')
+#     else:
+#         return render(request, 'account_activation_invalid.html')
 
 def signup(request):
     if request.method == 'POST':
-        form = SignUpForm(request.POST)
+        form = SignUpForm(request.POST, request.FILES)
         if form.is_valid():
+            print("Hey Im valid")
             user = form.save()
             '''user.is_active = False'''
-            user.email = form.cleaned_data.get('email')
             user.refresh_from_db()  # load the profile instance created by the signal
             user.profile.first_name = form.cleaned_data.get('first_name')
             user.profile.last_name = form.cleaned_data.get('last_name')
@@ -59,25 +73,30 @@ def signup(request):
             user.profile.LevelofStudy = form.cleaned_data.get('LevelofStudy')
             user.profile.gradYear = form.cleaned_data.get('gradYear')
             user.profile.dietRestrictions = form.cleaned_data.get('dietRestrictions')
-            user.profile.Resume = form.cleaned_data.get('Resume')
+            #user.profile.Resume = form.cleaned_data.get('Resume')
+            user.profile.Resume = handle_file_upload(request.FILES['Resume'])
+            newResume = Profile(Resume = request.FILES['Resume'])
             user.profile.shareBox = form.cleaned_data.get('shareBox')
             user.profile.conductBox = form.cleaned_data.get('conductBox')
             user.profile.questions = form.cleaned_data.get('questions')
             user.save()
             raw_password = form.cleaned_data.get('password1')
-            subject = 'Activate Your CutieHack Account'
-            message = render_to_string('account_activation_email.html', {
-                'user': user,
-                'domain': current_site.domain,
-                'uid': urlsafe_base64_encode(force_bytes(user.pk)),
-                'token': account_activation_token.make_token(user),
-                })
-            #user = authenticate(email=user.email, password=raw_password)
-            user.email_user(subject, message)
-            return redirect('account_activation_sent')
+            # subject = 'Activate Your CutieHack Account'
+            # message = render_to_string('account_activation_email.html', {
+            #     'user': user,
+            #     'domain': current_site.domain,
+            #     'uid': urlsafe_base64_encode(force_bytes(user.pk)),
+            #     'token': account_activation_token.make_token(user),
+            #     })
+            # user = authenticate(email=user.email, password=raw_password)
+            # user.email_user(subject, message)
+            # return redirect('account_activation_sent')
+            user = authenticate(username=user.email, password=raw_password) #directly authenticates the user
+            login(request, user)                                            #directly logs in the user 
+            return redirect('profile')                                      #directly takes the user to his/her profile page (@jZhu, these 3 lines are subject to your change I think - jihwan)
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
 
-def account_activation_sent(request):
-    return render(request, 'account_activation_sent.html')
+# def account_activation_sent(request):
+#     return render(request, 'account_activation_sent.html')
