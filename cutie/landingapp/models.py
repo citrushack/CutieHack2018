@@ -86,8 +86,8 @@ class Profile(models.Model):
     #email_confirmed = models.BooleanField(default=False)
     phoneNumber = models.CharField(max_length=12, blank=True)
     genderOptions = (
-      ("Male", "Male"), 
-      ('Female', 'Female'), 
+      ("Female", "Female"),
+      ("Male", "Male"),  
       ("Other", "Other"), 
       ("Prefer not to disclose", "Prefer not to disclose"),
       )

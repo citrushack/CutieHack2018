@@ -31,8 +31,8 @@ class SignUpForm(UserCreationForm):
       )
    age = forms.ChoiceField(choices=ageOptions)
    genderOptions = (
-      ("Male", "Male"), 
-      ('Female', 'Female'), 
+      ("Female", "Female"),
+      ("Male", "Male"),
       ("Other", "Other"), 
       ("Prefer not to disclose", "Prefer not to disclose"),
       )
