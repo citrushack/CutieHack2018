@@ -333,18 +333,26 @@
 	<div class="profileInfo">
 <div id="sameline">
 		<img src = "../static/images/logo.png" alt = " Citrus Hack logo" width = "122" height = "123" id="logo">
-		<div class="container WelcomeText"> Hello {{Profile.first_name}}! </div>
+		<div class="container WelcomeText"> Hello {{user.profile.first_name}}! </div>
 </div>
 		<div class="container ApplicationStatus">
-                	Application Status: PENDING
+                	Application Status: {{user.profile.appStatus}}
 		</div>
 		<div class = "container UserInfoDisplay">
 			Application Details<br/><br/>
-			First Name: {{Profile.first_name}} <br/>
-			Last Name: {{Profile.last_name}} <br/>
-			School: {{Profile.school}} <br/>
-			Age: {{Profile.age}}<br/>
-			Major: {{Profile.major}}<br/>
+			First Name: {{user.profile.first_name}} <br/>
+			Last Name: {{user.profile.last_name}} <br/>
+			School: {{user.profile.school}} <br/>
+			Age: {{user.profile.age}}<br/>
+			Major: {{user.profile.major}}<br/>
+			Level of Study: {{user.profile.LevelofStudy}}<br/>
+			Race: {{user.profile.Race}}<br/>
+			Gender: {{user.profile.Gender}}<br/>
+			Phone Number: {{user.profile.phoneNumber}}<br/>
+			Grad Year: {{user.profile.gradYear}}<br/>
+			Diet Restrictions: {{user.profile.dietRestrictions}}<br/>
+			Meme: {{user.profile.meme}}<br/>
+			Resume: {{user.profile.Resume}}<br/>
 		</div>
 	</div>
     </body>

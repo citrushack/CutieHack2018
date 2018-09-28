@@ -171,9 +171,9 @@
                       <option value="other">Other</option>
                       <option value="no disclosure">Prefer not to disclose</option>
                     </select>
-
+                    -->
                     
-                    --->
+                    
                     {{ form.Gender }}
                     <span class="red-star">&#x2605;</span>
                 </label>
@@ -323,7 +323,11 @@
       </label>
 
         <br><br>
-
+        {% for field in form %}
+          {% for error in field.errors %}
+            <p style="color: red">{{ error }}</p>
+          {% endfor %}
+        {% endfor %}
         <span><button id='prevSection3'type="button" class="btn btn-warning">Previous</button></span>
         <span><input type="submit" class="btn btn-warning next" value="Apply" style="width: 100px;"></span>
 

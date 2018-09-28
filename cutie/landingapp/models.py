@@ -112,7 +112,7 @@ class Profile(models.Model):
     Resume = models.FileField(default="", upload_to='uploads/')
     conductBox = models.BooleanField(default=False)
     shareBox = models.BooleanField(default=False)
-    meme = models.CharField(max_length=200, default="")
+    meme = models.CharField(max_length=200, blank=True)
 
 
 #might be better to have signal codes somewhere else 
