@@ -85,10 +85,25 @@ class Profile(models.Model):
     #need to check what is missing from here
     #email_confirmed = models.BooleanField(default=False)
     phoneNumber = models.CharField(max_length=12, blank=True)
-    genderOptions = (("male", "male"), ('female', 'female'), ("Other", "Other"), ("Prefer not to disclose", "Prefer not to disclose"), )
-    Gender = models.CharField(max_length=30, choices=genderOptions, default="")
-    raceOptions = (('White', 'White'), ('Black or African American','Black or African American'), ('Native American', 'Native American'), ('d', 'Asian'), ('Native Hawaiian or other Pacific Islander','Native Hawaiian or other Pacific Islander'), ('Latino or Latin American','Latino or Latin American'), ('Other','Other'), ('Two or more races', 'Two or more races'), ('Prefer not to disclose', 'Prefer not to disclose'), )
-    Race = models.CharField(max_length=30, choices=raceOptions, default="")
+    genderOptions = (
+      ("Male", "Male"), 
+      ('Female', 'Female'), 
+      ("Other", "Other"), 
+      ("Prefer not to disclose", "Prefer not to disclose"),
+      )
+    Gender = models.CharField(max_length=30, choices=genderOptions, blank=True)
+    raceOptions = (
+      ('Asian', 'Asian'), 
+      ('Black or African American','Black or African American'), 
+      ('Latino or Latin American','Latino or Latin American'), 
+      ('Native American', 'Native American'),  
+      ('Native Hawaiian or other Pacific Islander','Native Hawaiian or other Pacific Islander'), 
+      ('Other','Other'),
+      ('Prefer not to diclose', 'Prefer not to disclose'),
+      ('Two or more races', 'Two or more races'), 
+      ('White', 'White'), 
+      )
+    Race = models.CharField(max_length=30, choices=raceOptions, blank=True)
     studyOptions = (
       ("1st Year", "1st Year"),
       ("2nd Year", "2nd Year"),

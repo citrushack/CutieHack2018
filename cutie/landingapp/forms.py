@@ -12,7 +12,7 @@ class SignUpForm(UserCreationForm):
       ("14", "14"),
       ("15", "15"),
       ("16", "16"),
-      ("17", "17 "),
+      ("17", "17"),
       ("18", "18"),
       ("19", "19"),
       ("20", "20"),
@@ -30,9 +30,24 @@ class SignUpForm(UserCreationForm):
       ("32", "32"),
       )
    age = forms.ChoiceField(choices=ageOptions)
-   genderOptions = (("a", "Male"), ('b', 'Female'), ("c", "Other"), ("d", "Prefer not to disclose"),)
+   genderOptions = (
+      ("Male", "Male"), 
+      ('Female', 'Female'), 
+      ("Other", "Other"), 
+      ("Prefer not to disclose", "Prefer not to disclose"),
+      )
    Gender = forms.ChoiceField(choices=genderOptions)
-   raceOptions = (('a', 'White'), ('b','Black or African American'), ('c', 'Native American'), ('d', 'Asian'), ('e','Native Hawaiian or other Pacific Islander'), ('f','Latino or Latin American'), ('g','Other'), ('h', 'Two or more races'), ('i', 'Prefer not to disclose'), )
+   raceOptions = (
+      ('Asian', 'Asian'), 
+      ('Black or African American','Black or African American'), 
+      ('Latino or Latin American','Latino or Latin American'), 
+      ('Native American', 'Native American'),  
+      ('Native Hawaiian or other Pacific Islander','Native Hawaiian or other Pacific Islander'), 
+      ('Other','Other'),
+      ('Prefer not to diclose', 'Prefer not to disclose'),
+      ('Two or more races', 'Two or more races'), 
+      ('White', 'White'), 
+      )
    Race = forms.ChoiceField(choices=raceOptions)
    major = forms.CharField(max_length=30, required=True)
    studyOptions = (

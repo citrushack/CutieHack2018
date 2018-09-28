@@ -68,8 +68,8 @@ def signup(request):
             user.profile.school = form.cleaned_data.get('school')
             user.profile.major = form.cleaned_data.get('major')
             user.profile.phoneNumber = form.cleaned_data.get('phoneNumber')
-            user.profile.gender = form.cleaned_data.get('Gender')
-            user.profile.race = form.cleaned_data.get('Race')
+            user.profile.Gender = form.cleaned_data.get('Gender')
+            user.profile.Race = form.cleaned_data.get('Race')
             user.profile.LevelofStudy = form.cleaned_data.get('LevelofStudy')
             user.profile.gradYear = form.cleaned_data.get('gradYear')
             user.profile.dietRestrictions = form.cleaned_data.get('dietRestrictions')
@@ -79,6 +79,7 @@ def signup(request):
             user.profile.shareBox = form.cleaned_data.get('shareBox')
             user.profile.conductBox = form.cleaned_data.get('conductBox')
             user.profile.questions = form.cleaned_data.get('questions')
+            user.profile.meme = form.cleaned_data.get('meme')
             user.save()
             raw_password = form.cleaned_data.get('password1')
             # subject = 'Activate Your CutieHack Account'
