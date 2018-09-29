@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600');
 
+#sticky-nav {
+  z-index: 9 !important;
+  background-image: linear-gradient(45deg,#28282A,#34343B);
+}
+
 #CutieHackTitle {
   font-size: 700%;
   font-family:'Poppins';
@@ -133,54 +138,6 @@
 
 .row {
   width: 100%;
-}
-
-nav {
-  position: fixed !important;
-  top: 0 !important; 
-  width: 100% !important;
-  z-index: 9 !important;
-  background:#616160;
-  border: 10px !important;
-}
-
-nav ul li a {
-  float: left !important;
-  display: block !important;
-  color: #FFFFFF !important;
-  text-align: center !important;
-  text-decoration: none !important;
-}
-
-nav ul li a:hover {
-  color:grey !important;
-  transition: .5s !important;
-  text-decoration: none !important;
-}
-
-.dropdown {
-  float: left !important;
-  overflow: hidden !important;
-  margin:0 !important;
-}
-
-.dropbutton {
-  border:none !important; 
-  background:none !important;
-  color:#28282A;
-}
-
-.dropdown-content{
-  display:none !important;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block !important;
-    background-color: transparent !important;
-}
-
-.active{
-  color:#f09e12 !important;
 }
 
 .content{

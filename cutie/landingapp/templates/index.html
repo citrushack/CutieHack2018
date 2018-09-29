@@ -3,6 +3,9 @@
 <html>
 
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>Cutie Hack 2018</title>
 	{% load static %} <!--tag needed to configure static files like css in django-->
     <!--django will look for css/main.css file in the static folder-->
@@ -34,7 +37,27 @@
 </head>
 <body>
 	<!-- NAVBAR -->	
-	<nav>
+
+	<ul class="nav justify-content-end sticky-top" id="sticky-nav">
+		<li class= "nav-item">
+			<div class="nav-link">
+				<a id="homelink" class = "active" href="#home">HOME</a>
+			</div>
+		</li>
+
+
+		<li class="nav-item dropdown">
+	    	<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+		    <div class="dropdown-menu">
+		      	<a class="dropdown-item" href="#">Action</a>
+		      	<a class="dropdown-item" href="#">Another action</a>
+		      	<a class="dropdown-item" href="#">Something else here</a>
+		    </div>
+	  	</li>
+	</ul>
+
+
+	<!-- <nav>
 		<ul id="topnav" class="nav justify-content-end">
 			<li class= "nav-item">
 				<div class="nav-link">
@@ -83,7 +106,7 @@
 	        </li>
 	        {% endif %}	
 	    </ul>
-	</nav>    
+	</nav>     -->
 	<!-- END NAVBAR -->
 	
 	<!-- BEGIN CONTENT ON PAGE -->
@@ -96,7 +119,7 @@
 		<div id="banner">
 			<div id = "MainHeroText" data-aos="fade-up">
 				<h1 id="CutieHackTitle">CUTIE HACK</h1>
-				<p id="eventDetails">November 10, 2018<br>
+				<p id="eventDetails">November 11, 2018<br>
 				at UC Riverside</p>
 				<hr id="headerTextBreak">
 				<a href="{% url 'signup'%}"><button type="button" class="btn btn-dark">Apply</button></a>
@@ -111,7 +134,7 @@
 
 			<!-- Begin What is -->
 			<div id="whatis">
-				<div id="whatisContent" data-aos="fade-right">
+				<div id="whatisContent" data-aos="fade-down">
 					<div class='container'>
 						<div class="row">
 							<div class="col-12 col-sm-12 col-lg-6 col-xl-6 text-center">
@@ -132,7 +155,7 @@
 
 			<!--About Us-->
 			<div id="about">
-				<div id="aboutContent" data-aos="fade-left">
+				<div id="aboutContent" data-aos="fade-down">
 					<div class="container">
 						<div class="row">
 							<div id="aboutText"class="col-12 col-sm-12 col-lg-7 col-xl-7">
@@ -198,7 +221,7 @@
 
 					<div class="col questionBorder"> 
 					  	<h2 class="faqQuestion darkText">Where will the event be held?</h2>
-					  	<p class="faqAnsw infoText">Cutie Hack will be held November 10, 2018 in Winston Chung Hall at UC Riverside.</p>
+					  	<p class="faqAnsw infoText">Cutie Hack will be held November 11, 2018 in Winston Chung Hall at UC Riverside.</p>
 					</div>
 					<div class="col questionBorder"> 
 					  	<h2 class="faqQuestion darkText">Any other questions?</h2>
