@@ -214,23 +214,29 @@ img{
 }
 
 .bigSponsor{
-  padding: 2px;
+  padding: 25px;
 }
 
 .mediumSponsor{
-  margin-top:50px;
-  margin-left: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   margin: auto;    
   display: block;
 }
 
 #GitHub{
-  height:100px;
+  margin-top: 25px;
+  height:50px;
   width:auto;
 }
 
 #GoGoSqueez{
-  height:170px;
+  height:100px;
+  width:auto;
+}
+
+#dotTech{
+  height:100px;
   width:auto;
 }
 
@@ -244,7 +250,7 @@ img{
   width:auto;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 800px) {
   #GitHub{
     height:60px;
     width:auto;
@@ -256,12 +262,12 @@ img{
   }
 
   #ACM {
-    height:100px;
+    height:130px;
     width:auto;
   }
 
   #IEEE{
-    height: 100px;
+    height: 90px;
     width:auto;
   }
 }
