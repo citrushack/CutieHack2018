@@ -352,7 +352,7 @@
 			Grad Year: {{user.profile.gradYear}}<br/>
 			Diet Restrictions: {{user.profile.dietRestrictions}}<br/>
 			Meme: {{user.profile.meme}}<br/>
-			Resume: {{user.profile.Resume}}<br/>
+			Resume: <a href="{{ user.profile.Resume.url }}">{{ user.profile.Resume.name }}</a><br/>
 		</div>
 	</div>
     </body>

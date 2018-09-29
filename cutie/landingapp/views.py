@@ -74,8 +74,9 @@ def signup(request):
             user.profile.gradYear = form.cleaned_data.get('gradYear')
             user.profile.dietRestrictions = form.cleaned_data.get('dietRestrictions')
             #user.profile.Resume = form.cleaned_data.get('Resume')
-            user.profile.Resume = handle_file_upload(request.FILES['Resume'])
-            newResume = Profile(Resume = request.FILES['Resume'])
+            #user.profile.Resume = handle_file_upload(request.FILES['Resume'])
+            #newResume = Profile(Resume = request.FILES['Resume'])
+            user.profile.Resume = request.FILES['Resume']
             user.profile.shareBox = form.cleaned_data.get('shareBox')
             user.profile.conductBox = form.cleaned_data.get('conductBox')
             user.profile.questions = form.cleaned_data.get('questions')

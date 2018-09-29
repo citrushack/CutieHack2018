@@ -82,7 +82,6 @@ class Profile(models.Model):
     school = models.CharField(max_length=100, blank=True)
     major = models.CharField(max_length=30, blank=True)
     appStatus = models.CharField(max_length=30, default ="Pending")
-    #need to check what is missing from here
     #email_confirmed = models.BooleanField(default=False)
     phoneNumber = models.CharField(max_length=12, blank=True)
     genderOptions = (
