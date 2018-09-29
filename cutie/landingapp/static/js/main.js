@@ -49,19 +49,19 @@ $(document).ready(function() {
             
 
         if (whatisDist > 0) { //checks if you're in home section
-            $('nav ul li a').removeClass();   
+            $('ul li div').removeClass('active');   
             $('#homelink').addClass('active');
         } else if (whatisDist <= 0 && faqDist > 0) { //checks if you're in about section
-            $('nav ul li a').removeClass();
+            $('ul li div').removeClass('active'); 
             $('#aboutlink').addClass('active');
         } else if (faqDist <= 0 && sponsorsDist > 0) { //checks if you're in faq section
-            $('nav ul li a').removeClass();
+            $('ul li div').removeClass('active'); 
             $('#faqlink').addClass('active');
         } else if (sponsorsDist <= 0 && !((window.innerHeight + window.scrollY) >= document.body.offsetHeight)) { //checks if you're in sponsors section, but haven't hit the bottom of page
-            $('nav ul li a').removeClass();
+            $('ul li div').removeClass('active'); 
             $('#sponsorslink').addClass('active');
         } else if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) { // you're at the bottom of the page
-            $('nav ul li a').removeClass();
+            $('ul li div').removeClass('active'); 
             $('#contactlink').addClass('active');
         }     
     });

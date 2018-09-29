@@ -40,11 +40,52 @@
 
 	<ul class="nav justify-content-end sticky-top" id="sticky-nav">
 		<li class= "nav-item">
-			<div class="nav-link">
-				<a id="homelink" class = "active" href="#home">HOME</a>
+			<div class="nav-link active" id="homelink">
+				<a href="#home">HOME</a>
 			</div>
 		</li>
+		<li class= "nav-item">
+			<div class="nav-link" id="aboutlink">
+				<a href="#aboutUs">ABOUT</a>
+			</div>
+		</li>
+		<li class= "nav-item">
+			<div class="nav-link" id="faqlink">
+				<a href="#faq">FAQ</a>
+			</div>
+		</li>
+		<li class= "nav-item">
+			<div class="nav-link" id="sponsorslink">
+	       		<a href="#sponsors">SPONSORS</a>
+	       	</div>
+	    </li>
+	    <li class= "nav-item">
+	    	<div class="nav-link" id="contactlink">
+	        	<a href="#organizers">CONTACT</a>
+	        </div>
+	    </li>
 
+	    {% if user.is_authenticated %}
+        <li class= "nav-item">
+        	<div class="dropdown">
+	    		<button class="dropbutton nav-link">ACCOUNT <i class="fa fa-caret-down"></i></button>
+	    		<div class="dropdown-content">
+	    			<div class="nav-link">
+	    				<a id="profilelink"href = "{% url 'profile'%}">PROFILE</a>
+	    			</div>
+	    			<div class="nav-link">	
+	    				<a id="logoutlink"href = "{% url 'logout'%}">LOG OUT</a> 
+	    			</div>	
+	    		</div>	
+	    	</div>
+        </li>
+        {% else %}
+        <li class= "nav-item">
+        	<div class="nav-link">
+        		<a id="loginlink"href="{% url 'login'%}">LOGIN <i class="fa fa-sign-in-alt"></i></a>
+        	</div>
+        </li>
+        {% endif %}	
 
 		<li class="nav-item dropdown">
 	    	<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -277,7 +318,7 @@
 					<div class = "col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mediumSponsor">
 						<div class="img-responsive center-block">
 							{% load static %}
-	         				<a href="ieee.ee.ucr.edu/"><img class="zoom" src="{% static 'images/companylogos/IEEE.png' %}" alt="Institute of Electrical and Electronics Engineers, UC Riverside" id="IEEE"/></a>
+	         				<a href="https://ieee.ee.ucr.edu/"><img class="zoom" src="{% static 'images/companylogos/IEEE.png' %}" alt="Institute of Electrical and Electronics Engineers, UC Riverside" id="IEEE"/></a>
 						</div>
 					</div>
 				</div>
