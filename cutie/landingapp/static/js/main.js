@@ -39,7 +39,7 @@ $(document).ready(function(){
 //changes active nav link on scroll
 $(document).ready(function() {
     $(window).scroll(function(){
-        var scrollTop       = $(window).scrollTop() + 10, // top of browser + 10px
+        var scrollTop       = $(window).scrollTop() + 20, // top of browser + 10px
             whatisOffset    = $('#aboutUs').offset().top,
             whatisDist      = (whatisOffset - scrollTop), // stores current distance between top of browser and "about" section
             faqOffset       = $('#faq').offset().top,

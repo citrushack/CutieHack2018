@@ -45,39 +45,31 @@
 		<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 			<ul class="nav">
 				<li class= "nav-item">
-					<div class="nav-link active" id="homelink">
-						<a href="#home">HOME</a>
-					</div>
+					<a href="#home">
+						<div class="nav-link active" id="homelink">HOME</div>
+					</a>
 				</li>
 				<li class= "nav-item">
-					<div class="nav-link" id="aboutlink">
-						<a href="#aboutUs">ABOUT</a>
-					</div>
+					<a href="#aboutUs">
+						<div class="nav-link" id="aboutlink">ABOUT</div>
+					</a>	
 				</li>
 				<li class= "nav-item">
-					<div class="nav-link" id="faqlink">
-						<a href="#faq">FAQ</a>
-					</div>
+					<a href="#faq">
+						<div class="nav-link" id="faqlink">FAQ</div>
+					</a>
 				</li>
 				<li class= "nav-item">
-					<div class="nav-link" id="sponsorslink">
-			       		<a href="#sponsors">SPONSORS</a>
-			       	</div>
+			       	<a href="#sponsors">
+			       		<div class="nav-link" id="sponsorslink">SPONSORS</div>
+			       	</a>
 			    </li>
-			    <li class= "nav-item">
-			    	<div class="nav-link" id="contactlink">
-			        	<a href="#organizers">CONTACT</a>
-			        </div>
+			    <li class="nav-item">
+			    	<a href="#organizers">
+			    		<div class="nav-link" id="contactlink">CONTACT</div>
+			       	</a>
 			    </li>
-
 			    {% if user.is_authenticated %}
-		        <li class= "nav-item">
-		        	<div class="nav-link">
-		        		<a id="loginlink"href="{% url 'login'%}">LOGIN</a>
-		        	</div>
-		        </li>
-		        {% else %}
-		        
 		        <li class="nav-item dropdown">
 		        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ACCOUNT</a>
 			        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -85,6 +77,12 @@
 			        	<li><a class="dropdown-item" id="logoutlink"href = "{% url 'logout'%}">LOG OUT</a></li>
 			        </ul>
 		      	</li>
+		        {% else %}
+		      	<li class= "nav-item">
+		        	<a id="loginlink"href="{% url 'login'%}">
+		        		<div class="nav-link">LOGIN</div>
+		        	</a>
+		        </li>
 		        {% endif %}	
 			</ul>
 		</div>

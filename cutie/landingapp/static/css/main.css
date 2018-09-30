@@ -15,14 +15,23 @@
   color:#ffffff;
 }
 
-.nav-link>a{
+.nav-link{
   color:white;
+  text-decoration:none;
 }
 
 .nav-link>a:hover{
   text-decoration:none;
+}
+
+a:hover {
+  text-decoration:none !important;
+}
+
+.nav-link:hover{
   transition:1000ms;
   color:grey;
+  text-decoration:none !important;
 }
 
 #navbarDropdownMenuLink{
@@ -30,7 +39,7 @@
 }
 
 #navbarDropdownMenuLink:hover{
-  text-decoration:none;
+  text-decoration:none !important;
   transition:1000ms;
   color:grey;
 }
@@ -39,13 +48,13 @@
   background-image: radial-gradient(#3b3b3d,#28282A);
 }
 
-.active>a{
+.active{
   color:orange;
 }
 
 @media (max-width: 800px){
   .active {
-    background: #000000;
+    background: #28282A;
   }
 
   .nav-link{
@@ -302,7 +311,7 @@
   }
 
   #IEEE{
-    height: 90px;
+    height: 80px;
     width:auto;
   }
 }
