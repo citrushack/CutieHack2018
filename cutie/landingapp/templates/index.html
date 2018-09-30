@@ -22,132 +22,73 @@
     <!-- Favicon -->
     {% load static %}
     <link rel="shortcut icon" type="image/png" href="{%  static 'images/favicon.png' %}">
-    <!-- /FYI: for images/
-         {% load static %}
-         <img src="{% static 'images/image1.png' %}" alt="My image" style="width:10px;height:10px;"/>
-    -->
 
-	<!-- Bootstrap -->
+	<!-- Bootstrap and Popper.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
 	<!-- Font Awesome (for contact icons) -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 	<!-- CSS Animate on Scroll Library -->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
 	<!-- NAVBAR -->	
+	<nav class="navbar navbar-expand-lg sticky-top" id="sticky-nav">
+		<a class="navbar-brand" href="#"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <i id="collapse-button" class="fa fa-bars"></i>
+	  	</button>
 
-	<ul class="nav justify-content-end sticky-top" id="sticky-nav">
-		<li class= "nav-item">
-			<div class="nav-link active" id="homelink">
-				<a href="#home">HOME</a>
-			</div>
-		</li>
-		<li class= "nav-item">
-			<div class="nav-link" id="aboutlink">
-				<a href="#aboutUs">ABOUT</a>
-			</div>
-		</li>
-		<li class= "nav-item">
-			<div class="nav-link" id="faqlink">
-				<a href="#faq">FAQ</a>
-			</div>
-		</li>
-		<li class= "nav-item">
-			<div class="nav-link" id="sponsorslink">
-	       		<a href="#sponsors">SPONSORS</a>
-	       	</div>
-	    </li>
-	    <li class= "nav-item">
-	    	<div class="nav-link" id="contactlink">
-	        	<a href="#organizers">CONTACT</a>
-	        </div>
-	    </li>
+		<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+			<ul class="nav">
+				<li class= "nav-item">
+					<div class="nav-link active" id="homelink">
+						<a href="#home">HOME</a>
+					</div>
+				</li>
+				<li class= "nav-item">
+					<div class="nav-link" id="aboutlink">
+						<a href="#aboutUs">ABOUT</a>
+					</div>
+				</li>
+				<li class= "nav-item">
+					<div class="nav-link" id="faqlink">
+						<a href="#faq">FAQ</a>
+					</div>
+				</li>
+				<li class= "nav-item">
+					<div class="nav-link" id="sponsorslink">
+			       		<a href="#sponsors">SPONSORS</a>
+			       	</div>
+			    </li>
+			    <li class= "nav-item">
+			    	<div class="nav-link" id="contactlink">
+			        	<a href="#organizers">CONTACT</a>
+			        </div>
+			    </li>
 
-	    {% if user.is_authenticated %}
-        <li class= "nav-item">
-        	<div class="dropdown">
-	    		<button class="dropbutton nav-link">ACCOUNT <i class="fa fa-caret-down"></i></button>
-	    		<div class="dropdown-content">
-	    			<div class="nav-link">
-	    				<a id="profilelink"href = "{% url 'profile'%}">PROFILE</a>
-	    			</div>
-	    			<div class="nav-link">	
-	    				<a id="logoutlink"href = "{% url 'logout'%}">LOG OUT</a> 
-	    			</div>	
-	    		</div>	
-	    	</div>
-        </li>
-        {% else %}
-        <li class= "nav-item">
-        	<div class="nav-link">
-        		<a id="loginlink"href="{% url 'login'%}">LOGIN <i class="fa fa-sign-in-alt"></i></a>
-        	</div>
-        </li>
-        {% endif %}	
-
-		<li class="nav-item dropdown">
-	    	<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-		    <div class="dropdown-menu">
-		      	<a class="dropdown-item" href="#">Action</a>
-		      	<a class="dropdown-item" href="#">Another action</a>
-		      	<a class="dropdown-item" href="#">Something else here</a>
-		    </div>
-	  	</li>
-	</ul>
-
-
-	<!-- <nav>
-		<ul id="topnav" class="nav justify-content-end">
-			<li class= "nav-item">
-				<div class="nav-link">
-					<a id="homelink" class = "active" href="#home">HOME</a>
-				</div>
-			</li>
-			<li class= "nav-item">
-				<div class="nav-link">
-					<a id="aboutlink" href="#aboutUs">ABOUT</a>
-				</div>
-			</li>
-			<li class= "nav-item">
-				<div class="nav-link">
-					<a id="faqlink" href="#faq">FAQ</a>
-				</div>
-			</li>
-			<li class= "nav-item">
-				<div class="nav-link">
-		       		<a id="sponsorslink" href="#sponsors">SPONSORS</a>
-		       	</div>
-		    </li>
-		    <li class= "nav-item">
-		    	<div class="nav-link">
-		        	<a id="contactlink" href="#organizers">CONTACT</a>
-		        </div>
-		    </li>
-		    {% if user.is_authenticated %}
-	        <li class= "nav-item">
-	        	<div class="dropdown">
-		    		<button class="dropbutton nav-link">ACCOUNT <i class="fa fa-caret-down"></i></button>
-		    		<div class="dropdown-content">
-		    			<div class="nav-link">
-		    				<a id="profilelink"href = "{% url 'profile'%}">PROFILE</a>
-		    			</div>
-		    			<div class="nav-link">	
-		    				<a id="logoutlink"href = "{% url 'logout'%}">LOG OUT</a> 
-		    			</div>	
-		    		</div>	
-		    	</div>
-	        </li>
-	        {% else %}
-	        <li class= "nav-item">
-	        	<div class="nav-link">
-	        		<a id="loginlink"href="{% url 'login'%}">LOGIN</a>
-	        	</div>
-	        </li>
-	        {% endif %}	
-	    </ul>
-	</nav>     -->
+			    {% if user.is_authenticated %}
+		        <li class= "nav-item">
+		        	<div class="nav-link">
+		        		<a id="loginlink"href="{% url 'login'%}">LOGIN</a>
+		        	</div>
+		        </li>
+		        {% else %}
+		        
+		        <li class="nav-item dropdown">
+		        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ACCOUNT</a>
+			        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			        	<li><a class="dropdown-item" id="profilelink"href = "{% url 'profile'%}">PROFILE</a></li>
+			        	<li><a class="dropdown-item" id="logoutlink"href = "{% url 'logout'%}">LOG OUT</a></li>
+			        </ul>
+		      	</li>
+		        {% endif %}	
+			</ul>
+		</div>
+	</nav>
 	<!-- END NAVBAR -->
 	
 	<!-- BEGIN CONTENT ON PAGE -->
