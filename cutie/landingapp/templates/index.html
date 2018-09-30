@@ -3,6 +3,9 @@
 <html>
 
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>Cutie Hack 2018</title>
 	{% load static %} <!--tag needed to configure static files like css in django-->
     <!--django will look for css/main.css file in the static folder-->
@@ -19,71 +22,71 @@
     <!-- Favicon -->
     {% load static %}
     <link rel="shortcut icon" type="image/png" href="{%  static 'images/favicon.png' %}">
-    <!-- /FYI: for images/
-         {% load static %}
-         <img src="{% static 'images/image1.png' %}" alt="My image" style="width:10px;height:10px;"/>
-    -->
 
-	<!-- Bootstrap -->
+	<!-- Bootstrap and Popper.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
 	<!-- Font Awesome (for contact icons) -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 	<!-- CSS Animate on Scroll Library -->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
 	<!-- NAVBAR -->	
-	<nav>
-		<ul id="topnav" class="nav justify-content-end">
-			<li class= "nav-item">
-				<div class="nav-link">
-					<a id="homelink" class = "active" href="#home">HOME</a>
-				</div>
-			</li>
-			<li class= "nav-item">
-				<div class="nav-link">
-					<a id="aboutlink" href="#aboutUs">ABOUT</a>
-				</div>
-			</li>
-			<li class= "nav-item">
-				<div class="nav-link">
-					<a id="faqlink" href="#faq">FAQ</a>
-				</div>
-			</li>
-			<li class= "nav-item">
-				<div class="nav-link">
-		       		<a id="sponsorslink" href="#sponsors">SPONSORS</a>
-		       	</div>
-		    </li>
-		    <li class= "nav-item">
-		    	<div class="nav-link">
-		        	<a id="contactlink" href="#organizers">CONTACT</a>
-		        </div>
-		    </li>
-		    {% if user.is_authenticated %}
-	        <li class= "nav-item">
-	        	<div class="dropdown">
-		    		<button class="dropbutton nav-link">ACCOUNT <i class="fa fa-caret-down"></i></button>
-		    		<div class="dropdown-content">
-		    			<div class="nav-link">
-		    				<a id="profilelink"href = "{% url 'profile'%}">PROFILE</a>
-		    			</div>
-		    			<div class="nav-link">	
-		    				<a id="logoutlink"href = "{% url 'logout'%}">LOG OUT</a> 
-		    			</div>	
-		    		</div>	
-		    	</div>
-	        </li>
-	        {% else %}
-	        <li class= "nav-item">
-	        	<div class="nav-link">
-	        		<a id="loginlink"href="{% url 'login'%}">LOGIN</a>
-	        	</div>
-	        </li>
-	        {% endif %}	
-	    </ul>
-	</nav>    
+	<nav class="navbar navbar-expand-lg sticky-top" id="sticky-nav">
+		<a class="navbar-brand" href="#"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <i id="collapse-button" class="fa fa-bars"></i>
+	  	</button>
+
+		<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+			<ul class="nav">
+				<li class= "nav-item">
+					<a href="#home">
+						<div class="nav-link active" id="homelink">HOME</div>
+					</a>
+				</li>
+				<li class= "nav-item">
+					<a href="#aboutUs">
+						<div class="nav-link" id="aboutlink">ABOUT</div>
+					</a>	
+				</li>
+				<li class= "nav-item">
+					<a href="#faq">
+						<div class="nav-link" id="faqlink">FAQ</div>
+					</a>
+				</li>
+				<li class= "nav-item">
+			       	<a href="#sponsors">
+			       		<div class="nav-link" id="sponsorslink">SPONSORS</div>
+			       	</a>
+			    </li>
+			    <li class="nav-item">
+			    	<a href="#organizers">
+			    		<div class="nav-link" id="contactlink">CONTACT</div>
+			       	</a>
+			    </li>
+			    {% if user.is_authenticated %}
+		        <li class="nav-item dropdown">
+		        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ACCOUNT</a>
+			        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			        	<li><a class="dropdown-item" id="profilelink"href = "{% url 'profile'%}">PROFILE</a></li>
+			        	<li><a class="dropdown-item" id="logoutlink"href = "{% url 'logout'%}">LOG OUT</a></li>
+			        </ul>
+		      	</li>
+		        {% else %}
+		      	<li class= "nav-item">
+		        	<a id="loginlink"href="{% url 'login'%}">
+		        		<div class="nav-link">LOGIN</div>
+		        	</a>
+		        </li>
+		        {% endif %}	
+			</ul>
+		</div>
+	</nav>
 	<!-- END NAVBAR -->
 	
 	<!-- BEGIN CONTENT ON PAGE -->
@@ -96,7 +99,7 @@
 		<div id="banner">
 			<div id = "MainHeroText" data-aos="fade-up">
 				<h1 id="CutieHackTitle">CUTIE HACK</h1>
-				<p id="eventDetails">November 10, 2018<br>
+				<p id="eventDetails">November 11, 2018<br>
 				at UC Riverside</p>
 				{% if user.is_authenticated %}
 				{% else %}
@@ -114,7 +117,7 @@
 
 			<!-- Begin What is -->
 			<div id="whatis">
-				<div id="whatisContent" data-aos="fade-right">
+				<div id="whatisContent" data-aos="fade-down">
 					<div class='container'>
 						<div class="row">
 							<div class="col-12 col-sm-12 col-lg-6 col-xl-6 text-center">
@@ -135,7 +138,7 @@
 
 			<!--About Us-->
 			<div id="about">
-				<div id="aboutContent" data-aos="fade-left">
+				<div id="aboutContent" data-aos="fade-down">
 					<div class="container">
 						<div class="row">
 							<div id="aboutText"class="col-12 col-sm-12 col-lg-7 col-xl-7">
@@ -201,7 +204,7 @@
 
 					<div class="col questionBorder"> 
 					  	<h2 class="faqQuestion darkText">Where will the event be held?</h2>
-					  	<p class="faqAnsw infoText">Cutie Hack will be held November 10, 2018 in Winston Chung Hall at UC Riverside.</p>
+					  	<p class="faqAnsw infoText">Cutie Hack will be held November 11, 2018 in Winston Chung Hall at UC Riverside.</p>
 					</div>
 					<div class="col questionBorder"> 
 					  	<h2 class="faqQuestion darkText">Any other questions?</h2>
@@ -218,30 +221,48 @@
 				<h1 class="sectionHeader text-center">2018 Sponsors</h1>
 
 				<!-- Sponsors -->
-				<div class = "row">
-					<span class = "col img-responsive center-block">
-						{% load static %}
-	         			<a href="https://github.com"><img class="zoom mediumSponsor" src="{% static 'images/companylogos/GitHub.png' %}" alt="GitHub" id="GitHub"/></a>
-					</span>
-					<span class = "col img-responsive center-block">
-						{% load static %}
-	         			<a href="https://gogosqueez.com"><img class="zoom mediumSponsor" src="{% static 'images/companylogos/GoGoSqueez.png' %}" alt="GoGoSqueez" id="GoGoSqueez"/></a>
-					</span>
+
+				<div class = "row text-center">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 mediumSponsor">
+						<div class = "img-responsive center-block">
+							{% load static %}
+	         				<a href="https://github.com"><img class="zoom" src="{% static 'images/companylogos/GitHub.png' %}" alt="GitHub" id="GitHub"/></a>
+						</div>
+					</div>
+
+					<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 mediumSponsor">
+						<div class = "img-responsive center-block ">
+							{% load static %}
+	         				<a href="https://gogosqueez.com"><img class="zoom" src="{% static 'images/companylogos/GoGoSqueez.png' %}" alt="GoGoSqueez" id="GoGoSqueez"/></a>
+						</div>
+					</div>
+
+					<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 mediumSponsor">
+						<div class = "img-responsive center-block">
+							{% load static %}
+							<a href="https://get.tech/"><img class="zoom" src="{% static 'images/companylogos/dotTech.png' %}" alt=".Tech Domains" id="dotTech"/></a>
+						</div>
+					</div>
 				</div>
+
 				<!-- End Sponsors -->
 
 				<!-- organizers -->
 				<h1  class="sectionHeader text-center pt-4 pb-2" id= "organizers">Organizers</h1>
 
 				<div class = "row text-center">
-					<span class = "col img-responsive center-block">
-						{% load static %}
-	         			<a href="https://acmucr.org"><img class="zoom mediumSponsor" src="{% static 'images/companylogos/ACMUCR.png' %}" alt="Association of Computing Machines, UC Riverside" id="ACM"/></a>
-					</span>
-					<span class = "col img-responsive center-block">
-						{% load static %}
-	         			<a href="ieee.ee.ucr.edu/"><img class="zoom mediumSponsor" src="{% static 'images/companylogos/IEEE.png' %}" alt="Institute of Electrical and Electronics Engineers, UC Riverside" id="IEEE"/></a>
-					</span>
+					<div class = "col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mediumSponsor">
+						<div class="img-responsive center-block">
+							{% load static %}
+	         				<a href="https://acmucr.org"><img class="zoom" src="{% static 'images/companylogos/ACMUCR.png' %}" alt="Association of Computing Machines, UC Riverside" id="ACM"/></a>
+	         			</div>	
+					</div>
+					<div class = "col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mediumSponsor">
+						<div class="img-responsive center-block">
+							{% load static %}
+	         				<a href="https://ieee.ee.ucr.edu/"><img class="zoom" src="{% static 'images/companylogos/IEEE.png' %}" alt="Institute of Electrical and Electronics Engineers, UC Riverside" id="IEEE"/></a>
+						</div>
+					</div>
 				</div>
 			</div>	
 			<!-- End Organizers -->

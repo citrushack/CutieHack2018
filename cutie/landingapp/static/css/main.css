@@ -1,5 +1,68 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600');
 
+#sticky-nav {
+  z-index: 9 !important;
+  background-image: linear-gradient(#28282A,#34343B,#28282A) !important;
+}
+
+@media (min-width: 801px){
+  #sticky-nav {
+    padding-right: 3rem !important;
+  }  
+}
+
+#collapse-button {
+  color:#ffffff;
+}
+
+.nav-link{
+  color:white;
+  text-decoration:none;
+}
+
+.nav-link>a:hover{
+  text-decoration:none;
+}
+
+a:hover {
+  text-decoration:none !important;
+}
+
+.nav-link:hover{
+  transition:1000ms;
+  color:grey;
+  text-decoration:none !important;
+}
+
+#navbarDropdownMenuLink{
+  color:white;
+}
+
+#navbarDropdownMenuLink:hover{
+  text-decoration:none !important;
+  transition:1000ms;
+  color:grey;
+}
+
+.active {
+  background-image: radial-gradient(#3b3b3d,#28282A);
+}
+
+.active{
+  color:orange;
+}
+
+@media (max-width: 800px){
+  .active {
+    background: #28282A;
+  }
+
+  .nav-link{
+    display: block;
+    width:91vw;
+  }
+}
+
 #CutieHackTitle {
   font-size: 700%;
   font-family:'Poppins';
@@ -26,7 +89,7 @@
   /*font-style:italic;*/
 }
 
-@media (max-width: 799px) {
+@media (max-width: 800px) {
   #CutieHackTitle{
     font-size:300%;
   }
@@ -37,8 +100,6 @@
   font-weight: 500;
   }
 }
-
-
 
 #headerTextBreak {
   width: 33%;
@@ -135,54 +196,6 @@
   width: 100%;
 }
 
-nav {
-  position: fixed !important;
-  top: 0 !important; 
-  width: 100% !important;
-  z-index: 9 !important;
-  background:#616160;
-  border: 10px !important;
-}
-
-nav ul li a {
-  float: left !important;
-  display: block !important;
-  color: #FFFFFF !important;
-  text-align: center !important;
-  text-decoration: none !important;
-}
-
-nav ul li a:hover {
-  color:grey !important;
-  transition: .5s !important;
-  text-decoration: none !important;
-}
-
-.dropdown {
-  float: left !important;
-  overflow: hidden !important;
-  margin:0 !important;
-}
-
-.dropbutton {
-  border:none !important; 
-  background:none !important;
-  color:#28282A;
-}
-
-.dropdown-content{
-  display:none !important;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block !important;
-    background-color: transparent !important;
-}
-
-.active{
-  color:#f09e12 !important;
-}
-
 .content{
   z-index:1;
 }
@@ -198,10 +211,6 @@ nav ul li a:hover {
 .img-fluid {
   max-height: 100%;
   width: auto;
-}
-
-img{
-  z-index:0;
 }
 
 .contact-btn-spacing {
@@ -228,23 +237,15 @@ img{
   font-size: 400%;
 }
 
-.questionBorder {
-  border-radius: 5px;
-  background-color: #f09e12;
-  padding: 10px;
-  box-shadow: 5px 10px #906231;
-  margin: 25px;
-}
-
 #faq {
   background-image: linear-gradient(#F38709,#dd7a08);
   text-align: center;
-  padding:8%;
+  padding:5%;
 }
 
 #sponsors {
   background-image: linear-gradient(#f09e12,#d88e0f);
-  padding-top: 40px;
+  padding-top: 5%;
   padding-bottom: 5%;
 }
 
@@ -257,23 +258,29 @@ img{
 }
 
 .bigSponsor{
-  padding: 2px;
+  padding: 25px;
 }
 
 .mediumSponsor{
-  margin-top:50px;
-  margin-left: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   margin: auto;    
   display: block;
 }
 
 #GitHub{
-  height:100px;
+  margin-top: 25px;
+  height:50px;
   width:auto;
 }
 
 #GoGoSqueez{
-  height:170px;
+  height:100px;
+  width:auto;
+}
+
+#dotTech{
+  height:100px;
   width:auto;
 }
 
@@ -283,11 +290,11 @@ img{
 }
 
 #IEEE{
-  height: 170px;
+  height: 130px;
   width:auto;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 800px) {
   #GitHub{
     height:60px;
     width:auto;
@@ -299,12 +306,12 @@ img{
   }
 
   #ACM {
-    height:100px;
+    height:130px;
     width:auto;
   }
 
   #IEEE{
-    height: 100px;
+    height: 80px;
     width:auto;
   }
 }
