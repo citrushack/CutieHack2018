@@ -45,7 +45,7 @@
 
 @media (max-width: 800px){
   .active {
-    background-image: linear-gradient(#28282A,#3b3b3d,#28282A);
+    background: #000000;
   }
 
   .nav-link{
@@ -204,10 +204,6 @@
   width: auto;
 }
 
-img{
-  z-index:0;
-}
-
 .contact-btn-spacing {
   margin: 2%;
   background: #EEEEEE;
@@ -232,23 +228,15 @@ img{
   font-size: 400%;
 }
 
-.questionBorder {
-  border-radius: 5px;
-  background-color: #f09e12;
-  padding: 10px;
-  box-shadow: 5px 10px #906231;
-  margin: 25px;
-}
-
 #faq {
   background-image: linear-gradient(#F38709,#dd7a08);
   text-align: center;
-  padding:8%;
+  padding:5%;
 }
 
 #sponsors {
   background-image: linear-gradient(#f09e12,#d88e0f);
-  padding-top: 40px;
+  padding-top: 5%;
   padding-bottom: 5%;
 }
 
