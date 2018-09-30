@@ -52,6 +52,7 @@ a:hover {
   color:orange;
 }
 
+
 @media (max-width: 800px){
   .active {
     background: #28282A;
@@ -67,6 +68,8 @@ a:hover {
   font-size: 700%;
   font-family:'Poppins';
   font-weight: 600;
+  letter-spacing: 7px;
+  text-shadow: 0 10px darkslategray;
 }
 
 #eventDetails {
@@ -87,6 +90,7 @@ a:hover {
   height: 250px;
   color:#FFFFFF;
   /*font-style:italic;*/
+  text-shadow: 0 3px black;
 }
 
 @media (max-width: 800px) {
@@ -111,7 +115,7 @@ a:hover {
 }
 
 #banner {
-  background-color: #F38709;
+  background: linear-gradient(180deg, rgba(243,135,9,1) 85%, rgba(89,110,159,1) 95%); 
   height: 140vh;
   padding: 20%;
   z-index: 4;
@@ -122,6 +126,19 @@ a:hover {
   top:0;
   min-width: 100%;
   height: 140%;
+}
+
+.questionBorder {
+  padding-top: 5%;
+}
+
+.faqQuestion {
+  text-align: left;
+  font-weight: 600;
+}
+
+.faqAnsw {
+  text-align: left;
 }
 
 @media (max-width: 800px) {
@@ -146,7 +163,7 @@ a:hover {
   padding:5%;
   height:auto;
   width:100vw;
-  background-image: linear-gradient(#F38709,#dd7a08);
+  background: #596e9f;
   z-index: 0;
  } 
 
@@ -170,7 +187,7 @@ a:hover {
 }
 
 .sectionHeader {
-  font-size:275% !important;
+  font-size:350% !important;
   font-family: 'Poppins' !important;
   font-weight: 500;
   color: #fff;
@@ -181,11 +198,12 @@ a:hover {
   font-weight: 400;
   color: #fff;
   line-height: 2;
+  font-size: 125%;
 }
 
 #about{
   padding:8%;
-  background-image: linear-gradient(#f09e12,#d88e0f);
+  background: linear-gradient(180deg, rgba(89,110,159,1) 5%, rgba(240,158,18,1) 10%); 
 }
 
 #aboutText {
@@ -213,6 +231,16 @@ a:hover {
   width: auto;
 }
 
+.apply-btn {
+  font-size: 200%;
+  padding: 0 5%;
+  border-radius: 10px;
+  background-color: #596e9f;
+  text-transform: uppercase;
+  font-family: 'Poppins';
+  letter-spacing: 1px;
+}
+
 .contact-btn-spacing {
   margin: 2%;
   background: #EEEEEE;
@@ -233,18 +261,21 @@ a:hover {
 }
 
 .sectionHeader {
+  padding-top: 3%;
   padding-bottom: 3%;
   font-size: 400%;
 }
 
+
 #faq {
   background-image: linear-gradient(#F38709,#dd7a08);
+  background: linear-gradient(180deg, rgba(240,158,18,1) 5%, rgba(243, 135, 9, 1) 10%); 
   text-align: center;
   padding:5%;
 }
 
 #sponsors {
-  background-image: linear-gradient(#f09e12,#d88e0f);
+  background: linear-gradient(180deg,rgba(243, 135, 9, 1) 5%, rgba(240,158,18,1) 10%); 
   padding-top: 5%;
   padding-bottom: 5%;
 }

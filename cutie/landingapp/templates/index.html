@@ -7,10 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>Cutie Hack 2018</title>
-	{% load static %} <!--tag needed to configure static files like css in django-->
-    <!--django will look for css/main.css file in the static folder-->
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-
+	
     <!-- jquery -->
 	{% load static %}
 	<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
@@ -32,6 +29,9 @@
 
 	<!-- CSS Animate on Scroll Library -->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	{% load static %} <!--tag needed to configure static files like css in django-->
+  <!--django will look for css/main.css file in the static folder-->
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
@@ -104,7 +104,7 @@
 				{% if user.is_authenticated %}
 				{% else %}
 				<hr id="headerTextBreak">
-				<a href="{% url 'signup'%}"><button type="button" class="btn btn-dark">Apply</button></a>
+				<a href="{% url 'signup'%}"><button type="button" class="btn btn-dark apply-btn">Apply</button></a>
 				{% endif %}	
 			</div>	
 		</div>
@@ -127,7 +127,8 @@
 
 							<div class="col-12 col-sm-12 col-lg-6 col-xl-6">
 								<h1 class="sectionHeader" style="color: #FFFFFF;">What is Cutie Hack?</h1>
-								<p class="infoText" style="color: #FFFFFF;">Cutie Hack is a beginner-friendly, 12-hour hackathon. Hosted at UC Riverside, Cutie Hack is designed to help new hackers get used to the time crunch of a hackathon environment. Cutie Hack invites collegiate students to UC Riverside to collaborate and innovate. Throughout the 12 hours, participants work in teams on a project, attend workshops to learn about new technologies, and network with industry partners.</p>
+								<p class="infoText" style="color: #FFFFFF;">Cutie Hack is a beginner-friendly, 12-hour hackathon. Hosted at UC Riverside, Cutie Hack is designed to help new hackers get used to the time crunch of a hackathon environment.</p> 
+								<p class="infoText" style="color: #FFFFFF;">Cutie Hack invites collegiate students to UC Riverside to collaborate and innovate. Throughout the 12 hours, participants work in teams on a project, attend workshops to learn about new technologies, and network with industry partners.</p>
 							</div>
 						</div>
 					</div>	
@@ -288,7 +289,7 @@
 
 <script type="text/javascript">
 	AOS.init({
-		duration : 1200,
+		duration : 800,
 		once : true,
 	})
 </script>
