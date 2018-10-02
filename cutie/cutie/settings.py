@@ -23,11 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$dd0v0!7!h+x6_qondkdg6&k9-9w#@ejil$g6o%0yrd%qdran('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 
-ALLOWED_HOSTS = [ ] #add 'cutiehack2018-jkim393.c9users.io' for c9 usage
+ALLOWED_HOSTS = [ 'www.cutiehack.io','citrushack.pythonanywhere.com'] #add 'cutiehack2018-jkim393.c9users.io' for c9 usage
 
 
 
@@ -130,6 +130,9 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+STATIC_ROOT = '/home/CitrusHack/CutieHack2018/cutie/assets/'
+
 
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 
