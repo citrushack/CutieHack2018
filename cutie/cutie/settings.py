@@ -20,14 +20,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '$dd0v0!7!h+x6_qondkdg6&k9-9w#@ejil$g6o%0yrd%qdran('
+#SECRET_KEY = '$dd0v0!7!h+x6_qondkdg6&k9-9w#@ejil$g6o%0yrd%qdran('
+with open('/home/CitrusHack/CutieHack2018/secret_key.txt') as f:
+    SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
 
 
-ALLOWED_HOSTS = [ 'www.cutiehack.io','citrushack.pythonanywhere.com'] #add 'cutiehack2018-jkim393.c9users.io' for c9 usage
+ALLOWED_HOSTS = ['www.cutiehack.io','citrushack.pythonanywhere.com'] #add 'cutiehack2018-jkim393.c9users.io' for c9 usage
 
 
 

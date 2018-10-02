@@ -4,7 +4,7 @@ from django.contrib.auth.models import ( #to use emails as id instead of usernam
 )
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-
+from .validators import validate_file_extension
 # Create your models here. 
 # modified https://docs.djangoproject.com/en/2.1/topics/auth/customizing/#specifying-custom-user-model
 class MyUserManager(BaseUserManager):
@@ -123,7 +123,7 @@ class Profile(models.Model):
       )
     gradYear = models.CharField(max_length=30, choices=yearOptions, default="")
     dietRestrictions = models.CharField(max_length=100, default="")
-    Resume = models.FileField(default="", upload_to='uploads/')
+    Resume = models.FileField(default="", upload_to='uploads/', validators=[validate_file_extension])
     conductBox = models.BooleanField(default=False)
     shareBox = models.BooleanField(default=False)
     meme = models.CharField(max_length=200, blank=True)
