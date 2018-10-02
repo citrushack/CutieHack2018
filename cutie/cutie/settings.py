@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = '$dd0v0!7!h+x6_qondkdg6&k9-9w#@ejil$g6o%0yrd%qdran('
+
 with open('/home/CitrusHack/CutieHack2018/secret_key.txt') as f:
     SECRET_KEY = f.read().strip()
 
