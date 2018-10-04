@@ -88,30 +88,9 @@ input[type=file] {
 }
 
 
-@media (max-width:400px) {
-  input[type=firstname] {
-    width: 50px;
-  }
-  input[type=email] {
-    width: 250px;
-  }
-  input[type=password] {
-    width: 250px;
-  }
-  input[type=school] {
-    width: 250px;
-  }
-  input[type=major] {
-    width: 250px;
-  }
-  input[type=allergies] {
-    width: 250px;
-  }
-  input[type=memes] {
-    width: 250px;
-  }
-  #nextSection1{
-    margin-left:-100px;
+@media (min-width:400px) {
+  input{
+    width: 4px;
   }
 }
 @media (min-width:401px) and (max-width:599px) {

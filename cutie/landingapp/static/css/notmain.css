@@ -160,7 +160,7 @@ a:hover {
 }
 
 #whatis{
-  padding:5%;
+  padding:5% 0% 5% 0%;
   height:auto;
   width:100vw;
   background: #596e9f;
