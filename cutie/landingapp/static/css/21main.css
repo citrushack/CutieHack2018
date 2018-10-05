@@ -403,6 +403,7 @@ a:hover {
 .red{
   color:white;
 }
+
 .red:hover{
   color:#cd486b;
   -webkit-transition: color 1s ease-out;
