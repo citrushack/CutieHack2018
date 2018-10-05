@@ -70,11 +70,11 @@ class SignUpForm(UserCreationForm):
       )
    gradYear = forms.ChoiceField(choices=yearOptions)
    phoneNumber = forms.CharField(max_length=12,required=True)
-   Resume = forms.FileField(label='Click to upload file')
+   Resume = forms.URLField(label='Link to your resume')
    conductBox = forms.BooleanField()
    shareBox = forms.BooleanField()
    dietRestrictions = forms.CharField(max_length=100, required=False)
-   meme = forms.CharField(max_length= 200, required=False)
+   meme = forms.URLField(required=False)
 
    class Meta:
       model = MyUser

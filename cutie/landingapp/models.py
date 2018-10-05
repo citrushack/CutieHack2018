@@ -124,10 +124,10 @@ class Profile(models.Model):
       )
     gradYear = models.CharField(max_length=30, choices=yearOptions, default="")
     dietRestrictions = models.CharField(max_length=100, default="")
-    Resume = models.FileField(default="", upload_to='uploads/')
+    Resume = models.URLField(max_length=500, blank=True)
     conductBox = models.BooleanField(default=False)
     shareBox = models.BooleanField(default=False)
-    meme = models.CharField(max_length=200, blank=True)
+    meme = models.URLField(max_length=500, blank=True)
 
 
 #might be better to have signal codes somewhere else 
