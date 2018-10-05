@@ -8,6 +8,7 @@ class SignUpForm(UserCreationForm):
    last_name = forms.CharField(max_length=30, required=True)
    school = forms.CharField(max_length=100, required=True)
    ageOptions = (
+      ("",""),
       ("13", "13"),
       ("14", "14"),
       ("15", "15"),
@@ -31,6 +32,7 @@ class SignUpForm(UserCreationForm):
       )
    age = forms.ChoiceField(choices=ageOptions)
    genderOptions = (
+      ("",""),
       ("Female", "Female"),
       ("Male", "Male"),
       ("Other", "Other"), 
@@ -38,6 +40,7 @@ class SignUpForm(UserCreationForm):
       )
    Gender = forms.ChoiceField(choices=genderOptions)
    raceOptions = (
+      ("",""),
       ('Asian', 'Asian'), 
       ('Black or African American','Black or African American'), 
       ('Latino or Latin American','Latino or Latin American'), 
@@ -51,6 +54,7 @@ class SignUpForm(UserCreationForm):
    Race = forms.ChoiceField(choices=raceOptions)
    major = forms.CharField(max_length=30, required=True)
    studyOptions = (
+      ("",""),
       ("1st Year", "1st Year"),
       ("2nd Year", "2nd Year"),
       ("3rd Year", "3rd Year"),
@@ -60,6 +64,7 @@ class SignUpForm(UserCreationForm):
       )
    LevelofStudy = forms.ChoiceField(choices=studyOptions)
    yearOptions = (
+      ("",""),
       ("2019", "2019"),
       ("2020", "2020"),
       ("2021", "2021"),
