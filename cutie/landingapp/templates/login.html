@@ -62,14 +62,15 @@
 							</div>
 						</div>
 
+						
 						{% if form.errors %}
-							<p id="error">Your username and password didn't match. Please try again.</p>
+							<p id="error" style="margin-top: 20%">Your username and password didn't match. Please try again.</p><br>
 						{% endif %}
-
 						<input type="submit" value="Log In" id="button" class="btn btn-warning"/>
+						
 						</form>
 			<!-- <p id="forgot"><a href="{% url 'index' %}">Forgot password?</a></p> -->
-			<p id="apply"><a href="{% url 'signup' %}">Haven't applied?</a></p>
+			<p id="apply"style="margin-top: 10%"><a href="{% url 'signup' %}">Haven't applied?</a></p>
 
 			</div>
 		</div>
