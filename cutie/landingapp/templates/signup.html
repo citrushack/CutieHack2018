@@ -20,6 +20,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127067482-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-127067482-1');
+  </script>
+
   <title>Cutie Hack 2018</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!-- Favicon -->
@@ -51,7 +61,7 @@
           <img src="{% static 'images/logo.png' %}" id="icon">
           <h1>Apply to Cutie Hack</h1>
           <p class="description">Account Information
-          <p class="description">(<span class="red-star">&#x2605;</span> denotes required field)</p>
+          <p class="description">( <span class="red-star">*</span> denotes required field)</p>
         </div>
         {% load myfilters %}
         <form action="." method='post' enctype = "multipart/form-data" >
@@ -66,13 +76,13 @@
             <br>
             {{ form.first_name }}
 
-            <span class="red-star">&#x2605;</span>
+            <span class="red-star">*</span>
           </label>
 
           <label for="lastname">Last Name:
             <br>
             {{form.last_name}}
-            <span class="red-star">&#x2605;</span>
+            <span class="red-star">*</span>
           </label>
         </div>
 
@@ -80,7 +90,7 @@
           <label for="email">Email:
             <br>
             {{ form.email|addclass:'myfieldclass' }}
-            <span class="red-star">&#x2605;</span>
+            <span class="red-star">*</span>
           </label>
         </div>
 
@@ -88,13 +98,13 @@
           <label for="password">Password:
             <br>
             {{ form.password1 }}
-            <span class="red-star">&#x2605;</span>
+            <span class="red-star">*</span>
           </label>
 
           <label for="">Confirm Password:
             <br>
             {{ form.password2 }}
-            <span class="red-star">&#x2605;</span>
+            <span class="red-star">*</span>
           </label>
         </div>
 
@@ -125,7 +135,7 @@
             <img src="{% static 'images/logo.png' %}" id="icon">
             <h1>Apply to Cutie Hack</h1>
             <p class="description">Demographic Information
-            <p class="description">(<span class="red-star">&#x2605;</span> denotes required field)</p>
+            <p class="description">( <span class="red-star">*</span> denotes required field)</p>
           </div>
 
           <div>
@@ -134,7 +144,7 @@
               
               {{ form.school|addclass:'myfieldclass' }}
             
-              <span class="red-star">&#x2605;</span>
+              <span class="red-star">*</span>
             </label>
           </div>
 
@@ -142,7 +152,7 @@
             <label for="age">Age:
               <br>
                 {{ form.age }}
-                <span class="red-star">&#x2605;</span>
+                <span class="red-star">*</span>
               </label>
             <!-- </div> -->
          <!--   <div> -->
@@ -166,7 +176,7 @@
                     
                     
                     {{ form.Gender }}
-                    <span class="red-star">&#x2605;</span>
+                    <span class="red-star">*</span>
                 </label>
 
                 <label for="race">Race/Ethnicty:
@@ -186,7 +196,7 @@
                     </select>
                   -->
                   {{ form.Race }}
-                    <span class="red-star">&#x2605;</span>
+                    <span class="red-star">*</span>
                 </label>
             </div>
   <!--
@@ -211,14 +221,14 @@
             <label for="major">Major:
               <br>
               {{form.major }}
-              <span class="red-star">&#x2605;</span>
+              <span class="red-star">*</span>
             </label>
 
             <label for="levelOfStudy">Current Level of Study:
               <br>
               <!--<select name="levelOfStudy" style="width: 400px;"> -->
                 {{ form.LevelofStudy}}
-              <span class="red-star">&#x2605;</span>
+              <span class="red-star">*</span>
             </label>
           </div>
 
@@ -227,22 +237,24 @@
           <br>
           <!--<select name='gradYear' style="width: 224px;"> -->
             {{ form.gradYear|addclass:'moreInput' }}
-          <span class="red-star">&#x2605;</span>
+          <span class="red-star">*</span>
         </label>
 
         <label for="phoneNumber">Phone Number: 123 456 7890
           <br>
           <!--<input id="phoneNumber" name="phoneNumber" type="tel" style='width: 224px;'required> -->
           {{ form.phoneNumber|addclass:'moreInput' }}
-          <span class="red-star">&#x2605;</span>
+          <span class="red-star">*</span>
         </label>
 
         </div>
 
       <div>
-        <label for="resume"><span class="red-star">&#x2605;</span> Link to Resume:<br>
+        <label for="resume">Link to Resume:<br>
           {{form.Resume}}
+          <span class="red-star">*</span>
         </label>
+        <p>Note: If you are sharing your resume via Google Drive, please make sure the link veiwable to anyone. </p>
       </div>
 
         <span><button id='prevSection2'type="button" class="btn btn-warning">Previous</button></span>
@@ -264,7 +276,7 @@
         <img src="{% static 'images/logo.png' %}" id="icon">
         <h1>Apply to Cutie Hack</h1>
         <p class="description">Additional Information
-        <p class="description">(<span class="red-star">&#x2605;</span> denotes required field)</p>
+        <p class="description">( <span class="red-star">*</span> denotes required field)</p>
       </div>
 
         <p>All Cutie Hack participants must adhere to the MLH Code of Conduct at all times during the event. By checking the following box, you hereby agree to follow all rules and regulations outlined in the offical <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct.</a></p>
@@ -276,7 +288,7 @@
           {{form.conductBox}}
           <span class="checkmark"></span> 
         
-          <span class="red-star">&#x2605;</span>
+          <span class="red-star">*</span>
           <span class="checkboxText">
             I have read and agree to the MLH Code of Conduct.
           </span>
@@ -290,7 +302,7 @@
         <span class="checkmark"></span> 
 
        
-        <span class="red-star">&#x2605;</span>
+        <span class="red-star">*</span>
         I authorize you to share my application/registration information for event adminstration, ranking, MLH adminstration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the MLH Privacy Policy. I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy.
       </label>
 

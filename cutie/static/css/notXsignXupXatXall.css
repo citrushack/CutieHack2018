@@ -1,0 +1,394 @@
+/* Everything */
+
+body {
+  background: url(../images/cityscape_repeating.png);
+}
+
+.ui.segment, .ui.segments .segment {
+  font-size: 1.2em;
+  background-color: #EEBD69;
+}
+
+.ui.segment {
+  border-radius: 30px;
+}
+
+.form {
+  padding: 10%;
+}
+
+h1 {
+  font-style: italic;
+  font-weight: bold;
+}
+
+label {
+  font-weight: normal;
+}
+
+/* Formtop */
+
+.topDescrip {
+  margin-bottom: 4%;
+}
+
+#icon {
+  float: left;
+  margin-right: 2%;
+  height: 100px;
+  width: 100px;
+}
+
+.description {
+  font-size: 0.7em;
+  margin: auto;
+}
+
+
+/* Input Boxes */
+
+.input1Form1 {
+  width: 720px;
+  height: 40px;
+}
+
+.input2Form1 {
+  width: 428px;
+  height: 40px;
+}
+
+.input1Form2 {
+  width: 717px;
+  height: 40px;
+}
+
+.input2Form2 {
+  width: 397px;
+  height: 40px;
+}
+
+.input3Form2 {
+  width: 270px;
+  height: 40px;
+}
+
+.input1Form3 {
+  width: 700px;
+  height: 40px;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input{
+  width: 400px;
+}
+.myfieldclass{
+  width: 826px;
+}    
+.moreInput{
+  width: 224px;
+}
+.moreInput2{
+  width: 627px;
+}    
+/* For resume part */
+input[type=file] {
+  display: inline-block;
+  width: 220px;
+}
+
+
+@media (min-device-width:350px) and (max-width:400px) {
+  input[type=email]{
+    width: 225px;
+  }
+  input[type=password]{
+    width: 225px;
+  }  
+  input[type=school]{
+    width: 225px;
+  }
+  input[type=major]{
+    width: 225px;
+  }
+  input[type=allergies]{ 
+	width: 225px;
+  }
+  input[type=memes]{ 
+	width: 225px;
+  }
+  input[type=text]{
+    width: 225px;
+  }
+  input[type=url]{
+    width: 225px;
+  }  
+  #icon{
+    height:80px;
+    width:80px;
+  }
+  #nextSection1{
+    margin-left:-100px;
+  }
+  .myfieldclass{
+    width:225px;
+  }    
+}
+@media (min-width:401px) and (max-width:599px) {
+  input[type="firstname"]{
+    width: 250px;
+  }
+  input[type=email] {
+    width: 250px;
+  }
+  input[type=password] {
+    width: 250px;
+  }
+  input[type=school] {
+    width: 250px;
+  }
+  input[type=major] {
+    width: 250px;
+  }
+  input[type=allergies] {
+    width: 250px;
+  }
+  input[type=memes] {
+    width: 250px;
+  }
+  input[type=text] {
+    width: 250px;
+  }
+  input[type=url]{
+    width: 250px;
+  }    
+  #nextSection1{
+    margin-left:-100px;
+  }
+  .myfieldclass{
+    width: 250px;
+  }  
+}
+@media (min-width:600px) and (max-width:767px) {
+  .b {
+    width: 400px;
+  }
+  input[type=email] {
+    width: 400px;
+  }
+  input[type=password] {
+    width: 400px;
+  }
+  input[type=school] {
+    width: 400px;
+  }
+  input[type=major] {
+    width: 400px;
+  }
+  input[type=allergies] {
+    width: 400px;
+  }
+  input[type=memes] {
+    width: 400px;
+  }
+  input[type=text] {
+    width: 400px;
+  }    
+  input[type=url]{
+    width: 400px;
+  }  
+  #nextSection1{
+    margin-left:-100px;
+  }
+  .myfieldclass{
+    width: 400px;
+  }    
+}
+
+@media (min-width:768px) and (max-width:950px) {
+  .b {
+    width: 500px;
+  }
+  input[type=email] {
+    width: 500px;
+  }
+  input[type=password] {
+    width: 500px;
+  }
+  input[type=school] {
+    width: 500px;
+  }
+  input[type=major] {
+    width: 500px;
+  }
+  input[type=allergies] {
+    width: 500px;
+  }
+  input[type=memes] {
+    width: 500px;
+  }
+  input[type=text] {
+    width: 500px;
+  }
+  input[type=url]{ 
+    width: 500px;
+  }  
+  #nextSection1{
+    margin-left:-100px;
+  }
+  .myfieldclass {
+    width: 500px;
+  }    
+}
+@media (min-width:951px) and (max-width:1250px) {
+  input[type=firstname] {
+    width: 550px;
+  }
+  input[type=email] {
+    width: 550px;
+  }
+  input[type=password] {
+    width: 550px;
+  }
+  input[type=school] {
+    width: 550px;
+  }
+  input[type=major] {
+    width: 550px;
+  }
+  input[type=allergies] {
+    width: 550px;
+  }
+  input[type=memes] {
+    width: 550px;
+  }
+  input[type=text] {
+    width: 550px;
+  }
+  input[type=url] {
+    width: 500px;
+  }    
+  #nextSection1{
+    margin-left:-200px;
+  }
+  .myfieldclass{
+    width: 500px;
+  }    
+}
+
+
+#resumemargin {
+  margin-right: 10px;
+}
+
+
+/* Button */
+
+.previous {
+  margin-bottom: 2%;
+  background-color: blue;
+}
+
+#next { /* for the button in the application pt 1*/
+  margin-left: 94%;
+}
+
+.next {
+  float:right;
+}
+
+.red-star {
+    color: red;
+}
+select {
+
+  background-color: white;
+  font: inherit;
+  padding: 0.0em 3.5em 0.1em 1em;
+  margin: 0;      
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+ 
+  background-image:
+    linear-gradient(45deg, transparent 50%, white 50%),
+    linear-gradient(135deg, white 50%, transparent 50%),
+    linear-gradient(to right, #D3D3D3, #D3D3D3);
+  background-position:
+    calc(100% - 20px) calc(1em - 5px),
+    calc(100% - 15px) calc(1em - 5px),
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    2.5em 2.5em;
+  background-repeat: no-repeat;
+}
+.container2 {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.container2 input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+}
+/* On mouse-over, add a grey background color */
+.container2:hover input ~ .checkmark {
+    background-color: #FF8C00;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container2 input:checked ~ .checkmark {
+    background-color: #FF8C00;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container2 input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container2 .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+
+
