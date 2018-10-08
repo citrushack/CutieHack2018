@@ -100,8 +100,7 @@
 	
 	<!-- BEGIN CONTENT ON PAGE -->
 	<div id="home" class="content">
-		<!-- MainHero -->
-		{% load static %}
+		{% load static %}<!-- MainHero -->
 		<img src="{% static 'images/cityscape.png' %}" alt="Hero Image" id="heroLG" class="hero" data-aos="fade-up"/>
 		{% load static %}
 		<img src="{% static 'images/cityscape_mobile.png' %}" alt="Hero Image" id="heroSM" class="hero" data-aos="fade-up"/>
@@ -116,16 +115,9 @@
 				<a href="{% url 'signup'%}"><button type="button" class="btn btn-dark apply-btn">Apply</button></a>
 				{% endif %}	
 			</div>	
-		</div>
-
-		<!--  END MainHero -->
-
-
-		<!--Begin Main Info Sections-->
-		<div id="aboutUs">
-
-			<!-- Begin What is -->
-			<div id="whatis">
+		</div><!--  END MainHero -->
+		<div id="aboutUs"><!--Begin Main Info Sections-->
+			<div id="whatis"><!-- Begin What is -->
 				<div id="whatisContent" data-aos="fade-down">
 					<div class='container'>
 						<div class="row">
@@ -133,7 +125,6 @@
 								{% load static %}
 	         					<img src="{% static 'images/cody.png' %}" alt="Cody" class="img-fluid" id="computerCody"/>
 							</div>
-
 							<div class="col-12 col-sm-12 col-lg-6 col-xl-6">
 								<h1 class="sectionHeader" style="color: #FFFFFF;">What is Cutie Hack?</h1>
 								<p class="infoText" style="color: #FFFFFF;">Cutie Hack is a beginner-friendly, 12-hour hackathon. Hosted at UC Riverside, Cutie Hack is designed to help new hackers get used to the time crunch of a hackathon environment.</p> 
@@ -142,12 +133,8 @@
 						</div>
 					</div>	
 				</div>
-			</div>	
-			<!-- End What is -->
-
-
-			<!--About Us-->
-			<div id="about">
+			</div><!-- End What is -->
+			<div id="about"><!--About Us-->
 				<div id="aboutContent" data-aos="fade-down">
 					<div class="container">
 						<div class="row">
@@ -163,60 +150,48 @@
 						</div>	
 					</div>
 				</div>	
-			</div>
-			<!-- END About Us -->
-		</div>
-		<!-- END What is Cutie Hack & About Us -->
-
-		<!-- FAQ Section -->
-		
-		<div id="faq">
+			</div><!-- END About Us -->
+		</div><!-- END What is Cutie Hack & About Us -->
+		<div id="faq"><!-- FAQ Section -->
 			<div class="container">
 				<h1 id="faqHeader" class="text-center sectionHeader">FAQ</h1>
 
 				<div class="row">
-
-					<div class="col questionBorder"> 
+					<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 questionBorder"> 
 					  	<h2 class="faqQuestion darkText">Who can attend?</h2>
 					   	<p class="faqAnsw infoText">We welcome all undergraduate university students, from any major! If you have graduated within the past year, you are also welcome to attend.</p>
 					 </div>  
-					<div class="col questionBorder"> 
+					<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 questionBorder"> 
 						<h2 class="faqQuestion darkText">Is Cutie Hack free?</h2>
 				    	<p class="faqAnsw infoText">Absolutely! There's no cost to attend, but do bring your own hacking device.</p>
 					</div>
-
-					  <!-- bootstrap shortcut for creating new row -->
-					<div class="w-100"></div>  
-
-					<div class="col questionBorder"> 
+				</div>
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 questionBorder"> 
 						<h2 class="faqQuestion darkText">Is there free food?</h2>
 					  	<p class="faqAnsw infoText">Yes! Meals, refreshments, and snacks will be provided thoughout the event.</p>
 					</div>  
-					<div class="col questionBorder"> 
+					<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 questionBorder"> 
 					  	<h2 class="faqQuestion darkText">What should I bring?</h2>
 						<div class="faqAnsw infoText">Student IDs are required. Consider bringing a hacking machine, headphones, and a pillow!</div>
 					</div>
-
-					<!-- bootstrap shortcut for creating new row -->
-					<div class="w-100"></div>  
-
-					<div class="col questionBorder"> 
+ 				</div>
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 questionBorder"> 
 					  	<h2 class="faqQuestion darkText">Do I need a team?</h2>
 					  	<p class="faqAnsw infoText">Teams are not required, but are recommended. Membership is capped at 4 members. You are welcome to form teams before the hacking begins!</p>
 					</div>  
-					<div class="col questionBorder"> 
+					<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 questionBorder"> 
 					  	<h2 class="faqQuestion darkText">Am I allowed to prepare code before coming to the event?</h2>
 						<div class="faqAnsw infoText">All coding must be done during the given hacking period. You can, however, plan your project as much as you like before time starts!</div>
 					</div>
-					  
-					  <!-- bootstrap shortcut for creating new row -->
-					<div class="w-100"></div>  
-
-					<div class="col questionBorder"> 
+				</div>   
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 questionBorder"> 
 					  	<h2 class="faqQuestion darkText">Where will the event be held?</h2>
 					  	<p class="faqAnsw infoText">Cutie Hack will be held November 11, 2018 in Winston Chung Hall at UC Riverside.</p>
 					</div>
-					<div class="col questionBorder"> 
+					<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 questionBorder"> 
 					  	<h2 class="faqQuestion darkText">Any other questions?</h2>
 						<p class="faqAnsw infoText">Feel free to contact us through <a href="mailto:cutiehack@gmail.com">email!</a></p>
 					</div>
@@ -248,13 +223,8 @@
 							<a href="https://get.tech/"><img class="zoom" src="{% static 'images/companylogos/dotTech.png' %}" alt=".Tech Domains" id="dotTech"/></a>
 						</div>
 					</div>
-				</div>
-
-				<!-- End Sponsors -->
-
-				<!-- organizers -->
-				<h1  class="sectionHeader text-center pt-4 pb-2" id= "organizers">Organizers</h1>
-
+				</div><!-- End Sponsors -->				
+				<h1  class="sectionHeader text-center pt-4 pb-2" id= "organizers">Organizers</h1><!-- organizers -->
 				<div class = "row text-center">
 					<div class = "col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mediumSponsor">
 						<div class="img-responsive center-block">
@@ -269,15 +239,10 @@
 						</div>
 					</div>
 				</div>
-			</div>	
-			<!-- End Organizers -->
-		</div>
-		<!-- END Sponsors and organizers -->
-
-	</div>	
-
-	<!-- FOOTER -->
-	<div id="footer" class="darkDiv">
+			</div><!-- End Organizers -->	
+		</div><!-- END Sponsors and organizers -->
+	</div><!--  END MAIN CONTENT  -->	
+	<div id="footer" class="darkDiv"><!-- FOOTER -->
 		<p class="text-center lightText">
 			<a class="iconSize" href="https://www.facebook.com/cutiehack/"><i class="fa fa-facebook-square lightText"></i></a>
 		    <a class="iconSize" href="mailto:cutiehack@gmail.com"><i class="fa fa-envelope lightText"></i></a>
@@ -286,15 +251,12 @@
 		    <p class="infoText text-center">Made with <span class = "red" >&#9829;</span> in Riverside, CA</p>
 			<p class="infoText text-center">© 2018 Cutie Hack</p>
 		</p>
-	</div>
-	<!-- END FOOTER -->
-
+	</div><!-- END FOOTER -->
 </body>
-
-<script type="text/javascript">
-	AOS.init({
-		duration : 800,
-		once : true,
-	})
-</script>
+	<script type="text/javascript">
+		AOS.init({
+			duration : 800,
+			once : true,
+		})
+	</script>
 </html>
