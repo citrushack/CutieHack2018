@@ -4,6 +4,12 @@ body {
   background: url(../images/cityscape_repeating.png);
 }
 
+html, body {
+  margin: 0; 
+  height: 100%; 
+  overflow-x: hidden
+}
+
 .ui.segment, .ui.segments .segment {
   font-size: 1.2em;
   background-color: #EEBD69;
@@ -81,6 +87,18 @@ label {
   margin-bottom: 10px;
 }
 
+input{
+  width: 400px;
+}
+.myfieldclass{
+  width: 826px;
+}    
+.moreInput{
+  width: 224px;
+}
+.moreInput2{
+  width: 627px;
+}    
 /* For resume part */
 input[type=file] {
   display: inline-block;
@@ -88,14 +106,45 @@ input[type=file] {
 }
 
 
-@media (min-width:400px) {
-  input{
-    width: 4px;
+@media (min-device-width:350px) and (max-width:400px) {
+  input[type=email]{
+    width: 225px;
   }
+  input[type=password]{
+    width: 225px;
+  }  
+  input[type=school]{
+    width: 225px;
+  }
+  input[type=major]{
+    width: 225px;
+  }
+  input[type=allergies]{ 
+  width: 225px;
+  }
+  input[type=memes]{ 
+  width: 225px;
+  }
+  input[type=text]{
+    width: 225px;
+  }
+  input[type=url]{
+    width: 225px;
+  }  
+  #icon{
+    height:80px;
+    width:80px;
+  }
+  #nextSection1{
+    margin-left:-100px;
+  }
+  .myfieldclass{
+    width:225px;
+  }    
 }
 @media (min-width:401px) and (max-width:599px) {
   input[type="firstname"]{
-    width: 200px;
+    width: 250px;
   }
   input[type=email] {
     width: 250px;
@@ -115,9 +164,18 @@ input[type=file] {
   input[type=memes] {
     width: 250px;
   }
+  input[type=text] {
+    width: 250px;
+  }
+  input[type=url]{
+    width: 250px;
+  }    
   #nextSection1{
     margin-left:-100px;
   }
+  .myfieldclass{
+    width: 250px;
+  }  
 }
 @media (min-width:600px) and (max-width:767px) {
   .b {
@@ -141,9 +199,18 @@ input[type=file] {
   input[type=memes] {
     width: 400px;
   }
+  input[type=text] {
+    width: 400px;
+  }    
+  input[type=url]{
+    width: 400px;
+  }  
   #nextSection1{
     margin-left:-100px;
   }
+  .myfieldclass{
+    width: 400px;
+  }    
 }
 
 @media (min-width:768px) and (max-width:950px) {
@@ -168,13 +235,22 @@ input[type=file] {
   input[type=memes] {
     width: 500px;
   }
+  input[type=text] {
+    width: 500px;
+  }
+  input[type=url]{ 
+    width: 500px;
+  }  
   #nextSection1{
     margin-left:-100px;
   }
+  .myfieldclass {
+    width: 500px;
+  }    
 }
 @media (min-width:951px) and (max-width:1250px) {
   input[type=firstname] {
-    width: 50px;
+    width: 550px;
   }
   input[type=email] {
     width: 550px;
@@ -194,9 +270,18 @@ input[type=file] {
   input[type=memes] {
     width: 550px;
   }
+  input[type=text] {
+    width: 550px;
+  }
+  input[type=url] {
+    width: 500px;
+  }    
   #nextSection1{
     margin-left:-200px;
   }
+  .myfieldclass{
+    width: 500px;
+  }    
 }
 
 
@@ -309,19 +394,6 @@ select {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-input{
-  width: 400px;
-}
-.myfieldclass{
-  width: 826px;
-}
-.moreInput{
-  width: 224px;
-}
-.moreInput2{
-  width: 627px;
-}
-
 
 
 
