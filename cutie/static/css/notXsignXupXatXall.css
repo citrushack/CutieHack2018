@@ -4,6 +4,12 @@ body {
   background: url(../images/cityscape_repeating.png);
 }
 
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+}    
+
 .ui.segment, .ui.segments .segment {
   font-size: 1.2em;
   background-color: #EEBD69;
