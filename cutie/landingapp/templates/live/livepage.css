@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,400);
+/*@import url(https://fonts.googleapis.com/css?family=Roboto);*/
+
 body {
   text-align: center;
 }
@@ -20,7 +23,35 @@ body {
 
 #title-name {
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 13px;
+  color: rgb(243,135,9);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 96px;
+
+}
+
+#cntdwn {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 64px;
+  line-height: 1.2;
+}
+
+.btn-success {
+  background-color: rgb(243,135,9);
+  border-color: rgb(243,135,9); 
+  color: #28282A;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  margin: 15px 36px 15px 36px;
+}
+
+.btn-success:hover {
+  background-color: rgb(240,158,18);
+  border-color: rgb(240,158,18);
+  color: black;
 }
 
 .jumbotron {
@@ -31,8 +62,8 @@ body {
 
 #title-line {
   margin-bottom: 10px;
-  width: 50%;
-  border-top: 1px solid #a5a5a5;
+  width: 75%;
+  border-top: 2px solid #28282A;
 }
 
 /*All Sections*/
@@ -104,7 +135,7 @@ body {
 
 .navbar-default {
     background-color: white;
-    border-color: black;
+    border-color: #28282A;
 }
 /* Title */
 .navbar-default .navbar-brand {
