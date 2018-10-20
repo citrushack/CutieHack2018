@@ -193,4 +193,8 @@ body {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
     color: #333;
   }
+
+  .card {
+    margin-top: 10px;
+  }
 }
