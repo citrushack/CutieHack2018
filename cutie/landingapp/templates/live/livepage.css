@@ -170,3 +170,90 @@ body {
           color: #333;
     }
 }
+
+.darkDiv {
+  background: #28282A;
+  padding: 3%;
+}
+
+#footer {
+  padding-top: 1.5%;
+  padding-bottom: .5%;
+}
+
+
+
+.iconSize {
+  text-decoration:none;
+  color:#fff;
+  font-size: 175%;
+  margin: 2.5%;
+  margin-top: 1%;
+}
+
+.infoText{
+/*  font-family: 'Poppins' !important;"*/
+  font-weight: 400;
+  color: #fff;
+  line-height: 2;
+  font-size: 125%;
+}
+
+
+/*SponsorCSS*/
+.sectionHeader {
+  font-size:350% !important;
+  font-family: 'Poppins' !important;
+  font-weight: 500;
+  color: black;
+}
+
+#sponsors { 
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+#organizers {
+  padding-top: 5%;
+}
+
+.mediumSponsor{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: auto;    
+  display: block;
+}
+
+
+.img-fluid {
+  max-height: 100%;
+  width: auto;
+}
+
+#GitHub{
+  margin-top: 25px;
+  height:50px;
+  width:auto;
+}
+
+#GoGoSqueez{
+  height:100px;
+  width:auto;
+}
+
+#dotTech{
+  height:100px;
+  width:auto;
+}
+
+#ACM {
+  height:170px;
+  width:auto;
+}
+
+#IEEE{
+  height: 130px;
+  width:auto;
+}
+
+/*SponsorCSS End*/
