@@ -117,6 +117,10 @@ body {
     color: #5E5E5E;
 }
 /* Link */
+.navbar-default {
+    border-color: transparent;
+}
+
 .navbar-default .navbar-nav > li > a {
     font-family: 'Roboto';
     font-size: 18px;
