@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
 body {
   text-align: center;
 }
@@ -116,11 +118,14 @@ body {
 }
 /* Link */
 .navbar-default .navbar-nav > li > a {
-    color: #777; /*color of nav links*/
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: bold;
+    color: black; /*color of nav links*/
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    color: black; /*color change when hovering nav link*/
+    color: #777; /*color change when hovering nav link*/
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
