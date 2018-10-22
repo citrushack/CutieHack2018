@@ -212,9 +212,10 @@ body {
 /*SponsorCSS*/
 .sectionHeader {
   font-size:350% !important;
-  font-family: 'Poppins' !important;
+  font-family: Roboto;
   font-weight: 500;
   color: black;
+  font-style: italic;
 }
 
 #sponsors { 
