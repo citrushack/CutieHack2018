@@ -86,6 +86,17 @@ body {
   margin: 5% 20%;
 }
 
+/*  Map */
+#map {
+  background-color: #28282a;
+}
+
+#map > .other-headings {
+  color: #eeeeee;
+  font-style: italic;
+  font-weight: bold;
+}
+
 /* Resources */
 
 #resources {
@@ -94,6 +105,8 @@ body {
 
 #resources > .other-headings {
   color: #28282a;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .panel-default>.panel-heading {
@@ -168,7 +181,9 @@ body {
 }
 
 #speakers > .other-headings {
-  color: white;
+  color: #eeeeee;
+  font-style: italic;
+  font-weight: bold;
 }
 .card {
   margin-left: auto;
