@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cutie Hack 2018</title>
+    <link rel="stylesheet" type="text/css" href="livepage.css" />
+    <!-- include boostrap -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body>
+
+<!--Title-->
+<div>
+  <h1 id="cutie">Cutie Hack 2018</h1>
+  <p>Coming November 10, 2018!</p>
+</div>
+
+<!-- <div class="container">
+  <div class="jumbotron">
+    <center><h1>Cutie Hack 2018</h1></center>
+    <center><p>Coming November 10, 2018!</p></center>
+  </div>
+</div> -->
+
+  <!-- <h2>36 Hours 0 Min 0 Sec</h2>  -->
+  <!-- need to put countdown using JS -->
+  <!-- might be better to use days as well -->
+  <p id="cntdwn"></p>
+  <script>
+    var countDownDate = new Date("Nov 10, 2018  09:00:00").getTime();
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("cntdwn").innerHTML = days + " Days, " + hours + " Hours, " + minutes + " Minutes, and " + seconds + " Seconds ";
+
+      if(distance < 0)
+      {
+        clearInterval(x);
+        document.getElementById("cntdwn").innerHTML = "Event now in session!";
+      }     
+    }, 1000);
+  </script>
+  <hr>
+<!-- </div> -->
+
+<!--Links -->
+<!-- fixed alignment -->
+<p style="text-align:left">
+  <div>
+    <!-- need to make links into buttons -->
+    <form method="get" action="http://live.citrushack.com/assets/maps.pdf">
+        <!-- <button type="submit">Map</button> -->
+        <button class="btn btn-success btn-xs">Map</button>
+    </form>
+    <form method="get" action="https://citrushack2018.devpost.com/">
+        <!-- <button type="submit">Devpost</button> -->
+        <button class="btn btn-success btn-xs">Devpost</button>
+    </form>
+  </div>
+  <span style="float:right;">
+    <div>
+      <form method="get" action="https://www.facebook.com/CitrusHack/">
+          <!-- <button type="submit">Facebook</button> -->
+          <button class="btn btn-success btn-xs">Facebook</button>
+      </form>
+      <form method="get" action="https://twitter.com/citrushack?lang=en">
+          <!-- <button type="submit">Twitter</button> -->
+          <button class="btn btn-success btn-xs">Twitter</button>
+      </form>
+      <form method="get" action="https://citrus-hack-2018.slack.com/join/shared_invite/enQtMzQ1NjExOTAxMTY5LTBiMjBhMTdiMjMyZDEwOWNmZDgwZjc1ZDI2NmU1ZTBiYzgzOGI0NmIxOTQwMjZhZGE5MmMxNTYwMjdhZjRjNzg">
+          <!-- <button type="submit">Slack</button> -->
+          <button class="btn btn-success btn-xs">Slack</button>
+      </form>
+    </div>
+  </span>
+</p>
+
+
+<br>
+<!--Schedule -->
+
+<div>
+<table>
+  <tr>
+    <td class="day">Saturday</td>
+    <td class="day" id="sunday">Sunday</td>
+  </tr>
+</table>
+
+  <!-- <h3>Saturday</h3>
+  <hr>
+  Insert event names and times here
+
+  <h3>Sunday</h3>
+  <hr>
+  Insert event names and times here-->
+
+</div>
+
+<!-- Speakers -->
+<div>
+  <h2>Speakers</h2>
+  <hr>
+  <!--Insert speaker name and info here-->
+</div>
+
+<!-- Resources -->
+<h2>Resources</h2>
+<hr>
+<!--Insert hacker resources stuff here-->
+
+<!--Sponsors-->
+<h1>2019 Sponsors</h1>
+<hr>
+<!--Insert sponsor logos here-->
+
+<h1>Organizers</h1>
+<hr>
+<!--Insert sponsor logos here-->
+
+  </body>
+</html>

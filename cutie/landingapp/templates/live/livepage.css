@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700, 100, 400');
+
+
 body {
   text-align: center;
   overflow-x: hidden;
@@ -21,7 +24,35 @@ body {
 
 #title-name {
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 13px;
+  color: rgb(243,135,9);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 96px;
+
+}
+
+#cntdwn {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 64px;
+  line-height: 1.2;
+}
+
+.btn-success {
+  background-color: rgb(243,135,9);
+  border-color: rgb(243,135,9); 
+  color: #28282A;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  margin: 15px 36px 15px 36px;
+}
+
+.btn-success:hover {
+  background-color: rgb(240,158,18);
+  border-color: rgb(240,158,18);
+  color: black;
 }
 
 .jumbotron {
@@ -32,8 +63,8 @@ body {
 
 #title-line {
   margin-bottom: 10px;
-  width: 50%;
-  border-top: 1px solid #a5a5a5;
+  width: 75%;
+  border-top: 2px solid #28282A;
 }
 
 /*All Sections*/
@@ -114,8 +145,8 @@ body {
 /* navbar */
 
 .navbar-default {
-  background-color: white;
-  border-color: black;
+    background-color: white;
+    border-color: #28282A;
 }
 /* Title */
 .navbar-default .navbar-brand {
@@ -126,12 +157,20 @@ body {
   color: #5e5e5e;
 }
 /* Link */
-.navbar-default .navbar-nav > li > a {
-  color: #777; /*color of nav links*/
+.navbar-default {
+    border-color: transparent;
 }
+
+.navbar-default .navbar-nav > li > a {
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: bold;
+    color: black; /*color of nav links*/
+}
+
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: black; /*color change when hovering nav link*/
+    color: #777; /*color change when hovering nav link*/
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
@@ -205,3 +244,91 @@ body {
     margin-top: 10px;
   }
 }
+
+.darkDiv {
+  background: #28282A;
+  padding: 3%;
+}
+
+#footer {
+  padding-top: 1.5%;
+  padding-bottom: .5%;
+}
+
+
+
+.iconSize {
+  text-decoration:none;
+  color:#fff;
+  font-size: 175%;
+  margin: 2.5%;
+  margin-top: 1%;
+}
+
+.infoText{
+/*  font-family: 'Poppins' !important;"*/
+  font-weight: 400;
+  color: #fff;
+  line-height: 2;
+  font-size: 125%;
+}
+
+
+/*SponsorCSS*/
+.sectionHeader {
+  font-size:350% !important;
+  font-family: Roboto;
+  font-weight: 500;
+  color: black;
+  font-style: italic;
+}
+
+#sponsors { 
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+#organizers {
+  padding-top: 5%;
+}
+
+.mediumSponsor{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: auto;    
+  display: block;
+}
+
+
+.img-fluid {
+  max-height: 100%;
+  width: auto;
+}
+
+#GitHub{
+  margin-top: 25px;
+  height:50px;
+  width:auto;
+}
+
+#GoGoSqueez{
+  height:100px;
+  width:auto;
+}
+
+#dotTech{
+  height:100px;
+  width:auto;
+}
+
+#ACM {
+  height:170px;
+  width:auto;
+}
+
+#IEEE{
+  height: 130px;
+  width:auto;
+}
+
+/*SponsorCSS End*/
