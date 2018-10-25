@@ -20,12 +20,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# We have the secret key if you need it for the master branch! If you need it ask Ji Hwan or Aditya
+
+with open('/home/CitrusHack/CutieHack2018/secret_key.txt') as f:
+    SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+
+
+ALLOWED_HOSTS = ['localhost','www.cutiehack.io','citrushack.pythonanywhere.com'] #add 'cutiehack2018-jkim393.c9users.io' for c9 usage
+
 
 
 # Application definition
@@ -61,6 +66,7 @@ TEMPLATES = [
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
+                'django.template.context_processors.media',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
@@ -81,6 +87,7 @@ DATABASES = {
     }
 }
 
+AUTH_USER_MODEL = 'landingapp.MyUser'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -123,5 +130,16 @@ STATICFILES_DIRS = [
 
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+STATIC_ROOT = '/home/CitrusHack/CutieHack2018/cutie/assets/'
+
+
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
-LOGIN_REDIRECT_URL = '/'
+
+LOGOUT_REDIRECT_URL = 'index'
+LOGIN_REDIRECT_URL = 'profile'
+
+
+
