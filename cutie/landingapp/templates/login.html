@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127067482-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-127067482-1');
+    </script>
+
+
+	<title>Cutie Hack Login</title>
+ 	<!-- Favicon -->
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{%  static 'images/favicon.png' %}">
+
+		<!-- Bootstrap -->
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/segment.min.css">
+	<link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+</head>
+
+{% load static %}
+<body id="background" style="background-image: url({% static 'images/cityscape_repeating.png' %})">
+<!--{% if next %}-->
+<!--    {% if user.is_authenticated %}-->
+<!--    <p>Your account doesn't have access to this page. To proceed,-->
+<!--    please login with an account that has access.</p>-->
+<!--    {% else %}-->
+<!--    <p>Please login to see this page.</p>-->
+<!--    {% endif %}-->
+<!--{% endif %}-->
+
+<!-- Nav Bar  -->
+	<ul class="nav justify-content-end">
+		<li class= "nav-item mr-3">
+			<a class="nav-link" id="home" href="{% url 'index' %}">HOME</a>
+		</li>
+    </ul>
+
+<!-- Login Card -->
+
+	<!-- <div id="card" class="text-center"> -->
+	<div class="container">
+		<div class="row">
+			<!-- <div class="col-sm-12 text-center" id="card"> -->
+			<div class="col-sm-12">
+				<div class="ui raised segment text-center">
+
+					{% load static %}
+					<img src="{% static 'images/logo.png' %}"; id="logo">
+					<h1 id="title"><strong>CUTIE HACK</strong></h1>
+
+					<form method="post" action="{% url 'login' %}">
+
+						<div class="form-group">
+							<div id="username">
+								{% csrf_token %}
+								<td>{{ form.username.label_tag }}</td> <!-- you can comment the form.username.label_tag out to see the difference-->
+								<td>{{ form.username }}</td>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div id="password">
+								<td>{{ form.password.label_tag }}</td>
+								<td>{{ form.password }}</td>
+							</div>
+						</div>
+
+						
+						{% if form.errors %}
+							<p id="error" style="margin-top: 10%">Your username and password didn't match. Please try again.</p><br>
+						{% endif %}
+						<input type="submit" value="Log In" id="button" class="btn btn-warning"/>
+						
+						</form>
+			<!-- <p id="forgot"><a href="{% url 'index' %}">Forgot password?</a></p> -->
+			<p id="apply"style="margin-top: 10%"><a href="{% url 'signup' %}">Haven't applied?</a></p>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- </div>
+	 </div> -->
+
+							<!-- <form method="post" action="{% url 'login' %}">
+								<div class="row">
+									<div id="inputs">
+										<div class="col-sm-12">
+											<div id="username">
+												{% csrf_token %} -->
+												<!-- <td>{{ form.username.label_tag }}</td>  -->
+												<!-- you can comment the form.username.label_tag out to see the difference-->
+												<!-- <td>{{ form.username }}</td>
+											</div>
+										</div> -->
+
+										<!-- <div class="col-sm-12">
+											<div id="password">
+												<td>{{ form.password.label_tag }}</td>
+												<td>{{ form.password }}</td>
+											</div>
+										</div>
+									</div> -->
+
+								<!-- </div> -->
+
+								<!-- {% if form.errors %}
+									<p id="error">Your username and password didn't match. Please try again.</p>
+								{% endif %} -->
+
+								<!-- <div class="row">
+									<div class="col-sm-12">
+										<input type="submit" value="Log In" id="button" class="btn btn-warning"/>
+									</div>
+								</div> -->
+
+								<!-- <div class="row">
+									<div class="col-sm-12" id="forgot">
+										<p><a href="{% url 'index' %}">Forgot password?</a></p>
+									</div>
+								</div>
+
+							</form>
+
+					</div>
+			</div>
+		</div>
+	</div> -->
+
+		<!-- <p><a href="{% url 'index' %}">Forgot password? "not working; redirects to home"</a></p> -->
+		<!--<form style="display: inline-block">-->
+			<!--<input type="text" name="email" placeholder="email@example.com" class="textField">-->
+			<!--<input type="password" name="password" placeholder="password" class="textField">-->
+			<!--<br><br>-->
+			<!---->
+		<!--</form>	-->
+
+	<!-- </div> -->
+
+</body>
+
+</html>
+<!-- actual form part -->
+
+<!-- {% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+{% if next %}
+    {% if user.is_authenticated %}
+    <p>Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.</p>
+    {% else %}
+    <p>Please login to see this page.</p>
+    {% endif %}
+{% endif %}
+
+<form method="post" action="{% url 'login' %}">
+{% csrf_token %}
+
+<div>
+  <td>{{ form.username.label_tag }}</td>
+  <td>{{ form.username }}</td>
+</div>
+<div>
+  <td>{{ form.password.label_tag }}</td>
+  <td>{{ form.password }}</td>
+</div>
+
+<div>
+  <input type="submit" value="login" />
+  <input type="hidden" name="next" value="{{ next }}" />
+</div>
+</form>
+
+{# Assumes you setup the password_reset view in your URLconf #}
+ -->

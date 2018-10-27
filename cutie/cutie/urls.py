@@ -22,11 +22,11 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('landingapp.urls')), #cutiehack.com will take it to the landingapp's urls where all the view is: check out landingapp's urls.py
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 #for static files
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 #Add Django site authentication urls (for login, logout, password management)
-urlpatterns += [
-    path('accounts/', include('django.contrib.auth.urls')),
-]
+# urlpatterns += [
+#     path('accounts/', include('django.contrib.auth.urls')),
+# ]

@@ -1,6 +1,8 @@
 # DS_STORE
 .DS_Store
 
+Thumbs.db
+
 # gitignore below is from https://github.com/github/gitignore/blob/master/Python.gitignore
 
 # Byte-compiled / optimized / DLL files

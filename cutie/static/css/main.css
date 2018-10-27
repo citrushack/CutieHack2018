@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600');
+
+#sticky-nav {
+  z-index: 9 !important;
+  background-image: linear-gradient(#28282A,#34343B,#28282A) !important;
+}
+
+@media (min-width: 801px){
+  #sticky-nav {
+    padding-right: 3rem !important;
+  }  
+}
+
+#collapse-button {
+  color:#ffffff;
+}
+
+.nav-link{
+  color:white;
+  text-decoration:none;
+}
+
+.nav-link>a:hover{
+  text-decoration:none;
+}
+
+a:hover {
+  text-decoration:none !important;
+}
+
+.nav-link:hover{
+  transition:1000ms;
+  color:grey;
+  text-decoration:none !important;
+}
+
+#navbarDropdownMenuLink{
+  color:white;
+}
+
+#navbarDropdownMenuLink:hover{
+  text-decoration:none !important;
+  transition:1000ms;
+  color:grey;
+}
+
+.active {
+  background-image: radial-gradient(#3b3b3d,#28282A);
+}
+
+.active{
+  color:orange;
+}
+
+
+@media (max-width: 800px){
+  .active {
+    background: #28282A;
+  }
+
+  .nav-link{
+    display: block;
+    width:91vw;
+  }
+}
+
+#CutieHackTitle {
+  font-size: 700%;
+  font-family:'Poppins';
+  font-weight: 600;
+  letter-spacing: 7px;
+  text-shadow: 0 10px darkslategray;
+}
+
+#eventDetails {
+  font-size: 200%;
+  font-family:'Poppins';
+  font-weight: 500;
+}
+
+#MainHeroText{
+  text-align:center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 75%;
+  height: 250px;
+  color:#FFFFFF;
+  /*font-style:italic;*/
+  text-shadow: 0 3px black;
+}
+
+@media (max-width: 800px) {
+  #CutieHackTitle{
+    font-size:300%;
+  }
+
+  #eventDetails {
+  font-size: 125%;
+  font-family:'Poppins';
+  font-weight: 500;
+  }
+}
+
+#headerTextBreak {
+  width: 33%;
+  display: block;
+  margin: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 2px solid #FFFFFF;
+}
+
+#banner {
+  background: linear-gradient(180deg, rgba(243,135,9,1) 85%, rgba(89,110,159,1) 95%); 
+  height: 140vh;
+  padding: 20%;
+  z-index: 4;
+}
+
+.hero {
+  position:absolute;
+  top:0;
+  min-width: 100%;
+  height: 140%;
+}
+
+.questionBorder {
+  padding-top: 5%;
+}
+
+.faqQuestion {
+  text-align: left;
+  font-weight: 600;
+}
+
+.faqAnsw {
+  text-align: left;
+}
+
+@media (max-width: 800px) {
+  #heroLG {
+    display: none;
+  }
+    .hero {
+    position:absolute;
+    top:0;
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media (min-width: 801px) {
+  #heroSM {
+    display: none;
+  }
+}
+
+#whatis{
+  padding:5%;
+  height:auto;
+  width:100vw;
+  background: #596e9f;
+  z-index: 0;
+ } 
+
+#computerCody {
+  height: 500px;
+  width: auto;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+@media (max-width: 750px) {
+  #computerCody{
+    height:300px;
+    width:auto;
+  }
+}
+
+#billboard {
+  height:500px;
+  width: auto;
+}
+
+.sectionHeader {
+  font-size:350% !important;
+  font-family: 'Poppins' !important;
+  font-weight: 500;
+  color: #fff;
+}
+
+.infoText{
+  font-family: 'Poppins' !important;
+  font-weight: 400;
+  color: #fff;
+  line-height: 2;
+  font-size: 125%;
+}
+
+#about{
+  padding:8%;
+  background: linear-gradient(180deg, rgba(89,110,159,1) 5%, rgba(240,158,18,1) 10%); 
+}
+
+#aboutText {
+  padding-left:10%;
+}
+
+.row {
+  width: 100%;
+}
+
+.content{
+  z-index:1;
+}
+
+/** Responsive Images **/
+.ml-auto, .mx-auto {
+  margin-left: auto!important;
+}
+.mr-auto, .mx-auto {
+  margin-right: auto!important;
+}
+
+.img-fluid {
+  max-height: 100%;
+  width: auto;
+}
+
+.apply-btn {
+  font-size: 200%;
+  padding: 0 5%;
+  border-radius: 10px;
+  background-color: #596e9f;
+  text-transform: uppercase;
+  font-family: 'Poppins';
+  letter-spacing: 1px;
+}
+
+.contact-btn-spacing {
+  margin: 2%;
+  background: #EEEEEE;
+}
+
+.lightColor {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.darkDiv {
+  background: #28282A;
+  padding: 3%;
+}
+
+.darkText {
+  color: #EEEEEE;
+}
+
+.sectionHeader {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  font-size: 400%;
+}
+
+
+#faq {
+  background-image: linear-gradient(#F38709,#dd7a08);
+  background: linear-gradient(180deg, rgba(240,158,18,1) 5%, rgba(243, 135, 9, 1) 10%); 
+  text-align: center;
+  padding:5%;
+}
+
+#sponsors {
+  background: linear-gradient(180deg,rgba(243, 135, 9, 1) 5%, rgba(240,158,18,1) 10%); 
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.zoom {
+  transition: 1s;
+}
+
+.zoom:hover {
+  transform: scale(1.08);
+}
+
+.bigSponsor{
+  padding: 25px;
+}
+
+.mediumSponsor{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: auto;    
+  display: block;
+}
+
+#GitHub{
+  margin-top: 25px;
+  height:50px;
+  width:auto;
+}
+
+#GoGoSqueez{
+  height:100px;
+  width:auto;
+}
+
+#dotTech{
+  height:100px;
+  width:auto;
+}
+
+#ACM {
+  height:170px;
+  width:auto;
+}
+
+#IEEE{
+  height: 130px;
+  width:auto;
+}
+
+@media (max-width: 800px) {
+  #GitHub{
+    height:60px;
+    width:auto;
+  }
+
+  #GoGoSqueez{
+    height:100px;
+    width:auto;
+  }
+
+  #ACM {
+    height:130px;
+    width:auto;
+  }
+
+  #IEEE{
+    height: 80px;
+    width:auto;
+  }
+}
+
+.smallSponsor{
+  padding:10px;
+}
+
+#footer {
+  padding-top: 1.5%;
+  padding-bottom: .5%;
+}
+
+.iconSize {
+  text-decoration:none;
+  color:#fff;
+  font-size: 175%;
+  margin: 2.5%;
+  margin-top: 1%;
+}
+
+/**Transition Colors for Social Media links**/
+.fa-facebook-square:hover{
+  text-decoration:none;
+  color:#43609C;
+  -webkit-transition: color 2s ease-out;
+  -moz-transition: color 2s ease-out;
+  -o-transition: color 2s ease-out;
+  transition: color 2s ease-out;
+}
+
+.fa-instagram:hover{
+  text-decoration:none;
+  color:#cd486b;
+  -webkit-transition: color 1s ease-out;
+  -moz-transition: color 1s ease-out;
+  -o-transition: color 1s ease-out;
+  transition: color 1s ease-out;
+}
+  
+.fa-twitter-square:hover{
+  text-decoration:none;
+  color:#6CADDE;
+  -webkit-transition: color 1s ease-out;
+  -moz-transition: color 1s ease-out;
+  -o-transition: color 1s ease-out;
+  transition: color 1s ease-out;
+}
+
+.fa-envelope:hover{
+  text-decoration:none;
+  color:#fbad50;
+  -webkit-transition: color 1s ease-out;
+  -moz-transition: color 1s ease-out;
+  -o-transition: color 1s ease-out;
+  transition: color 1s ease-out;
+}
+/**With Heart**/
+.red{
+  color:white;
+}
+.red:hover{
+  color:#cd486b;
+  -webkit-transition: color 1s ease-out;
+  -moz-transition: color 1s ease-out;
+  -o-transition: color 1s ease-out;
+  transition: color 1s ease-out;
+}

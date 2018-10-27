@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700, 100, 400');
+
+
+body {
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Nav Bar */
+
+/*.navbar-default {
+  background: transparent;
+  border-color: transparent;
+}
+*/
+
+/* For active nav link */
+
+.active {
+  color: #f09e12 !important;
+}
+
+/* Title */
+
+#title-name {
+  text-transform: uppercase;
+  letter-spacing: 13px;
+  color: rgb(243,135,9);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 96px;
+
+}
+
+#cntdwn {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 64px;
+  line-height: 1.2;
+}
+
+.btn-success {
+  background-color: rgb(243,135,9);
+  border-color: rgb(243,135,9); 
+  color: #28282A;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  margin: 15px 36px 15px 36px;
+}
+
+.btn-success:hover {
+  background-color: rgb(240,158,18);
+  border-color: rgb(240,158,18);
+  color: black;
+}
+
+.jumbotron {
+  background: transparent;
+  margin-bottom: -20px;
+  padding-top: 6%;
+}
+
+#title-line {
+  margin-bottom: 10px;
+  width: 75%;
+  border-top: 2px solid #28282A;
+}
+
+/*All Sections*/
+
+.container {
+  /* makes everything bigger */
+  width: 100%;
+}
+
+.all-headings {
+  text-transform: uppercase;
+}
+
+.lines {
+  margin-top: 0px;
+  width: 50%;
+  border-top: 1px solid #a5a5a5;
+}
+
+/* Sections after Schedule */
+
+.other-headings {
+  font-size: 2.5em;
+}
+
+.sections {
+  /* makes each section have space top and bottom */
+  padding: 5%;
+}
+
+/* Schedule */
+
+.schedule {
+  border: 1px solid #a5a5a5;
+  padding: 3% 0%;
+  border-radius: 30px;
+  margin: 30px;
+}
+
+.weekends {
+  font-size: 2em;
+}
+
+.events {
+  font-size: 20px;
+  text-transform: none;
+  padding: 3%;
+  border: 1px solid #a5a5a5;
+  width: 60%;
+  margin: 5% 20%;
+}
+
+/*  Map */
+#map {
+  background-color: #28282a;
+}
+
+#map > .other-headings {
+  color: #eeeeee;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Resources */
+
+#resources {
+  background-color: #eeeeee;
+}
+
+#resources > .other-headings {
+  color: #28282a;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.panel-default>.panel-heading {
+  background-color: #28282a;
+  color: #eeeeee;
+}
+
+.list-group-item {
+  background-color: #28282a;
+  color: #eeeeee;
+  border: none;
+}
+
+.panel {
+  margin: 4% 3%;
+}
+
+/* navbar */
+
+.navbar-default {
+    background-color: white;
+    border-color: #28282A;
+}
+/* Title */
+.navbar-default .navbar-brand {
+  color: #777;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #5e5e5e;
+}
+/* Link */
+.navbar-default {
+    border-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a {
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: bold;
+    color: black; /*color of nav links*/
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #777; /*color change when hovering nav link*/
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #555;
+  background-color: #d5d5d5;
+}
+/* Caret */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+  border-top-color: #777;
+  border-bottom-color: #777;
+}
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+  border-top-color: #333;
+  border-bottom-color: #333;
+}
+.navbar-default .navbar-nav > .open > a .caret,
+.navbar-default .navbar-nav > .open > a:hover .caret,
+.navbar-default .navbar-nav > .open > a:focus .caret {
+  border-top-color: #555;
+  border-bottom-color: #555;
+}
+
+/**Speakers Section**/
+#speakers {
+  background-color: #28282a;
+}
+
+#speakers > .other-headings {
+  color: #eeeeee;
+  font-style: italic;
+  font-weight: bold;
+}
+.card {
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  color: #333;
+  border-radius: 10px;
+}
+.card-text {
+  padding: 2px;
+}
+
+/* Mobile version */
+.navbar-default .navbar-toggle {
+  border-color: #ddd;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #ddd;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ccc;
+}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #777;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #333;
+  }
+
+  .card {
+    margin-top: 10px;
+  }
+}
+
+.darkDiv {
+  background: #28282A;
+  padding: 3%;
+}
+
+#footer {
+  padding-top: 1.5%;
+  padding-bottom: .5%;
+}
+
+
+
+.iconSize {
+  text-decoration:none;
+  color:#fff;
+  font-size: 175%;
+  margin: 2.5%;
+  margin-top: 1%;
+}
+
+.infoText{
+/*  font-family: 'Poppins' !important;"*/
+  font-weight: 400;
+  color: #fff;
+  line-height: 2;
+  font-size: 125%;
+}
+
+
+/*SponsorCSS*/
+.sectionHeader {
+  font-size:350% !important;
+  font-family: Roboto;
+  font-weight: 500;
+  color: black;
+  font-style: italic;
+}
+
+#sponsors { 
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+#organizers {
+  padding-top: 5%;
+}
+
+.mediumSponsor{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: auto;    
+  display: block;
+}
+
+
+.img-fluid {
+  max-height: 100%;
+  width: auto;
+}
+
+#GitHub{
+  margin-top: 25px;
+  height:50px;
+  width:auto;
+}
+
+#GoGoSqueez{
+  height:100px;
+  width:auto;
+}
+
+#dotTech{
+  height:100px;
+  width:auto;
+}
+
+#ACM {
+  height:170px;
+  width:auto;
+}
+
+#IEEE{
+  height: 130px;
+  width:auto;
+}
+
+/*SponsorCSS End*/
