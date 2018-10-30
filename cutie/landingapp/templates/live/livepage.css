@@ -3,6 +3,7 @@
 body {
   text-align: center;
   overflow-x: hidden;
+  background-color: #EEEEEE;
 }
 
 /* Nav Bar */
@@ -210,7 +211,7 @@ th {
 /* navbar */
 
 .navbar-default {
-    background-color: white;
+    background-color: #EEEEEE;
     border-color: #28282A;
 }
 /* Title */
