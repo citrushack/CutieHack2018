@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:700, 100, 400');
-
+@import url('https://fonts.googleapis.com/css?family=Roboto:100, 400, 700');
 
 body {
   text-align: center;
@@ -103,6 +102,59 @@ body {
   border-radius: 30px;
   margin: 30px;
 }
+
+#schedule_header {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  font-style: italic;
+  color: #28282A;
+  margin-top: 0;
+}
+
+#schedule_line {
+  margin-bottom: 40px;
+  width: 30%;
+  border-top: 2px solid #28282A;
+}
+
+.table {
+  font-family: "Roboto";
+  font-weight: 100;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 5%;
+  width: 100%;
+}
+
+#col_0 {
+  width: 5%;
+} 
+
+#col_1 {
+  width: 25%;
+
+}
+#col_2 {
+  width: 45%;
+}
+#col_3 {
+  width: 25%;
+}
+
+th {
+  padding-left: 50px;
+}
+
+.Event_Name {
+  color: #F09E12;
+}
+
+
+
 
 .weekends {
   font-size: 2em;
