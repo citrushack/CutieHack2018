@@ -20,6 +20,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/livepage.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
 
 <body>
@@ -39,12 +41,12 @@
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a class="nav-link js-scroll-trigger active" id="homelink" href="#home">Home</a></li>
-          <li><a class="nav-link js-scroll-trigger" id="schedulelink" href="#schedule">Schedule</a></li>
-          <li><a class="nav-link js-scroll-trigger" id="maplink" href="#map">Map</a></li>
-          <li><a class="nav-link js-scroll-trigger" id="resourceslink" href="#resources">Resources</a></li>
-          <li><a class="nav-link js-scroll-trigger" id="speakerslink" href="#speakers">Speakers</a></li>
-          <li><a class="nav-link js-scroll-trigger" id="sponsorslink" href="#sponsors">Sponsors</a></li>
+          <li><a class="nav-link js-scroll-trigger active" id="homelink" href="#home">HOME</a></li>
+          <li><a class="nav-link js-scroll-trigger" id="schedulelink" href="#schedule">SCHEDULE</a></li>
+          <li><a class="nav-link js-scroll-trigger" id="maplink" href="#map">MAP</a></li>
+          <li><a class="nav-link js-scroll-trigger" id="resourceslink" href="#resources">RESOURCES</a></li>
+          <li><a class="nav-link js-scroll-trigger" id="judgeslink" href="#judges">JUDGES</a></li>
+          <li><a class="nav-link js-scroll-trigger" id="sponsorslink" href="#sponsors">SPONSORS</a></li>
         </ul>
 
       </div>
@@ -55,91 +57,203 @@
 
 
 <!--Title + Buttons-->
-<div class="container">   
+<div class="container" >   
     <div class="jumbotron">
-      <h1 id="title-name">Cutie Hack 2018</h1>
-      <p id="cntdwn"></p>
-      <hr id="title-line">
+      <h1 id="title-name" data-aos="zoom-in">Cutie Hack 2018</h1>
+      <p id="cntdwn" data-aos="zoom-in"data-aos-delay="400"></p>
       <br>
-      <div id="buttons">
-        <span id="allbuttons">
-          <a href="https://citrushack2018.devpost.com/" class="btn btn-success btn-default">Devpost</a>
-          <a href="https://www.facebook.com/CitrusHack/" class="btn btn-success btn-default">Facebook</a>
-          <a href="https://twitter.com/citrushack?lang=en" class="btn btn-success btn-default">Twitter</a>
-          <a href="https://citrus-hack-2018.slack.com/join/shared_invite/enQtMzQ1NjExOTAxMTY5LTBiMjBhMTdiMjMyZDEwOWNmZDgwZjc1ZDI2NmU1ZTBiYzgzOGI0NmIxOTQwMjZhZGE5MmMxNTYwMjdhZjRjNzg"
-            class="btn btn-success btn-default">Slack</a>
-        </span>
+      <div id="buttons" class="container" data-aos="zoom-in" data-aos-delay="1200">
+      	<div class="row">
+      		<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+				<a href="https://citrushack2018.devpost.com/" class="btn btn-success btn-default">Devpost</a><!-- UPDATE -->
+			</div>	
+			<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+		        <a href="https://www.facebook.com/CitrusHack/" class="btn btn-success btn-default">Facebook</a>
+		    </div>	
+		    <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+		        <a href="https://twitter.com/citrushack?lang=en" class="btn btn-success btn-default">Twitter</a>
+		    </div>	
+		    <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+		        <a href="https://citrus-hack-2018.slack.com/join/shared_invite/enQtMzQ1NjExOTAxMTY5LTBiMjBhMTdiMjMyZDEwOWNmZDgwZjc1ZDI2NmU1ZTBiYzgzOGI0NmIxOTQwMjZhZGE5MmMxNTYwMjdhZjRjNzg"
+		            class="btn btn-success btn-default">Slack</a><!-- UPDATE -->
+		    </div>	
+        </div>
       </div>
     </div>
 </div>
 
     <!--Schedule -->
-<h1 id="schedule_header">
-    Schedule
-</h1>
-<hr id="schedule_line">
-
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col" id="col_0"></th>
-            <th scope="col" id="col_1">Time</th>
-            <th scope="col" class="Event_Name" id="col_2">Event Name</th>
-            <th scope="col" id="col_3">Location</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td></td>
-            <td>8:00 AM</td>
-            <td class="Event_Name">Registration</td>
-            <td>Location</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>9:00 AM</td>
-            <td class="Event_Name">Registration</td>
-            <td>Location</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>10:00 AM</td>
-            <td class="Event_Name">Registration</td>
-            <td>Location</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>11:00 AM</td>
-            <td class="Event_Name">Registration</td>
-            <td>Location</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>12:00 PM</td>
-            <td class="Event_Name">Registration</td>
-            <td>Location</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>1:00 PM</td>
-            <td class="Event_Name">Registration</td>
-            <td>Location</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>2:00 PM</td>
-            <td class="Event_Name">Registration</td>
-            <td>Location</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>3:00 PM</td>
-            <td class="Event_Name">Registration</td>
-            <td>Location</td>
-        </tr>
-   </tbody>
-</table>
-
+<div id="schedule" class="container">    
+	<h1 class="sectionHeading">Schedule</h1>
+	<table class="table">
+	    <thead>
+	        <tr>
+	            <th scope="col" id="col_0"></th>
+	            <th scope="col" id="col_1">Time</th>
+	            <th scope="col" class="Event_Name" id="col_2">Event Name</th>
+	            <th scope="col" id="col_3">Location</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr>
+	            <td></td>
+	            <td>7:00 AM</td>
+	            <td class="Event_Name">Registration</td>
+	            <td>Bytes</td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>8:30 AM</td>
+	            <td class="Event_Name">Opening Ceremony</td>
+	            <td>Winston Chung 138</td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>9:00 AM</td>
+	            <td class="HACKING_TIME">HACKING BEGINS</td>
+	            <td></td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>7:30 AM</td>
+	            <td class="Event_Name">Breakfast - American Donuts</td>
+	            <td>Bytes</td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>9:00 AM</td>
+	            <td class="Event_Name">Team Building</td>
+	            <td>Winston Chung 138</td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>9:00 AM</td>
+	            <td class="Event_Name">Cutest Cuties Begins</td>
+	            <td></td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>10:00 AM</td>
+	            <td class="Event_Name">Intro to Unity</td>
+	            <td>Winston Chung 141</td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>10:00 AM</td>
+	            <td class="Event_Name">Intro to GitHub</td>
+	            <td>Winston Chung 138</td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>11:00 AM</td>
+	            <td class="Event_Name">Intro to Arduino</td>
+	            <td>Winston Chung 141</td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>11:00 AM</td>
+	            <td class="Event_Name">Front-end Web Development</td>
+	            <td>Winston Chung 138</td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>12:00 PM</td>
+	            <td class="Event_Name">Intro to Flask</td>
+	            <td>Winston Chung 141</td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>12:00 PM</td>
+	            <td class="Event_Name">Rock, Paper, Scissors, Python!</td>
+	            <td>Winston Chung 138</td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>12:00 PM</td>
+	            <td class="Event_Name">Vine Time Begins</td>
+	            <td>Bytes</td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>1:00 PM</td>
+	            <td class="Event_Name">Game Room Opens</td>
+	            <td>Winston Chung 202</td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>1:30 PM</td>
+	            <td class="Event_Name">Lunch - Lee's Sandwiches</td>
+	            <td>Bytes</td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>3:00 PM</td>
+	            <td class="Event_Name">Open Frameworks</td>
+	            <td>Winston Chung 141</td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>6:30 PM</td>
+	            <td class="Event_Name">How to Pitch Your Product</td>
+	            <td>Winston Chung 138</td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>6:30 PM</td>
+	            <td class="Event_Name">Breaking Down the Breakdance</td>
+	            <td>Winston Chung Patio</td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>8:00 PM</td>
+	            <td class="Event_Name">Judge Debriefing</td>
+	            <td></td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>8:30 PM</td>
+	            <td class="Event_Name">Vine Time Ends</td>
+	            <td>Bytes</td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>9:00 PM</td>
+	            <td class="HACKING_TIME">HACKING ENDS</td>
+	            <td></td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>9:00 PM</td>
+	            <td class="Event_Name">Dinner - Marcello's Pizza</td>
+	            <td>Bytes</td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>9:00 PM</td>
+	            <td class="Event_Name">Cutest Cuties Ends</td>
+	            <td></td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>9:30 PM</td>
+	            <td class="Event_Name">Demo Expo Fair</td>
+	            <td>Winston Chung 205/206</td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>10:30 PM</td>
+	            <td class="Event_Name">Judging Deliberations</td>
+	            <td></td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td>11:00 PM</td>
+	            <td class="Event_Name">Demo Expo Fair</td>
+	            <td>Winston Chung 138</td>
+	        </tr>
+	   </tbody>
+	</table>
+</div>
 
 
 
@@ -153,18 +267,18 @@
     <!--Map-->
 
     <div class="row sections" id="map">
-      <div class="col-lg-12 columns all-headings other-headings">Map
-        <hr class="lines">
-        <div class="col-sm-12"><img src="https://via.placeholder.com/750x365"></div>
-      </div>
+    	<h1 class="sectionHeading altHeading">Map</h1>
+      	<div class="col-lg-12 columns all-headings other-headings">
+        	<div class="col-sm-12">
+        		<img src="https://via.placeholder.com/750x365">
+        	</div>
+      	</div>
     </div>
 
     <!--Resources  -->
 
     <div class="row sections" id="resources">
-      <div class="col-lg-12 columns all-headings other-headings">Resources
-        <hr class="lines">
-      </div>
+      <h1 class="sectionHeading">Resources</h1>
 
       <!-- Resources Subsections  -->
 
@@ -250,78 +364,88 @@
 
   <!--Speakers-->
 
-  <div class="row sections" id="speakers">
-    <div class="col-lg-12 columns all-headings other-headings">Speakers
-      <hr class="lines">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card" style="width: 286px; background-color:whitesmoke;">
-            <img class="card-img-top" style="width:283px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16693615cb4%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16693615cb4%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.1953125%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-              alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title" style="font-size:20px">Card title</h5>
-              <p class="card-text" style="font-size:15px">Some quick example text to build on the card title and make
-                up
-                the bulk of the
-                card's content.</p>
-              <p class="card-text"><small class="text-muted" style="font-size:10px;">Last updated 3 mins
-                  ago</small></p>
-            </div>
-          </div>
+  	<div class="row sections" id="judges">
+    	<h1 class="sectionHeading altHeading">Judges</h1>
+  		<div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+      		<div class="card" style="width: 286px; background-color:whitesmoke;">
+        		<img class="card-img-top" style="width:283px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16693615cb4%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16693615cb4%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.1953125%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image cap">
+        		<div class="card-body">
+          			<h5 class="card-title" style="font-size:20px">Judge Name</h5>
+          			<p class="card-text" style="font-size:15px">Here is a brief 2-5 sentence description of this judge. This text gives the reader more information about what they do. Below is where to find more information about them.</p>
+          			<p class="card-text"><small class="text-muted" style="font-size:10px;">Find out more about [this judge]'s work here.</small></p>
+        		</div>
+      		</div>
+    	</div>
+    	<div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+          	<div class="card" style="width: 286px; background-color:whitesmoke;">
+            	<img class="card-img-top" style="width:283px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16693615cb4%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16693615cb4%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.1953125%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image cap">
+            	<div class="card-body">
+              		<h5 class="card-title" style="font-size:20px">Judge Name</h5>
+              		<p class="card-text" style="font-size:15px">Here is a brief 2-5 sentence description of this judge. This text gives the reader more information about what they do. Below is where to find more information about them.</p>
+              		<p class="card-text"><small class="text-muted" style="font-size:10px;">Find out more about [this judge]'s work here.</small></p>
+            	</div>
+          	</div>
         </div>
-        <div class="col-md-4">
-          <div class="card" style="width: 286px; background-color:whitesmoke;">
-            <img class="card-img-top" style="width:283px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16693615cb4%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16693615cb4%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.1953125%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-              alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title" style="font-size:20px">Card title</h5>
-              <p class="card-text" style="font-size:15px">Some quick example text to build on the card title and make
-                up
-                the bulk of the
-                card's content.</p>
-              <p class="card-text"><small class="text-muted" style="font-size:10px;">Last updated 3 mins
-                  ago</small></p>
-            </div>
-          </div>
+        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+          	<div class="card" style="width: 286px; background-color:whitesmoke;">
+            	<img class="card-img-top" style="width:283px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16693615cb4%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16693615cb4%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.1953125%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image cap">
+            	<div class="card-body">
+              		<h5 class="card-title" style="font-size:20px">Judge Name</h5>
+              		<p class="card-text" style="font-size:15px">Here is a brief 2-5 sentence description of this judge. This text gives the reader more information about what they do. Below is where to find more information about them.</p>
+              		<p class="card-text"><small class="text-muted" style="font-size:10px;">Find out more about [this judge]'s work here.</small></p>
+            	</div>
+          	</div>
         </div>
-        <div class="col-md-4">
-          <div class="card" style="width: 286px; background-color:whitesmoke;">
-            <img class="card-img-top" style="width:283px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16693615cb4%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16693615cb4%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.1953125%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-              alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title" style="font-size:20px">Card title</h5>
-              <p class="card-text" style="font-size:15px">Some quick example text to build on the card title and make
-                up
-                the bulk of the
-                card's content.</p>
-              <p class="card-text"><small class="text-muted" style="font-size:10px;">Last updated 3 mins
-                  ago</small></p>
-            </div>
-          </div>
+  		<div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+      		<div class="card" style="width: 286px; background-color:whitesmoke;">
+        		<img class="card-img-top" style="width:283px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16693615cb4%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16693615cb4%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.1953125%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image cap">
+        		<div class="card-body">
+          			<h5 class="card-title" style="font-size:20px">Judge Name</h5>
+          			<p class="card-text" style="font-size:15px">Here is a brief 2-5 sentence description of this judge. This text gives the reader more information about what they do. Below is where to find more information about them.</p>
+          			<p class="card-text"><small class="text-muted" style="font-size:10px;">Find out more about [this judge]'s work here.</small></p>
+        		</div>
+      		</div>
+    	</div>
+    	<div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+          	<div class="card" style="width: 286px; background-color:whitesmoke;">
+            	<img class="card-img-top" style="width:283px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16693615cb4%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16693615cb4%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.1953125%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image cap">
+            	<div class="card-body">
+              		<h5 class="card-title" style="font-size:20px">Judge Name</h5>
+              		<p class="card-text" style="font-size:15px">Here is a brief 2-5 sentence description of this judge. This text gives the reader more information about what they do. Below is where to find more information about them.</p>
+              		<p class="card-text"><small class="text-muted" style="font-size:10px;">Find out more about [this judge]'s work here.</small></p>
+            	</div>
+          	</div>
         </div>
-       </div>
-   </div>
-</div>
+        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+          	<div class="card" style="width: 286px; background-color:whitesmoke;">
+            	<img class="card-img-top" style="width:283px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16693615cb4%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16693615cb4%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.1953125%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image cap">
+            	<div class="card-body">
+              		<h5 class="card-title" style="font-size:20px">Judge Name</h5>
+              		<p class="card-text" style="font-size:15px">Here is a brief 2-5 sentence description of this judge. This text gives the reader more information about what they do. Below is where to find more information about them.</p>
+              		<p class="card-text"><small class="text-muted" style="font-size:10px;">Find out more about [this judge]'s work here.</small></p>
+            	</div>
+          	</div>
+        </div>
+	</div>
 
 <!--Sponsors and Organizers-->
 		<div class = "container" id="sponsors">
 			<!-- Sponsors -->
-			<h1 class="sectionHeader text-center">2018 Sponsors</h1> 
-			<hr class="lines">
+			<h1 class="sectionHeading text-center">2018 Sponsors</h1> 
 			<div class = "row text-center">
-				<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 mediumSponsor">
+				<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mediumSponsor">
 					<div class = "img-fluid center-block">
          				<a href="https://github.com"><img class="zoom" src="photos/companylogos/GitHub.png" alt="GitHub" id="GitHub"/></a>
 					</div>
 				</div>
 
-				<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 mediumSponsor">
+				<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mediumSponsor">
 					<div class = "img-fluid center-block ">
          				<a href="https://gogosqueez.com"><img class="zoom" src="photos/companylogos/GoGoSqueez.png" alt="GoGoSqueez" id="GoGoSqueez"/></a>
 					</div>
 				</div>
 
-				<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 mediumSponsor">
+				<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mediumSponsor">
 					<div class = "img-fluid center-block">
 						<a href="https://get.tech/"><img class="zoom" src="photos/companylogos/dotTech.png" alt=".Tech Domains" id="dotTech"/></a>
 					</div>
@@ -329,15 +453,14 @@
 			</div>
 			<!-- End Sponsors -->	
 			<!-- Organizers -->
-			<h1  class="sectionHeader text-center pb-2" id= "organizers">Organizers</h1>
-			<hr class="lines" style="width: 45%">
+			<h1  class="sectionHeading text-center pb-2" id= "organizers">Organizers</h1>
 			<div class = "row text-center">
-				<div class = "col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mediumSponsor">
+				<div class = "col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mediumSponsor">
 					<div class="img-fluid center-block">
          				<a href="https://acmucr.org"><img class="zoom" src="photos/companylogos/ACMUCR.png" alt="Association of Computing Machines, UC Riverside" id="ACM"/></a>
          			</div>	
 				</div>
-				<div class = "col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mediumSponsor">
+				<div class = "col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mediumSponsor">
 					<div class="img-fluid center-block">
          				<a href="https://ieee.ee.ucr.edu/"><img class="zoom" src="photos/companylogos/IEEE.png" alt="Institute of Electrical and Electronics Engineers, UC Riverside" id="IEEE"/></a>
 					</div>
@@ -346,11 +469,6 @@
 			<!-- End Organizers -->
 		</div>
 <!-- END Sponsors and organizers -->
-
-
-
-
-
 
 <div id="footer" class="darkDiv"><!-- FOOTER -->
     <p class="text-center lightText">
@@ -361,13 +479,17 @@
         <p class="infoText text-center">Made with <span style = "color:red">&#9829;</span> in Riverside, CA</p>
       <p class="infoText text-center">© 2018 Cutie Hack</p>
     </p>
-  </div><!-- END FOOTER -->
+</div><!-- END FOOTER -->
 
   <!-- JS Scripts -->
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="js/scrolling-nav.js"></script>
-
+  	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  	<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  	<script src="js/scrolling-nav.js"></script>
+  	<script>
+	  AOS.init({
+	  duration: 200,
+	})
+	</script>
 </body>
 
 </html>

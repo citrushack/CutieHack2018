@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100, 400, 700');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:100, 400, 700');
 
 body {
   text-align: center;
@@ -26,27 +26,26 @@ body {
   text-transform: uppercase;
   letter-spacing: 13px;
   color: rgb(243,135,9);
-  font-family: "Roboto", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-weight: 400;
   font-size: 96px;
 
 }
 
 #cntdwn {
-  font-family: "Roboto", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-weight: 100;
-  font-size: 64px;
+  font-size: 40px;
   line-height: 1.2;
 }
 
 .btn-success {
   background-color: rgb(243,135,9);
   border-color: rgb(243,135,9); 
-  color: #28282A;
-  font-family: "Roboto", sans-serif;
+  color: white;
+  font-family: "Titillium Web", sans-serif;
   font-weight: 100;
   font-size: 20px;
-  margin: 15px 36px 15px 36px;
 }
 
 .btn-success:hover {
@@ -61,12 +60,6 @@ body {
   padding-top: 6%;
 }
 
-#title-line {
-  margin-bottom: 10px;
-  width: 75%;
-  border-top: 2px solid #28282A;
-}
-
 /*All Sections*/
 
 .container {
@@ -74,9 +67,6 @@ body {
   width: 100%;
 }
 
-.all-headings {
-  text-transform: uppercase;
-}
 
 .lines {
   margin-top: 0px;
@@ -104,31 +94,18 @@ body {
   margin: 30px;
 }
 
-#schedule_header {
-  font-family: "Roboto";
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 56px;
-  font-style: italic;
-  color: #28282A;
-  margin-top: 0;
-}
-
 #schedule_line {
   margin-bottom: 40px;
-  width: 30%;
   border-top: 2px solid #28282A;
 }
 
 .table {
-  font-family: "Roboto";
+  font-family: "Titillium Web";
   font-weight: 100;
-  font-size: 36px;
-  line-height: 42px;
+  font-size: 24px;
   text-align: left;
   margin: 0;
   margin-bottom: 5%;
-  width: 100%;
 }
 
 #col_0 {
@@ -154,6 +131,9 @@ th {
   color: #F09E12;
 }
 
+.HACKING_TIME {
+  color: #596E9F;
+}
 
 
 
@@ -228,7 +208,7 @@ th {
 }
 
 .navbar-default .navbar-nav > li > a {
-    font-family: 'Roboto';
+    font-family: 'Titillium Web';
     font-size: 18px;
     font-weight: bold;
     color: black; /*color of nav links*/
@@ -268,11 +248,11 @@ th {
 }
 
 /**Speakers Section**/
-#speakers {
+#judges {
   background-color: #28282a;
 }
 
-#speakers > .other-headings {
+#judges > .other-headings {
   color: #eeeeee;
   font-style: italic;
   font-weight: bold;
@@ -343,12 +323,16 @@ th {
 
 
 /*SponsorCSS*/
-.sectionHeader {
+.sectionHeading {
   font-size:350% !important;
-  font-family: Roboto;
+  font-family: Titillium Web, sans-serif;
   font-weight: 500;
   color: black;
-  font-style: italic;
+}
+
+.altHeading {
+  color: white;
+  padding-bottom: 20px;
 }
 
 #sponsors { 
