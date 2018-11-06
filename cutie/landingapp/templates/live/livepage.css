@@ -87,11 +87,9 @@ body {
 
 /* Schedule */
 
-.schedule {
-  border: 1px solid #a5a5a5;
-  padding: 3% 0%;
-  border-radius: 30px;
-  margin: 30px;
+#schedule {
+  padding-left: 8%;
+  padding-right: 8%;
 }
 
 #schedule_line {
@@ -283,6 +281,7 @@ th {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #777;
   }
+
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
     color: #333;
