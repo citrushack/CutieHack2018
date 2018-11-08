@@ -14,6 +14,10 @@ body {
 }
 */
 
+.col-sm-6 {
+  width: 45% !important;
+}
+
 /* For active nav link */
 
 .active {
@@ -138,7 +142,7 @@ th {
 }
 
 .workshop {
-  color: #00b5ad;
+  color: #5a6f9d;
 }
 
 
@@ -162,6 +166,20 @@ th {
 
 /* Resources */
 
+.resource-content {
+  margin: 2% 0;
+  font-size: 1.2em;
+}
+
+.resource-heading {
+  font-size: 2em;
+}
+
+.resource-text {
+  padding: 0 25%;
+  text-align: left;
+}
+
 #resources {
   background-color: #eeeeee;
 }
@@ -181,6 +199,10 @@ th {
   background-color: #28282a;
   color: #eeeeee;
   border: none;
+}
+
+.list-group-item-heading {
+  margin: 2% 0;
 }
 
 .panel {

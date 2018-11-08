@@ -28,9 +28,9 @@ var x = setInterval(function() {
   var secString;
 
   if (seconds == 1) {
-      secString = " Second, ";
+      secString = " Second ";
   } else {
-      secString = " Seconds, ";
+      secString = " Seconds ";
   }
   
   document.getElementById("cntdwn").innerHTML = hours + hourString + minutes + minString + "and " + seconds + secString;
