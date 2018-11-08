@@ -10,7 +10,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   document.getElementById("cntdwn").innerHTML = hours + " Hours, " + minutes + " Minutes, and " + seconds + " Seconds ";
-}, 1000);
+}, 100);
 
 //changes active nav link on scroll
 $(document).ready(function() {
