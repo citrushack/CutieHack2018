@@ -20,13 +20,16 @@ body {
   color: #f09e12 !important;
 }
 
+#landing-logo {
+  max-width: 15%;
+}
+
 /* Title */
 
 #title-name {
   text-transform: uppercase;
   letter-spacing: 13px;
-  color: rgb(243,135,9);
-  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  text-shadow: 4px 8px 6px rgba(0,0,0,0.3);
   font-family: "Titillium Web", sans-serif;
   font-weight: 400;
   font-size: 96px;

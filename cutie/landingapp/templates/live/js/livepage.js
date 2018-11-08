@@ -9,7 +9,31 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById("cntdwn").innerHTML = hours + " Hours, " + minutes + " Minutes, and " + seconds + " Seconds ";
+  var hourString;
+
+  if (hours == 1) {
+      hourString = " Hour, ";
+  } else {
+      hourString = " Hours, ";
+  }
+
+  var minString;
+
+  if (minutes == 1) {
+      minString = " Minute, ";
+  } else {
+      minString = " Minutes, ";
+  }
+ 
+  var secString;
+
+  if (seconds == 1) {
+      secString = " Second, ";
+  } else {
+      secString = " Seconds, ";
+  }
+  
+  document.getElementById("cntdwn").innerHTML = hours + hourString + minutes + minString + "and " + seconds + secString;
 }, 100);
 
 //changes active nav link on scroll
