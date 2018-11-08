@@ -157,12 +157,6 @@ th {
   background-color: #28282a;
 }
 
-#map > .other-headings {
-  color: #eeeeee;
-  font-style: italic;
-  font-weight: bold;
-}
-
 /* Resources */
 
 #resources {
@@ -190,6 +184,10 @@ th {
   margin: 4% 3%;
 }
 
+.card {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 /* navbar */
 
 .navbar-default {
@@ -353,7 +351,6 @@ th {
   margin: auto;    
   display: block;
 }
-
 
 .img-fluid {
   max-height: 100%;
