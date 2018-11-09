@@ -1,5 +1,65 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:100, 400, 700');
 
+/* navbar */
+
+.navbar-default {
+    background-color: #EEEEEE;
+    border-color: #28282A;
+}
+/* Title */
+.navbar-default .navbar-brand {
+  color: #777;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #5e5e5e;
+}
+/* Link */
+.navbar-default {
+    border-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a {
+    font-family: 'Titillium Web';
+    font-size: 18px;
+    font-weight: bold;
+    color: black; /*color of nav links*/
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #777; /*color change when hovering nav link*/
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #555;
+  background-color: #d5d5d5;
+}
+/* Caret */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+  border-top-color: #777;
+  border-bottom-color: #777;
+}
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+  border-top-color: #333;
+  border-bottom-color: #333;
+}
+.navbar-default .navbar-nav > .open > a .caret,
+.navbar-default .navbar-nav > .open > a:hover .caret,
+.navbar-default .navbar-nav > .open > a:focus .caret {
+  border-top-color: #555;
+  border-bottom-color: #555;
+}
+
+
 body {
   text-align: center;
   overflow-x: hidden;
@@ -13,10 +73,6 @@ body {
   border-color: transparent;
 }
 */
-
-.col-sm-6 {
-  width: 45% !important;
-}
 
 /* For active nav link */
 
@@ -48,18 +104,16 @@ body {
 }
 
 .btn-success {
-  background-color: rgb(243,135,9);
-  border-color: rgb(243,135,9); 
-  color: white;
+  border-color: whitesmoke; 
+  color: whitesmoke;
   font-family: "Titillium Web", sans-serif;
   font-weight: 100;
   font-size: 20px;
 }
 
 .btn-success:hover {
-  background-color: rgb(240,158,18);
-  border-color: rgb(240,158,18);
-  color: black;
+  transform: 300px;
+  transition: 8000ms;
 }
 
 .jumbotron {
@@ -145,7 +199,6 @@ th {
   color: #5a6f9d;
 }
 
-
 .weekends {
   font-size: 2em;
 }
@@ -160,8 +213,13 @@ th {
 }
 
 /*  Map */
-#map {
+#map{
   background-color: #28282a;
+}
+
+#map-img{
+  max-width: 75%;
+  height: auto;
 }
 
 /* Resources */
@@ -212,69 +270,21 @@ th {
 .card {
   padding-top: 10px;
   padding-bottom: 10px;
-}
-/* navbar */
-
-.navbar-default {
-    background-color: #EEEEEE;
-    border-color: #28282A;
-}
-/* Title */
-.navbar-default .navbar-brand {
-  color: #777;
-}
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-  color: #5e5e5e;
-}
-/* Link */
-.navbar-default {
-    border-color: transparent;
-}
-
-.navbar-default .navbar-nav > li > a {
-    font-family: 'Titillium Web';
-    font-size: 18px;
-    font-weight: bold;
-    color: black; /*color of nav links*/
-}
-
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-    color: #777; /*color change when hovering nav link*/
-}
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  color: #555;
-  background-color: #e7e7e7;
-}
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
-  color: #555;
-  background-color: #d5d5d5;
-}
-/* Caret */
-.navbar-default .navbar-nav > .dropdown > a .caret {
-  border-top-color: #777;
-  border-bottom-color: #777;
-}
-.navbar-default .navbar-nav > .dropdown > a:hover .caret,
-.navbar-default .navbar-nav > .dropdown > a:focus .caret {
-  border-top-color: #333;
-  border-bottom-color: #333;
-}
-.navbar-default .navbar-nav > .open > a .caret,
-.navbar-default .navbar-nav > .open > a:hover .caret,
-.navbar-default .navbar-nav > .open > a:focus .caret {
-  border-top-color: #555;
-  border-bottom-color: #555;
+  box-shadow: 4px 8px 6px rgba(0,0,0,0.3);
 }
 
 /**Speakers Section**/
 #judges {
   background-color: #28282a;
+}
+
+.judge {
+  margin-top: 30px;
+  transition: .8s;
+}
+
+.judge:hover {
+  transform: translateY(-5px);
 }
 
 #judges > .other-headings {
@@ -383,35 +393,56 @@ th {
 }
 
 #Gigabyte{
-  margin-top: 25px;
-  height:50px;
-  width:auto;
+  max-width:200px;
+  height:auto;
 }
 
 #GitHub{
-  margin-top: 25px;
-  height:50px;
-  width:auto;
+  max-width:200px;
+  height:auto;
+}
+
+#GCP{
+  max-width:200px;
+  height:auto;
 }
 
 #GoGoSqueez{
-  height:100px;
-  width:auto;
+  max-width:200px;
+  height:auto;
+}
+
+#UCRCSE{
+  max-width:200px;
+  height:auto;
 }
 
 #dotTech{
-  height:100px;
-  width:auto;
+  max-width:200px;
+  height:auto;
+}
+
+#Wolfram{
+  max-width: 200px;
+  height:auto;
 }
 
 #ACM {
-  height:170px;
-  width:auto;
+  max-width:300px;
+  height:auto;
 }
 
 #IEEE{
-  height: 130px;
-  width:auto;
+  max-width: 450px;
+  height:auto;
+}
+
+.zoom {
+  transition: .8s;
+}
+
+.zoom:hover {
+  transform: scale(1.08);
 }
 
 #devpost {
@@ -436,6 +467,42 @@ th {
 
 .fas {
   padding-right: 3%;
+}
+
+.fa-facebook-f:hover{
+  text-decoration:none;
+  color:#43609C;
+  -webkit-transition: color .2s ease-out;
+  -moz-transition: color .2s ease-out;
+  -o-transition: color .2s ease-out;
+  transition: color .2s ease-out;
+}
+
+.fa-instagram:hover{
+  text-decoration:none;
+  color:#cd486b;
+  -webkit-transition: color .2s ease-out;
+  -moz-transition: color .2s ease-out;
+  -o-transition: color .2s ease-out;
+  transition: color .2s ease-out;
+}
+  
+.fa-twitter:hover{
+  text-decoration:none;
+  color:#6CADDE;
+  -webkit-transition: color .2s ease-out;
+  -moz-transition: color .2s ease-out;
+  -o-transition: color .2s ease-out;
+  transition: color .2s ease-out;
+}
+
+.fa-envelope:hover{
+  text-decoration:none;
+  color:#fbad50;
+  -webkit-transition: color .2s ease-out;
+  -moz-transition: color .2s ease-out;
+  -o-transition: color .2s ease-out;
+  transition: color .2s ease-out;
 }
 
 /*SponsorCSS End*/
