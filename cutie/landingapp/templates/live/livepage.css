@@ -101,7 +101,7 @@ body {
 }
 
 .title-letter {
-  transition: .8s;
+  transition: .4s;
   display:inline-block;
 }
 
@@ -238,7 +238,7 @@ th {
 /* Resources */
 
 .resource-content {
-  margin: 2% 0;
+  margin: 2% 0 0 0;
   font-size: 1.2em;
 }
 
@@ -247,8 +247,16 @@ th {
 }
 
 .resource-text {
-  padding: 0 25%;
+  padding: 0 25px;
   text-align: left;
+}
+
+.resource-list {
+  padding-left: 50px;
+}
+
+.resource-list-item{
+  padding-left: 0px;
 }
 
 #resources {
