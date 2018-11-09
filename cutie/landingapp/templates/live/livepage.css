@@ -96,6 +96,19 @@ body {
 
 }
 
+.title-word {
+  display:inline-block;
+}
+
+.title-letter {
+  transition: .8s;
+  display:inline-block;
+}
+
+.title-letter:hover {
+  transform: translateY(-5px);
+}
+
 #cntdwn {
   font-family: "Titillium Web", sans-serif;
   font-weight: 100;
