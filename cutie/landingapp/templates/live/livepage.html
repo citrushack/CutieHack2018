@@ -500,15 +500,25 @@
       <p class="infoText text-center">© 2018 Cutie Hack</p>
     </p>
 </div><!-- END FOOTER -->
-
+<canvas class="background"></canvas>
   <!-- JS Scripts -->
-  	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   	<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   	<script src="js/scrolling-nav.js"></script>
   	<script>
 	  AOS.init({
-	  duration: 200,
-	})
+	    duration: 200
+	  });
+	  
+	  window.onload = function() {
+		  Particles.init({
+			  selector: '.background',
+			  color: ['#f08727', '#00aa53', '#09629e'],
+			  maxParticles: 100,
+			  sizeVariations: 6
+		  })
+	  }
 	</script>
 </body>
 
