@@ -71,10 +71,12 @@ $(document).ready(function() {
       $('nav ul li a').removeClass();
       $('#resourceslink').addClass('active');
     } else if (speakersDist <= 73 && sponsorsDist > 57) { //checks if you're in speakers section
-      $('nav ul li a').removeClass();              $('#judgeslink').addClass('active');
+      $('nav ul li a').removeClass();              
+      $('#judgeslink').addClass('active');
     } else if (sponsorsDist <= 57 && !((window.innerHeight + window.scrollY) >= document.body.offsetHeight)) { //checks if you're in sponsors section, but haven't hit the bottom of page
       $('nav ul li a').removeClass();
       $('#sponsorslink').addClass('active');
     }
   });
 });
+
